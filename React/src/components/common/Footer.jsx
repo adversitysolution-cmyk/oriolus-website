@@ -29,7 +29,7 @@ const Footer = () => {
             <div className="col-md-12">
               <div className="footer-logo text-center">
                 <Link to="/">
-                  <img src="/images/45944_Oriolus scientific yoga and naturopathy research center_LOGO_SK_-01.png" alt="Oriolus Scientific — Yoga &amp; Naturopathy Research Center" style={{ maxHeight: '70px', width: 'auto', objectFit: 'contain' }} />
+                  <img src="/images/45944_Oriolus scientific yoga and naturopathy research center_LOGO_SK_-01.png" alt="Oriolus Scientific — Yoga &amp; Naturopathy Research Center" style={{ maxHeight: '80px', width: 'auto', objectFit: 'contain' }} />
                 </Link>
               </div>
             </div>

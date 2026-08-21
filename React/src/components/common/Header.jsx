@@ -81,7 +81,7 @@ const Header = () => {
               {/* Start logo */}
               <div className="logo">
                 <Link to="/">
-                  <img className="logo-image" src="/images/45944_Oriolus scientific yoga and naturopathy research center_LOGO_SK_-01.png" alt="Oriolus Scientific — Yoga &amp; Naturopathy Research Center" style={{ maxHeight: '65px', width: 'auto', objectFit: 'contain' }} />
+                  <img className="logo-image" src="/images/45944_Oriolus scientific yoga and naturopathy research center_LOGO_SK_-01.png" alt="Oriolus Scientific — Yoga &amp; Naturopathy Research Center" style={{ maxHeight: '75px', width: 'auto', objectFit: 'contain' }} />
                 </Link>
               </div>
               {/* End logo */}
