@@ -32,32 +32,37 @@ const WelcomeArea = () => {
                 </div>
                 {/* End single item */}
               </div>
-              <div className="bottom" style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+              <div className="bottom" style={{ display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap', marginTop: '30px' }}>
                 <div className="read-more-button">
                   <Link className="thm-btn bgclr-1" to={content.cta.btnLink}>
                     {content.cta.btnText}
                   </Link>
                 </div>
-                <div className="call-now-button">
+                <div className="call-now-wrapper" style={{ display: 'inline-flex', alignItems: 'center', gap: '14px' }}>
+                  {content.cta.adviceLabel && (
+                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 600, color: '#262626' }}>
+                      {content.cta.adviceLabel}
+                    </h3>
+                  )}
                   <a 
                     className="thm-btn" 
                     href={content.cta.callPhone || 'tel:+919845012345'} 
                     style={{ 
                       display: 'inline-flex', 
                       alignItems: 'center', 
-                      gap: '10px', 
+                      gap: '8px', 
                       background: '#12305C', 
                       color: '#fff', 
                       borderRadius: '30px',
-                      padding: '12px 28px',
-                      fontSize: '14px',
+                      padding: '11px 24px',
+                      fontSize: '13px',
                       fontWeight: 600,
                       textTransform: 'uppercase',
                       letterSpacing: '1px',
-                      boxShadow: '0 4px 12px rgba(18, 48, 92, 0.25)'
+                      boxShadow: '0 4px 12px rgba(18, 48, 92, 0.2)'
                     }}
                   >
-                    <i className="fa fa-phone" style={{ fontSize: '15px', color: '#c59d5f' }}></i>
+                    <i className="fa fa-phone" style={{ fontSize: '14px', color: '#c59d5f' }}></i>
                     {content.cta.callBtnText || 'Call Now'}
                   </a>
                 </div>

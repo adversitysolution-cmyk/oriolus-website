@@ -64,6 +64,7 @@ export const homeContent = {
     cta: {
       btnText: 'Discover Our Story',
       btnLink: '/about',
+      adviceLabel: 'Need guidance?',
       callBtnText: 'Call Now',
       callPhone: 'tel:+919845012345'
     }
