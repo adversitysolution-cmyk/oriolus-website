@@ -32,14 +32,34 @@ const WelcomeArea = () => {
                 </div>
                 {/* End single item */}
               </div>
-              <div className="bottom">
+              <div className="bottom" style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
                 <div className="read-more-button">
                   <Link className="thm-btn bgclr-1" to={content.cta.btnLink}>
                     {content.cta.btnText}
                   </Link>
                 </div>
-                <div className="title">
-                  <h2>{content.cta.adviceLabel} <span>{content.cta.advicePhone}</span></h2>
+                <div className="call-now-button">
+                  <a 
+                    className="thm-btn" 
+                    href={content.cta.callPhone || 'tel:+919845012345'} 
+                    style={{ 
+                      display: 'inline-flex', 
+                      alignItems: 'center', 
+                      gap: '10px', 
+                      background: '#12305C', 
+                      color: '#fff', 
+                      borderRadius: '30px',
+                      padding: '12px 28px',
+                      fontSize: '14px',
+                      fontWeight: 600,
+                      textTransform: 'uppercase',
+                      letterSpacing: '1px',
+                      boxShadow: '0 4px 12px rgba(18, 48, 92, 0.25)'
+                    }}
+                  >
+                    <i className="fa fa-phone" style={{ fontSize: '15px', color: '#c59d5f' }}></i>
+                    {content.cta.callBtnText || 'Call Now'}
+                  </a>
                 </div>
               </div>
             </div>
