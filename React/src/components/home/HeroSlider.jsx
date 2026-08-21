@@ -16,7 +16,16 @@ const HeroSlider = () => {
   const slide = slides[currentSlide];
 
   return (
-    <section className="rev_slider_wrapper" style={{ position: 'relative', overflow: 'hidden', minHeight: '600px', backgroundColor: '#1a1a1a' }}>
+    <section 
+      className="rev_slider_wrapper" 
+      style={{ 
+        position: 'relative', 
+        overflow: 'hidden', 
+        minHeight: '620px', 
+        backgroundColor: '#12305C' 
+      }}
+    >
+      {/* Background Image with Smooth Cross-fade */}
       <div 
         style={{
           position: 'absolute',
@@ -31,6 +40,8 @@ const HeroSlider = () => {
           zIndex: 1
         }}
       />
+
+      {/* Premium Dark Gradient Overlay */}
       <div 
         style={{
           position: 'absolute',
@@ -38,63 +49,120 @@ const HeroSlider = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: 'rgba(0,0,0,0.45)',
+          background: 'linear-gradient(135deg, rgba(18, 48, 92, 0.90) 0%, rgba(12, 34, 66, 0.88) 50%, rgba(23, 179, 163, 0.55) 100%)',
           zIndex: 2
         }}
       />
 
-      <div className="container" style={{ position: 'relative', zIndex: 3, height: '600px', display: 'flex', alignItems: 'center' }}>
-        <div className="row" style={{ width: '100%' }}>
+      {/* Content Container - shifted upwards (~3cm) */}
+      <div 
+        className="container" 
+        style={{ 
+          position: 'relative', 
+          zIndex: 3, 
+          minHeight: '620px', 
+          display: 'flex', 
+          alignItems: 'center',
+          paddingTop: '30px'
+        }}
+      >
+        <div className="row" style={{ width: '100%', margin: 0 }}>
           <div 
             className={`col-md-12 ${
               slide.alignment === 'center' ? 'text-center' : 
               slide.alignment === 'right' ? 'text-right' : 'text-left'
             }`}
+            style={{ padding: 0 }}
           >
-            <div className="tp-caption" style={{ color: '#fff', padding: '0 15px' }}>
+            {/* Shifted upward by 3cm (~110px) */}
+            <div 
+              className="tp-caption" 
+              style={{ 
+                color: '#fff', 
+                maxWidth: '850px', 
+                margin: slide.alignment === 'center' ? '-55px auto 0' : slide.alignment === 'right' ? '-55px 0 0 auto' : '-55px 0 0 0',
+                padding: '0 15px'
+              }}
+            >
+              {/* Eyebrow Subtitle */}
               <div 
                 style={{ 
-                  color: '#c59d5f', 
-                  fontSize: '16px', 
+                  color: '#F0985A', 
+                  fontSize: '14px', 
                   textTransform: 'uppercase', 
-                  letterSpacing: '2px',
-                  marginBottom: '15px',
-                  fontWeight: 600,
-                  animation: 'fadeInDown 0.8s'
+                  letterSpacing: '2.5px',
+                  marginBottom: '14px',
+                  fontWeight: 700,
+                  display: 'inline-block'
                 }}
               >
                 {slide.subtitle}
               </div>
+
+              {/* Main Headline */}
               <h1 
                 style={{ 
-                  fontSize: '48px', 
-                  lineHeight: '58px', 
+                  fontSize: '44px', 
+                  lineHeight: '54px', 
                   fontWeight: 700, 
-                  color: '#fff',
-                  marginBottom: '20px',
+                  color: '#FFFFFF',
+                  marginBottom: '16px',
                   whiteSpace: 'pre-line',
-                  animation: 'fadeInUp 0.8s'
+                  textShadow: '0 2px 10px rgba(0,0,0,0.3)'
                 }}
               >
                 {slide.title}
               </h1>
+
+              {/* Supporting Description */}
               <p 
                 style={{ 
                   fontSize: '16px', 
-                  color: '#e0e0e0', 
-                  maxWidth: '600px', 
-                  margin: slide.alignment === 'center' ? '0 auto 30px' : slide.alignment === 'right' ? '0 0 30px auto' : '0 0 30px',
-                  lineHeight: '26px',
-                  animation: 'fadeInUp 1s'
+                  color: '#F3EFE8', 
+                  maxWidth: '650px', 
+                  margin: slide.alignment === 'center' ? '0 auto 28px' : slide.alignment === 'right' ? '0 0 28px auto' : '0 0 28px',
+                  lineHeight: '28px'
                 }}
               >
                 {slide.desc}
               </p>
-              <div style={{ display: 'flex', gap: '15px', justifyContent: slide.alignment === 'center' ? 'center' : slide.alignment === 'right' ? 'flex-end' : 'flex-start', flexWrap: 'wrap' }}>
-                <Link to={slide.btnLink1} className="thm-btn bgclr-1">
+
+              {/* Action Buttons */}
+              <div 
+                style={{ 
+                  display: 'inline-flex', 
+                  gap: '15px', 
+                  justifyContent: slide.alignment === 'center' ? 'center' : slide.alignment === 'right' ? 'flex-end' : 'flex-start', 
+                  flexWrap: 'wrap'
+                }}
+              >
+                <Link 
+                  to={slide.btnLink1} 
+                  className="thm-btn bgclr-1"
+                  style={{
+                    padding: '14px 32px',
+                    fontSize: '14px',
+                    fontWeight: 600,
+                    borderRadius: '4px',
+                    boxShadow: '0 4px 15px rgba(23, 179, 163, 0.3)'
+                  }}
+                >
                   {slide.btnText1}
                 </Link>
-                <Link to={slide.btnLink2} className="thm-btn" style={{ background: 'transparent', border: '2px solid #fff', color: '#fff' }}>
+                <Link 
+                  to={slide.btnLink2} 
+                  className="thm-btn" 
+                  style={{ 
+                    background: 'rgba(255,255,255,0.1)', 
+                    border: '2px solid #FFFFFF', 
+                    color: '#FFFFFF',
+                    padding: '12px 30px',
+                    fontSize: '14px',
+                    fontWeight: 600,
+                    borderRadius: '4px',
+                    backdropFilter: 'blur(5px)'
+                  }}
+                >
                   {slide.btnText2}
                 </Link>
               </div>
@@ -109,22 +177,23 @@ const HeroSlider = () => {
         aria-label="Previous Slide"
         style={{
           position: 'absolute',
-          left: '20px',
+          left: '25px',
           top: '50%',
           transform: 'translateY(-50%)',
           zIndex: 4,
-          background: 'rgba(255,255,255,0.2)',
+          background: 'rgba(18, 48, 92, 0.65)',
+          border: '1px solid rgba(255,255,255,0.2)',
           color: '#fff',
-          border: 'none',
           borderRadius: '50%',
-          width: '45px',
-          height: '45px',
+          width: '46px',
+          height: '46px',
           cursor: 'pointer',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           fontSize: '20px',
-          transition: 'background 0.3s'
+          transition: 'all 0.3s',
+          backdropFilter: 'blur(4px)'
         }}
       >
         <i className="fa fa-angle-left"></i>
@@ -134,39 +203,54 @@ const HeroSlider = () => {
         aria-label="Next Slide"
         style={{
           position: 'absolute',
-          right: '20px',
+          right: '25px',
           top: '50%',
           transform: 'translateY(-50%)',
           zIndex: 4,
-          background: 'rgba(255,255,255,0.2)',
+          background: 'rgba(18, 48, 92, 0.65)',
+          border: '1px solid rgba(255,255,255,0.2)',
           color: '#fff',
-          border: 'none',
           borderRadius: '50%',
-          width: '45px',
-          height: '45px',
+          width: '46px',
+          height: '46px',
           cursor: 'pointer',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           fontSize: '20px',
-          transition: 'background 0.3s'
+          transition: 'all 0.3s',
+          backdropFilter: 'blur(4px)'
         }}
       >
         <i className="fa fa-angle-right"></i>
       </button>
 
       {/* Dots Indicator */}
-      <div style={{ position: 'absolute', bottom: '25px', left: '50%', transform: 'translateX(-50%)', zIndex: 4, display: 'flex', gap: '8px' }}>
+      <div 
+        style={{ 
+          position: 'absolute', 
+          bottom: '25px', 
+          left: '50%', 
+          transform: 'translateX(-50%)', 
+          zIndex: 5, 
+          display: 'flex', 
+          gap: '10px',
+          padding: '6px 14px',
+          background: 'rgba(12, 34, 66, 0.4)',
+          borderRadius: '20px',
+          backdropFilter: 'blur(5px)'
+        }}
+      >
         {slides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrentSlide(idx)}
             aria-label={`Go to slide ${idx + 1}`}
             style={{
-              width: currentSlide === idx ? '25px' : '10px',
+              width: currentSlide === idx ? '28px' : '10px',
               height: '10px',
               borderRadius: '5px',
-              background: currentSlide === idx ? '#c59d5f' : 'rgba(255,255,255,0.5)',
+              background: currentSlide === idx ? '#F0985A' : 'rgba(255,255,255,0.5)',
               border: 'none',
               cursor: 'pointer',
               transition: 'all 0.3s'
