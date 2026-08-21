@@ -74,7 +74,7 @@ const HeroSlider = () => {
               style={{
                 color: '#fff',
                 maxWidth: '850px',
-                margin: '-130px 0 0 0',
+                margin: '-165px 0 0 0',
                 padding: '0 15px'
               }}
             >
