@@ -262,6 +262,40 @@ export const homeContent = {
     btnLink: '/contact'
   },
 
+  // Wellness Journey Process Section
+  wellnessJourney: {
+    eyebrow: 'YOUR WELLNESS JOURNEY',
+    title: 'A Personalised Path to Better Wellbeing',
+    subtitle: 'Every journey at Oriolus Scientific begins with understanding you. From the first consultation to continued guidance, each step is thoughtfully shaped around your individual needs.',
+    steps: [
+      {
+        stepNumber: '01',
+        stepColor: '#12305C',
+        icon: 'consultation',
+        title: 'Consultation & Assessment',
+        desc: 'We begin by understanding your health history, lifestyle, mobility, concerns and personal wellness goals.'
+      },
+      {
+        stepNumber: '02',
+        stepColor: '#0F8B8D',
+        icon: 'lotus',
+        title: 'Personalised Wellness Plan',
+        desc: 'Suitable Yoga, Naturopathy, Ayurveda or Acupuncture therapies are selected around your individual needs.'
+      },
+      {
+        stepNumber: '03',
+        stepColor: '#12305C',
+        icon: 'progress',
+        title: 'Progress & Guidance',
+        desc: 'Your wellness journey is reviewed over time with practical guidance to support sustainable everyday wellbeing.'
+      }
+    ],
+    cta: {
+      btnText: 'Begin Your Wellness Journey',
+      btnLink: '/contact'
+    }
+  },
+
   // Testimonials
   // Replace these placeholders with genuine, approved patient testimonials before launch.
   testimonials: {

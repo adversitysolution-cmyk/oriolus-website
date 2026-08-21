@@ -4,6 +4,7 @@ import HeroSlider from '../components/home/HeroSlider';
 import WelcomeArea from '../components/home/WelcomeArea';
 import ProceduresList from '../components/home/ProceduresList';
 import SloganBanner from '../components/home/SloganBanner';
+import WellnessJourney from '../components/home/WellnessJourney';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import Testimonials from '../components/home/Testimonials';
 import QuickAppointment from '../components/home/QuickAppointment';
@@ -17,6 +18,7 @@ const HomePage = () => {
       <WelcomeArea />
       <ProceduresList />
       <SloganBanner />
+      <WellnessJourney />
       <WhyChooseUs />
       <Testimonials />
       <QuickAppointment />
