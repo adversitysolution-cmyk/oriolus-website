@@ -93,6 +93,40 @@ export const homeContent = {
     btn2Link: '/contact'
   },
 
+  // Clinical Trust & Accreditation Strip
+  clinicalTrustStrip: {
+    pillars: [
+      {
+        id: 1,
+        badge: 'BNYS',
+        title: 'Licensed Medical Faculty',
+        desc: 'Consultations led by certified Naturopathy & Yogic Science doctors.',
+        icon: 'medical'
+      },
+      {
+        id: 2,
+        badge: '26+ Yrs',
+        title: 'Clinical Heritage',
+        desc: 'Decades of authentic practice in drugless healing protocols.',
+        icon: 'heritage'
+      },
+      {
+        id: 3,
+        badge: '100%',
+        title: 'Drugless & Natural',
+        desc: 'Pure botanical therapies, hydrotherapy & lifestyle restoration.',
+        icon: 'drugless'
+      },
+      {
+        id: 4,
+        badge: '4-in-1',
+        title: 'Integrated Disciplines',
+        desc: 'Yoga, Naturopathy, Ayurveda & Acupuncture under one roof.',
+        icon: 'disciplines'
+      }
+    ]
+  },
+
   // Procedures Overview List (4 Core Disciplines)
   proceduresList: {
     eyebrow: 'Integrated Wellness Disciplines',

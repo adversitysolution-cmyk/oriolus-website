@@ -3,6 +3,7 @@ import MainLayout from '../layouts/MainLayout';
 import HeroSlider from '../components/home/HeroSlider';
 import WelcomeArea from '../components/home/WelcomeArea';
 import LeadPractitioner from '../components/home/LeadPractitioner';
+import ClinicalTrustStrip from '../components/home/ClinicalTrustStrip';
 import ProceduresList from '../components/home/ProceduresList';
 import SloganBanner from '../components/home/SloganBanner';
 import WellnessJourney from '../components/home/WellnessJourney';
@@ -18,6 +19,7 @@ const HomePage = () => {
       <HeroSlider />
       <WelcomeArea />
       <LeadPractitioner />
+      <ClinicalTrustStrip />
       <ProceduresList />
       <SloganBanner />
       <WellnessJourney />
