@@ -9,7 +9,7 @@ import WellnessJourney from '../components/home/WellnessJourney';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import Testimonials from '../components/home/Testimonials';
 import QuickAppointment from '../components/home/QuickAppointment';
-import PricingPlans from '../components/home/PricingPlans';
+import StructuredPrograms from '../components/home/StructuredPrograms';
 import LatestBlog from '../components/home/LatestBlog';
 
 const HomePage = () => {
@@ -24,7 +24,7 @@ const HomePage = () => {
       <WhyChooseUs />
       <Testimonials />
       <QuickAppointment />
-      <PricingPlans />
+      <StructuredPrograms />
       <LatestBlog />
     </MainLayout>
   );

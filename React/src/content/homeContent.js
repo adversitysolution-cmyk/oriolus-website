@@ -226,53 +226,88 @@ export const homeContent = {
   },
 
   // Structured Wellness Programs Section
-  pricingPlans: {
-    title: 'Structured Wellness Programs',
-    bgImage: '/images/resources/pricing-bg.jpg',
-    plans: [
+  structuredPrograms: {
+    eyebrow: 'PERSONALISED WELLNESS PROGRAMS',
+    title: 'Structured Programs for\nFocused Wellbeing',
+    subtitle: 'Explore thoughtfully designed wellness programs combining suitable therapies, lifestyle guidance and personalised care around specific health and wellbeing goals.',
+    cornerImage: '/images/ChatGPT Image Aug 22, 2026, 12_17_01 AM.png',
+    programs: [
       {
         id: 1,
-        name: 'Obesity Reduction & Detox',
-        price: '4–6',
-        period: ' Weeks',
-        features: [
+        number: '01',
+        title: 'Obesity Reduction & Detox',
+        duration: '4–6 Weeks',
+        icon: 'obesity',
+        image: '/images/ChatGPT Image Aug 22, 2026, 12_18_27 AM.png',
+        desc: 'A structured wellness program combining nutrition guidance, Naturopathy, Yoga and selected Ayurvedic therapies to support healthier lifestyle habits.',
+        highlights: [
           'Personalised wellness consultation',
           'Nutrition & lifestyle guidance',
-          'Selected naturopathy therapies',
-          'Yoga, Udwarthanam & Swedana'
+          'Naturopathy & detox support',
+          'Yoga & Ayurvedic therapies'
         ],
         btnText: 'Explore Program',
-        link: '/programs/obesity-detox'
+        btnLink: '/programs/obesity-detox',
+        isSignature: false
       },
       {
         id: 2,
-        name: 'Diabetes Wellness Program',
-        price: '8',
-        period: ' Weeks',
-        features: [
+        number: '02',
+        title: 'Diabetes Wellness Program',
+        duration: '8 Weeks',
+        icon: 'diabetes',
+        image: '/images/ChatGPT Image Aug 22, 2026, 12_22_46 AM.png',
+        desc: 'A personalised lifestyle-focused program integrating therapeutic movement, nutrition guidance and natural wellness practices to support metabolic wellbeing.',
+        highlights: [
           'Lifestyle & nutrition assessment',
           'Therapeutic Yoga practices',
           'Metabolic wellness support',
           'Progress & lifestyle reviews'
         ],
         btnText: 'Explore Program',
-        link: '/programs/diabetes-reversal'
+        btnLink: '/programs/diabetes-reversal',
+        isSignature: false
       },
       {
         id: 3,
-        name: 'Spine & Joint Pain Care',
-        price: '3–4',
-        period: ' Weeks',
-        features: [
-          'Movement & posture assessment',
+        number: '03',
+        title: 'Spine & Joint Pain Care',
+        duration: '3–4 Weeks',
+        icon: 'spine',
+        image: '/images/ChatGPT Image Aug 22, 2026, 12_25_07 AM.png',
+        desc: 'An integrative program combining movement assessment, Yoga Therapy, Ayurveda and Acupuncture to support mobility, comfort and everyday function.',
+        highlights: [
+          'Posture & mobility assessment',
           'Pain Management Yoga',
-          'Ayurvedic supportive therapies',
+          'Supportive Ayurvedic therapies',
           'Acupuncture & mobility guidance'
         ],
         btnText: 'Explore Program',
-        link: '/programs/pain-management'
+        btnLink: '/programs/pain-management',
+        isSignature: false
+      },
+      {
+        id: 4,
+        number: '04',
+        title: 'Full-Body Wellness Retreat',
+        duration: '7–14 Days',
+        icon: 'retreat',
+        image: '/images/ChatGPT Image Aug 22, 2026, 12_26_08 AM.png',
+        desc: 'Our signature wellness experience brings all four disciplines together for personalised rejuvenation, deep rest and meaningful lifestyle renewal.',
+        highlights: [
+          'Personalised wellness planning',
+          'Daily Yoga & relaxation',
+          'Ayurveda & Naturopathy therapies',
+          'Nutrition & lifestyle guidance'
+        ],
+        btnText: 'Explore Retreat',
+        btnLink: '/programs/wellness-retreat',
+        isSignature: true,
+        signatureBadge: 'SIGNATURE PROGRAM'
       }
-    ]
+    ],
+    footerTextLine1: 'Each program is personalised and guided by experienced practitioners.',
+    footerTextLine2: 'Your wellness. Your journey. Our support.'
   },
 
   // Slogan Banner
