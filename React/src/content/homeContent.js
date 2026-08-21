@@ -1,5 +1,6 @@
 /**
  * Oriolus Scientific - Homepage Content Store
+ * Premium, concise, SEO-aware and layout-balanced content.
  */
 
 export const homeContent = {
@@ -11,119 +12,119 @@ export const homeContent = {
         image: '/images/slides/1.jpg',
         subtitle: 'Yoga & Naturopathy Research Center',
         title: 'Where Ancient Science Meets\nModern Medical Wellness',
-        desc: 'Oriolus Scientific brings together Therapeutic Yoga, Naturopathy, Ayurveda and Acupuncture through personalised wellness protocols designed around each individual.',
+        desc: 'Oriolus Scientific integrates Yoga Therapy, Naturopathy, Ayurveda and Acupuncture into personalised wellness programs designed around individual needs.',
         btnText1: 'Explore Therapies',
-        btnLink1: '/procedures',
+        btnLink1: '/therapies/yoga/therapeutic',
         btnText2: 'Book Consultation',
-        btnLink2: '/appointment',
-        alignment: 'left'
+        btnLink2: '/contact',
+        alignment: 'center'
       },
       {
         id: 2,
         image: '/images/slides/2.jpg',
-        subtitle: 'A Division of Funicle Health Care and Wellness Pvt. Ltd.',
-        title: 'Evidence-Based Drugless\nClinical Healing Protocols',
-        desc: 'Transformative natural medicine therapies for diabetes remission, metabolic detox, and pain management under expert physician supervision.',
-        btnText1: 'About Center',
+        subtitle: 'Personalised Integrative Wellness',
+        title: 'Traditional Healing.\nThoughtfully Personalised.',
+        desc: 'Experience structured natural wellness through therapeutic movement, lifestyle care, Ayurvedic therapies and carefully guided integrative practices.',
+        btnText1: 'Our Approach',
         btnLink1: '/about',
-        btnText2: 'Contact OPD',
-        btnLink2: '/contact',
+        btnText2: 'Meet Dr. Vijay',
+        btnLink2: '/about/meet-dr-vijay',
         alignment: 'center'
       },
       {
         id: 3,
         image: '/images/slides/3.jpg',
-        subtitle: 'Oriolus Scientific Clinical Sanctuary',
-        title: 'Restoring Natural\nPhysiological Equilibrium',
-        desc: 'Experience 26+ years of clinical mastery in authentic Yogic Sciences and Naturopathic therapies at our serene Bengaluru campus.',
-        btnText1: 'Our Procedures',
-        btnLink1: '/procedures',
+        subtitle: 'Four Disciplines. One Wellness Journey.',
+        title: 'Restore Balance.\nRebuild Wellbeing.',
+        desc: 'From mobility and stress support to metabolic wellness and rejuvenation, our programs bring multiple natural disciplines together with personalised guidance.',
+        btnText1: 'View Programs',
+        btnLink1: '/programs/wellness-retreat',
         btnText2: 'Make Appointment',
-        btnLink2: '/appointment',
-        alignment: 'right'
+        btnLink2: '/contact',
+        alignment: 'center'
       }
     ]
   },
 
   // Welcome Snapshot Area
   welcomeArea: {
-    eyebrow: 'Institutional Heritage',
-    title: 'Welcome to Oriolus Scientific',
-    leadText: 'Oriolus Scientific is a premier Yoga & Naturopathy Research Center. A division of Funicle Health Care and Wellness Pvt. Ltd., dedicated to personalized, drugless clinical healing.',
+    eyebrow: 'About Oriolus Scientific',
+    title: 'Personalised Wellness, Thoughtfully Delivered',
+    leadText: 'Oriolus Scientific is a Yoga & Naturopathy Research Center bringing Yoga Therapy, Naturopathy, Ayurveda and Acupuncture together within one integrated wellness approach.',
     image: '/images/resources/welcome.jpg',
-    imageAlt: 'Welcome to Oriolus Scientific',
+    imageAlt: 'Oriolus Scientific Yoga and Naturopathy Research Center',
     mission: {
       title: 'Our Mission',
-      desc: 'To provide scientifically validated, drugless, holistic healthcare that addresses root causes and restores natural physiological balance.'
+      desc: 'To make structured, responsible and personalised natural wellness accessible through integrated therapeutic care and lifestyle guidance.'
     },
     vision: {
       title: 'Our Vision',
-      desc: 'To be globally recognized as a center of clinical excellence in Yoga, Naturopathy, Ayurveda, and Acupuncture research.'
+      desc: 'To build a trusted center for integrative Yoga and Naturopathy practice, personalised wellness and meaningful long-term wellbeing.'
     },
     cta: {
-      btnText: 'Read More',
+      btnText: 'Discover Our Story',
       btnLink: '/about',
-      adviceLabel: 'Need advice?',
-      advicePhone: '+91 98450 12345'
+      adviceLabel: 'Need guidance?',
+      advicePhone: '+91 XXXXX XXXXX'
     }
   },
 
   // Procedures Overview List (4 Core Disciplines)
   proceduresList: {
-    eyebrow: 'Core Medical Disciplines',
-    title: 'Our Procedures',
+    eyebrow: 'Integrated Wellness Disciplines',
+    title: 'Explore Our Therapies',
     items: [
       {
         id: 1,
-        title: 'Therapeutic Yoga',
+        title: 'Yoga Therapy',
         icon: 'flaticon-hands',
         image: '/images/procedures/1.png',
-        link: '/massage-therapy',
-        desc: 'Condition-specific biomechanical alignment, restorative asanas, and clinical breathwork.'
+        link: '/therapies/yoga/therapeutic',
+        desc: 'Personalised therapeutic movement, breathing and posture practices for mobility, alignment and balance.'
       },
       {
         id: 2,
-        title: 'Clinical Naturopathy',
+        title: 'Naturopathy',
         icon: 'flaticon-medical',
         image: '/images/procedures/2.png',
-        link: '/facial-treatments',
-        desc: 'Colon Hydrotherapy, raw living nutrition, and hydro-thermal metabolic detox.'
+        link: '/therapies/naturopathy/detoxification',
+        desc: 'Natural wellness through hydrotherapy, therapeutic nutrition, detox support and lifestyle restoration.'
       },
       {
         id: 3,
-        title: 'Classical Ayurveda',
+        title: 'Ayurveda',
         icon: 'flaticon-people',
         image: '/images/procedures/3.png',
-        link: '/pedicure-menicure',
-        desc: 'Panchakarma biocleansing, warm medicated Abhyanga, and authentic Shirodhara.'
+        link: '/therapies/ayurveda/panchakarma',
+        desc: 'Classical Panchakarma, Abhyanga, Shirodhara and rejuvenative therapies personalised to individual needs.'
       },
       {
         id: 4,
-        title: 'Acupuncture & Pain Relief',
+        title: 'Acupuncture',
         icon: 'flaticon-relax',
         image: '/images/procedures/4.png',
-        link: '/salt-oil-bath',
-        desc: 'Precision meridian neuro-stimulation and non-invasive endorphin pain modulation.'
+        link: '/therapies/acupuncture/pain-management',
+        desc: 'Targeted acupuncture protocols supporting musculoskeletal comfort, relaxation and integrative wellness.'
       }
     ]
   },
 
   // Quick Appointment Section
   quickAppointment: {
-    title: 'Make an Appointment',
+    title: 'Book Your Consultation',
     experienceBadge: {
-      sinceText: 'Since 1998,',
-      subText: 'we provide holistic clinical care.',
-      years: '26',
-      yearsLabel: 'Years of Clinical Excellence',
-      description: 'Comprehensive physician consultation integrating all four natural healing disciplines.'
+      sinceText: 'Personalised care,',
+      subText: 'built around your wellness journey.',
+      years: '4',
+      yearsLabel: 'Disciplines Integrated',
+      description: 'Begin with a focused consultation to understand your needs and identify a suitable wellness pathway.'
     },
     serviceOptions: [
-      'Select Clinical Discipline',
+      'Select Therapy or Program',
       'Yoga Therapy Consultation',
       'Naturopathy & Detoxification',
-      'Classical Ayurveda / Panchakarma',
-      'Clinical Acupuncture',
+      'Ayurveda & Panchakarma',
+      'Acupuncture Consultation',
       'Diabetes Wellness Program',
       'Obesity Reduction Program',
       'Spine & Joint Pain Management',
@@ -132,20 +133,20 @@ export const homeContent = {
     infoCards: [
       {
         id: 1,
-        title: 'Medical Faculty',
-        desc: 'Direct consultation with Dr. Vijay and licensed doctors.',
+        title: 'Practitioner-Led Care',
+        desc: 'Personalised guidance based on your individual needs.',
         icon: 'flaticon-medical-1'
       },
       {
         id: 2,
-        title: 'Safe & Drugless',
-        desc: 'Non-pharmacological therapies respecting bodily harmony.',
+        title: 'Natural Approach',
+        desc: 'Thoughtful, non-invasive wellness-focused therapies.',
         icon: 'flaticon-nature-1'
       },
       {
         id: 3,
-        title: 'Personalized Care',
-        desc: 'Customized protocols based on in-depth diagnostics.',
+        title: 'Personalised Plans',
+        desc: 'Programs adapted to your goals, comfort and lifestyle.',
         icon: 'flaticon-flower'
       }
     ]
@@ -153,99 +154,99 @@ export const homeContent = {
 
   // Why Choose Us Section
   whyChooseUs: {
-    title: 'Why Choosing Us?',
+    title: 'Why Choose Oriolus Scientific?',
     items: [
       {
         id: 1,
-        title: 'Mind & Autonomic Balance',
-        desc: 'Downregulates sympathetic nervous stress and restores parasympathetic cellular healing.',
+        title: 'Individual-First Approach',
+        desc: 'Every wellness journey begins by understanding your health goals, lifestyle and physical needs.',
         icon: 'flaticon-medical-1',
         isBottomBorder: true
       },
       {
         id: 2,
-        title: 'Holistic Health & Vitality',
-        desc: 'Addresses the root causes of metabolic and musculoskeletal disorders without chemical drugs.',
+        title: 'Whole-Person Wellness',
+        desc: 'Movement, nutrition, relaxation and lifestyle are considered together rather than in isolation.',
         icon: 'flaticon-medical-2',
         isBottomBorder: true
       },
       {
         id: 3,
-        title: 'Practitioner Guidance',
-        desc: '26+ years of clinical excellence under Chief Medical Officer Dr. Vijay and expert faculty.',
+        title: 'Guided Therapeutic Care',
+        desc: 'Structured wellness programs are delivered with practitioner guidance and personalised attention.',
         icon: 'flaticon-people-1',
         isBottomBorder: true
       },
       {
         id: 4,
-        title: '100% Herbal & Natural',
-        desc: 'Classical medicated botanical oils, pure therapeutic waters, and organic clinical nutrition.',
+        title: 'Natural Therapies',
+        desc: 'Traditional wellness practices are delivered with care, clarity and individual suitability in mind.',
         icon: 'flaticon-nature-1',
         isBottomBorder: false
       },
       {
         id: 5,
-        title: 'Four Disciplines in One',
-        desc: 'Seamless integration of Yoga, Naturopathy, Ayurveda, and Acupuncture under one roof.',
+        title: 'Four Disciplines, One Center',
+        desc: 'Yoga Therapy, Naturopathy, Ayurveda and Acupuncture come together in one integrated approach.',
         icon: 'flaticon-flower',
         isBottomBorder: false
       },
       {
         id: 6,
-        title: 'Serene Botanical Campus',
-        desc: 'A calming clinical sanctuary in Bengaluru designed to nurture holistic recovery.',
+        title: 'Calm Healing Environment',
+        desc: 'A thoughtfully designed wellness setting that encourages privacy, relaxation and restorative care.',
         icon: 'flaticon-relax',
         isBottomBorder: false
       }
     ]
   },
 
-  // Pricing & Structured Packages Section
+  // Structured Wellness Programs Section
   pricingPlans: {
-    title: 'Clinical Wellness Packages',
+    title: 'Structured Wellness Programs',
     bgImage: '/images/resources/pricing-bg.jpg',
     plans: [
       {
         id: 1,
         name: 'Obesity Reduction & Detox',
-        price: '$49',
-        period: '/Day',
+        price: '4–6',
+        period: ' Weeks',
         features: [
-          'Doctor Naturopathy consultation',
-          'Therapeutic raw nutrition & juices',
-          'Colon Hydrotherapy & Mud packs',
-          'Udwarthanam herbal dry massage'
+          'Personalised wellness consultation',
+          'Nutrition & lifestyle guidance',
+          'Selected naturopathy therapies',
+          'Yoga, Udwarthanam & Swedana'
         ],
-        btnText: 'View Package',
-        link: '/appointment'
+        btnText: 'Explore Program',
+        link: '/programs/obesity-detox'
       },
       {
         id: 2,
         name: 'Diabetes Wellness Program',
-        price: '$79',
-        period: '/Day',
+        price: '8',
+        period: ' Weeks',
         features: [
-          'Continuous glycemic monitoring',
-          'Pancreatic mud & hydro packs',
-          'Metabolic Medical Yoga Asanas',
-          'Targeted clinical acupuncture'
+          'Lifestyle & nutrition assessment',
+          'Therapeutic Yoga practices',
+          'Metabolic wellness support',
+          'Progress & lifestyle reviews'
         ],
-        btnText: 'View Package',
-        link: '/appointment'
+        btnText: 'Explore Program',
+        link: '/programs/diabetes-reversal'
       },
       {
         id: 3,
         name: 'Spine & Joint Pain Care',
-        price: '$99',
-        period: '/Day',
+        price: '3–4',
+        period: ' Weeks',
         features: [
-          'Orthopedic alignment assessment',
-          'Therapeutic Abhyanga & Swedana',
-          'Neuro-stimulation acupuncture',
-          'Prop-supported spinal yoga'
+          'Movement & posture assessment',
+          'Pain Management Yoga',
+          'Ayurvedic supportive therapies',
+          'Acupuncture & mobility guidance'
         ],
-        btnText: 'View Package',
-        link: '/appointment'
+        btnText: 'Explore Program',
+        link: '/programs/pain-management'
       }
     ]
   },
@@ -253,14 +254,15 @@ export const homeContent = {
   // Slogan Banner
   sloganBanner: {
     bgImage: '/images/resources/slogan-bg.jpg',
-    title: 'Treat Yourself for Rejuvenating Your Body & Soul',
-    line1: 'Oriolus Scientific brings together classical natural medicine and modern clinical excellence for lifelong wellness.',
+    title: 'Reconnect With Your Health. Restore Your Natural Balance.',
+    line1: 'Discover personalised wellness through Yoga Therapy, Naturopathy, Ayurveda and Acupuncture.',
     line2: 'Where Ancient Science Meets Modern Medical Wellness.',
-    btnText: 'Make an Appointment',
-    btnLink: '/appointment'
+    btnText: 'Book Consultation',
+    btnLink: '/contact'
   },
 
   // Testimonials
+  // Replace these placeholders with genuine, approved patient testimonials before launch.
   testimonials: {
     title: 'Patient Experiences',
     bgImage: '/images/testimonial/testimonial-bg.jpg',
@@ -268,62 +270,62 @@ export const homeContent = {
       {
         id: 1,
         image: '/images/testimonial/1.png',
-        title: 'Oriolus Scientific is outstanding!',
-        quote: 'Great clinical experience and a wonderful transformation for our wellness. Dr. Vijay and the team provided thorough naturopathic care.',
-        name: 'Findlay Davis'
+        title: 'A More Personal Wellness Experience',
+        quote: 'Add an approved patient testimonial here describing the consultation experience, personalised care and overall wellness journey.',
+        name: 'Verified Patient'
       },
       {
         id: 2,
         image: '/images/testimonial/2.png',
-        title: 'Always gentle and restorative.',
-        quote: 'I was greeted at the clinical reception with warmth and professionalism. The Yoga Therapy and Hydrotherapy protocols brought immediate relief.',
-        name: 'Linforde Iris'
+        title: 'Thoughtful Guidance & Care',
+        quote: 'Add an approved patient testimonial here focused on the quality of guidance, therapeutic environment and practitioner support.',
+        name: 'Verified Patient'
       },
       {
         id: 3,
         image: '/images/testimonial/3.png',
-        title: 'Serene and transformative campus',
-        quote: 'Oriolus Scientific is fantastic. From entering the center, the calming atmosphere and authentic therapies immediately restore peace of mind.',
-        name: 'Marsh Harnel'
+        title: 'Calm, Professional & Restorative',
+        quote: 'Add an approved patient testimonial here describing the center atmosphere, therapy experience and overall sense of wellbeing.',
+        name: 'Verified Patient'
       }
     ]
   },
 
-  // Latest Blog & Research Publications
+  // Latest Blog & Wellness Insights
   latestBlog: {
-    title: 'Latest From Blog & Research',
-    btnText: 'Read More Articles',
-    btnLink: '/blog-default',
+    title: 'Wellness Insights & Resources',
+    btnText: 'Explore All Articles',
+    btnLink: '/blog',
     posts: [
       {
         id: 1,
-        title: 'Therapeutic Yoga for Chronic Work Stress & Autonomic Balance',
+        title: 'How Therapeutic Yoga Supports Better Posture & Mobility',
         image: '/images/blog/latest-blog-1.jpg',
         category: 'Yoga Therapy',
-        date: 'August 15, 2026',
-        comments: '12 Comments',
-        desc: 'How targeted asanas, pranayama, and vagal nerve activation restore parasympathetic equilibrium.',
-        link: '/blog-single'
+        date: 'Wellness Guide',
+        comments: 'Expert Insight',
+        desc: 'Understand how personalised movement, breathing and alignment practices can support everyday mobility.',
+        link: '/blog/therapeutic-yoga-posture-mobility'
       },
       {
         id: 2,
-        title: 'Reversing Insulin Resistance Through Naturopathic Nutrition',
+        title: 'Building Better Metabolic Health Through Everyday Lifestyle',
         image: '/images/blog/latest-blog-2.jpg',
         category: 'Naturopathy',
-        date: 'July 28, 2026',
-        comments: '18 Comments',
-        desc: 'Clinical observations on visceral lipid clearance and beta-cell resting protocols.',
-        link: '/blog-single'
+        date: 'Lifestyle Wellness',
+        comments: 'Health Education',
+        desc: 'Explore the role of nutrition, movement, sleep and sustainable habits in supporting metabolic wellbeing.',
+        link: '/blog/metabolic-health-lifestyle'
       },
       {
         id: 3,
-        title: 'Classical Panchakarma: Cellular Biocleansing & Longevity',
+        title: 'Understanding Panchakarma as a Classical Ayurvedic Practice',
         image: '/images/blog/latest-blog-3.jpg',
         category: 'Ayurveda',
-        date: 'July 10, 2026',
-        comments: '24 Comments',
-        desc: 'Scientific insights into deep tissue oleation, doshic balance, and immune rejuvenation.',
-        link: '/blog-single'
+        date: 'Ayurveda Guide',
+        comments: 'Traditional Wellness',
+        desc: 'A simple introduction to the preparation, therapeutic stages and restorative principles of Panchakarma.',
+        link: '/blog/understanding-panchakarma'
       }
     ]
   }
