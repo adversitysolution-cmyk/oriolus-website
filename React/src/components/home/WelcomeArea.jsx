@@ -45,7 +45,7 @@ const WelcomeArea = () => {
             </div>   
           </div>
           <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-            <div className="img-holder">
+            <div className="img-holder" style={{ marginTop: '38px' }}>
               <img src={content.image} alt={content.imageAlt} />    
             </div>   
           </div>     
