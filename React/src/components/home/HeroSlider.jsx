@@ -16,17 +16,17 @@ const HeroSlider = () => {
   const slide = slides[currentSlide];
 
   return (
-    <section 
-      className="rev_slider_wrapper" 
-      style={{ 
-        position: 'relative', 
-        overflow: 'hidden', 
-        minHeight: '620px', 
-        backgroundColor: '#12305C' 
+    <section
+      className="rev_slider_wrapper"
+      style={{
+        position: 'relative',
+        overflow: 'hidden',
+        minHeight: '620px',
+        backgroundColor: '#12305C'
       }}
     >
       {/* Background Image with Smooth Cross-fade */}
-      <div 
+      <div
         style={{
           position: 'absolute',
           top: 0,
@@ -42,7 +42,7 @@ const HeroSlider = () => {
       />
 
       {/* Premium Dark Gradient Overlay */}
-      <div 
+      <div
         style={{
           position: 'absolute',
           top: 0,
@@ -55,13 +55,13 @@ const HeroSlider = () => {
       />
 
       {/* Content Container - shifted upwards */}
-      <div 
-        className="container" 
-        style={{ 
-          position: 'relative', 
-          zIndex: 3, 
-          minHeight: '620px', 
-          display: 'flex', 
+      <div
+        className="container"
+        style={{
+          position: 'relative',
+          zIndex: 3,
+          minHeight: '620px',
+          display: 'flex',
           alignItems: 'center',
           paddingTop: '0px'
         }}
@@ -69,21 +69,21 @@ const HeroSlider = () => {
         <div className="row" style={{ width: '100%', margin: 0 }}>
           <div className="col-md-12 text-left" style={{ padding: 0 }}>
             {/* Unified Left-Aligned Content Box for all slides */}
-            <div 
-              className="tp-caption" 
-              style={{ 
-                color: '#fff', 
-                maxWidth: '850px', 
+            <div
+              className="tp-caption"
+              style={{
+                color: '#fff',
+                maxWidth: '850px',
                 margin: '-130px 0 0 0',
                 padding: '0 15px'
               }}
             >
               {/* Eyebrow Subtitle */}
-              <div 
-                style={{ 
-                  color: '#F0985A', 
-                  fontSize: '14px', 
-                  textTransform: 'uppercase', 
+              <div
+                style={{
+                  color: '#F0985A',
+                  fontSize: '14px',
+                  textTransform: 'uppercase',
                   letterSpacing: '2.5px',
                   marginBottom: '14px',
                   fontWeight: 700,
@@ -94,11 +94,11 @@ const HeroSlider = () => {
               </div>
 
               {/* Main Headline */}
-              <h1 
-                style={{ 
-                  fontSize: '44px', 
-                  lineHeight: '54px', 
-                  fontWeight: 700, 
+              <h1
+                style={{
+                  fontSize: '44px',
+                  lineHeight: '54px',
+                  fontWeight: 700,
                   color: '#FFFFFF',
                   marginBottom: '16px',
                   whiteSpace: 'pre-line',
@@ -109,11 +109,11 @@ const HeroSlider = () => {
               </h1>
 
               {/* Supporting Description */}
-              <p 
-                style={{ 
-                  fontSize: '16px', 
-                  color: '#F3EFE8', 
-                  maxWidth: '650px', 
+              <p
+                style={{
+                  fontSize: '16px',
+                  color: '#F3EFE8',
+                  maxWidth: '650px',
                   margin: '0 0 28px 0',
                   lineHeight: '28px'
                 }}
@@ -122,16 +122,16 @@ const HeroSlider = () => {
               </p>
 
               {/* Action Buttons */}
-              <div 
-                style={{ 
-                  display: 'inline-flex', 
-                  gap: '15px', 
-                  justifyContent: 'flex-start', 
+              <div
+                style={{
+                  display: 'inline-flex',
+                  gap: '15px',
+                  justifyContent: 'flex-start',
                   flexWrap: 'wrap'
                 }}
               >
-                <Link 
-                  to={slide.btnLink1} 
+                <Link
+                  to={slide.btnLink1}
                   className="thm-btn bgclr-1"
                   style={{
                     padding: '14px 32px',
@@ -143,12 +143,12 @@ const HeroSlider = () => {
                 >
                   {slide.btnText1}
                 </Link>
-                <Link 
-                  to={slide.btnLink2} 
-                  className="thm-btn" 
-                  style={{ 
-                    background: 'rgba(255,255,255,0.1)', 
-                    border: '2px solid #FFFFFF', 
+                <Link
+                  to={slide.btnLink2}
+                  className="thm-btn"
+                  style={{
+                    background: 'rgba(255,255,255,0.1)',
+                    border: '2px solid #FFFFFF',
                     color: '#FFFFFF',
                     padding: '12px 30px',
                     fontSize: '14px',
@@ -166,7 +166,7 @@ const HeroSlider = () => {
       </div>
 
       {/* Navigation Arrows */}
-      <button 
+      <button
         onClick={() => setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length)}
         aria-label="Previous Slide"
         style={{
@@ -192,7 +192,7 @@ const HeroSlider = () => {
       >
         <i className="fa fa-angle-left"></i>
       </button>
-      <button 
+      <button
         onClick={() => setCurrentSlide(prev => (prev + 1) % slides.length)}
         aria-label="Next Slide"
         style={{
@@ -220,14 +220,14 @@ const HeroSlider = () => {
       </button>
 
       {/* Dots Indicator */}
-      <div 
-        style={{ 
-          position: 'absolute', 
-          bottom: '25px', 
-          left: '50%', 
-          transform: 'translateX(-50%)', 
-          zIndex: 5, 
-          display: 'flex', 
+      <div
+        style={{
+          position: 'absolute',
+          bottom: '25px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: 5,
+          display: 'flex',
           gap: '10px',
           padding: '6px 14px',
           background: 'rgba(12, 34, 66, 0.4)',
