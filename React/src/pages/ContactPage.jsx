@@ -39,7 +39,7 @@ const ContactPage = () => {
             <div className="border">
               <span className="flaticon-shape"></span>    
             </div>
-            <p>Daily Spanz is an Elegant, good looking beauty spa website. With the help of shortcodes you can<br /> create a website.</p>  
+            <p>Oriolus Scientific — Yoga &amp; Naturopathy Research Center. A Division of Funicle Health Care and Wellness Pvt. Ltd.<br /> Where Ancient Science Meets Modern Medical Wellness.</p>  
           </div>
 
           <div className="row">
@@ -181,7 +181,7 @@ const ContactPage = () => {
       {/* Start Google Map Area */}
       <section className="home-google-map" style={{ width: '100%', height: '400px' }}>
         <iframe 
-          title="Daily Spanz Location Map"
+          title="Oriolus Scientific Location Map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.7663243141527!2d-74.0080649239741!3d40.72317187139178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598c44569305%3A0x6b77dfad206037b5!2sVarick%20St%2C%20New%20York%2C%20NY%2010013%2C%20USA!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
           width="100%" 
           height="100%" 

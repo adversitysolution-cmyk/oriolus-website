@@ -9,8 +9,8 @@ const SloganBanner = () => {
           <div className="col-md-12">
             <div className="inner-content text-center">
               <h1>Treat Yourself for Rejuvenating Your Body &amp; Soul</h1>
-              <p>Daily Spanz is an Elegant, good looking Beauty Spa Website. With the help of shortcodes you can create a</p>
-              <p>website with Feature rich presentation.</p>
+              <p>Oriolus Scientific brings together classical natural medicine and modern clinical excellence for lifelong wellness.</p>
+              <p>Where Ancient Science Meets Modern Medical Wellness.</p>
               <Link className="thm-btn bgclr-1" to="/appointment">Make an Appointment</Link>
             </div>
           </div>

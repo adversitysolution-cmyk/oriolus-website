@@ -6,7 +6,7 @@ const WelcomeArea = () => {
     <section className="welcome-area">
       <div className="container">
         <div className="sec-title">
-          <h1>Welcome to Daily Spanz</h1>
+          <h1>Welcome to Oriolus Scientific</h1>
           <div className="border">
             <span className="flaticon-shape"></span>    
           </div>
@@ -14,18 +14,18 @@ const WelcomeArea = () => {
         <div className="row">
           <div className="col-lg-7 col-md-7 col-sm-12 col-xs-12">
             <div className="text-holder">
-              <h4>Daily Spanz is an Elegant, good looking beauty spa website. With the help of shortcodes you can create a website.</h4>
+              <h4>Oriolus Scientific is a premier Yoga &amp; Naturopathy Research Center. A division of Funicle Health Care and Wellness Pvt. Ltd., dedicated to personalized, drugless clinical healing.</h4>
               <div className="inner-content">
                 {/* Start single item */}
                 <div className="single-item">
                   <h3>Our Mission</h3>
-                  <p>Explain to you how all this mistaken idea of denouncing ut pleasure work praising pain was born and will give.</p>
+                  <p>To provide scientifically validated, drugless, holistic healthcare that addresses root causes and restores natural physiological balance.</p>
                 </div>
                 {/* End single item */}
                 {/* Start single item */}
                 <div className="single-item border">
                   <h3>Our Vision</h3>
-                  <p>Pleasure work praising pain ut was born and will give you can complete design account sed the system.</p>
+                  <p>To be globally recognized as a center of clinical excellence in Yoga, Naturopathy, Ayurveda, and Acupuncture research.</p>
                 </div>
                 {/* End single item */}
               </div>
@@ -34,14 +34,14 @@ const WelcomeArea = () => {
                   <Link className="thm-btn bgclr-1" to="/about">Read More</Link>
                 </div>
                 <div className="title">
-                  <h2>Need advice? <span>+321 456 7890</span></h2>
+                  <h2>Need advice? <span>+91 98450 12345</span></h2>
                 </div>
               </div>
             </div>   
           </div>
           <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
             <div className="img-holder">
-              <img src="/images/resources/welcome.jpg" alt="Welcome to Daily Spanz" />    
+              <img src="/images/resources/welcome.jpg" alt="Welcome to Oriolus Scientific" />    
             </div>   
           </div>     
         </div>

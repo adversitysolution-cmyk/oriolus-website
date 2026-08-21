@@ -49,15 +49,15 @@ const Header = () => {
             <div className="col-lg-7 col-md-6 col-sm-12 col-xs-12">
               <div className="top-left">
                 <ul>
-                  <li><span className="flaticon-technology"></span>Phone: (020) 4567 89012</li>
-                  <li><span className="flaticon-note"></span>Email: Mail@dailyspanz.com</li>
+                  <li><span className="flaticon-technology"></span>Phone: +91 98450 12345 / +91 80 2845 6789</li>
+                  <li><span className="flaticon-note"></span>Email: info@oriolus.org</li>
                 </ul>
               </div>
             </div>
             <div className="col-lg-5 col-md-6 col-sm-12 col-xs-12">
               <div className="top-right clearfix">
                 <ul className="location">
-                  <li><span className="flaticon-location"></span>121, Park Drive,Newyork 10012, USA</li>
+                  <li><span className="flaticon-location"></span>Campus: Bengaluru, Karnataka, India</li>
                 </ul>
                 <ul className="social-links">
                   <li><a href="https://facebook.com" target="_blank" rel="noreferrer"><i className="fa fa-facebook"></i></a></li>
@@ -81,7 +81,7 @@ const Header = () => {
               {/* Start logo */}
               <div className="logo">
                 <Link to="/">
-                  <img className="logo-image" src="/images/resources/logo.png" alt="Daily Spanz" />
+                  <img className="logo-image" src="/images/45944_Oriolus scientific yoga and naturopathy research center_LOGO_SK_-01.png" alt="Oriolus Scientific — Yoga &amp; Naturopathy Research Center" style={{ maxHeight: '65px', width: 'auto', objectFit: 'contain' }} />
                 </Link>
               </div>
               {/* End logo */}
@@ -112,7 +112,7 @@ const Header = () => {
                         <Link to="/about">About Us</Link>
                         <div className="dropdown-btn" onClick={(e) => toggleDropdown('about', e)}></div>
                         <ul style={{ display: openDropdowns['about'] ? 'block' : '' }}>
-                          <li><Link to="/about">About Daily Spanz</Link></li>
+                          <li><Link to="/about">About Oriolus Scientific</Link></li>
                           <li><Link to="/testimonials">Testimonials</Link></li>
                           <li><Link to="/faq">FAQ’s</Link></li>
                           <li><Link to="/appointment">Make an Appointment</Link></li>

@@ -3,7 +3,7 @@ import MainLayout from '../layouts/MainLayout';
 import Breadcrumb from '../components/common/Breadcrumb';
 
 const faqCategories = [
-  { id: 'about-spanz', title: 'About Daily Spanz' },
+  { id: 'about-oriolus', title: 'About Oriolus Scientific' },
   { id: 'massage-therapy', title: 'Body Massage Therapy' },
   { id: 'polish-skin', title: 'Polish Your Skin' },
   { id: 'manicure', title: 'Manicure / Pedicure' },
@@ -11,7 +11,7 @@ const faqCategories = [
 ];
 
 const faqData = {
-  'about-spanz': [
+  'about-oriolus': [
     {
       q: 'When should I make my spa reservations?',
       a: 'We recommend scheduling your appointment at least 1 to 2 weeks in advance to ensure your preferred time slot and therapist, especially for weekend visits and group packages.'

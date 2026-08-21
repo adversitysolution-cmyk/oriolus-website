@@ -5,22 +5,22 @@ const testimonials = [
   {
     id: 1,
     image: '/images/testimonial/1.png',
-    title: 'Daily Spanz is outstanding!',
-    quote: 'Great experience and a wonderful addition to our vacation. I get massages on a regular basis & it was my husbands first.',
+    title: 'Oriolus Scientific is outstanding!',
+    quote: 'Great clinical experience and a wonderful transformation for our wellness. Dr. Vijay and the team provided thorough naturopathic care.',
     name: 'Findlay Davis'
   },
   {
     id: 2,
     image: '/images/testimonial/2.png',
-    title: 'Always a gentle and renewed.',
-    quote: 'I was greeted at the reception desk with a big smile and friendly welcome. First impressions are important! Well done!',
+    title: 'Always gentle and restorative.',
+    quote: 'I was greeted at the clinical reception with warmth and professionalism. The Yoga Therapy and Hydrotherapy protocols brought immediate relief.',
     name: 'Linforde Iris'
   },
   {
     id: 3,
     image: '/images/testimonial/3.png',
-    title: 'Comfortable and clean',
-    quote: 'Daily Spanz is fantastic. From entering into the Spa, the low lighting, the welcoming aroma, you already feel relaxed.',
+    title: 'Serene and transformative campus',
+    quote: 'Oriolus Scientific is fantastic. From entering the center, the calming atmosphere and authentic therapies immediately restore peace of mind.',
     name: 'Marsh Harnel'
   }
 ];

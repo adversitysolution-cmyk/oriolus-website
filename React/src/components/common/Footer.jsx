@@ -29,7 +29,7 @@ const Footer = () => {
             <div className="col-md-12">
               <div className="footer-logo text-center">
                 <Link to="/">
-                  <img src="/images/footer/footer-logo.png" alt="Awesome Footer Logo" />
+                  <img src="/images/45944_Oriolus scientific yoga and naturopathy research center_LOGO_SK_-01.png" alt="Oriolus Scientific — Yoga &amp; Naturopathy Research Center" style={{ maxHeight: '70px', width: 'auto', objectFit: 'contain' }} />
                 </Link>
               </div>
             </div>
@@ -43,7 +43,7 @@ const Footer = () => {
                   <span className="border"></span>
                 </div>
                 <div className="our-info">
-                  <p>Daily Spanz brings 41 years of interior designs experience right to your home or office. Our design professionals.</p>
+                  <p>Oriolus Scientific Yoga &amp; Naturopathy Research Center. A division of Funicle Health Care and Wellness Pvt. Ltd., dedicated to personalized, drugless clinical healing.</p>
                 </div>
                 <ul className="footer-contact-info">
                   <li>
@@ -51,7 +51,7 @@ const Footer = () => {
                       <span className="flaticon-location"></span>
                     </div>
                     <div className="text-holder">
-                      <h5>Address: 121, Park Drive, Varick<br />Str, New York, NY 10012, USA</h5>
+                      <h5>Address: Oriolus Scientific Campus,<br />Bengaluru, Karnataka, India</h5>
                     </div>
                   </li>
                   <li>
@@ -59,7 +59,7 @@ const Footer = () => {
                       <span className="flaticon-technology"></span>
                     </div>
                     <div className="text-holder">
-                      <h5>Phone: (123) 0200 12345</h5>
+                      <h5>Phone: +91 98450 12345</h5>
                     </div>
                   </li>
                   <li>
@@ -67,7 +67,7 @@ const Footer = () => {
                       <span className="flaticon-note"></span>
                     </div>
                     <div className="text-holder">
-                      <h5>Email: Mailus@Dailyspanz.com</h5>
+                      <h5>Email: info@oriolus.org</h5>
                     </div>
                   </li>
                 </ul>
@@ -194,7 +194,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-8">
               <div className="copyright-text">
-                <p>Copyrights © 2017 All Rights Reserved, Powered by <a href="#">Daily Spanz.</a></p> 
+                <p>Copyrights © 2026 All Rights Reserved, Powered by <a href="/">Oriolus Scientific — Funicle Health Care and Wellness Pvt. Ltd.</a></p> 
               </div>
             </div>
             <div className="col-md-4">

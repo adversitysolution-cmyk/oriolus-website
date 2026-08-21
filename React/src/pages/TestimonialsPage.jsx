@@ -6,8 +6,8 @@ const allTestimonials = [
   {
     id: 1,
     image: '/images/testimonial/1.png',
-    title: 'Daily Spanz is outstanding!',
-    quote: 'Great experience and a wonderful addition to our vacation. I get massages on a regular basis & it was my husband’s first. We both left feeling completely renewed!',
+    title: 'Oriolus Scientific is outstanding!',
+    quote: 'Great clinical experience and a wonderful transformation for our wellness. Dr. Vijay and the team provided thorough naturopathic care.',
     name: 'Findlay Davis',
     rating: 5
   },
@@ -15,7 +15,7 @@ const allTestimonials = [
     id: 2,
     image: '/images/testimonial/2.png',
     title: 'Always gentle and renewed.',
-    quote: 'I was greeted at the reception desk with a big smile and friendly welcome. First impressions are important! The botanical facial took years off my skin.',
+    quote: 'I was greeted at the reception desk with a big smile and friendly welcome. First impressions are important! The botanical therapies took years off my fatigue.',
     name: 'Linforde Iris',
     rating: 5
   },
@@ -23,23 +23,23 @@ const allTestimonials = [
     id: 3,
     image: '/images/testimonial/3.png',
     title: 'Comfortable and immaculate',
-    quote: 'Daily Spanz is fantastic. From entering into the Spa, the low ambient lighting, and the welcoming lavender aroma, you already feel deeply relaxed.',
+    quote: 'Oriolus Scientific is fantastic. From entering the center, the calming atmosphere and authentic therapies immediately restore peace of mind.',
     name: 'Marsh Harnel',
     rating: 5
   },
   {
     id: 4,
     image: '/images/testimonial/1.png',
-    title: 'The Best Hot Stone Massage Ever',
-    quote: 'The thermal stone treatment completely unlocked my chronic back stiffness. Elena has magical hands and remarkable technique.',
+    title: 'The Best Therapeutic Massage Ever',
+    quote: 'The clinical hydrotherapy and mud treatment completely unlocked my chronic back stiffness. The medical team has remarkable technique.',
     name: 'Sophia Bennett',
     rating: 5
   },
   {
     id: 5,
     image: '/images/testimonial/2.png',
-    title: 'Bridal Party Perfection',
-    quote: 'We booked the entire salon for our bridal party makeup and manicures. The team was punctual, exceptionally professional, and made us look flawless!',
+    title: 'Restorative Wellness Perfection',
+    quote: 'We booked the residential wellness retreat for our family. The team was punctual, exceptionally professional, and made us feel renewed!',
     name: 'Chloe Lancaster',
     rating: 5
   },
@@ -47,7 +47,7 @@ const allTestimonials = [
     id: 6,
     image: '/images/testimonial/3.png',
     title: 'Pure Serenity and Peace',
-    quote: 'The hydrotherapy salt soak was the most relaxing 60 minutes of my month. Highly recommend Daily Spanz to anyone needing genuine stress relief.',
+    quote: 'The hydrotherapy salt soak was the most relaxing 60 minutes of my month. Highly recommend Oriolus Scientific to anyone needing genuine stress relief.',
     name: 'Marcus Vance',
     rating: 5
   }
