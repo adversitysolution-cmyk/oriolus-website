@@ -70,6 +70,29 @@ export const homeContent = {
     }
   },
 
+  // Lead Practitioner (Dr. Vijay) Section
+  leadPractitioner: {
+    eyebrow: 'LEAD PRACTITIONER',
+    title: 'Guided by Experience.\nPersonalised for You.',
+    doctorName: 'Dr. Vijay',
+    doctorRole: 'Lead Practitioner — Oriolus Scientific',
+    bio: 'Dr. Vijay leads the therapeutic approach at Oriolus Scientific, bringing together Yoga Therapy, Naturopathy and integrative wellness practices with a strong focus on personalised care and individual wellbeing.',
+    areasOfFocusTitle: 'AREAS OF FOCUS',
+    focusAreas: [
+      { id: 1, title: 'Therapeutic Yoga', icon: 'lotus' },
+      { id: 2, title: 'Naturopathy', icon: 'leaf' },
+      { id: 3, title: 'Pain Management', icon: 'spine' },
+      { id: 4, title: 'Lifestyle Wellness', icon: 'yoga' }
+    ],
+    quote: 'Every individual is different. Meaningful wellness begins by understanding the person before choosing the therapy.',
+    image: '/images/team/1.jpg',
+    imageAlt: 'Dr. Vijay - Lead Practitioner at Oriolus Scientific',
+    btn1Text: 'Meet Dr. Vijay',
+    btn1Link: '/about/meet-dr-vijay',
+    btn2Text: 'Book a Consultation',
+    btn2Link: '/contact'
+  },
+
   // Procedures Overview List (4 Core Disciplines)
   proceduresList: {
     eyebrow: 'Integrated Wellness Disciplines',

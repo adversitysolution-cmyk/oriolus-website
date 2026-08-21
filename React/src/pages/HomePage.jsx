@@ -2,6 +2,7 @@ import React from 'react';
 import MainLayout from '../layouts/MainLayout';
 import HeroSlider from '../components/home/HeroSlider';
 import WelcomeArea from '../components/home/WelcomeArea';
+import LeadPractitioner from '../components/home/LeadPractitioner';
 import ProceduresList from '../components/home/ProceduresList';
 import SloganBanner from '../components/home/SloganBanner';
 import WellnessJourney from '../components/home/WellnessJourney';
@@ -16,6 +17,7 @@ const HomePage = () => {
     <MainLayout>
       <HeroSlider />
       <WelcomeArea />
+      <LeadPractitioner />
       <ProceduresList />
       <SloganBanner />
       <WellnessJourney />
