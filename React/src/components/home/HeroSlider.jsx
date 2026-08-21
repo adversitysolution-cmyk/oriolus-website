@@ -74,13 +74,13 @@ const HeroSlider = () => {
             }`}
             style={{ padding: 0 }}
           >
-            {/* Shifted upward by an extra 20% */}
+            {/* Shifted upward */}
             <div 
               className="tp-caption" 
               style={{ 
                 color: '#fff', 
                 maxWidth: '850px', 
-                margin: slide.alignment === 'center' ? '-90px auto 0' : slide.alignment === 'right' ? '-90px 0 0 auto' : '-90px 0 0 0',
+                margin: slide.alignment === 'center' ? '-130px auto 0' : slide.alignment === 'right' ? '-130px 0 0 auto' : '-130px 0 0 0',
                 padding: '0 15px'
               }}
             >
