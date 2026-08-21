@@ -95,6 +95,9 @@ export const homeContent = {
 
   // Clinical Trust & Accreditation Strip
   clinicalTrustStrip: {
+    eyebrow: 'CLINICAL EXCELLENCE & TRUST',
+    title: 'Rooted in Science. Guided by Nature.',
+    subtitle: 'Every treatment protocol at Oriolus Scientific adheres to rigorous clinical standards, time-tested natural sciences, and individualized patient care.',
     pillars: [
       {
         id: 1,
