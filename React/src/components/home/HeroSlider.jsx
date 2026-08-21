@@ -67,14 +67,14 @@ const HeroSlider = () => {
         }}
       >
         <div className="row" style={{ width: '100%', margin: 0 }}>
-          <div className="col-md-12 text-center" style={{ padding: 0 }}>
-            {/* Unified Centered Content Box for all slides */}
+          <div className="col-md-12 text-left" style={{ padding: 0 }}>
+            {/* Unified Left-Aligned Content Box for all slides */}
             <div 
               className="tp-caption" 
               style={{ 
                 color: '#fff', 
                 maxWidth: '850px', 
-                margin: '-130px auto 0',
+                margin: '-130px 0 0 0',
                 padding: '0 15px'
               }}
             >
@@ -114,7 +114,7 @@ const HeroSlider = () => {
                   fontSize: '16px', 
                   color: '#F3EFE8', 
                   maxWidth: '650px', 
-                  margin: '0 auto 28px',
+                  margin: '0 0 28px 0',
                   lineHeight: '28px'
                 }}
               >
@@ -126,7 +126,7 @@ const HeroSlider = () => {
                 style={{ 
                   display: 'inline-flex', 
                   gap: '15px', 
-                  justifyContent: 'center', 
+                  justifyContent: 'flex-start', 
                   flexWrap: 'wrap'
                 }}
               >
