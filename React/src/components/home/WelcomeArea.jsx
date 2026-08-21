@@ -11,7 +11,7 @@ const WelcomeArea = () => {
         <div className="sec-title">
           <h1>{content.title}</h1>
           <div className="border">
-            <span className="flaticon-shape"></span>    
+            <span className="flaticon-shape"></span>
           </div>
         </div>
         <div className="row">
@@ -42,13 +42,13 @@ const WelcomeArea = () => {
                   <h2>{content.cta.adviceLabel} <span>{content.cta.advicePhone}</span></h2>
                 </div>
               </div>
-            </div>   
+            </div>
           </div>
           <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-            <div className="img-holder" style={{ marginTop: '38px' }}>
-              <img src={content.image} alt={content.imageAlt} />    
-            </div>   
-          </div>     
+            <div className="img-holder" style={{ marginTop: '19px' }}>
+              <img src={content.image} alt={content.imageAlt} />
+            </div>
+          </div>
         </div>
       </div>
     </section>

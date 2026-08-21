@@ -17,7 +17,7 @@ export const homeContent = {
         btnLink1: '/therapies/yoga/therapeutic',
         btnText2: 'Book Consultation',
         btnLink2: '/contact',
-        alignment: 'left'
+        alignment: 'center'
       },
       {
         id: 2,
@@ -29,7 +29,7 @@ export const homeContent = {
         btnLink1: '/about',
         btnText2: 'Meet Dr. Vijay',
         btnLink2: '/about/meet-dr-vijay',
-        alignment: 'left'
+        alignment: 'center'
       },
       {
         id: 3,
@@ -41,7 +41,7 @@ export const homeContent = {
         btnLink1: '/programs/wellness-retreat',
         btnText2: 'Make Appointment',
         btnLink2: '/contact',
-        alignment: 'left'
+        alignment: 'center'
       }
     ]
   },
