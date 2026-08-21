@@ -64,9 +64,93 @@ const LeadPractitioner = () => {
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="row" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
           
-          {/* Left Column - Content & Profile */}
+          {/* Left Column - Picture Card Container */}
           <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ marginBottom: '40px' }}>
-            <div className="practitioner-content" style={{ paddingRight: '15px' }}>
+            <div style={{ position: 'relative', maxWidth: '480px', margin: '0 auto' }}>
+              
+              {/* Outer Dashed Contour Border */}
+              <div 
+                style={{ 
+                  border: '2px dashed #0F8B8D', 
+                  borderRadius: '36px', 
+                  padding: '16px',
+                  background: 'rgba(15, 139, 141, 0.02)',
+                  position: 'relative'
+                }}
+              >
+                {/* Inside Image Frame */}
+                <div 
+                  style={{ 
+                    width: '100%', 
+                    minHeight: '440px', 
+                    borderRadius: '26px', 
+                    overflow: 'hidden', 
+                    position: 'relative',
+                    background: '#EAE6DF',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 12px 35px rgba(0,0,0,0.08)'
+                  }}
+                >
+                  {/* Image with fallback styled placeholder SVG */}
+                  <img 
+                    src={content.image || '/images/team/1.jpg'} 
+                    alt={content.imageAlt}
+                    style={{ 
+                      width: '100%', 
+                      height: '100%', 
+                      objectFit: 'cover', 
+                      display: 'block',
+                      minHeight: '440px'
+                    }}
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.parentNode.style.background = '#EAE6DF';
+                    }}
+                  />
+
+                  {/* Fallback Placeholder graphic inside frame */}
+                  <div 
+                    style={{ 
+                      position: 'absolute', 
+                      pointerEvents: 'none', 
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      alignItems: 'center', 
+                      justifyContent: 'center',
+                      opacity: 0.25
+                    }}
+                  >
+                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="3" y="3" width="18" height="18" rx="3" stroke="#12305C" strokeWidth="1.5" />
+                      <circle cx="8.5" cy="8.5" r="2" fill="#12305C" />
+                      <path d="M21 15L16 10L5 21" stroke="#12305C" strokeWidth="1.5" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              {/* Decorative Dot Matrix in Bottom Left */}
+              <div 
+                style={{ 
+                  position: 'absolute', 
+                  bottom: '-25px', 
+                  left: '-25px', 
+                  width: '60px', 
+                  height: '60px', 
+                  backgroundImage: 'radial-gradient(#0F8B8D 2px, transparent 2px)', 
+                  backgroundSize: '12px 12px',
+                  opacity: 0.6,
+                  zIndex: 1
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Right Column - Content & Profile */}
+          <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ marginBottom: '40px' }}>
+            <div className="practitioner-content" style={{ paddingLeft: '20px' }}>
               
               {/* Eyebrow */}
               <div 
@@ -278,90 +362,6 @@ const LeadPractitioner = () => {
                 </Link>
               </div>
 
-            </div>
-          </div>
-
-          {/* Right Column - Picture Card Container */}
-          <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-            <div style={{ position: 'relative', maxWidth: '480px', margin: '0 auto' }}>
-              
-              {/* Outer Dashed Contour Border */}
-              <div 
-                style={{ 
-                  border: '2px dashed #0F8B8D', 
-                  borderRadius: '36px', 
-                  padding: '16px',
-                  background: 'rgba(15, 139, 141, 0.02)',
-                  position: 'relative'
-                }}
-              >
-                {/* Inside Image Frame */}
-                <div 
-                  style={{ 
-                    width: '100%', 
-                    minHeight: '440px', 
-                    borderRadius: '26px', 
-                    overflow: 'hidden', 
-                    position: 'relative',
-                    background: '#EAE6DF',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    boxShadow: '0 12px 35px rgba(0,0,0,0.08)'
-                  }}
-                >
-                  {/* Image with fallback styled placeholder SVG */}
-                  <img 
-                    src={content.image || '/images/team/1.jpg'} 
-                    alt={content.imageAlt}
-                    style={{ 
-                      width: '100%', 
-                      height: '100%', 
-                      objectFit: 'cover', 
-                      display: 'block',
-                      minHeight: '440px'
-                    }}
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.parentNode.style.background = '#EAE6DF';
-                    }}
-                  />
-
-                  {/* Fallback Placeholder graphic inside frame */}
-                  <div 
-                    style={{ 
-                      position: 'absolute', 
-                      pointerEvents: 'none', 
-                      display: 'flex', 
-                      flexDirection: 'column', 
-                      alignItems: 'center', 
-                      justifyContent: 'center',
-                      opacity: 0.25
-                    }}
-                  >
-                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="3" y="3" width="18" height="18" rx="3" stroke="#12305C" strokeWidth="1.5" />
-                      <circle cx="8.5" cy="8.5" r="2" fill="#12305C" />
-                      <path d="M21 15L16 10L5 21" stroke="#12305C" strokeWidth="1.5" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              {/* Decorative Dot Matrix in Bottom Right */}
-              <div 
-                style={{ 
-                  position: 'absolute', 
-                  bottom: '-25px', 
-                  right: '-25px', 
-                  width: '60px', 
-                  height: '60px', 
-                  backgroundImage: 'radial-gradient(#0F8B8D 2px, transparent 2px)', 
-                  backgroundSize: '12px 12px',
-                  opacity: 0.6,
-                  zIndex: 1
-                }}
-              />
             </div>
           </div>
 
