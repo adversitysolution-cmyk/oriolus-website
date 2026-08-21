@@ -1,42 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const procedures = [
-  {
-    id: 1,
-    title: 'Hot Stone Massage',
-    icon: 'flaticon-hands',
-    image: '/images/procedures/1.png',
-    link: '/massage-therapy',
-    desc: 'Facials are the second most popular spa treatment.'
-  },
-  {
-    id: 2,
-    title: 'Facial Treatment',
-    icon: 'flaticon-medical',
-    image: '/images/procedures/2.png',
-    link: '/facial-treatments',
-    desc: 'Facials are the second most popular spa treatment.'
-  },
-  {
-    id: 3,
-    title: 'Pedicure & Menicure',
-    icon: 'flaticon-people',
-    image: '/images/procedures/3.png',
-    link: '/pedicure-menicure',
-    desc: 'Facials are the second most popular spa treatment.'
-  },
-  {
-    id: 4,
-    title: 'Salt & Oil Bath',
-    icon: 'flaticon-relax',
-    image: '/images/procedures/4.png',
-    link: '/salt-oil-bath',
-    desc: 'Facials are the second most popular spa treatment.'
-  }
-];
+import { homeContent } from '../../content/homeContent';
 
 const ProceduresList = () => {
+  const content = homeContent.proceduresList;
+
   return (
     <section className="procedures-area">
       <div className="arrow">
@@ -56,13 +24,13 @@ const ProceduresList = () => {
       </div>
       <div className="container">
         <div className="sec-title text-center">
-          <h1>Our Procedures</h1>
+          <h1>{content.title}</h1>
           <div className="border mar0auto">
             <span className="flaticon-shape"></span>    
           </div>
         </div>
         <div className="row">
-          {procedures.map(item => (
+          {content.items.map(item => (
             <div key={item.id} className="col-md-3 col-sm-6 col-xs-12">
               <div className="single-item">
                 <div className="img-holder">

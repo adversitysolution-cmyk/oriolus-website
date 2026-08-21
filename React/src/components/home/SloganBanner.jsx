@@ -1,17 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { homeContent } from '../../content/homeContent';
 
 const SloganBanner = () => {
+  const content = homeContent.sloganBanner;
+
   return (
-    <section className="slogan-area" style={{ backgroundImage: 'url(/images/resources/slogan-bg.jpg)' }}>
+    <section className="slogan-area" style={{ backgroundImage: `url(${content.bgImage})` }}>
       <div className="container">
         <div className="row">
           <div className="col-md-12">
             <div className="inner-content text-center">
-              <h1>Treat Yourself for Rejuvenating Your Body &amp; Soul</h1>
-              <p>Oriolus Scientific brings together classical natural medicine and modern clinical excellence for lifelong wellness.</p>
-              <p>Where Ancient Science Meets Modern Medical Wellness.</p>
-              <Link className="thm-btn bgclr-1" to="/appointment">Make an Appointment</Link>
+              <h1>{content.title}</h1>
+              <p>{content.line1}</p>
+              <p>{content.line2}</p>
+              <Link className="thm-btn bgclr-1" to={content.btnLink}>{content.btnText}</Link>
             </div>
           </div>
         </div>

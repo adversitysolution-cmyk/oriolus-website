@@ -1,33 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const testimonials = [
-  {
-    id: 1,
-    image: '/images/testimonial/1.png',
-    title: 'Oriolus Scientific is outstanding!',
-    quote: 'Great clinical experience and a wonderful transformation for our wellness. Dr. Vijay and the team provided thorough naturopathic care.',
-    name: 'Findlay Davis'
-  },
-  {
-    id: 2,
-    image: '/images/testimonial/2.png',
-    title: 'Always gentle and restorative.',
-    quote: 'I was greeted at the clinical reception with warmth and professionalism. The Yoga Therapy and Hydrotherapy protocols brought immediate relief.',
-    name: 'Linforde Iris'
-  },
-  {
-    id: 3,
-    image: '/images/testimonial/3.png',
-    title: 'Serene and transformative campus',
-    quote: 'Oriolus Scientific is fantastic. From entering the center, the calming atmosphere and authentic therapies immediately restore peace of mind.',
-    name: 'Marsh Harnel'
-  }
-];
+import { homeContent } from '../../content/homeContent';
 
 const Testimonials = () => {
+  const content = homeContent.testimonials;
+
   return (
-    <section className="testimonial-area" style={{ backgroundImage: 'url(/images/testimonial/testimonial-bg.jpg)' }}>
+    <section className="testimonial-area" style={{ backgroundImage: `url(${content.bgImage})` }}>
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -43,7 +22,7 @@ const Testimonials = () => {
           </div>
         </div>
         <div className="row mar-top">
-          {testimonials.map(item => (
+          {content.items.map(item => (
             <div key={item.id} className="col-md-4">
               <div className="single-testimonial-item text-center">
                 <div className="img-holder">

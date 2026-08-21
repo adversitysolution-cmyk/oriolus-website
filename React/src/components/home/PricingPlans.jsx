@@ -1,57 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const pricingPlans = [
-  {
-    id: 1,
-    name: 'Family Pack',
-    price: '$49',
-    period: '/Mo',
-    features: [
-      'Nail Cutting and styling',
-      'Spa Therapy with manicure',
-      'Foot massage',
-      'Hair Coloring & Styling'
-    ]
-  },
-  {
-    id: 2,
-    name: 'Premium Pack',
-    price: '$79',
-    period: '/Mo',
-    features: [
-      'Spa Therapy with manicure',
-      'Foot massage',
-      'Hair Coloring & Styling',
-      'Body Hand and Foot massage'
-    ]
-  },
-  {
-    id: 3,
-    name: 'Ultimate Pack',
-    price: '$99',
-    period: '/Mo',
-    features: [
-      'Nail Cutting and styling',
-      'Spa Therapy with manicure',
-      'Foot massage',
-      'Hair Coloring & Styling'
-    ]
-  }
-];
+import { homeContent } from '../../content/homeContent';
 
 const PricingPlans = () => {
+  const content = homeContent.pricingPlans;
+
   return (
-    <section id="pricing" className="pricing-plan-area" style={{ backgroundImage: 'url(/images/resources/pricing-bg.jpg)' }}>
+    <section id="pricing" className="pricing-plan-area" style={{ backgroundImage: `url(${content.bgImage})` }}>
       <div className="container">
         <div className="sec-title text-center">
-          <h1>Our Pricing Plan</h1>
+          <h1>{content.title}</h1>
           <div className="border mar0auto">
             <span className="flaticon-shape"></span>    
           </div>
         </div>
         <div className="row">
-          {pricingPlans.map(plan => (
+          {content.plans.map(plan => (
             <div key={plan.id} className="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
               <div className="single-price-box">
                 <div className="table-header">
@@ -70,7 +34,7 @@ const PricingPlans = () => {
                   </ul>
                 </div>
                 <div className="table-footer">
-                  <Link className="thm-btn" to="/shop">BUY NOW</Link>
+                  <Link className="thm-btn" to={plan.link}>{plan.btnText || 'ENROLL NOW'}</Link>
                 </div>
               </div>
             </div>

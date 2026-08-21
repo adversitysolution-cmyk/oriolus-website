@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { siteContent } from '../../content/siteContent';
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -7,6 +8,9 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState({});
   const location = useLocation();
+
+  const brand = siteContent.brand;
+  const contact = siteContent.contact;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,22 +53,20 @@ const Header = () => {
             <div className="col-lg-7 col-md-6 col-sm-12 col-xs-12">
               <div className="top-left">
                 <ul>
-                  <li><span className="flaticon-technology"></span>Phone: +91 98450 12345 / +91 80 2845 6789</li>
-                  <li><span className="flaticon-note"></span>Email: info@oriolus.org</li>
+                  <li><span className="flaticon-technology"></span>Phone: {contact.phoneDisplay}</li>
+                  <li><span className="flaticon-note"></span>Email: {contact.emailPrimary}</li>
                 </ul>
               </div>
             </div>
             <div className="col-lg-5 col-md-6 col-sm-12 col-xs-12">
               <div className="top-right clearfix">
                 <ul className="location">
-                  <li><span className="flaticon-location"></span>Campus: Bengaluru, Karnataka, India</li>
+                  <li><span className="flaticon-location"></span>Campus: {contact.address}</li>
                 </ul>
                 <ul className="social-links">
-                  <li><a href="https://facebook.com" target="_blank" rel="noreferrer"><i className="fa fa-facebook"></i></a></li>
-                  <li><a href="https://twitter.com" target="_blank" rel="noreferrer"><i className="fa fa-twitter"></i></a></li>
-                  <li><a href="https://plus.google.com" target="_blank" rel="noreferrer"><i className="fa fa-google-plus"></i></a></li>
-                  <li><a href="https://pinterest.com" target="_blank" rel="noreferrer"><i className="fa fa-pinterest-p"></i></a></li>
-                  <li><a href="https://linkedin.com" target="_blank" rel="noreferrer"><i className="fa fa-linkedin"></i></a></li>
+                  {siteContent.socialLinks.map((s, i) => (
+                    <li key={i}><a href={s.url} target="_blank" rel="noreferrer" aria-label={s.platform}><i className={s.icon}></i></a></li>
+                  ))}
                 </ul>
               </div>
             </div>

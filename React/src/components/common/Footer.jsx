@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { siteContent } from '../../content/siteContent';
 
 const Footer = () => {
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+
+  const brand = siteContent.brand;
+  const contact = siteContent.contact;
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -29,7 +33,11 @@ const Footer = () => {
             <div className="col-md-12">
               <div className="footer-logo text-center">
                 <Link to="/">
-                  <img src="/images/45944_Oriolus scientific yoga and naturopathy research center_LOGO_SK_-01.png" alt="Oriolus Scientific — Yoga &amp; Naturopathy Research Center" style={{ maxHeight: '80px', width: 'auto', objectFit: 'contain' }} />
+                  <img 
+                    src={brand.logo} 
+                    alt={brand.logoAlt} 
+                    style={{ maxHeight: '80px', width: 'auto', objectFit: 'contain' }} 
+                  />
                 </Link>
               </div>
             </div>
@@ -43,7 +51,7 @@ const Footer = () => {
                   <span className="border"></span>
                 </div>
                 <div className="our-info">
-                  <p>Oriolus Scientific Yoga &amp; Naturopathy Research Center. A division of Funicle Health Care and Wellness Pvt. Ltd., dedicated to personalized, drugless clinical healing.</p>
+                  <p>{brand.fullName}. {brand.division}, dedicated to personalized, drugless clinical healing.</p>
                 </div>
                 <ul className="footer-contact-info">
                   <li>
@@ -51,7 +59,7 @@ const Footer = () => {
                       <span className="flaticon-location"></span>
                     </div>
                     <div className="text-holder">
-                      <h5>Address: Oriolus Scientific Campus,<br />Bengaluru, Karnataka, India</h5>
+                      <h5>Address: {contact.address}</h5>
                     </div>
                   </li>
                   <li>
@@ -59,7 +67,7 @@ const Footer = () => {
                       <span className="flaticon-technology"></span>
                     </div>
                     <div className="text-holder">
-                      <h5>Phone: +91 98450 12345</h5>
+                      <h5>Phone: {contact.phonePrimary}</h5>
                     </div>
                   </li>
                   <li>
@@ -67,7 +75,7 @@ const Footer = () => {
                       <span className="flaticon-note"></span>
                     </div>
                     <div className="text-holder">
-                      <h5>Email: info@oriolus.org</h5>
+                      <h5>Email: {contact.emailPrimary}</h5>
                     </div>
                   </li>
                 </ul>
@@ -79,27 +87,22 @@ const Footer = () => {
             <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
               <div className="single-footer-widget pd-bottom50">
                 <div className="title">
-                  <h3>Usefull Links</h3>
+                  <h3>Useful Links</h3>
                   <span className="border"></span>
                 </div>
                 <ul className="usefull-links fl-lft">
                   <li><Link to="/about">About Us</Link></li>
-                  <li><Link to="/procedures">Procedures</Link></li>
-                  <li><Link to="/blog-default">News &amp; Tips</Link></li>
-                  <li><Link to="/therapists">Threrapists</Link></li>
-                  <li><Link to="/shop">Our Shop</Link></li>
-                  <li><Link to="/testimonials">Stories</Link></li>
+                  <li><Link to="/therapists">Therapists</Link></li>
                   <li><Link to="/faq">FAQ’s</Link></li>
-                  <li><Link to="/contact">Contact Us</Link></li>
+                  <li><Link to="/testimonials">Testimonials</Link></li>
+                  <li><Link to="/contact">Contact</Link></li>
                 </ul>
                 <ul className="usefull-links">
-                  <li><Link to="/#pricing">Pricing Plans</Link></li>
-                  <li><Link to="/about">Healthy Foods</Link></li>
-                  <li><Link to="/shop">Get Offers</Link></li>
+                  <li><Link to="/procedures">Procedures</Link></li>
+                  <li><Link to="/massage-therapy">Massage</Link></li>
+                  <li><Link to="/facial-treatments">Facials</Link></li>
+                  <li><Link to="/gallery-grid">Gallery</Link></li>
                   <li><Link to="/appointment">Appointment</Link></li>
-                  <li><Link to="/about">Certificates</Link></li>
-                  <li><Link to="/therapists">Qualifications</Link></li>
-                  <li><Link to="/about">Private Policy</Link></li>
                 </ul>
               </div>
             </div>
@@ -107,37 +110,45 @@ const Footer = () => {
 
             {/* Start single footer widget */}
             <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-              <div className="single-footer-widget mar-bottom">
+              <div className="single-footer-widget pd-bottom50">
                 <div className="title">
-                  <h3>Popular Post</h3>
+                  <h3>Latest Blog</h3>
+                  <span className="border"></span>
                 </div>
-                <ul className="latest-post">
-                  <li className="single-post">
+                <ul className="footer-latest-blog">
+                  <li>
                     <div className="img-holder">
-                      <img src="/images/footer/latest-news-1.png" alt="Awesome Image" />
+                      <img src="/images/footer/latest-blog-1.jpg" alt="Awesome Image" />
+                      <div className="overlay-style-one">
+                        <div className="box">
+                          <div className="content">
+                            <Link to="/blog-single"><i className="fa fa-link" aria-hidden="true"></i></Link>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div className="text-holder">
-                      <Link className="post-title" to="/blog-single">Spas &amp; the psychology of<br />well-being...</Link>
-                      <div className="post-info">
-                        <span>August 24, 2017</span>
-                      </div>
+                      <Link to="/blog-single"><h6>Therapeutic Yoga for Managing Workplace Stress</h6></Link>
+                      <span>August 15, 2026</span>
                     </div>
                   </li>
-                  <li className="single-post">
+                  <li>
                     <div className="img-holder">
-                      <img src="/images/footer/latest-news-2.png" alt="Awesome Image" />
+                      <img src="/images/footer/latest-blog-2.jpg" alt="Awesome Image" />
+                      <div className="overlay-style-one">
+                        <div className="box">
+                          <div className="content">
+                            <Link to="/blog-single"><i className="fa fa-link" aria-hidden="true"></i></Link>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div className="text-holder">
-                      <Link className="post-title" to="/blog-single">Two massages are better<br />than one...</Link>
-                      <div className="post-info">
-                        <span>February 05, 2017</span>
-                      </div>
+                      <Link to="/blog-single"><h6>Clinical Detoxification &amp; Cellular Rejuvenation</h6></Link>
+                      <span>July 28, 2026</span>
                     </div>
                   </li>
                 </ul>
-                <div className="more-news">
-                  <Link to="/blog-default">More News <i className="fa fa-caret-right" aria-hidden="true"></i></Link>
-                </div>
               </div>
             </div>
             {/* End single footer widget */}
@@ -147,26 +158,23 @@ const Footer = () => {
               <div className="single-footer-widget clearfix">
                 <div className="title">
                   <h3>Subscribe Us</h3>
+                  <span className="border"></span>
                 </div>
-                <div className="newsletter-box">
-                  <p>Subscribe to our newsletter!</p>
+                <div className="subscribe-form">
+                  <p>Subscribe to our wellness newsletter to receive research articles, health tips, and clinic updates.</p>
                   {subscribed ? (
-                    <div style={{ color: '#c59d5f', padding: '10px 0', fontWeight: 'bold' }}>
-                      Thank you for subscribing!
-                    </div>
+                    <p style={{ color: '#c59d5f', fontWeight: 'bold' }}>Thank you for subscribing!</p>
                   ) : (
-                    <form className="newsletter-form" onSubmit={handleSubscribe}>
+                    <form onSubmit={handleSubscribe}>
                       <input 
-                        placeholder="Email Address" 
                         type="email" 
+                        name="email" 
+                        placeholder="Your Email Address..." 
                         value={newsletterEmail}
                         onChange={(e) => setNewsletterEmail(e.target.value)}
                         required 
                       />
                       <button type="submit"><i className="fa fa-paper-plane" aria-hidden="true"></i></button>
-                      <div className="envelope">
-                        <i className="fa fa-envelope" aria-hidden="true"></i>
-                      </div>
                     </form>
                   )}
                 </div>
@@ -176,9 +184,9 @@ const Footer = () => {
                   <h3>Opening Hours</h3>
                 </div>
                 <ul className="working-hours">
-                  <li>Mon-FriDay: <span>9.00 to 18.00</span></li>
-                  <li>Saturday: <span>9.00 to 18.00</span></li>
-                  <li>Sunday: <span className="closed">Closed</span></li>
+                  <li>Mon-FriDay: <span>8.00 to 19.00</span></li>
+                  <li>Saturday: <span>8.00 to 19.00</span></li>
+                  <li>Sunday: <span className="closed">OPD Appt</span></li>
                 </ul>
               </div>
             </div>
@@ -194,15 +202,14 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-8">
               <div className="copyright-text">
-                <p>Copyrights © 2026 All Rights Reserved, Powered by <a href="/">Oriolus Scientific — Funicle Health Care and Wellness Pvt. Ltd.</a></p> 
+                <p>{siteContent.copyright.text}</p> 
               </div>
             </div>
             <div className="col-md-4">
               <ul className="footer-social-links">
-                <li><a href="https://facebook.com" target="_blank" rel="noreferrer"><i className="fa fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com" target="_blank" rel="noreferrer"><i className="fa fa-twitter"></i></a></li>
-                <li><a href="https://plus.google.com" target="_blank" rel="noreferrer"><i className="fa fa-google-plus"></i></a></li>
-                <li><a href="https://linkedin.com" target="_blank" rel="noreferrer"><i className="fa fa-linkedin"></i></a></li>
+                {siteContent.socialLinks.map((s, i) => (
+                  <li key={i}><a href={s.url} target="_blank" rel="noreferrer" aria-label={s.platform}><i className={s.icon}></i></a></li>
+                ))}
               </ul>
             </div>
           </div>

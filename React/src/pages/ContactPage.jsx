@@ -1,45 +1,52 @@
 import React, { useState } from 'react';
 import MainLayout from '../layouts/MainLayout';
 import Breadcrumb from '../components/common/Breadcrumb';
+import { contactContent } from '../content/contactContent';
 
 const ContactPage = () => {
+  const content = contactContent;
+
   const [formData, setFormData] = useState({
-    form_name: '',
-    form_email: '',
-    form_phone: '',
-    form_subject: '',
-    form_message: ''
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
     setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        form_name: '',
-        form_email: '',
-        form_phone: '',
-        form_subject: '',
-        form_message: ''
-      });
-    }, 5000);
+      setLoading(false);
+      setSubmitted(true);
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      setTimeout(() => setSubmitted(false), 5000);
+    }, 1000);
+  };
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   return (
     <MainLayout>
-      <Breadcrumb title="Contact Us" activeTitle="Contact Us" />
+      <Breadcrumb title={content.header.title} activeTitle={content.header.activeTitle} />
 
       {/* Start contact form area */}
       <section className="contact-form-area" style={{ padding: '80px 0' }}>
         <div className="container">
           <div className="sec-title">
-            <h1>Get Touch With Us</h1>
+            <h1>{content.leadMessage.title}</h1>
             <div className="border">
               <span className="flaticon-shape"></span>    
             </div>
-            <p>Oriolus Scientific — Yoga &amp; Naturopathy Research Center. A Division of Funicle Health Care and Wellness Pvt. Ltd.<br /> Where Ancient Science Meets Modern Medical Wellness.</p>  
+            <p>{content.leadMessage.desc}</p>  
           </div>
 
           <div className="row">
@@ -47,7 +54,7 @@ const ContactPage = () => {
             <div className="col-lg-4 col-md-5">
               <div className="quick-contact" style={{ background: '#f9f8f6', padding: '35px', border: '1px solid #eee', marginBottom: '30px' }}>
                 <div className="title">
-                  <h2>Quick Contact</h2>
+                  <h2>{content.quickContact.title}</h2>
                 </div>
                 <ul className="contact-info">
                   <li>
@@ -55,7 +62,7 @@ const ContactPage = () => {
                       <span className="flaticon-location"></span>
                     </div>
                     <div className="text-holder">
-                      <h5><span>Address:</span> 121, Park Drive, Varick<br /> Str New York, NY 10012, USA</h5>
+                      <h5><span>Address:</span> {content.quickContact.address}</h5>
                     </div>
                   </li>
                   <li>
@@ -63,7 +70,7 @@ const ContactPage = () => {
                       <span className="flaticon-technology"></span>
                     </div>
                     <div className="text-holder">
-                      <h5><span>Phone:</span> (123) 0200 12345 &amp;<br />1800-45-678-9012</h5>
+                      <h5><span>Phone:</span> {content.quickContact.phone}</h5>
                     </div>
                   </li>
                   <li>
@@ -71,7 +78,7 @@ const ContactPage = () => {
                       <span className="flaticon-note"></span>
                     </div>
                     <div className="text-holder">
-                      <h5><span>Email:</span> Mailus@dailySpanz.com</h5>
+                      <h5><span>Email:</span> {content.quickContact.email}</h5>
                     </div>
                   </li>
                   <li>
@@ -79,7 +86,11 @@ const ContactPage = () => {
                       <span className="flaticon-clock"></span>
                     </div>
                     <div className="text-holder">
-                      <h5>Mon-Satday: 9.00am to 18.00pm <br />Sunday: <span className="closes" style={{ color: '#c59d5f' }}>Closed</span></h5>
+                      <h5>
+                        {content.quickContact.workingHours.map((wh, idx) => (
+                          <span key={idx} style={{ display: 'block' }}>{wh.day}: {wh.hours}</span>
+                        ))}
+                      </h5>
                     </div>
                   </li>
                 </ul>
@@ -88,84 +99,89 @@ const ContactPage = () => {
 
             {/* Contact Form */}
             <div className="col-lg-8 col-md-7">
-              <div className="contact-form" style={{ background: '#fff', border: '1px solid #eee', padding: '35px' }}>
+              <div className="contact-form" style={{ background: '#fff', padding: '35px', border: '1px solid #eee' }}>
                 {submitted ? (
-                  <div style={{ background: '#131d33', padding: '40px', color: '#fff', textAlign: 'center', borderRadius: '4px' }}>
-                    <span className="flaticon-shape" style={{ fontSize: '50px', color: '#c59d5f', display: 'block', marginBottom: '15px' }}></span>
-                    <h2 style={{ color: '#c59d5f', marginBottom: '10px' }}>Message Dispatched!</h2>
-                    <p style={{ fontSize: '16px', color: '#eee' }}>
-                      Thank you, <strong>{formData.form_name}</strong>. Your inquiry has been received. Our wellness team will reply to <strong>{formData.form_email}</strong> shortly.
-                    </p>
+                  <div style={{ background: '#131d33', padding: '40px 20px', color: '#fff', textAlign: 'center', borderRadius: '4px' }}>
+                    <i className="fa fa-check-circle" style={{ fontSize: '48px', color: '#c59d5f', marginBottom: '15px' }}></i>
+                    <h3 style={{ color: '#c59d5f', marginBottom: '10px' }}>Message Sent Successfully!</h3>
+                    <p style={{ color: '#ccc', margin: 0 }}>Thank you for reaching out to Oriolus Scientific. Our medical team will respond shortly.</p>
                   </div>
                 ) : (
-                  <form id="contact-form" onSubmit={handleSubmit}>
+                  <form onSubmit={handleSubmit} className="default-form">
                     <div className="row">
-                      <div className="col-md-6" style={{ marginBottom: '20px' }}>
-                        <input 
-                          type="text" 
-                          name="form_name" 
-                          className="form-control"
-                          placeholder="Your Name*" 
-                          required 
-                          value={formData.form_name}
-                          onChange={(e) => setFormData({ ...formData, form_name: e.target.value })}
-                          style={{ height: '48px' }}
-                        />
+                      <div className="col-md-6">
+                        <div className="input-box" style={{ marginBottom: '20px' }}>
+                          <input 
+                            type="text" 
+                            name="name" 
+                            placeholder="Your Name *" 
+                            value={formData.name} 
+                            onChange={handleChange} 
+                            required 
+                            style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', outline: 'none' }}
+                          />
+                        </div>
                       </div>
-                      <div className="col-md-6" style={{ marginBottom: '20px' }}>
-                        <input 
-                          type="email" 
-                          name="form_email" 
-                          className="form-control"
-                          placeholder="Your Mail*" 
-                          required 
-                          value={formData.form_email}
-                          onChange={(e) => setFormData({ ...formData, form_email: e.target.value })}
-                          style={{ height: '48px' }}
-                        />
+                      <div className="col-md-6">
+                        <div className="input-box" style={{ marginBottom: '20px' }}>
+                          <input 
+                            type="email" 
+                            name="email" 
+                            placeholder="Your Email *" 
+                            value={formData.email} 
+                            onChange={handleChange} 
+                            required 
+                            style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', outline: 'none' }}
+                          />
+                        </div>
                       </div>
                     </div>
                     <div className="row">
-                      <div className="col-md-6" style={{ marginBottom: '20px' }}>
-                        <input 
-                          type="text" 
-                          name="form_phone" 
-                          className="form-control"
-                          placeholder="Phone" 
-                          value={formData.form_phone}
-                          onChange={(e) => setFormData({ ...formData, form_phone: e.target.value })}
-                          style={{ height: '48px' }}
-                        />
+                      <div className="col-md-6">
+                        <div className="input-box" style={{ marginBottom: '20px' }}>
+                          <input 
+                            type="tel" 
+                            name="phone" 
+                            placeholder="Phone Number" 
+                            value={formData.phone} 
+                            onChange={handleChange} 
+                            style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', outline: 'none' }}
+                          />
+                        </div>
                       </div>
-                      <div className="col-md-6" style={{ marginBottom: '20px' }}>
-                        <input 
-                          type="text" 
-                          name="form_subject" 
-                          className="form-control"
-                          placeholder="Subject" 
-                          value={formData.form_subject}
-                          onChange={(e) => setFormData({ ...formData, form_subject: e.target.value })}
-                          style={{ height: '48px' }}
-                        />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12" style={{ marginBottom: '25px' }}>
-                        <textarea 
-                          name="form_message" 
-                          className="form-control"
-                          rows="6" 
-                          placeholder="Your Message.." 
-                          required 
-                          value={formData.form_message}
-                          onChange={(e) => setFormData({ ...formData, form_message: e.target.value })}
-                        ></textarea>
+                      <div className="col-md-6">
+                        <div className="input-box" style={{ marginBottom: '20px' }}>
+                          <input 
+                            type="text" 
+                            name="subject" 
+                            placeholder="Subject / Consultation Topic" 
+                            value={formData.subject} 
+                            onChange={handleChange} 
+                            style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', outline: 'none' }}
+                          />
+                        </div>
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-md-12">
-                        <button className="thm-btn bgclr-1" type="submit" style={{ padding: '12px 35px' }}>
-                          Send Message
+                        <div className="input-box" style={{ marginBottom: '25px' }}>
+                          <textarea 
+                            name="message" 
+                            placeholder="Write your health inquiry, condition history, or message here.. *" 
+                            value={formData.message} 
+                            onChange={handleChange} 
+                            rows="5"
+                            required 
+                            style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', outline: 'none', resize: 'vertical' }}
+                          ></textarea>
+                        </div>
+                        <button 
+                          type="submit" 
+                          className="thm-btn bgclr-1" 
+                          disabled={loading}
+                          style={{ cursor: loading ? 'not-allowed' : 'pointer' }}
+                        >
+                          {loading ? 'Sending Message...' : 'Send Message'}
                         </button>
                       </div>
                     </div>
@@ -181,8 +197,8 @@ const ContactPage = () => {
       {/* Start Google Map Area */}
       <section className="home-google-map" style={{ width: '100%', height: '400px' }}>
         <iframe 
-          title="Oriolus Scientific Location Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.7663243141527!2d-74.0080649239741!3d40.72317187139178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598c44569305%3A0x6b77dfad206037b5!2sVarick%20St%2C%20New%20York%2C%20NY%2010013%2C%20USA!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+          title={content.map.title}
+          src={content.map.embedUrl} 
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 

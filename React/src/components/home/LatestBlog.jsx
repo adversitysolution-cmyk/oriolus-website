@@ -1,55 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const latestPosts = [
-  {
-    id: 1,
-    title: 'Massage thereaphy for managing work place stress',
-    image: '/images/blog/latest-blog-1.jpg',
-    category: 'Massage',
-    date: 'April 21, 2017',
-    comments: '10 Comments',
-    desc: 'pleasure and praising pain was born I will give you a complete account of the system, and expound actual teachings great.'
-  },
-  {
-    id: 2,
-    title: 'When massage may not be a good idea fro you',
-    image: '/images/blog/latest-blog-2.jpg',
-    category: 'Wellness',
-    date: 'February 05, 2017',
-    comments: '24 Comments',
-    desc: 'pleasure and praising pain was born I will give you a complete account of the system, and expound actual teachings great.'
-  },
-  {
-    id: 3,
-    title: 'New theraphy center opened at california',
-    image: '/images/blog/latest-blog-3.jpg',
-    category: 'Massage',
-    date: 'January 14, 2017',
-    comments: '18 Comments',
-    desc: 'pleasure and praising pain was born I will give you a complete account of the system, and expound actual teachings great.'
-  }
-];
+import { homeContent } from '../../content/homeContent';
 
 const LatestBlog = () => {
+  const content = homeContent.latestBlog;
+
   return (
     <section className="latest-blog-area sec-padding">
       <div className="container">
         <div className="row">
           <div className="col-md-12 top">
             <div className="sec-title pull-left">
-              <h1>Latest From Blog</h1>
+              <h1>{content.title}</h1>
               <div className="border">
                 <span className="flaticon-shape"></span>    
               </div>
             </div>
             <div className="readmore-blog pull-right">
-              <Link className="thm-btn bgclr-1" to="/blog-default">Read More</Link>
+              <Link className="thm-btn bgclr-1" to={content.btnLink}>{content.btnText}</Link>
             </div>
           </div>
         </div>
         <div className="row">
-          {latestPosts.map(post => (
+          {content.posts.map(post => (
             <div key={post.id} className="col-md-4">
               <div className="single-blog-item">
                 <div className="img-holder">
@@ -61,10 +34,10 @@ const LatestBlog = () => {
                 </div>
                 <div className="text-holder">
                   <ul className="meta-info">
-                    <li><Link to="/blog-single">{post.date}</Link></li>
-                    <li><Link to="/blog-single">{post.comments}</Link></li>
+                    <li><Link to={post.link || '/blog-single'}>{post.date}</Link></li>
+                    <li><Link to={post.link || '/blog-single'}>{post.comments}</Link></li>
                   </ul>
-                  <Link to="/blog-single">
+                  <Link to={post.link || '/blog-single'}>
                     <h3 className="blog-title">{post.title}</h3>
                   </Link>
                   <div className="text">

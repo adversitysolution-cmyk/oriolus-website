@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
+import { homeContent } from '../../content/homeContent';
+import { siteContent } from '../../content/siteContent';
 
 const QuickAppointment = () => {
+  const content = homeContent.quickAppointment;
+  const contact = siteContent.contact;
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    service: 'Select Service',
+    service: content.serviceOptions[0] || 'Select Clinical Discipline',
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
@@ -14,7 +19,7 @@ const QuickAppointment = () => {
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
-      setFormData({ name: '', email: '', service: 'Select Service', message: '' });
+      setFormData({ name: '', email: '', service: content.serviceOptions[0] || 'Select Clinical Discipline', message: '' });
     }, 4000);
   };
 
@@ -25,7 +30,7 @@ const QuickAppointment = () => {
       </div>
       <div className="container">
         <div className="sec-title text-center">
-          <h1>Make an appointment</h1>
+          <h1>{content.title}</h1>
           <div className="border mar0auto">
             <span className="flaticon-shape"></span>    
           </div>
@@ -34,19 +39,19 @@ const QuickAppointment = () => {
           <div className="col-md-9">
             <div className="appointment-box">
               <div className="experince text-center">
-                <h3><span>Since 1991,</span> we provide best<br />service for our clients.</h3>
+                <h3><span>{content.experienceBadge.sinceText}</span> {content.experienceBadge.subText}</h3>
                 <div className="inner-content">
                   <span className="flaticon-laurel"></span>
-                  <h1>26</h1>
-                  <h3>Years of experince</h3>
+                  <h1>{content.experienceBadge.years}</h1>
+                  <h3>{content.experienceBadge.yearsLabel}</h3>
                 </div>
-                <p>Must explain to you how all this mistaken denouncing pleasure &amp; praising </p>    
+                <p>{content.experienceBadge.description}</p>    
               </div> 
               <div className="form">
                 {submitted ? (
                   <div style={{ background: '#131d33', padding: '30px', color: '#fff', textAlign: 'center', borderRadius: '4px' }}>
                     <h3 style={{ color: '#c59d5f', marginBottom: '10px' }}>Appointment Request Received!</h3>
-                    <p>Thank you, {formData.name}. Our wellness coordinator will contact you shortly at {formData.email}.</p>
+                    <p>Thank you, {formData.name}. Our OPD wellness coordinator will contact you shortly at {formData.email}.</p>
                   </div>
                 ) : (
                   <form id="appointment-form" onSubmit={handleSubmit}>
@@ -56,7 +61,7 @@ const QuickAppointment = () => {
                           <input 
                             type="text" 
                             name="form_name" 
-                            placeholder="Your Name" 
+                            placeholder="Your Name *" 
                             value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                             required 
@@ -68,7 +73,7 @@ const QuickAppointment = () => {
                           <input 
                             type="email" 
                             name="form_email" 
-                            placeholder="Your Email" 
+                            placeholder="Your Email *" 
                             value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             required 
@@ -80,42 +85,39 @@ const QuickAppointment = () => {
                       <div className="col-md-12">
                         <div className="input-box">
                           <select 
-                            className="selectmenu form-control"
+                            className="selectmenu" 
                             value={formData.service}
                             onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                            style={{ height: '48px', marginBottom: '20px' }}
+                            style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', color: '#777', marginBottom: '20px', borderRadius: '0' }}
                           >
-                            <option value="Select Service">Select Service</option>
-                            <option value="Massage Therapy">Massage Therapy</option>
-                            <option value="Facial Treatments">Facial Treatments</option>
-                            <option value="Pedicure & Menicure">Pedicure &amp; Menicure</option>
-                            <option value="Salt and Oil Bath">Salt and Oil Bath</option>
-                            <option value="Perfect Makeup">Perfect Makeup</option>
-                            <option value="Hair Treatments">Hair Treatments</option>
+                            {content.serviceOptions.map((opt, i) => (
+                              <option key={i} value={opt}>{opt}</option>
+                            ))}
                           </select>
                         </div>
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-md-12">
-                        <textarea 
-                          name="form_message" 
-                          placeholder="Your Message.." 
-                          value={formData.message}
-                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                          required
-                        ></textarea>
+                        <div className="input-box">
+                          <textarea 
+                            name="form_message" 
+                            placeholder="Your Health Goals / Symptoms.."
+                            value={formData.message}
+                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                          ></textarea>
+                        </div>
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-md-12">
-                        <button className="thm-btn bgclr-1" type="submit">submit</button>   
+                        <button className="thm-btn bgclr-1" type="submit">Submit Request</button>
                       </div>
                     </div>
-                  </form>  
+                  </form>
                 )}
               </div>
-            </div>
+            </div>   
           </div>
           
           <div className="col-md-3">
@@ -129,7 +131,7 @@ const QuickAppointment = () => {
                     <span className="flaticon-location"></span>
                   </div>
                   <div className="text-holder">
-                    <h5><span>Address:</span> 121, Park Drive, Varick<br /> Str New York, NY 10012, USA</h5>
+                    <h5><span>Address:</span> {contact.address}</h5>
                   </div>
                 </li>
                 <li>
@@ -137,7 +139,7 @@ const QuickAppointment = () => {
                     <span className="flaticon-technology"></span>
                   </div>
                   <div className="text-holder">
-                    <h5><span>Phone:</span> (123) 0200 12345 &amp;<br />1800-45-678-9012</h5>
+                    <h5><span>Phone:</span> {contact.phonePrimary}</h5>
                   </div>
                 </li>
                 <li>
@@ -145,7 +147,7 @@ const QuickAppointment = () => {
                     <span className="flaticon-note"></span>
                   </div>
                   <div className="text-holder">
-                    <h5><span>Email:</span> Mailus@dailySpanz.com</h5>
+                    <h5><span>Email:</span> {contact.emailPrimary}</h5>
                   </div>
                 </li>
                 <li>
@@ -153,7 +155,7 @@ const QuickAppointment = () => {
                     <span className="flaticon-clock"></span>
                   </div>
                   <div className="text-holder">
-                    <h5><span>Weekdays:</span> 9.00am to 18.00pm</h5>
+                    <h5><span>Hours:</span> {contact.workingHours.weekdays}</h5>
                   </div>
                 </li>
               </ul>
