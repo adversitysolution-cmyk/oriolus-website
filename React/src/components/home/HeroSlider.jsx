@@ -54,7 +54,7 @@ const HeroSlider = () => {
         }}
       />
 
-      {/* Content Container - shifted upwards (~3cm) */}
+      {/* Content Container - shifted upwards */}
       <div 
         className="container" 
         style={{ 
@@ -63,7 +63,7 @@ const HeroSlider = () => {
           minHeight: '620px', 
           display: 'flex', 
           alignItems: 'center',
-          paddingTop: '30px'
+          paddingTop: '0px'
         }}
       >
         <div className="row" style={{ width: '100%', margin: 0 }}>
@@ -74,13 +74,13 @@ const HeroSlider = () => {
             }`}
             style={{ padding: 0 }}
           >
-            {/* Shifted upward by 3cm (~110px) */}
+            {/* Shifted upward by an extra 20% */}
             <div 
               className="tp-caption" 
               style={{ 
                 color: '#fff', 
                 maxWidth: '850px', 
-                margin: slide.alignment === 'center' ? '-55px auto 0' : slide.alignment === 'right' ? '-55px 0 0 auto' : '-55px 0 0 0',
+                margin: slide.alignment === 'center' ? '-90px auto 0' : slide.alignment === 'right' ? '-90px 0 0 auto' : '-90px 0 0 0',
                 padding: '0 15px'
               }}
             >
