@@ -99,30 +99,30 @@ export const homeContent = {
       {
         id: 1,
         badge: 'BNYS',
-        title: 'Licensed Medical Faculty',
-        desc: 'Consultations led by certified Naturopathy & Yogic Science doctors.',
-        icon: 'medical'
+        subtitle: 'Licensed Medical Practitioners',
+        desc: 'Qualified and certified naturopathy professionals delivering authentic care.',
+        icon: 'mortar'
       },
       {
         id: 2,
-        badge: '26+ Yrs',
-        title: 'Clinical Heritage',
-        desc: 'Decades of authentic practice in drugless healing protocols.',
-        icon: 'heritage'
+        badge: 'Classical',
+        subtitle: 'Evidence-Based Protocols',
+        desc: 'Time-tested therapeutic approaches supported by clinical practice.',
+        icon: 'scroll'
       },
       {
         id: 3,
-        badge: '100%',
-        title: 'Drugless & Natural',
-        desc: 'Pure botanical therapies, hydrotherapy & lifestyle restoration.',
-        icon: 'drugless'
+        badge: '26+ Years',
+        subtitle: 'Clinical Heritage',
+        desc: 'More than two decades of experience in holistic healing and patient care.',
+        icon: 'temple'
       },
       {
         id: 4,
-        badge: '4-in-1',
-        title: 'Integrated Disciplines',
-        desc: 'Yoga, Naturopathy, Ayurveda & Acupuncture under one roof.',
-        icon: 'disciplines'
+        badge: '100%',
+        subtitle: 'Drugless & Non-Invasive Care',
+        desc: 'Natural, gentle, and safe treatments focused on restoring wellness without medication or surgery.',
+        icon: 'waterleaf'
       }
     ]
   },
