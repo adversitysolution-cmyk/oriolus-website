@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { homeContent } from '../../content/homeContent';
 
 const WelcomeArea = () => {
   const content = homeContent.welcomeArea;
+  const [isCallHovered, setIsCallHovered] = useState(false);
 
   return (
     <section className="welcome-area">
@@ -47,22 +48,37 @@ const WelcomeArea = () => {
                   <a 
                     className="thm-btn" 
                     href={content.cta.callPhone || 'tel:+919845012345'} 
+                    onMouseEnter={() => setIsCallHovered(true)}
+                    onMouseLeave={() => setIsCallHovered(false)}
                     style={{ 
                       display: 'inline-flex', 
                       alignItems: 'center', 
-                      gap: '8px', 
-                      background: '#12305C', 
-                      color: '#fff', 
+                      gap: '9px', 
+                      background: isCallHovered ? '#12305C' : 'rgba(18, 48, 92, 0.40)', 
+                      color: isCallHovered ? '#ffffff' : '#12305C', 
+                      border: isCallHovered ? '1px solid #12305C' : '1px solid rgba(18, 48, 92, 0.30)',
                       borderRadius: '30px',
                       padding: '11px 24px',
                       fontSize: '13px',
-                      fontWeight: 600,
+                      fontWeight: 700,
                       textTransform: 'uppercase',
                       letterSpacing: '1px',
-                      boxShadow: '0 4px 12px rgba(18, 48, 92, 0.2)'
+                      transform: isCallHovered ? 'translateY(-3px) scale(1.03)' : 'translateY(0) scale(1)',
+                      boxShadow: isCallHovered ? '0 8px 22px rgba(18, 48, 92, 0.35)' : '0 2px 8px rgba(18, 48, 92, 0.10)',
+                      transition: 'all 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
+                      backdropFilter: 'blur(4px)',
+                      cursor: 'pointer'
                     }}
                   >
-                    <i className="fa fa-phone" style={{ fontSize: '14px', color: '#c59d5f' }}></i>
+                    <i 
+                      className="fa fa-phone" 
+                      style={{ 
+                        fontSize: '14px', 
+                        color: isCallHovered ? '#c59d5f' : '#12305C',
+                        transform: isCallHovered ? 'rotate(15deg) scale(1.15)' : 'rotate(0deg) scale(1)',
+                        transition: 'transform 0.3s ease'
+                      }}
+                    ></i>
                     {content.cta.callBtnText || 'Call Now'}
                   </a>
                 </div>
