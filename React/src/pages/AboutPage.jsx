@@ -1,7 +1,7 @@
 import React from 'react';
 import MainLayout from '../layouts/MainLayout';
 import Breadcrumb from '../components/common/Breadcrumb';
-import WelcomeArea from '../components/home/WelcomeArea';
+import AboutStory from '../components/about/AboutStory';
 import ClinicalTrustStrip from '../components/home/ClinicalTrustStrip';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import Testimonials from '../components/home/Testimonials';
@@ -13,7 +13,7 @@ const AboutPage = () => {
   return (
     <MainLayout>
       <Breadcrumb title={content.header.title} activeTitle={content.header.activeTitle} />
-      <WelcomeArea />
+      <AboutStory />
       <ClinicalTrustStrip />
       <WhyChooseUs />
       <Testimonials />
