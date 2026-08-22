@@ -2,6 +2,7 @@ import React from 'react';
 import MainLayout from '../layouts/MainLayout';
 import Breadcrumb from '../components/common/Breadcrumb';
 import WelcomeArea from '../components/home/WelcomeArea';
+import LeadPractitioner from '../components/home/LeadPractitioner';
 import AboutStory from '../components/about/AboutStory';
 import ClinicalTrustStrip from '../components/home/ClinicalTrustStrip';
 import WhyChooseUs from '../components/home/WhyChooseUs';
@@ -15,6 +16,7 @@ const AboutPage = () => {
     <MainLayout>
       <Breadcrumb title={content.header.title} activeTitle={content.header.activeTitle} />
       <WelcomeArea />
+      <LeadPractitioner />
       <AboutStory />
       <ClinicalTrustStrip />
       <WhyChooseUs />
