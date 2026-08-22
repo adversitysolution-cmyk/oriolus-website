@@ -6,44 +6,65 @@ const AboutStory = () => {
   const [hoveredStep, setHoveredStep] = useState(null);
   const [hoveredValue, setHoveredValue] = useState(null);
 
-  // SVG Icons for the 4 Journey Milestones
+  // Exact Line-Art SVG Icons matching the reference image
   const renderJourneyIcon = (iconName) => {
     switch (iconName) {
       case 'lifestyle':
         return (
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="7.5" r="3.5" stroke="#2D6A4F" strokeWidth="1.8" fill="#EDF6EC" />
-            <path d="M5 19.5C5 16 8 13.5 12 13.5C16 13.5 19 16 19 19.5" stroke="#2D6A4F" strokeWidth="1.8" strokeLinecap="round" />
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Person Head */}
+            <circle cx="24" cy="16" r="6" stroke="#23492D" strokeWidth="2" fill="none" />
+            {/* Hair contour */}
+            <path d="M19 15C19 12 21 10 24 10C27 10 29 12 29 15" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
+            {/* Neck */}
+            <path d="M22 22V25H26V22" stroke="#23492D" strokeWidth="1.8" />
+            {/* Shoulders & V-collar */}
+            <path d="M13 37C13 30 18 27 21 26L24 30L27 26C30 27 35 30 35 37" stroke="#23492D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
           </svg>
         );
       case 'wisdom':
         return (
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 19C6 19 7 13 13 8C19 3 20 4 20 4C20 4 21 5 16 11C11 17 6 19 6 19Z" stroke="#2D6A4F" strokeWidth="1.8" strokeLinejoin="round" fill="#EDF6EC" />
-            <path d="M6 19L11 14" stroke="#2D6A4F" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M12 9C10 11 9 14 9 14" stroke="#2D6A4F" strokeWidth="1.4" strokeLinecap="round" />
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Main leaf pointing up-right */}
+            <path d="M20 33C20 33 21 21 33 13C33 13 34 26 23 31" stroke="#23492D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <path d="M22 31L29 20" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
+            {/* Secondary leaf branching down-left */}
+            <path d="M21 28C16 27 14 31 16 34C19 35 22 32 21 28Z" stroke="#23492D" strokeWidth="1.8" strokeLinejoin="round" fill="none" />
+            {/* Branch stem */}
+            <path d="M15 36C18 36 21 34 23 31" stroke="#23492D" strokeWidth="2" strokeLinecap="round" />
           </svg>
         );
       case 'bridge':
         return (
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Bridge arch */}
-            <path d="M3 16C6 12 10 10 12 10C14 10 18 12 21 16" stroke="#2D6A4F" strokeWidth="1.8" strokeLinecap="round" />
-            <line x1="2" y1="17.5" x2="22" y2="17.5" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" />
-            {/* Bridge pillars */}
-            <line x1="6" y1="14" x2="6" y2="17.5" stroke="#2D6A4F" strokeWidth="1.6" />
-            <line x1="12" y1="10" x2="12" y2="17.5" stroke="#2D6A4F" strokeWidth="1.6" />
-            <line x1="18" y1="14" x2="18" y2="17.5" stroke="#2D6A4F" strokeWidth="1.6" />
+          <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Roadway beam */}
+            <line x1="8" y1="31" x2="40" y2="31" stroke="#23492D" strokeWidth="2.2" strokeLinecap="round" />
+            {/* Left Tower */}
+            <path d="M16 16L14 34M16 16L18 34" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
+            <path d="M14 16H18M14 24H18" stroke="#23492D" strokeWidth="1.6" />
+            {/* Right Tower */}
+            <path d="M32 16L30 34M32 16L34 34" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
+            <path d="M30 16H34M30 24H34" stroke="#23492D" strokeWidth="1.6" />
+            {/* Suspension Cables */}
+            <path d="M8 26C12 21 16 16 16 16C16 16 24 25 32 16C32 16 36 21 40 26" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+            {/* Vertical hanger cables */}
+            <line x1="21" y1="23" x2="21" y2="31" stroke="#23492D" strokeWidth="1.4" />
+            <line x1="24" y1="25" x2="24" y2="31" stroke="#23492D" strokeWidth="1.4" />
+            <line x1="27" y1="23" x2="27" y2="31" stroke="#23492D" strokeWidth="1.4" />
           </svg>
         );
       case 'care':
       default:
         return (
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="7" r="3.2" stroke="#2D6A4F" strokeWidth="1.8" fill="#EDF6EC" />
-            <path d="M6 19.5C6 16.5 8.5 14 12 14C15.5 14 18 16.5 18 19.5" stroke="#2D6A4F" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M16 16.5C18 16.5 19.5 17.5 19.5 19.5" stroke="#2D6A4F" strokeWidth="1.5" strokeLinecap="round" />
-            <circle cx="12" cy="18" r="1.8" fill="#2D6A4F" />
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Doctor Head with Medical Cap */}
+            <circle cx="24" cy="17" r="5.5" stroke="#23492D" strokeWidth="2" fill="none" />
+            <path d="M18.5 16C18.5 13 21 11.5 24 11.5C27 11.5 29.5 13 29.5 16" stroke="#23492D" strokeWidth="2" strokeLinecap="round" fill="#DFE8D3" />
+            {/* Shoulders */}
+            <path d="M14 37C14 30.5 18.5 27 24 27C29.5 27 34 30.5 34 37" stroke="#23492D" strokeWidth="2" strokeLinecap="round" fill="none" />
+            {/* Stethoscope */}
+            <path d="M20 27V31C20 33 22 34.5 24 34.5C26 34.5 28 33 28 31V27" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
+            <circle cx="28" cy="31" r="1.8" fill="#23492D" />
           </svg>
         );
     }
@@ -55,33 +76,33 @@ const AboutStory = () => {
       case 'contemporary':
         return (
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="6" r="2.5" stroke="#2D6A4F" strokeWidth="1.6" fill="#EDF6EC" />
-            <path d="M12 9V15" stroke="#2D6A4F" strokeWidth="1.6" strokeLinecap="round" />
-            <path d="M8 13L12 11L16 13" stroke="#2D6A4F" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M7 18C8 15 10 15 12 16C14 15 16 15 17 18" stroke="#2D6A4F" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+            <circle cx="12" cy="6" r="2.5" stroke="#23492D" strokeWidth="1.6" fill="#DFE8D3" />
+            <path d="M12 9V15" stroke="#23492D" strokeWidth="1.6" strokeLinecap="round" />
+            <path d="M8 13L12 11L16 13" stroke="#23492D" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M7 18C8 15 10 15 12 16C14 15 16 15 17 18" stroke="#23492D" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         );
       case 'traditional':
         return (
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 21C12 21 4 15 4 9C4 5 7 2 12 2C17 2 20 5 20 9C20 15 12 21 12 21Z" stroke="#2D6A4F" strokeWidth="1.6" strokeLinejoin="round" fill="#EDF6EC" />
-            <path d="M12 7V13M9 10L15 10" stroke="#2D6A4F" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M12 21C12 21 4 15 4 9C4 5 7 2 12 2C17 2 20 5 20 9C20 15 12 21 12 21Z" stroke="#23492D" strokeWidth="1.6" strokeLinejoin="round" fill="#DFE8D3" />
+            <path d="M12 7V13M9 10L15 10" stroke="#23492D" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
         );
       case 'individual':
         return (
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="9" cy="8" r="3" stroke="#2D6A4F" strokeWidth="1.6" fill="#EDF6EC" />
-            <path d="M3 18C3 15 5.5 13 9 13C12.5 13 15 15 15 18" stroke="#2D6A4F" strokeWidth="1.6" strokeLinecap="round" />
-            <path d="M15 8H21M18 5V11" stroke="#2D6A4F" strokeWidth="1.6" strokeLinecap="round" />
+            <circle cx="9" cy="8" r="3" stroke="#23492D" strokeWidth="1.6" fill="#DFE8D3" />
+            <path d="M3 18C3 15 5.5 13 9 13C12.5 13 15 15 15 18" stroke="#23492D" strokeWidth="1.6" strokeLinecap="round" />
+            <path d="M15 8H21M18 5V11" stroke="#23492D" strokeWidth="1.6" strokeLinecap="round" />
           </svg>
         );
       case 'everyday':
       default:
         return (
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" stroke="#2D6A4F" strokeWidth="1.6" fill="#EDF6EC" />
-            <path d="M12 9V15M9 12H15" stroke="#2D6A4F" strokeWidth="1.4" strokeLinecap="round" />
+            <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" stroke="#23492D" strokeWidth="1.6" fill="#DFE8D3" />
+            <path d="M12 9V15M9 12H15" stroke="#23492D" strokeWidth="1.4" strokeLinecap="round" />
           </svg>
         );
     }
@@ -130,7 +151,7 @@ const AboutStory = () => {
                   }}
                 >
                   Built Around a More{' '}
-                  <span style={{ color: '#2D6A4F' }}>Integrated</span> View of Wellness
+                  <span style={{ color: '#23492D' }}>Integrated</span> View of Wellness
                 </h2>
 
                 {/* Description */}
@@ -153,21 +174,20 @@ const AboutStory = () => {
                   <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                     <div 
                       style={{ 
-                        width: '60px', 
-                        height: '60px', 
+                        width: '64px', 
+                        height: '64px', 
                         borderRadius: '50%', 
-                        background: 'linear-gradient(135deg, #E3EFE0 0%, #D2E4CE 100%)', 
-                        border: '1.5px solid #2D6A4F', 
+                        background: '#DFE8D3', 
+                        border: '1.5px solid #C4DCC1', 
                         display: 'flex', 
                         alignItems: 'center', 
                         justifyContent: 'center',
-                        flexShrink: 0,
-                        boxShadow: '0 4px 14px rgba(45, 106, 79, 0.15)'
+                        flexShrink: 0
                       }}
                     >
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 19C6 19 7 13 13 8C19 3 20 4 20 4C20 4 21 5 16 11C11 17 6 19 6 19Z" stroke="#2D6A4F" strokeWidth="2" strokeLinejoin="round" fill="#C5DDC0" />
-                        <path d="M6 19L11 14" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" />
+                      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 19C6 19 7 13 13 8C19 3 20 4 20 4C20 4 21 5 16 11C11 17 6 19 6 19Z" stroke="#23492D" strokeWidth="2" strokeLinejoin="round" fill="none" />
+                        <path d="M6 19L11 14" stroke="#23492D" strokeWidth="2" strokeLinecap="round" />
                       </svg>
                     </div>
                     <div>
@@ -184,23 +204,22 @@ const AboutStory = () => {
                   <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                     <div 
                       style={{ 
-                        width: '60px', 
-                        height: '60px', 
+                        width: '64px', 
+                        height: '64px', 
                         borderRadius: '50%', 
-                        background: 'linear-gradient(135deg, #E3EFE0 0%, #D2E4CE 100%)', 
-                        border: '1.5px solid #2D6A4F', 
+                        background: '#DFE8D3', 
+                        border: '1.5px solid #C4DCC1', 
                         display: 'flex', 
                         alignItems: 'center', 
                         justifyContent: 'center',
-                        flexShrink: 0,
-                        boxShadow: '0 4px 14px rgba(45, 106, 79, 0.15)'
+                        flexShrink: 0
                       }}
                     >
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 4C10 9 10 15 12 18C14 15 14 9 12 4Z" stroke="#2D6A4F" strokeWidth="1.8" fill="#C5DDC0" />
-                        <path d="M12 18C9 16 6 12 5 9C8 10 11 14 12 18Z" stroke="#2D6A4F" strokeWidth="1.8" />
-                        <path d="M12 18C15 16 18 12 19 9C16 10 13 14 12 18Z" stroke="#2D6A4F" strokeWidth="1.8" />
-                        <path d="M5 19C9 20.5 15 20.5 19 19" stroke="#2D6A4F" strokeWidth="1.8" strokeLinecap="round" />
+                      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4C10 9 10 15 12 18C14 15 14 9 12 4Z" stroke="#23492D" strokeWidth="1.8" fill="none" />
+                        <path d="M12 18C9 16 6 12 5 9C8 10 11 14 12 18Z" stroke="#23492D" strokeWidth="1.8" />
+                        <path d="M12 18C15 16 18 12 19 9C16 10 13 14 12 18Z" stroke="#23492D" strokeWidth="1.8" />
+                        <path d="M5 19C9 20.5 15 20.5 19 19" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
                       </svg>
                     </div>
                     <div>
@@ -281,11 +300,10 @@ const AboutStory = () => {
       <section 
         style={{ 
           padding: '85px 0 95px', 
-          backgroundColor: '#F5F7F2', 
-          borderTop: '1px solid #E8ECE5',
-          borderBottom: '1px solid #E8ECE5',
-          position: 'relative',
-          backgroundImage: 'radial-gradient(circle at 10% 20%, rgba(45, 106, 79, 0.04) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(197, 168, 128, 0.04) 0%, transparent 40%)'
+          backgroundColor: '#F3F4EE', 
+          borderTop: '1px solid #E5E7DF',
+          borderBottom: '1px solid #E5E7DF',
+          position: 'relative'
         }}
       >
         <div className="container">
@@ -299,41 +317,62 @@ const AboutStory = () => {
                   fontSize: '36px', 
                   fontWeight: 700, 
                   fontFamily: "'Playfair Display', Georgia, serif", 
-                  margin: '0 0 10px' 
+                  margin: '0 0 12px' 
                 }}
               >
-                The <span style={{ color: '#2D6A4F' }}>Oriolus Journey</span>
+                The <span style={{ color: '#23492D' }}>Oriolus Journey</span>
               </h2>
               
-              {/* Central Botanical Leaf Accent */}
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
-                <span style={{ width: '28px', height: '1.2px', background: '#2D6A4F', opacity: 0.6 }}></span>
-                <span style={{ color: '#2D6A4F', fontSize: '13px' }}>♥</span>
-                <span style={{ width: '28px', height: '1.2px', background: '#2D6A4F', opacity: 0.6 }}></span>
+              {/* Central Botanical Leaf / Sprout Ornament */}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+                <span style={{ width: '32px', height: '1.2px', background: '#23492D', opacity: 0.5 }}></span>
+                <span style={{ color: '#23492D', fontSize: '15px' }}>🌱</span>
+                <span style={{ width: '32px', height: '1.2px', background: '#23492D', opacity: 0.5 }}></span>
               </div>
             </div>
           </div>
 
-          {/* 4 Connected Milestone Steps */}
+          {/* 4 Connected Milestone Steps with Center Dashed Line & Milestone Dots */}
           <div style={{ position: 'relative' }}>
             
-            {/* Horizontal Connecting Dashed Track (Desktop/Tablet) */}
+            {/* Horizontal Center Dashed Line across all 4 circles */}
             <div 
               className="hidden-xs"
               style={{ 
                 position: 'absolute', 
-                top: '38px', 
-                left: '12%', 
-                right: '12%', 
-                height: '2px', 
-                borderTop: '1.8px dashed #8FA895', 
-                zIndex: 1,
-                opacity: 0.65
+                top: '43px', 
+                left: '12.5%', 
+                right: '12.5%', 
+                height: '0', 
+                borderTop: '1.6px dashed #9EAC95', 
+                zIndex: 1
               }}
             >
-              {/* Midpoint Junction Dots */}
-              <span style={{ position: 'absolute', top: '-4px', left: '33.3%', width: '8px', height: '8px', borderRadius: '50%', background: '#66896E' }}></span>
-              <span style={{ position: 'absolute', top: '-4px', left: '66.6%', width: '8px', height: '8px', borderRadius: '50%', background: '#66896E' }}></span>
+              {/* 3 Milestone Dots in between each pair of circles */}
+              <span 
+                style={{ 
+                  position: 'absolute', 
+                  top: '-4px', 
+                  left: '33.3%', 
+                  transform: 'translateX(-50%)',
+                  width: '8px', 
+                  height: '8px', 
+                  borderRadius: '50%', 
+                  background: '#688562' 
+                }}
+              />
+              <span 
+                style={{ 
+                  position: 'absolute', 
+                  top: '-4px', 
+                  left: '66.6%', 
+                  transform: 'translateX(-50%)',
+                  width: '8px', 
+                  height: '8px', 
+                  borderRadius: '50%', 
+                  background: '#688562' 
+                }}
+              />
             </div>
 
             <div className="row" style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -347,27 +386,26 @@ const AboutStory = () => {
                       onMouseLeave={() => setHoveredStep(null)}
                       style={{ 
                         textAlign: 'center', 
-                        padding: '0 16px',
+                        padding: '0 12px',
                         transition: 'transform 0.3s ease',
                         transform: isHovered ? 'translateY(-4px)' : 'translateY(0)'
                       }}
                     >
-                      {/* Step Circle Badge */}
+                      {/* Step Circle Badge (Exact solid soft sage circle) */}
                       <div 
                         style={{ 
-                          width: '78px', 
-                          height: '78px', 
+                          width: '86px', 
+                          height: '86px', 
                           borderRadius: '50%', 
-                          background: 'linear-gradient(135deg, #E2EFE0 0%, #D0E6CC 100%)', 
-                          border: '1.8px solid #C4DCC1', 
+                          background: '#DFE8D3', 
+                          border: '1.5px solid #C4DCC1', 
                           display: 'flex', 
                           alignItems: 'center', 
                           justifyContent: 'center', 
                           margin: '0 auto 16px',
                           position: 'relative',
                           zIndex: 2,
-                          boxShadow: '0 6px 18px rgba(45, 106, 79, 0.15)',
-                          transform: isHovered ? 'scale(1.08)' : 'scale(1)',
+                          transform: isHovered ? 'scale(1.06)' : 'scale(1)',
                           transition: 'transform 0.3s ease'
                         }}
                       >
@@ -377,10 +415,10 @@ const AboutStory = () => {
                       {/* Step Number */}
                       <div 
                         style={{ 
-                          color: '#2D6A4F', 
-                          fontSize: '14px', 
-                          fontWeight: 800, 
-                          letterSpacing: '1px',
+                          color: '#23492D', 
+                          fontSize: '15px', 
+                          fontWeight: 700, 
+                          letterSpacing: '0.5px',
                           marginBottom: '6px',
                           fontFamily: "'Poppins', sans-serif"
                         }}
@@ -396,7 +434,7 @@ const AboutStory = () => {
                           fontWeight: 700, 
                           marginBottom: '10px',
                           fontFamily: "'Poppins', sans-serif",
-                          lineHeight: '1.35',
+                          lineHeight: '1.3',
                           minHeight: '44px',
                           display: 'flex',
                           alignItems: 'center',
@@ -409,7 +447,7 @@ const AboutStory = () => {
                       {/* Step Description */}
                       <p 
                         style={{ 
-                          color: '#5A6B74', 
+                          color: '#4A5859', 
                           fontSize: '13px', 
                           lineHeight: '1.65', 
                           margin: 0,
@@ -530,11 +568,11 @@ const AboutStory = () => {
                           onMouseLeave={() => setHoveredValue(null)}
                           style={{ 
                             background: '#FFFFFF', 
-                            border: isValHovered ? '1px solid #2D6A4F' : '1px solid #EAECE8', 
+                            border: isValHovered ? '1px solid #23492D' : '1px solid #EAECE8', 
                             borderRadius: '16px', 
                             padding: '20px 10px 16px', 
                             textAlign: 'center', 
-                            boxShadow: isValHovered ? '0 10px 25px rgba(45, 106, 79, 0.14)' : '0 4px 16px rgba(0,0,0,0.03)',
+                            boxShadow: isValHovered ? '0 10px 25px rgba(35, 73, 45, 0.14)' : '0 4px 16px rgba(0,0,0,0.03)',
                             transform: isValHovered ? 'translateY(-3px)' : 'translateY(0)',
                             transition: 'all 0.3s ease',
                             height: '100%',
@@ -550,8 +588,8 @@ const AboutStory = () => {
                               width: '44px', 
                               height: '44px', 
                               borderRadius: '50%', 
-                              background: 'linear-gradient(135deg, #E6F1E4 0%, #D2E4CE 100%)', 
-                              border: '1px solid #D2E4CE', 
+                              background: '#DFE8D3', 
+                              border: '1px solid #C4DCC1', 
                               display: 'flex', 
                               alignItems: 'center', 
                               justifyContent: 'center', 
