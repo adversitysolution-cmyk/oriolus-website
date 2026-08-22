@@ -8,51 +8,53 @@ const DrVijayPage = () => {
   const content = drVijayContent;
   const [hoveredFocus, setHoveredFocus] = useState(null);
 
-  // SVG Icons for the 4 Focus Areas
+  // Exact SVG Icons & Silhouettes matching the reference image
   const renderFocusIcon = (iconName) => {
     switch (iconName) {
       case 'yoga':
         return (
-          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="5.5" r="2.5" stroke="#23492D" strokeWidth="1.8" fill="#DFE8D3" />
-            <path d="M12 8.5V14" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M7.5 12L12 10.5L16.5 12" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M6.5 17.5C7.5 14.5 9.5 14.5 12 15.5C14.5 14.5 16.5 14.5 17.5 17.5" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+          <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Meditating Silhouette */}
+            <circle cx="24" cy="14" r="4.5" fill="#23492D" />
+            <path d="M24 19.5C21 19.5 17 21 16 26C15.5 28 17 31 19 32L14 36C12.5 37 13.5 39 15.5 39H32.5C34.5 39 35.5 37 34 36L29 32C31 31 32.5 28 32 26C31 21 27 19.5 24 19.5Z" fill="#23492D" />
           </svg>
         );
       case 'naturopathy':
         return (
-          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Water drop */}
-            <path d="M12 3C12 3 6 10 6 15C6 18.3137 8.68629 21 12 21C15.3137 21 18 18.3137 18 15C18 10 12 3 12 3Z" stroke="#23492D" strokeWidth="1.8" strokeLinejoin="round" fill="none" />
-            {/* Inner leaves */}
-            <path d="M12 18C9.5 18 8.5 15.5 9 13.5C10.5 13 12 15.5 12 18Z" fill="#23492D" />
-            <path d="M12 18C14.5 18 15.5 15.5 15 13.5C13.5 13 12 15.5 12 18Z" fill="#23492D" />
-            <path d="M12 12V18" stroke="#23492D" strokeWidth="1.4" strokeLinecap="round" />
+          <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Water Drop Contour */}
+            <path d="M24 8C24 8 13 21 13 29C13 35.0751 17.9249 40 24 40C30.0751 40 35 35.0751 35 29C35 21 24 8 24 8Z" stroke="#23492D" strokeWidth="2.5" strokeLinejoin="round" fill="none" />
+            {/* Dual leaves inside */}
+            <path d="M24 33C19 33 17 29 18 26C21 25 24 29 24 33Z" fill="#23492D" />
+            <path d="M24 33C29 33 31 29 30 26C27 25 24 29 24 33Z" fill="#23492D" />
+            <path d="M24 24V35" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
           </svg>
         );
       case 'mobility':
         return (
-          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="5" r="2.2" stroke="#23492D" strokeWidth="1.8" fill="#DFE8D3" />
-            <path d="M12 7.5V17" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
-            {/* Arms raised up for mobility/wellness */}
-            <path d="M7 9L12 8L17 9" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M7 9V5" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M17 9V5" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
-            {/* Legs */}
-            <path d="M9 21L12 17L15 21" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+          <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Standing figure with raised arm silhouette */}
+            <circle cx="24" cy="11" r="4.5" fill="#23492D" />
+            <path d="M22 17H26V28H22V17Z" fill="#23492D" />
+            {/* Left raised arm */}
+            <path d="M22 18L17 12V6H19V11L23 16" fill="#23492D" />
+            {/* Right lowered arm */}
+            <path d="M26 18L29 25H27L25 19" fill="#23492D" />
+            {/* Legs standing straight */}
+            <path d="M21.5 28H23.5V39H21.5V28Z" fill="#23492D" />
+            <path d="M24.5 28H26.5V39H24.5V28Z" fill="#23492D" />
           </svg>
         );
       case 'lifestyle':
       default:
         return (
-          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Lotus flower */}
-            <path d="M12 4C10 9 10 15 12 18C14 15 14 9 12 4Z" stroke="#23492D" strokeWidth="1.8" fill="#DFE8D3" />
-            <path d="M12 18C9 16 6 12 5 9C8 10 11 14 12 18Z" stroke="#23492D" strokeWidth="1.8" />
-            <path d="M12 18C15 16 18 12 19 9C16 10 13 14 12 18Z" stroke="#23492D" strokeWidth="1.8" />
-            <path d="M5 19C9 20.5 15 20.5 19 19" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
+          <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* 5-Petal Lotus Bloom Outline */}
+            <path d="M24 10C21 17 21 27 24 33C27 27 27 17 24 10Z" stroke="#23492D" strokeWidth="2.2" strokeLinejoin="round" fill="none" />
+            <path d="M24 33C19 29 14 22 13 16C18 17 22 24 24 33Z" stroke="#23492D" strokeWidth="2.2" strokeLinejoin="round" fill="none" />
+            <path d="M24 33C29 29 34 22 35 16C30 17 26 24 24 33Z" stroke="#23492D" strokeWidth="2.2" strokeLinejoin="round" fill="none" />
+            <path d="M24 33C17 32 10 28 7 22C11 21 18 25 24 33Z" stroke="#23492D" strokeWidth="2" strokeLinejoin="round" fill="none" />
+            <path d="M24 33C31 32 38 28 41 22C37 21 30 25 24 33Z" stroke="#23492D" strokeWidth="2" strokeLinejoin="round" fill="none" />
           </svg>
         );
     }
@@ -65,11 +67,11 @@ const DrVijayPage = () => {
       {/* ─────────────────────────────────────────────────────────────
           TIER 1: Hero Profile & Philosophy Section
          ───────────────────────────────────────────────────────────── */}
-      <section style={{ padding: '95px 0 85px', backgroundColor: '#FFFFFF', position: 'relative' }}>
+      <section style={{ padding: '90px 0 85px', backgroundColor: '#FFFFFF', position: 'relative' }}>
         <div className="container">
           <div className="row" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
             
-            {/* Left Column: Narrative & Philosophy */}
+            {/* Left Column: Narrative, Philosophy & Buttons */}
             <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ marginBottom: '40px' }}>
               <div style={{ paddingRight: '25px' }}>
                 
@@ -149,11 +151,10 @@ const DrVijayPage = () => {
                       display: 'flex', 
                       alignItems: 'center', 
                       justifyContent: 'center',
-                      flexShrink: 0,
-                      boxShadow: '0 4px 12px rgba(35, 73, 45, 0.25)'
+                      flexShrink: 0
                     }}
                   >
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6 19C6 19 7 13 13 8C19 3 20 4 20 4C20 4 21 5 16 11C11 17 6 19 6 19Z" stroke="#FFFFFF" strokeWidth="1.8" strokeLinejoin="round" fill="none" />
                       <path d="M6 19L11 14" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
                     </svg>
@@ -179,16 +180,16 @@ const DrVijayPage = () => {
                       fontSize: '14px', 
                       fontWeight: 600, 
                       textDecoration: 'none',
-                      boxShadow: '0 4px 15px rgba(35, 73, 45, 0.3)',
+                      boxShadow: '0 4px 14px rgba(35, 73, 45, 0.25)',
                       transition: 'all 0.3s ease'
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = '0 8px 22px rgba(35, 73, 45, 0.4)';
+                      e.currentTarget.style.boxShadow = '0 6px 18px rgba(35, 73, 45, 0.35)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = '0 4px 15px rgba(35, 73, 45, 0.3)';
+                      e.currentTarget.style.boxShadow = '0 4px 14px rgba(35, 73, 45, 0.25)';
                     }}
                   >
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -234,7 +235,7 @@ const DrVijayPage = () => {
               </div>
             </div>
 
-            {/* Right Column: Hero Visual Picture Frame */}
+            {/* Right Column: Hero Portrait Visual Container */}
             <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
               <div 
                 style={{ 
@@ -297,8 +298,8 @@ const DrVijayPage = () => {
       <section 
         style={{ 
           padding: '85px 0 95px', 
-          backgroundColor: '#FAF9F5', 
-          borderTop: '1px solid #E8ECE5',
+          backgroundColor: '#F7F8F3', 
+          borderTop: '1px solid #E8ECE5', 
           borderBottom: '1px solid #E8ECE5',
           position: 'relative' 
         }}
@@ -321,10 +322,10 @@ const DrVijayPage = () => {
               </h2>
               
               {/* Lotus flower glyph divider */}
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-                <span style={{ width: '32px', height: '1.2px', background: '#23492D', opacity: 0.5 }}></span>
-                <span style={{ color: '#23492D', fontSize: '15px' }}>🪷</span>
-                <span style={{ width: '32px', height: '1.2px', background: '#23492D', opacity: 0.5 }}></span>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '14px' }}>
+                <span style={{ width: '36px', height: '1.2px', background: '#23492D', opacity: 0.4 }}></span>
+                <span style={{ color: '#23492D', fontSize: '16px' }}>🪷</span>
+                <span style={{ width: '36px', height: '1.2px', background: '#23492D', opacity: 0.4 }}></span>
               </div>
             </div>
           </div>
@@ -346,11 +347,11 @@ const DrVijayPage = () => {
                       transform: isHovered ? 'translateY(-4px)' : 'translateY(0)'
                     }}
                   >
-                    {/* Sage Green Circular Emblem */}
+                    {/* Exact Solid Sage-Olive Circular Emblem */}
                     <div 
                       style={{ 
-                        width: '84px', 
-                        height: '84px', 
+                        width: '86px', 
+                        height: '86px', 
                         borderRadius: '50%', 
                         background: '#DFE8D3', 
                         border: '1.5px solid #C4DCC1', 
@@ -358,7 +359,6 @@ const DrVijayPage = () => {
                         alignItems: 'center', 
                         justifyContent: 'center', 
                         margin: '0 auto 18px',
-                        boxShadow: '0 4px 14px rgba(35, 73, 45, 0.12)',
                         transform: isHovered ? 'scale(1.06)' : 'scale(1)',
                         transition: 'transform 0.3s ease'
                       }}
@@ -416,24 +416,25 @@ const DrVijayPage = () => {
             position: 'absolute', 
             bottom: '-20px', 
             right: '-20px', 
-            width: '240px', 
-            height: '240px', 
+            width: '260px', 
+            height: '260px', 
             pointerEvents: 'none',
-            opacity: 0.18,
+            opacity: 0.22,
             zIndex: 1
           }}
         >
           <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M180 20C180 20 160 80 100 120C40 160 20 180 20 180C20 180 80 160 120 100C160 40 180 20 180 20Z" fill="#23492D" />
-            <path d="M120 100L180 180" stroke="#23492D" strokeWidth="3" strokeLinecap="round" />
-            <path d="M140 60C110 80 100 110 100 110" stroke="#23492D" strokeWidth="2.5" strokeLinecap="round" />
+            <path d="M190 10C190 10 165 75 105 120C45 165 10 190 10 190C10 190 75 165 120 105C165 45 190 10 190 10Z" fill="#688562" />
+            <path d="M120 105L190 190" stroke="#688562" strokeWidth="3" strokeLinecap="round" />
+            <path d="M145 60C115 80 100 115 100 115" stroke="#688562" strokeWidth="2.5" strokeLinecap="round" />
+            <path d="M60 145C80 115 115 100 115 100" stroke="#688562" strokeWidth="2.5" strokeLinecap="round" />
           </svg>
         </div>
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className="row" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
             
-            {/* Left Column: Visual Frame */}
+            {/* Left Column: Visual Container Frame */}
             <div className="col-lg-5 col-md-12 col-sm-12 col-xs-12" style={{ marginBottom: '40px' }}>
               <div 
                 style={{ 
@@ -486,7 +487,7 @@ const DrVijayPage = () => {
               </div>
             </div>
 
-            {/* Right Column: Narrative & Checkpoints */}
+            {/* Right Column: Narrative & 3 Checkpoint Cards */}
             <div className="col-lg-7 col-md-12 col-sm-12 col-xs-12">
               <div style={{ paddingLeft: '25px' }}>
                 
@@ -523,7 +524,7 @@ const DrVijayPage = () => {
                 </h2>
 
                 {/* 3 Checkpoint Items */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '22px' }}>
                   {content.approach.checkpoints.map((item) => (
                     <div 
                       key={item.id} 
@@ -533,13 +534,13 @@ const DrVijayPage = () => {
                         gap: '16px' 
                       }}
                     >
-                      {/* Sage Checkmark Badge */}
+                      {/* Exact Sage Checkmark Badge */}
                       <div 
                         style={{ 
-                          width: '36px', 
-                          height: '36px', 
+                          width: '34px', 
+                          height: '34px', 
                           borderRadius: '50%', 
-                          background: '#E2EFE0', 
+                          background: '#DFE8D3', 
                           border: '1px solid #C4DCC1', 
                           display: 'flex', 
                           alignItems: 'center', 
@@ -548,10 +549,13 @@ const DrVijayPage = () => {
                           marginTop: '2px'
                         }}
                       >
-                        <i className="fa fa-check" style={{ color: '#23492D', fontSize: '13px' }}></i>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="12" cy="12" r="9" stroke="#23492D" strokeWidth="1.6" />
+                          <path d="M8.5 12L11 14.5L15.5 10" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
                       </div>
 
-                      {/* Text */}
+                      {/* Text Details */}
                       <div>
                         <h4 
                           style={{ 
@@ -569,7 +573,7 @@ const DrVijayPage = () => {
                           style={{ 
                             color: '#5A6B74', 
                             fontSize: '13.5px', 
-                            lineHeight: '1.55', 
+                            lineHeight: '1.6', 
                             margin: 0,
                             fontFamily: "'Open Sans', sans-serif"
                           }}
