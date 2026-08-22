@@ -27,6 +27,7 @@ import ShoppingCartPage from './pages/ShoppingCartPage';
 import CheckoutPage from './pages/CheckoutPage';
 import AccountPage from './pages/AccountPage';
 import ContactPage from './pages/ContactPage';
+import DrVijayPage from './pages/DrVijayPage';
 
 function App() {
   return (
@@ -39,6 +40,10 @@ function App() {
         {/* About */}
         <Route path="/about" element={<AboutPage />} />
         <Route path="/about.html" element={<AboutPage />} />
+        <Route path="/about/meet-dr-vijay" element={<DrVijayPage />} />
+        <Route path="/dr-vijay" element={<DrVijayPage />} />
+        <Route path="/dr-vijay.html" element={<DrVijayPage />} />
+        <Route path="/therapists/dr-vijay" element={<DrVijayPage />} />
 
         {/* Procedures */}
         <Route path="/procedures" element={<ProceduresPage />} />

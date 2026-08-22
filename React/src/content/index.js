@@ -11,3 +11,4 @@ export { therapistsContent } from './therapistsContent';
 export { testimonialsContent } from './testimonialsContent';
 export { faqContent } from './faqContent';
 export { contactContent } from './contactContent';
+export { drVijayContent } from './drVijayContent';
