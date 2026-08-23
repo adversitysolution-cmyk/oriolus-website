@@ -104,7 +104,7 @@ const Header = () => {
                 </div>
                 
                 <div className={`navbar-collapse collapse clearfix ${mobileMenuOpen ? 'in' : ''}`} style={{ display: mobileMenuOpen ? 'block' : '' }}>
-                  {/* Start nav container nav left */}
+                  {/* Start nav container nav left: Home, About Us, Dr. Vijay */}
                   <div className="nav-container nav-left">
                     <ul className="navigation clearfix">
                       <li className={isActive('/') ? 'current' : ''}>
@@ -122,6 +122,16 @@ const Header = () => {
                           <li><Link to="/about#affiliations">Our Affiliations</Link></li>
                         </ul>
                       </li>
+                      <li className={isActive('/about/meet-dr-vijay') || isActive('/dr-vijay') || isActive('/therapists') ? 'current' : ''}>
+                        <Link to="/about/meet-dr-vijay">Dr. Vijay</Link>
+                      </li>
+                    </ul>
+                  </div>
+                  {/* End nav container nav left */}
+
+                  {/* Start nav container nav right: Procedures, Blog, Gallery, Shop, Contact Us */}
+                  <div className="nav-container nav-right">
+                    <ul className="navigation clearfix">
                       <li className={`dropdown procedures-mega-item ${['/procedures', '/yoga-therapy', '/naturopathy', '/ayurveda', '/acupuncture', '/structured-wellness-programs', '/wellness-programs', '/services/'].some(p => isActive(p)) ? 'current' : ''}`}>
                         <Link to="/procedures">Procedures</Link>
                         <div className="dropdown-btn" onClick={(e) => toggleDropdown('procedures', e)}></div>
@@ -211,16 +221,6 @@ const Header = () => {
                           </div>
                         </div>
                       </li>
-                      <li className={isActive('/about/meet-dr-vijay') || isActive('/dr-vijay') || isActive('/therapists') ? 'current' : ''}>
-                        <Link to="/about/meet-dr-vijay">Dr. Vijay</Link>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* End nav container nav left */}
-
-                  {/* Start nav container nav right */}
-                  <div className="nav-container nav-right">
-                    <ul className="navigation clearfix">
                       <li className={`dropdown ${['/blog-default', '/blog-large', '/blog-single'].some(p => isActive(p)) ? 'current' : ''}`}>
                         <Link to="/blog-default">Blog</Link>
                         <div className="dropdown-btn" onClick={(e) => toggleDropdown('blog', e)}></div>
