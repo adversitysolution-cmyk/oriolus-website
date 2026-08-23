@@ -1,22 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { siteContent } from '../../content/siteContent';
 
 const Footer = () => {
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
   const brand = siteContent.brand;
   const contact = siteContent.contact;
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (newsletterEmail) {
-      setSubscribed(true);
-      setTimeout(() => setSubscribed(false), 4000);
-      setNewsletterEmail('');
-    }
-  };
 
   return (
     <>
@@ -43,15 +31,15 @@ const Footer = () => {
             </div>
           </div>
           <div className="row">
-            {/* Start single footer widget */}
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            {/* Start single footer widget: Quick Contact */}
+            <div className="col-lg-5 col-md-6 col-sm-12 col-xs-12">
               <div className="single-footer-widget pd-bottom50">
                 <div className="title">
                   <h3>Quick Contact</h3>
                   <span className="border"></span>
                 </div>
                 <div className="our-info">
-                  <p>{brand.fullName}. {brand.division}, dedicated to personalized, drugless clinical healing.</p>
+                  <p>{brand.fullName}. {brand.division}, dedicated to evidence-based drugless healing and natural wellness.</p>
                 </div>
                 <ul className="footer-contact-info">
                   <li>
@@ -83,114 +71,44 @@ const Footer = () => {
             </div>
             {/* End single footer widget */}
 
-            {/* Start single footer widget */}
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            {/* Start single footer widget: Useful Links */}
+            <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div className="single-footer-widget pd-bottom50">
                 <div className="title">
                   <h3>Useful Links</h3>
                   <span className="border"></span>
                 </div>
-                <ul className="usefull-links fl-lft">
-                  <li><Link to="/about">About Us</Link></li>
-                  <li><Link to="/about/meet-dr-vijay">Dr. Vijay</Link></li>
-                  <li><Link to="/faq">FAQ’s</Link></li>
-                  <li><Link to="/testimonials">Testimonials</Link></li>
-                  <li><Link to="/contact">Contact</Link></li>
-                </ul>
                 <ul className="usefull-links">
-                  <li><Link to="/yoga-therapy">Yoga Therapy</Link></li>
-                  <li><Link to="/naturopathy">Naturopathy</Link></li>
-                  <li><Link to="/ayurveda">Ayurveda</Link></li>
-                  <li><Link to="/acupuncture">Acupuncture</Link></li>
-                  <li><Link to="/structured-wellness-programs">Programs</Link></li>
+                  <li><Link to="/about">About Us</Link></li>
+                  <li><Link to="/about/meet-dr-vijay">Meet Dr. Vijay</Link></li>
+                  <li><Link to="/faq">Patient FAQs</Link></li>
+                  <li><Link to="/testimonials">Testimonials</Link></li>
+                  <li><Link to="/contact">Contact Us</Link></li>
+                  <li><Link to="/appointment">Book Appointment</Link></li>
                 </ul>
               </div>
             </div>
             {/* End single footer widget */}
 
-            {/* Start single footer widget */}
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            {/* Start single footer widget: Clinical Services */}
+            <div className="col-lg-4 col-md-3 col-sm-6 col-xs-12">
               <div className="single-footer-widget pd-bottom50">
                 <div className="title">
-                  <h3>Latest Blog</h3>
+                  <h3>Clinical Services</h3>
                   <span className="border"></span>
                 </div>
-                <ul className="footer-latest-blog">
-                  <li>
-                    <div className="img-holder">
-                      <img src="/images/footer/latest-blog-1.jpg" alt="Awesome Image" />
-                      <div className="overlay-style-one">
-                        <div className="box">
-                          <div className="content">
-                            <Link to="/blog-single"><i className="fa fa-link" aria-hidden="true"></i></Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="text-holder">
-                      <Link to="/blog-single"><h6>Therapeutic Yoga for Managing Workplace Stress</h6></Link>
-                      <span>August 15, 2026</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="img-holder">
-                      <img src="/images/footer/latest-blog-2.jpg" alt="Awesome Image" />
-                      <div className="overlay-style-one">
-                        <div className="box">
-                          <div className="content">
-                            <Link to="/blog-single"><i className="fa fa-link" aria-hidden="true"></i></Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="text-holder">
-                      <Link to="/blog-single"><h6>Clinical Detoxification &amp; Cellular Rejuvenation</h6></Link>
-                      <span>July 28, 2026</span>
-                    </div>
-                  </li>
+                <ul className="usefull-links">
+                  <li><Link to="/services/therapeutic-yoga">Therapeutic Yoga</Link></li>
+                  <li><Link to="/services/colon-hydrotherapy">Clinical Naturopathy</Link></li>
+                  <li><Link to="/services/panchakarma">Classical Panchakarma</Link></li>
+                  <li><Link to="/services/acupuncture-pain-management">Medical Acupuncture</Link></li>
+                  <li><Link to="/services/obesity-reduction-detox">Detox &amp; Weight Management</Link></li>
+                  <li><Link to="/structured-wellness-programs">Structured Wellness Programs</Link></li>
                 </ul>
               </div>
             </div>
             {/* End single footer widget */}
 
-            {/* Start single footer widget */}
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-              <div className="single-footer-widget clearfix">
-                <div className="title">
-                  <h3>Subscribe Us</h3>
-                  <span className="border"></span>
-                </div>
-                <div className="subscribe-form">
-                  <p>Subscribe to our wellness newsletter to receive research articles, health tips, and clinic updates.</p>
-                  {subscribed ? (
-                    <p style={{ color: '#c59d5f', fontWeight: 'bold' }}>Thank you for subscribing!</p>
-                  ) : (
-                    <form onSubmit={handleSubscribe}>
-                      <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="Your Email Address..." 
-                        value={newsletterEmail}
-                        onChange={(e) => setNewsletterEmail(e.target.value)}
-                        required 
-                      />
-                      <button type="submit"><i className="fa fa-paper-plane" aria-hidden="true"></i></button>
-                    </form>
-                  )}
-                </div>
-              </div>
-              <div className="single-footer-widget clearfix">
-                <div className="title">
-                  <h3>Opening Hours</h3>
-                </div>
-                <ul className="working-hours">
-                  <li>Mon-FriDay: <span>8.00 to 19.00</span></li>
-                  <li>Saturday: <span>8.00 to 19.00</span></li>
-                  <li>Sunday: <span className="closed">OPD Appt</span></li>
-                </ul>
-              </div>
-            </div>
-            {/* End single footer widget */}
           </div>
         </div>
       </footer>
@@ -200,17 +118,22 @@ const Footer = () => {
       <section className="footer-bottom-area">
         <div className="container">
           <div className="row">
-            <div className="col-md-8">
-              <div className="copyright-text">
-                <p>{siteContent.copyright.text}</p> 
+            <div className="col-md-12">
+              <div className="footer-bottom">
+                <div className="copyright-text pull-left">
+                  <p>
+                    &copy; {new Date().getFullYear()} <Link to="/">{brand.name}</Link> &mdash; {brand.tagline}. All Rights Reserved.
+                  </p>
+                </div>
+                <div className="footer-social-links pull-right">
+                  <ul className="social-links">
+                    <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter"></i></a></li>
+                    <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram"></i></a></li>
+                    <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a></li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div className="col-md-4">
-              <ul className="footer-social-links">
-                {siteContent.socialLinks.map((s, i) => (
-                  <li key={i}><a href={s.url} target="_blank" rel="noreferrer" aria-label={s.platform}><i className={s.icon}></i></a></li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
