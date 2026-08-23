@@ -698,7 +698,7 @@ select:focus {
 .main-menu .navigation > li > ul > li  > ul > li:hover > a{}
 
 /* ==========================================================================
-   PROCEDURES 5-COLUMN MEGA MENU
+   PROCEDURES 5-COLUMN MEGA MENU (SEPARATE CARDS)
    ========================================================================== */
 .main-menu .navigation > li.procedures-mega-item {
   position: static !important;
@@ -709,14 +709,14 @@ select:focus {
   top: 130%;
   left: 0;
   right: 0;
-  width: 1080px;
+  width: 1140px;
   max-width: 96vw;
   margin: 0 auto;
-  background: #ffffff;
+  background: #f7faf6;
   border-top: 3px solid #2acb35;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
-  padding: 28px 30px 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16);
+  padding: 24px 24px 18px;
   z-index: 99999;
   visibility: hidden;
   opacity: 0;
@@ -732,59 +732,79 @@ select:focus {
 .procedures-mega-columns {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  gap: 16px;
 }
 
+/* Individual Card for Each Discipline */
 .procedures-mega-col {
+  background: #ffffff;
+  border: 1px solid #e2ebd0;
+  border-top: 3px solid #2acb35;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.procedures-mega-col:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(42, 203, 53, 0.12);
 }
 
 .procedures-mega-col-title {
   display: block;
-  font-size: 13.5px !important;
+  font-size: 13px !important;
   font-weight: 700 !important;
   color: #162d3d !important;
   text-transform: uppercase !important;
   letter-spacing: 0.5px;
-  padding: 0 0 10px 0 !important;
-  margin-bottom: 12px !important;
-  border-bottom: 2px solid #2acb35;
+  padding: 12px 14px !important;
+  margin: 0 !important;
+  background: #fafdf9;
+  border-bottom: 1px solid #eef2eb !important;
   font-family: 'Poppins', sans-serif !important;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .procedures-mega-col-title:hover {
   color: #2acb35 !important;
+  background: #f0f7ef;
 }
 
 .procedures-mega-list {
   list-style: none;
   padding: 0 !important;
   margin: 0 !important;
+  flex-grow: 1;
 }
 
 .procedures-mega-list li {
   display: block !important;
   float: none !important;
-  margin: 0 0 4px 0 !important;
+  margin: 0 !important;
   padding: 0 !important;
-  border: none !important;
+  border-bottom: 1px solid #f4f4f4 !important;
+}
+
+.procedures-mega-list li:last-child {
+  border-bottom: none !important;
 }
 
 .procedures-mega-list li a {
   display: block !important;
-  padding: 8px 12px !important;
-  font-size: 13.5px !important;
+  padding: 12px 14px !important;
+  font-size: 13px !important;
   font-weight: 600 !important;
   color: #303030 !important;
   text-transform: capitalize !important;
-  line-height: 1.4 !important;
+  line-height: 1.35 !important;
   font-family: 'Poppins', sans-serif !important;
-  border-radius: 4px;
   position: relative !important;
-  transition: all 300ms ease !important;
+  transition: all 250ms ease !important;
   text-decoration: none !important;
+  background: none;
 }
 
 .procedures-mega-list li a:before {
@@ -797,7 +817,7 @@ select:focus {
   font-size: 14px;
   color: #ffffff;
   opacity: 0;
-  transition: all 300ms ease;
+  transition: all 250ms ease;
 }
 
 .procedures-mega-list li a:after {
@@ -816,9 +836,9 @@ select:focus {
 }
 
 .procedures-mega-footer {
-  margin-top: 20px;
-  padding-top: 14px;
-  border-top: 1px solid #f0f0f0;
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid #e8ede5;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -838,7 +858,7 @@ select:focus {
 .procedures-mega-footer a.book-link {
   font-size: 13px !important;
   font-weight: 600 !important;
-  color: #666666 !important;
+  color: #555555 !important;
   padding: 0 !important;
   text-transform: none !important;
 }
@@ -856,8 +876,9 @@ select:focus {
     opacity: 1;
     visibility: visible;
     box-shadow: none;
-    padding: 15px;
+    padding: 15px 0;
     border-radius: 0;
+    background: transparent;
   }
   .procedures-mega-columns {
     grid-template-columns: 1fr;
