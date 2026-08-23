@@ -2,8 +2,73 @@ import React, { useState } from 'react';
 import { useParams, Link, Navigate, useLocation } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import Breadcrumb from '../components/common/Breadcrumb';
-import ProcedureSidebar from '../components/procedures/ProcedureSidebar';
+import {
+  Accessibility,
+  Activity,
+  ArrowRight,
+  Armchair,
+  CalendarDays,
+  ChevronDown,
+  Dumbbell,
+  Flower2,
+  HeartPulse,
+  Leaf,
+  PersonStanding,
+  SlidersHorizontal,
+  Sparkles,
+  TrendingUp,
+  UserRoundCheck,
+  Wind,
+} from 'lucide-react';
 import { servicesDetailData } from '../content/servicesDetailContent';
+import './therapeutic-yoga.css';
+
+// Blank Image Slot Component
+const BlankImagePlaceholder = ({ minHeight = '380px', label = 'Image Placeholder' }) => (
+  <div
+    style={{
+      width: '100%',
+      minHeight,
+      height: '100%',
+      background: 'linear-gradient(135deg, #F3EFE6 0%, #EAE6DF 100%)',
+      borderRadius: '12px',
+      border: '1px solid #DED8CD',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: '10px',
+      boxShadow: '0 8px 24px rgba(0,0,0,0.03)',
+      position: 'relative',
+      overflow: 'hidden'
+    }}
+  >
+    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ opacity: 0.35 }}>
+      <rect x="3" y="3" width="18" height="18" rx="3" stroke="#2E5F31" strokeWidth="1.5" />
+      <circle cx="8.5" cy="8.5" r="2" fill="#2E5F31" />
+      <path d="M21 15L16 10L5 21" stroke="#2E5F31" strokeWidth="1.5" strokeLinejoin="round" />
+    </svg>
+    <span style={{ fontSize: '11px', letterSpacing: '1.5px', textTransform: 'uppercase', color: '#687768', fontWeight: 600, opacity: 0.5 }}>
+      {label}
+    </span>
+  </div>
+);
+
+function DecorativeTitle({ children }) {
+  return (
+    <div className="ty-section-title-wrap">
+      <h2 className="ty-section-title">{children}</h2>
+      <div className="ty-title-ornament" aria-hidden="true">
+        <span />
+        <Leaf size={16} strokeWidth={1.8} />
+        <span />
+      </div>
+    </div>
+  );
+}
+
+// Icon mapper for benefits
+const benefitIcons = [PersonStanding, Armchair, Dumbbell, Armchair, Wind, Flower2, Accessibility, HeartPulse, Activity];
 
 const ServiceDetailPage = () => {
   const { slug } = useParams();
@@ -37,359 +102,304 @@ const ServiceDetailPage = () => {
         activeTitle={service.title} 
       />
 
-      {/* Start Main Therapy Area */}
-      <section className="single-procedure-area pd-top100 pd-bottom80">
-        <div className="container">
-          <div className="row">
-            
-            {/* Start Content Column (9 cols right) */}
-            <div className="col-lg-9 col-md-8 col-sm-12 col-xs-12 pull-right">
-              <div className="single-procedure-content">
-                
-                {/* 1. HERO BANNER & HEADER */}
-                <div className="service-hero-header" style={{ marginBottom: '35px' }}>
-                  {service.eyebrow && (
-                    <span 
-                      style={{ 
-                        display: 'inline-block',
-                        padding: '5px 14px',
-                        background: '#e8f5e9',
-                        color: '#2acb35',
-                        fontSize: '12px',
-                        fontWeight: 700,
-                        letterSpacing: '1px',
-                        textTransform: 'uppercase',
-                        borderRadius: '20px',
-                        marginBottom: '12px'
-                      }}
-                    >
-                      {service.eyebrow}
-                    </span>
-                  )}
-                  <h1 style={{ fontSize: '32px', fontWeight: 600, color: '#222', margin: '0 0 10px' }}>
-                    {service.title}
-                  </h1>
-                  <h3 style={{ fontSize: '18px', fontWeight: 400, color: '#2acb35', margin: '0 0 15px', fontFamily: "'Poppins', sans-serif" }}>
-                    {service.tagline}
-                  </h3>
-                  <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#555', margin: '0 0 25px' }}>
-                    {service.heroDescription}
-                  </p>
-
-                  {/* Hero Dual CTA */}
-                  <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginBottom: '30px' }}>
-                    <Link className="thm-btn bgclr-1" to="/appointment" style={{ padding: '12px 28px', fontSize: '14px' }}>
-                      Book a Consultation
-                    </Link>
-                    <Link className="thm-btn" to={service.parentLink} style={{ background: '#f4f4f4', color: '#333', padding: '12px 28px', fontSize: '14px', border: '1px solid #ddd' }}>
-                      Explore {service.category}
-                    </Link>
-                  </div>
-
-                  {/* Feature Image */}
-                  <div className="img-holder" style={{ overflow: 'hidden', borderRadius: '8px', boxShadow: '0 8px 25px rgba(0,0,0,0.06)' }}>
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
-                      style={{ width: '100%', maxHeight: '420px', objectFit: 'cover' }} 
-                    />
-                  </div>
+      <main className="ty-page">
+        
+        {/* 1. HERO SECTION */}
+        <section className="ty-hero-section">
+          <div className="ty-container">
+            <div className="ty-hero-grid">
+              <div className="ty-hero-content">
+                <div className="ty-kicker-row">
+                  <span className="ty-kicker">{service.eyebrow || service.category}</span>
+                  <span className="ty-kicker-line" />
                 </div>
 
-                {/* 2. OVERVIEW */}
-                <div className="service-overview" style={{ marginBottom: '45px' }}>
-                  <div className="sec-title" style={{ paddingBottom: '15px' }}>
-                    <h2 style={{ fontSize: '24px', color: '#222' }}>{service.overviewTitle || `What Is ${service.title}?`}</h2>
-                    <div className="border" style={{ margin: '12px 0 20px' }}>
-                      <span className="flaticon-shape"></span>
-                    </div>
-                  </div>
-                  <div className="text" style={{ fontSize: '15px', lineHeight: '1.85', color: '#555' }}>
-                    {service.overview.map((para, idx) => (
-                      <p key={idx} style={{ marginBottom: '14px' }}>{para}</p>
-                    ))}
-                  </div>
+                <h1>{service.title}</h1>
+                <h2>{service.tagline}</h2>
+
+                <p className="ty-hero-copy">
+                  {service.heroDescription}
+                </p>
+
+                <div className="ty-hero-actions">
+                  <Link to="/appointment" className="ty-btn ty-btn-primary">
+                    <CalendarDays size={18} />
+                    <span>Book a Consultation</span>
+                  </Link>
+                  <Link to={service.parentLink} className="ty-btn ty-btn-secondary">
+                    <span>Explore {service.category}</span>
+                    <ArrowRight size={18} />
+                  </Link>
                 </div>
 
-                {/* 3. KEY BENEFITS */}
-                {service.benefits && service.benefits.length > 0 && (
-                  <div className="service-benefits" style={{ marginBottom: '45px', background: '#fafafa', border: '1px solid #eee', borderRadius: '8px', padding: '35px 30px' }}>
-                    <h2 style={{ fontSize: '22px', color: '#222', marginBottom: '20px' }}>
-                      How {service.title} May Support You
-                    </h2>
-                    <div className="row">
-                      {service.benefits.map((benefit, idx) => (
-                        <div key={idx} className="col-md-6 col-sm-12" style={{ marginBottom: '14px' }}>
-                          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                            <span style={{ 
-                              display: 'inline-flex', 
-                              alignItems: 'center', 
-                              justifyContent: 'center', 
-                              width: '24px', 
-                              height: '24px', 
-                              background: '#e8f5e9', 
-                              color: '#2acb35', 
-                              borderRadius: '50%', 
-                              fontSize: '12px',
-                              flexShrink: 0,
-                              marginTop: '2px'
-                            }}>
-                              <i className="fa fa-check"></i>
-                            </span>
-                            <span style={{ fontSize: '14.5px', color: '#444', lineHeight: '1.6' }}>{benefit}</span>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                <div className="ty-trust-row">
+                  <div className="ty-trust-item">
+                    <UserRoundCheck size={24} />
+                    <span>Personalised<br />Care</span>
                   </div>
-                )}
-
-                {/* 4. WHO MAY BENEFIT */}
-                {service.whoMayBenefit && service.whoMayBenefit.length > 0 && (
-                  <div className="service-who-benefit" style={{ marginBottom: '45px' }}>
-                    <h2 style={{ fontSize: '22px', color: '#222', marginBottom: '15px' }}>
-                      Who May Benefit?
-                    </h2>
-                    <p style={{ color: '#666', marginBottom: '20px', fontSize: '14.5px' }}>
-                      This therapy may be especially suitable for:
-                    </p>
-                    <div className="row">
-                      {service.whoMayBenefit.map((item, idx) => (
-                        <div key={idx} className="col-md-6 col-sm-12" style={{ marginBottom: '12px' }}>
-                          <div style={{ 
-                            background: '#fff', 
-                            border: '1px solid #eef2eb', 
-                            borderLeft: '3px solid #2acb35', 
-                            padding: '14px 18px', 
-                            borderRadius: '4px',
-                            fontSize: '14px',
-                            color: '#444'
-                          }}>
-                            {item}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                  <div className="ty-trust-item">
+                    <Leaf size={24} />
+                    <span>Natural &amp;<br />Drugless</span>
                   </div>
-                )}
-
-                {/* 5. WHAT TO EXPECT */}
-                {service.whatToExpect && service.whatToExpect.length > 0 && (
-                  <div className="service-experience" style={{ marginBottom: '45px' }}>
-                    <h2 style={{ fontSize: '22px', color: '#222', marginBottom: '15px' }}>
-                      Your {service.title} Experience
-                    </h2>
-                    <p style={{ color: '#666', marginBottom: '25px', fontSize: '14.5px' }}>
-                      Every session is adapted rather than predetermined. Depending on your needs, a session may include:
-                    </p>
-                    <div className="row">
-                      {service.whatToExpect.map((exp, idx) => (
-                        <div key={idx} className="col-md-6 col-sm-12" style={{ marginBottom: '20px' }}>
-                          <div style={{ 
-                            background: '#fff', 
-                            border: '1px solid #eee', 
-                            borderRadius: '8px', 
-                            padding: '22px 20px', 
-                            height: '100%',
-                            boxShadow: '0 3px 10px rgba(0,0,0,0.02)'
-                          }}>
-                            <h4 style={{ fontSize: '16px', fontWeight: 600, color: '#222', marginBottom: '8px' }}>
-                              {exp.title}
-                            </h4>
-                            <p style={{ fontSize: '13.5px', color: '#666', margin: 0, lineHeight: '1.6' }}>
-                              {exp.desc}
-                            </p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                  <div className="ty-trust-item">
+                    <Accessibility size={24} />
+                    <span>Whole Person<br />Approach</span>
                   </div>
-                )}
-
-                {/* 6. 3-STEP JOURNEY */}
-                {service.threeStepJourney && service.threeStepJourney.length > 0 && (
-                  <div className="service-journey" style={{ marginBottom: '45px' }}>
-                    <h2 style={{ fontSize: '22px', color: '#222', marginBottom: '25px' }}>
-                      Your 3-Step Journey
-                    </h2>
-                    <div className="row">
-                      {service.threeStepJourney.map((step, idx) => (
-                        <div key={idx} className="col-md-4 col-sm-12" style={{ marginBottom: '20px' }}>
-                          <div style={{ 
-                            background: '#f9f8f6', 
-                            border: '1px solid #ede8e0', 
-                            borderRadius: '8px', 
-                            padding: '25px 20px', 
-                            textAlign: 'center',
-                            height: '100%'
-                          }}>
-                            <div style={{ 
-                              display: 'inline-block',
-                              width: '45px',
-                              height: '45px',
-                              lineHeight: '45px',
-                              background: '#2acb35',
-                              color: '#fff',
-                              borderRadius: '50%',
-                              fontSize: '16px',
-                              fontWeight: 700,
-                              marginBottom: '15px'
-                            }}>
-                              {step.step}
-                            </div>
-                            <h3 style={{ fontSize: '17px', color: '#222', marginBottom: '10px' }}>
-                              {step.title}
-                            </h3>
-                            <p style={{ fontSize: '13.5px', color: '#666', lineHeight: '1.6', margin: 0 }}>
-                              {step.desc}
-                            </p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* 7. IMPORTANT CONSIDERATIONS */}
-                {service.importantConsiderations && (
-                  <div style={{ 
-                    background: '#fffdf5', 
-                    border: '1px solid #f6e6b8', 
-                    borderLeft: '4px solid #c59d5f', 
-                    borderRadius: '6px', 
-                    padding: '22px 25px', 
-                    marginBottom: '45px',
-                    display: 'flex',
-                    alignItems: 'flex-start',
-                    gap: '15px'
-                  }}>
-                    <i className="fa fa-info-circle" style={{ color: '#c59d5f', fontSize: '22px', marginTop: '3px' }}></i>
-                    <div>
-                      <h4 style={{ margin: '0 0 6px', fontSize: '15px', color: '#7a5a1e', fontWeight: 600 }}>
-                        Important Considerations &amp; Safety Guidance
-                      </h4>
-                      <p style={{ margin: 0, fontSize: '13.5px', color: '#6c5324', lineHeight: '1.7' }}>
-                        {service.importantConsiderations}
-                      </p>
-                    </div>
-                  </div>
-                )}
-
-                {/* 8. FREQUENTLY ASKED QUESTIONS */}
-                {service.faqs && service.faqs.length > 0 && (
-                  <div className="service-faqs" style={{ marginBottom: '50px' }}>
-                    <h2 style={{ fontSize: '22px', color: '#222', marginBottom: '20px' }}>
-                      Frequently Asked Questions
-                    </h2>
-                    <div className="accordion-box">
-                      {service.faqs.map((faq, idx) => {
-                        const isOpen = openFaq === idx;
-                        return (
-                          <div key={idx} className="accordion" style={{ marginBottom: '10px' }}>
-                            <div 
-                              className={`accord-btn ${isOpen ? 'active' : ''}`}
-                              onClick={() => setOpenFaq(isOpen ? -1 : idx)}
-                              style={{ cursor: 'pointer', padding: '16px 20px', background: isOpen ? '#f2fff3' : '#f9f9f9' }}
-                            >
-                              <h4 style={{ margin: 0, fontSize: '15px', color: isOpen ? '#2acb35' : '#222' }}>{faq.q}</h4>
-                            </div>
-                            <div className={`accord-content ${isOpen ? 'collapsed' : ''}`} style={{ display: isOpen ? 'block' : 'none', padding: '18px 20px', background: '#fff', border: '1px solid #eee' }}>
-                              <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.7', color: '#666' }}>{faq.a}</p>
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-
-                {/* 9. RELATED THERAPIES STRIP */}
-                {service.relatedLinks && service.relatedLinks.length > 0 && (
-                  <div style={{ marginBottom: '45px', padding: '25px', background: '#f8faf7', borderRadius: '8px', border: '1px solid #e2e8df' }}>
-                    <h4 style={{ fontSize: '15px', fontWeight: 600, color: '#333', marginBottom: '14px' }}>
-                      Related Therapies &amp; Complementary Practices:
-                    </h4>
-                    <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-                      {service.relatedLinks.map((rel, idx) => (
-                        <Link 
-                          key={idx}
-                          to={rel.link} 
-                          style={{ 
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '6px',
-                            padding: '8px 16px',
-                            background: '#fff',
-                            border: '1px solid #cbd8c8',
-                            borderRadius: '20px',
-                            fontSize: '13px',
-                            color: '#2a5a30',
-                            fontWeight: 500,
-                            textDecoration: 'none',
-                            transition: 'all 0.3s'
-                          }}
-                        >
-                          <span>{rel.title}</span>
-                          <i className="fa fa-arrow-right" style={{ fontSize: '10px' }}></i>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* 10. GLOBAL CONSULTATION CALLOUT BOX */}
-                <div style={{ 
-                  background: 'linear-gradient(135deg, #131d33 0%, #1c2b48 100%)', 
-                  borderRadius: '10px', 
-                  padding: '40px 35px', 
-                  color: '#fff', 
-                  marginBottom: '35px',
-                  boxShadow: '0 10px 30px rgba(19,29,51,0.15)'
-                }}>
-                  <span style={{ color: '#2acb35', fontSize: '13px', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase' }}>
-                    Your Wellness Is Personal
-                  </span>
-                  <h2 style={{ color: '#fff', fontSize: '24px', margin: '8px 0 14px' }}>
-                    Not Sure Whether This Therapy Is Right for You?
-                  </h2>
-                  <p style={{ color: '#c5d0e0', fontSize: '14.5px', lineHeight: '1.7', marginBottom: '25px', maxWidth: '650px' }}>
-                    You don't need to decide on a therapy before visiting Oriolus Scientific. Begin with a conversation about your goals, lifestyle, mobility and wellness concerns. Our team can help you understand the available options and identify an appropriate starting point.
-                  </p>
-                  <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-                    <Link className="thm-btn bgclr-1" to="/appointment" style={{ padding: '12px 28px', fontSize: '14px' }}>
-                      Book a Consultation
-                    </Link>
-                    <Link className="thm-btn" to="/procedures" style={{ background: 'rgba(255,255,255,0.15)', color: '#fff', padding: '12px 28px', fontSize: '14px', border: '1px solid rgba(255,255,255,0.25)' }}>
-                      Explore All Therapies
-                    </Link>
+                  <div className="ty-trust-item">
+                    <Sparkles size={24} />
+                    <span>Expert<br />Guidance</span>
                   </div>
                 </div>
+              </div>
 
-                {/* 11. UNIVERSAL MEDICAL / WELLNESS NOTE */}
-                <div style={{ 
-                  padding: '18px 22px', 
-                  background: '#fcfcfc', 
-                  border: '1px solid #ececec', 
-                  borderRadius: '6px', 
-                  fontSize: '12.5px', 
-                  color: '#777', 
-                  lineHeight: '1.7' 
-                }}>
-                  <strong>Wellness Information:</strong> Information on this website is intended for general wellness and educational purposes. Individual responses to therapies vary. Oriolus Scientific therapies are not a substitute for emergency care, medical diagnosis or prescribed treatment. If you have an existing medical condition, take medication, are pregnant, recently underwent surgery or have significant health concerns, please consult an appropriate healthcare professional before beginning a new therapy.
-                </div>
-
+              {/* Blank Hero Image Slot */}
+              <div className="ty-hero-image-wrap">
+                <BlankImagePlaceholder minHeight="420px" label={`${service.title} Feature Slot`} />
               </div>
             </div>
-            {/* End Content Column */}
-
-            {/* Start Sidebar (3 cols left) */}
-            <ProcedureSidebar />
-            {/* End Sidebar */}
-
           </div>
-        </div>
-      </section>
-      {/* End Main Therapy Area */}
+        </section>
+
+        {/* 2. OVERVIEW / WHAT IS [THERAPY] SECTION */}
+        <section className="ty-intro-section">
+          <div className="ty-container">
+            <div className="ty-intro-grid">
+              {/* Blank Overview Image Slot */}
+              <div className="ty-intro-image-wrap">
+                <BlankImagePlaceholder minHeight="380px" label={`${service.title} Overview Slot`} />
+              </div>
+
+              <div className="ty-intro-content">
+                <h2>{service.overviewTitle || `What Is ${service.title}?`}</h2>
+                {service.overview.map((para, idx) => (
+                  <p key={idx}>{para}</p>
+                ))}
+
+                <div className="ty-note-card">
+                  <div className="ty-note-icon"><Leaf size={24} /></div>
+                  <p>
+                    Every program at Oriolus Scientific is personalized around your comfort, lifestyle, and individual wellness goals.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. HOW [THERAPY] MAY SUPPORT YOU (BENEFITS GRID) */}
+        {service.benefits && service.benefits.length > 0 && (
+          <section className="ty-support-section">
+            <div className="ty-container">
+              <DecorativeTitle>How {service.title} May Support You</DecorativeTitle>
+              <div className="ty-benefit-grid" style={{ gridTemplateColumns: `repeat(${Math.min(service.benefits.length, 7)}, 1fr)` }}>
+                {service.benefits.map((benefit, index) => {
+                  const Icon = benefitIcons[index % benefitIcons.length];
+                  return (
+                    <div className="ty-benefit" key={index}>
+                      <div className="ty-benefit-icon-wrap">
+                        <Icon size={26} strokeWidth={1.8} />
+                      </div>
+                      <div className="ty-benefit-label">{benefit}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 4. WHO MAY BENEFIT / YOUR EXPERIENCE */}
+        {service.whatToExpect && service.whatToExpect.length > 0 && (
+          <section className="ty-experience-section" id="experience">
+            <div className="ty-container">
+              <DecorativeTitle>Your {service.title} Experience</DecorativeTitle>
+
+              <div className="ty-experience-track" style={{ gridTemplateColumns: `repeat(${Math.min(service.whatToExpect.length, 5)}, 1fr)` }}>
+                {service.whatToExpect.map((exp, index) => (
+                  <article className="ty-experience-item" key={index}>
+                    <div className="ty-experience-icon">
+                      <Flower2 size={26} strokeWidth={1.8} />
+                    </div>
+                    <h3>{exp.title}</h3>
+                    <p>{exp.desc}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 5. YOUR 3-STEP JOURNEY */}
+        {service.threeStepJourney && service.threeStepJourney.length > 0 && (
+          <section className="ty-journey-section">
+            <div className="ty-container">
+              <DecorativeTitle>Your 3-Step Journey</DecorativeTitle>
+              <div className="ty-journey-grid">
+                {service.threeStepJourney.map((step, index) => (
+                  <article className="ty-step-card" key={index}>
+                    <div className="ty-step-number">{step.step}</div>
+                    <h3>{step.title}</h3>
+                    <p>{step.desc}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 6. IMPORTANT CONSIDERATIONS (SAFETY ALERT) */}
+        {service.importantConsiderations && (
+          <section style={{ padding: '45px 0', background: '#fffdf5', borderTop: '1px solid #f6e6b8', borderBottom: '1px solid #f6e6b8' }}>
+            <div className="ty-container">
+              <div style={{ 
+                display: 'flex', 
+                alignItems: 'flex-start', 
+                gap: '18px', 
+                padding: '24px 28px', 
+                background: '#ffffff', 
+                borderRadius: '8px', 
+                borderLeft: '4px solid #c59d5f',
+                boxShadow: '0 4px 15px rgba(0,0,0,0.02)'
+              }}>
+                <div style={{ color: '#c59d5f', fontSize: '24px', flexShrink: 0, marginTop: '2px' }}>
+                  <i className="fa fa-info-circle"></i>
+                </div>
+                <div>
+                  <h4 style={{ margin: '0 0 6px', fontSize: '16px', color: '#7a5a1e', fontWeight: 700, fontFamily: "'Inter', sans-serif" }}>
+                    Important Considerations &amp; Safety Guidance
+                  </h4>
+                  <p style={{ margin: 0, fontSize: '14.5px', color: '#6c5324', lineHeight: '1.7' }}>
+                    {service.importantConsiderations}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 7. FREQUENTLY ASKED QUESTIONS */}
+        {service.faqs && service.faqs.length > 0 && (
+          <section className="ty-faq-section">
+            <div className="ty-container">
+              <div className="ty-faq-grid">
+                {/* Blank FAQ Image Slot */}
+                <div className="ty-faq-image-wrap">
+                  <BlankImagePlaceholder minHeight="400px" label="Props / Clinic Environment Slot" />
+                </div>
+
+                <div className="ty-faq-content">
+                  <DecorativeTitle>Frequently Asked Questions</DecorativeTitle>
+                  <div className="ty-faq-list">
+                    {service.faqs.map((item, index) => {
+                      const isOpen = openFaq === index;
+                      return (
+                        <div className={`ty-faq-item ${isOpen ? 'is-open' : ''}`} key={index}>
+                          <button
+                            className="ty-faq-question"
+                            onClick={() => setOpenFaq(isOpen ? null : index)}
+                            aria-expanded={isOpen}
+                          >
+                            <span>{item.q}</span>
+                            <ChevronDown size={18} className="ty-faq-icon" />
+                          </button>
+                          {isOpen && (
+                            <div className="ty-faq-answer">
+                              <p>{item.a}</p>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 8. RELATED THERAPIES STRIP */}
+        {service.relatedLinks && service.relatedLinks.length > 0 && (
+          <section style={{ padding: '45px 0', background: '#fbf8f2', borderTop: '1px solid #ded8cd' }}>
+            <div className="ty-container text-center">
+              <h4 style={{ fontSize: '16px', fontWeight: 600, color: '#333', marginBottom: '16px', fontFamily: "'Inter', sans-serif" }}>
+                Related Therapies &amp; Complementary Practices:
+              </h4>
+              <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                {service.relatedLinks.map((rel, idx) => (
+                  <Link 
+                    key={idx}
+                    to={rel.link} 
+                    style={{ 
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '10px 22px',
+                      background: '#ffffff',
+                      border: '1px solid #cbd8c8',
+                      borderRadius: '30px',
+                      fontSize: '13.5px',
+                      color: '#2e5f31',
+                      fontWeight: 600,
+                      textDecoration: 'none',
+                      boxShadow: '0 2px 6px rgba(0,0,0,0.03)',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-2px)';
+                      e.currentTarget.style.borderColor = '#2e5f31';
+                      e.currentTarget.style.background = '#f4f8f4';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.borderColor = '#cbd8c8';
+                      e.currentTarget.style.background = '#ffffff';
+                    }}
+                  >
+                    <span>{rel.title}</span>
+                    <ArrowRight size={14} />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 9. BOTTOM GREEN CTA BANNER */}
+        <section className="ty-cta-section" id="consultation">
+          <div className="ty-container">
+            <div className="ty-cta-inner">
+              <div className="ty-cta-copy">
+                <h2>{service.cta?.heading || 'Begin With Movement That Understands You'}</h2>
+                <p>
+                  {service.cta?.subheading || 'Discover a personalised natural wellness practice designed around your comfort and goals.'}
+                </p>
+              </div>
+              <Link to="/appointment" className="ty-cta-button">
+                <CalendarDays size={18} />
+                <span>{service.cta?.btnText || 'Book a Consultation'}</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* 10. UNIVERSAL MEDICAL / WELLNESS DISCLAIMER NOTE */}
+        <section style={{ padding: '30px 0', background: '#fafaf8', borderTop: '1px solid #eae6df' }}>
+          <div className="ty-container">
+            <div style={{ 
+              padding: '16px 20px', 
+              background: '#ffffff', 
+              border: '1px solid #e7e2d8', 
+              borderRadius: '6px', 
+              fontSize: '12.5px', 
+              color: '#777', 
+              lineHeight: '1.7' 
+            }}>
+              <strong>Wellness Information:</strong> Information on this website is intended for general wellness and educational purposes. Individual responses to therapies vary. Oriolus Scientific therapies are not a substitute for emergency care, medical diagnosis or prescribed treatment. If you have an existing medical condition, take medication, are pregnant, recently underwent surgery or have significant health concerns, please consult an appropriate healthcare professional before beginning a new therapy.
+            </div>
+          </div>
+        </section>
+
+      </main>
     </MainLayout>
   );
 };
