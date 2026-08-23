@@ -145,12 +145,24 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 14.5px;
   font-weight: 600;
   transition: all 0.3s ease;
   cursor: pointer;
+}
+
+.ty-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.2px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.ty-btn:hover svg {
+  transform: translateX(3px);
 }
 
 /* Primary Button: Default Deep Navy Blue ➔ Hover Radiant Orange */
@@ -663,7 +675,7 @@
   color: var(--oriolus-navy) !important;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
   font-size: 14.5px;
   font-weight: 700;
@@ -672,11 +684,25 @@
   flex-shrink: 0;
 }
 
+.ty-cta-button svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2.2px;
+  flex-shrink: 0;
+  color: var(--oriolus-amber);
+  transition: all 0.3s ease;
+}
+
 .ty-cta-button:hover {
   background: var(--oriolus-amber) !important;
   color: #ffffff !important;
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(235, 140, 71, 0.45) !important;
+}
+
+.ty-cta-button:hover svg {
+  color: #ffffff !important;
+  transform: scale(1.15);
 }
 
 /* ==========================================================================

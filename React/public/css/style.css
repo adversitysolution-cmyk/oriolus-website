@@ -845,7 +845,7 @@ select:focus {
 }
 
 .procedures-mega-footer {
-  padding: 14px 24px;
+  padding: 16px 28px;
   background: #fafafa;
   border-top: 1px solid #f0f0f0;
   display: flex;
@@ -854,26 +854,54 @@ select:focus {
 }
 
 .procedures-mega-footer a.overview-link {
-  font-size: 13px !important;
+  font-size: 13.5px !important;
   font-weight: 700 !important;
   color: #EB8C47 !important;
   text-transform: uppercase !important;
   display: inline-flex !important;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   padding: 0 !important;
+  transition: transform 0.3s ease;
+}
+
+.procedures-mega-footer a.overview-link i {
+  font-size: 18px !important;
+  color: #EB8C47 !important;
+  transition: transform 0.3s ease;
+}
+
+.procedures-mega-footer a.overview-link:hover i {
+  transform: translateX(4px);
 }
 
 .procedures-mega-footer a.book-link {
-  font-size: 13px !important;
-  font-weight: 600 !important;
-  color: #555555 !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: #0B2B4E !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
   padding: 0 !important;
   text-transform: none !important;
+  transition: color 0.3s ease;
+}
+
+.procedures-mega-footer a.book-link i {
+  font-size: 17px !important;
+  color: #EB8C47 !important;
+  transition: transform 0.3s ease;
+}
+
+.procedures-mega-footer a.book-link:hover {
+  color: #EB8C47 !important;
+}
+
+.procedures-mega-footer a.book-link:hover i {
+  transform: scale(1.15);
 }
 
 .procedures-mega-footer a:hover {
-  color: #0B2B4E !important;
   background: none !important;
 }
 
