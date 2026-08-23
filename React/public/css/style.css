@@ -837,7 +837,9 @@ select:focus {
 
 .procedures-mega-footer {
   margin-top: 18px;
-  padding-top: 12px;
+  padding: 18px 26px 16px;
+  min-height: 56px;
+  background: #fafdfa;
   border-top: 1px solid #e8ede5;
   display: flex;
   align-items: center;
@@ -845,22 +847,32 @@ select:focus {
 }
 
 .procedures-mega-footer a.overview-link {
-  font-size: 13px !important;
+  font-size: 13.5px !important;
   font-weight: 700 !important;
   color: #2acb35 !important;
   text-transform: uppercase !important;
   display: inline-flex !important;
   align-items: center;
-  gap: 8px;
-  padding: 0 !important;
+  gap: 10px;
+  padding: 4px 0 !important;
+  transition: transform 0.3s ease;
+}
+
+.procedures-mega-footer a.overview-link:hover {
+  transform: translateX(4px);
 }
 
 .procedures-mega-footer a.book-link {
-  font-size: 13px !important;
+  font-size: 13.5px !important;
   font-weight: 600 !important;
   color: #555555 !important;
-  padding: 0 !important;
+  padding: 4px 0 !important;
   text-transform: none !important;
+  transition: color 0.3s ease;
+}
+
+.procedures-mega-footer a.book-link:hover {
+  color: #2acb35 !important;
 }
 
 .procedures-mega-footer a:hover {
