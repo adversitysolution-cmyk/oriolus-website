@@ -1041,7 +1041,7 @@ select:focus {
 
 
 .procedures-area .single-item{
-    margin-bottom: 30px;
+    margin-bottom: 55px;
 }
 .procedures-area .single-item .img-holder {
     position: relative;
@@ -1070,11 +1070,12 @@ select:focus {
 .procedures-area .single-item:hover .img-holder .overlay-style-one {
     -webkit-transform: scale(1);
     transform: scale(1);
-    opacity: 1;
+    opacity: 1; 
 }
 
 .procedures-area .single-item .text-holder{
     position: relative;
+    min-height: 150px;
 }
 .procedures-area .single-item .text-holder .show-content {
     padding: 23px 0 7px;
@@ -1100,7 +1101,7 @@ select:focus {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     transform: scale(0);
     transition: all 500ms ease 0.5s;
 }
@@ -1109,7 +1110,7 @@ select:focus {
     transform: scale(1);
 }
 .procedures-area .single-item .text-holder .hover-content h3 {
-    margin: 27px 0 17px;
+    margin: 15px 0 10px;
     color: #2acb35;
 }
 .procedures-area .single-item .text-holder .hover-content .border{
@@ -1120,7 +1121,9 @@ select:focus {
     margin: 0 auto;
 }
 .procedures-area .single-item .text-holder .hover-content p{
-    margin: 14px 0 0;    
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 

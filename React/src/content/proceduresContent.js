@@ -175,7 +175,7 @@ export const ayurvedaPageContent = {
       icon: 'flaticon-lotus-flower',
       image: '/images/procedures/1.png',
       link: '/services/panchakarma',
-      shortDesc: 'Five-fold authentic classical bio-purification and cellular detoxification protocol.'
+      shortDesc: 'Five-fold authentic classical bio-purification and cellular detoxification.'
     },
     {
       id: 2,
@@ -184,7 +184,7 @@ export const ayurvedaPageContent = {
       icon: 'flaticon-stones-and-leaf-massage-spa-symbol',
       image: '/images/procedures/3.png',
       link: '/services/abhyanga',
-      shortDesc: 'Full-body synchronized therapeutic massage with warm dosha-specific medicated herbal tailams.'
+      shortDesc: 'Full-body synchronized massage with warm dosha-specific medicated herbal oils.'
     },
     {
       id: 3,
@@ -193,7 +193,7 @@ export const ayurvedaPageContent = {
       icon: 'flaticon-flower',
       image: '/images/procedures/2.png',
       link: '/services/shirodhara',
-      shortDesc: 'Rhythmic, continuous stream of warm medicated herbal oil over the third-eye chakra for deep calm.'
+      shortDesc: 'Continuous warm herbal oil stream over the forehead for deep mental calm.'
     },
     {
       id: 4,
@@ -202,7 +202,7 @@ export const ayurvedaPageContent = {
       icon: 'flaticon-hands',
       image: '/images/procedures/4.png',
       link: '/services/udwarthanam',
-      shortDesc: 'Deep therapeutic dry herbal powder massage to break down subcutaneous fat and stimulate lymphatic drainage.'
+      shortDesc: 'Deep dry herbal powder massage for fat breakdown and lymphatic drainage.'
     },
     {
       id: 5,
@@ -211,7 +211,7 @@ export const ayurvedaPageContent = {
       icon: 'flaticon-light',
       image: '/images/procedures/1.png',
       link: '/services/swedana',
-      shortDesc: 'Medicinal herbal steam box therapy to open micro-channels (Srotas) and expel deep cellular toxins.'
+      shortDesc: 'Medicinal herbal steam box therapy to open micro-channels and expel toxins.'
     }
   ]
 };
