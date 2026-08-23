@@ -230,26 +230,6 @@ const Header = () => {
                           <li><Link to="/blog-single">Blog Single Post</Link></li>
                         </ul>
                       </li>
-                      <li className={`dropdown ${['/gallery-grid', '/gallery-without-grid', '/gallery-single'].some(p => isActive(p)) ? 'current' : ''}`}>
-                        <Link to="/gallery-grid">Gallery</Link>
-                        <div className="dropdown-btn" onClick={(e) => toggleDropdown('gallery', e)}></div>
-                        <ul style={{ display: openDropdowns['gallery'] ? 'block' : '' }}>
-                          <li><Link to="/gallery-grid">Gallery Grid View</Link></li>
-                          <li><Link to="/gallery-without-grid">Gallery Without Grid</Link></li>
-                          <li><Link to="/gallery-single">Gallery Single</Link></li>
-                        </ul>
-                      </li>
-                      <li className={`dropdown ${['/shop', '/shop-single', '/shopping-cart', '/checkout', '/account'].some(p => isActive(p)) ? 'current' : ''}`}>
-                        <Link to="/shop">Shop</Link>
-                        <div className="dropdown-btn" onClick={(e) => toggleDropdown('shop', e)}></div>
-                        <ul style={{ display: openDropdowns['shop'] ? 'block' : '' }}>
-                          <li><Link to="/shop">Shop Products</Link></li>
-                          <li><Link to="/shop-single">Products Single</Link></li>
-                          <li><Link to="/shopping-cart">Shopping Cart</Link></li>
-                          <li><Link to="/checkout">Checkout</Link></li>
-                          <li><Link to="/account">My Account</Link></li>
-                        </ul>
-                      </li>
                       <li className={isActive('/contact') ? 'current' : ''}>
                         <Link to="/contact">Contact Us</Link>
                       </li>
