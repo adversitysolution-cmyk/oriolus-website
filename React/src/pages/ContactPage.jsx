@@ -106,8 +106,8 @@ const ContactPage = () => {
             <div className="col-lg-8 col-md-7 col-sm-12 col-xs-12">
               <div className="contact-form">
                 {submitted ? (
-                  <div className="alert alert-success text-center" style={{ padding: '40px 20px', background: '#f2fff3', border: '1px solid #00B5A6' }}>
-                    <span className="flaticon-shape" style={{ fontSize: '40px', color: '#00B5A6', display: 'block', marginBottom: '15px' }}></span>
+                  <div className="alert alert-success text-center" style={{ padding: '40px 20px', background: '#FDF4EC', border: '1px solid #EB8C47' }}>
+                    <span className="flaticon-shape" style={{ fontSize: '40px', color: '#EB8C47', display: 'block', marginBottom: '15px' }}></span>
                     <h2>Message Successfully Sent!</h2>
                     <p style={{ fontSize: '15px', marginTop: '10px' }}>
                       Thank you for contacting Oriolus Scientific. Our patient care team will get back to you shortly.

@@ -44,8 +44,8 @@ const BlankImagePlaceholder = ({ minHeight = '380px', label = 'Image Placeholder
     }}
   >
     <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ opacity: 0.4 }}>
-      <rect x="3" y="3" width="18" height="18" rx="3" stroke="#00B5A6" strokeWidth="1.5" />
-      <circle cx="8.5" cy="8.5" r="2" fill="#00B5A6" />
+      <rect x="3" y="3" width="18" height="18" rx="3" stroke="#EB8C47" strokeWidth="1.5" />
+      <circle cx="8.5" cy="8.5" r="2" fill="#EB8C47" />
       <path d="M21 15L16 10L5 21" stroke="#0B2B4E" strokeWidth="1.5" strokeLinejoin="round" />
     </svg>
     <span style={{ fontSize: '11px', letterSpacing: '1.5px', textTransform: 'uppercase', color: '#64748B', fontWeight: 600, opacity: 0.7 }}>
@@ -335,7 +335,7 @@ const ServiceDetailPage = () => {
                       gap: '8px',
                       padding: '10px 22px',
                       background: '#ffffff',
-                      border: '1.5px solid #C7E2E0',
+                      border: '1.5px solid #F6D6BA',
                       borderRadius: '30px',
                       fontSize: '13.5px',
                       color: 'var(--oriolus-navy)',
@@ -346,13 +346,13 @@ const ServiceDetailPage = () => {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.borderColor = '#00B5A6';
-                      e.currentTarget.style.color = '#00B5A6';
-                      e.currentTarget.style.background = '#E6F7F6';
+                      e.currentTarget.style.borderColor = '#EB8C47';
+                      e.currentTarget.style.color = '#EB8C47';
+                      e.currentTarget.style.background = '#FDF4EC';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.borderColor = '#C7E2E0';
+                      e.currentTarget.style.borderColor = '#F6D6BA';
                       e.currentTarget.style.color = '#0B2B4E';
                       e.currentTarget.style.background = '#ffffff';
                     }}
