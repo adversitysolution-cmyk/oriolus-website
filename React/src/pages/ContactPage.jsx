@@ -63,8 +63,7 @@ const ContactPage = () => {
                       <span className="flaticon-location"></span>
                     </div>
                     <div className="text-holder">
-                      <h5><span>{content.quickContact.addressLabel}:</span></h5>
-                      <p>{content.quickContact.address}</p>
+                      <h5><span>Address:</span> {content.quickContact.address}</h5>
                     </div>
                   </li>
                   <li>
@@ -72,8 +71,7 @@ const ContactPage = () => {
                       <span className="flaticon-technology"></span>
                     </div>
                     <div className="text-holder">
-                      <h5><span>{content.quickContact.phoneLabel}:</span></h5>
-                      <p>{content.quickContact.phone}</p>
+                      <h5><span>Phone:</span> {content.quickContact.phone}</h5>
                     </div>
                   </li>
                   <li>
@@ -81,8 +79,7 @@ const ContactPage = () => {
                       <span className="flaticon-note"></span>
                     </div>
                     <div className="text-holder">
-                      <h5><span>{content.quickContact.emailLabel}:</span></h5>
-                      <p>{content.quickContact.email}</p>
+                      <h5><span>Email:</span> {content.quickContact.email}</h5>
                     </div>
                   </li>
                   <li>
@@ -90,8 +87,7 @@ const ContactPage = () => {
                       <span className="flaticon-clock"></span>
                     </div>
                     <div className="text-holder">
-                      <h5><span>{content.quickContact.hoursLabel}:</span></h5>
-                      <p>{content.quickContact.hoursWeekdays}</p>
+                      <h5><span>Hours:</span> {content.quickContact.hoursWeekdays}</h5>
                       <p><span className="closes" style={{ color: '#b28b57', fontWeight: 600 }}>{content.quickContact.hoursSunday}</span></p>
                     </div>
                   </li>
