@@ -28,6 +28,11 @@ import CheckoutPage from './pages/CheckoutPage';
 import AccountPage from './pages/AccountPage';
 import ContactPage from './pages/ContactPage';
 import DrVijayPage from './pages/DrVijayPage';
+import YogaTherapyPage from './pages/YogaTherapyPage';
+import NaturopathyPage from './pages/NaturopathyPage';
+import AyurvedaPage from './pages/AyurvedaPage';
+import AcupuncturePage from './pages/AcupuncturePage';
+import StructuredWellnessProgramsPage from './pages/StructuredWellnessProgramsPage';
 
 function App() {
   return (
@@ -45,9 +50,23 @@ function App() {
         <Route path="/dr-vijay.html" element={<DrVijayPage />} />
         <Route path="/therapists/dr-vijay" element={<DrVijayPage />} />
 
-        {/* Procedures */}
+        {/* Procedures & 5 Core Disciplines */}
         <Route path="/procedures" element={<ProceduresPage />} />
         <Route path="/procedures.html" element={<ProceduresPage />} />
+        <Route path="/yoga-therapy" element={<YogaTherapyPage />} />
+        <Route path="/yoga-therapy.html" element={<YogaTherapyPage />} />
+        <Route path="/naturopathy" element={<NaturopathyPage />} />
+        <Route path="/naturopathy.html" element={<NaturopathyPage />} />
+        <Route path="/ayurveda" element={<AyurvedaPage />} />
+        <Route path="/ayurveda.html" element={<AyurvedaPage />} />
+        <Route path="/acupuncture" element={<AcupuncturePage />} />
+        <Route path="/acupuncture.html" element={<AcupuncturePage />} />
+        <Route path="/structured-wellness-programs" element={<StructuredWellnessProgramsPage />} />
+        <Route path="/structured-wellness-programs.html" element={<StructuredWellnessProgramsPage />} />
+        <Route path="/wellness-programs" element={<StructuredWellnessProgramsPage />} />
+        <Route path="/wellness-programs.html" element={<StructuredWellnessProgramsPage />} />
+
+        {/* Single Procedures */}
         <Route path="/massage-therapy" element={<MassageTherapyPage />} />
         <Route path="/massage-therapy.html" element={<MassageTherapyPage />} />
         <Route path="/facial-treatments" element={<FacialTreatmentsPage />} />

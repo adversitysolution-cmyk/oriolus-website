@@ -121,16 +121,16 @@ const Header = () => {
                           <li><Link to="/appointment">Make an Appointment</Link></li>
                         </ul>
                       </li>
-                      <li className={`dropdown ${['/procedures', '/massage-therapy', '/facial-treatments', '/pedicure-menicure', '/salt-oil-bath', '/perfect-makeup', '/hair-treatments'].some(p => isActive(p)) ? 'current' : ''}`}>
+                      <li className={`dropdown ${['/procedures', '/yoga-therapy', '/naturopathy', '/ayurveda', '/acupuncture', '/structured-wellness-programs', '/wellness-programs', '/massage-therapy', '/facial-treatments', '/pedicure-menicure', '/salt-oil-bath', '/perfect-makeup', '/hair-treatments'].some(p => isActive(p)) ? 'current' : ''}`}>
                         <Link to="/procedures">Procedures</Link>
                         <div className="dropdown-btn" onClick={(e) => toggleDropdown('procedures', e)}></div>
                         <ul style={{ display: openDropdowns['procedures'] ? 'block' : '' }}>
-                          <li><Link to="/massage-therapy">Massage Therapy</Link></li>
-                          <li><Link to="/facial-treatments">Facial Treatments</Link></li>
-                          <li><Link to="/pedicure-menicure">Pedicure & Menicure</Link></li>
-                          <li><Link to="/salt-oil-bath">Salt and Oil Bath</Link></li>
-                          <li><Link to="/perfect-makeup">Perfect Makeup</Link></li>
-                          <li><Link to="/hair-treatments">Hair Treatments</Link></li>
+                          <li><Link to="/procedures">All Procedures &amp; Therapies</Link></li>
+                          <li><Link to="/yoga-therapy">Yoga Therapy</Link></li>
+                          <li><Link to="/naturopathy">Naturopathy</Link></li>
+                          <li><Link to="/ayurveda">Ayurveda</Link></li>
+                          <li><Link to="/acupuncture">Acupuncture</Link></li>
+                          <li><Link to="/structured-wellness-programs">Structured Wellness Programs</Link></li>
                         </ul>
                       </li>
                       <li className={isActive('/about/meet-dr-vijay') || isActive('/dr-vijay') || isActive('/therapists') ? 'current' : ''}>
