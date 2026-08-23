@@ -71,7 +71,7 @@ const Footer = () => {
             </div>
             {/* End single footer widget */}
 
-            {/* Start single footer widget: Useful Links */}
+            {/* Start single footer widget: Useful Links (Header Items) */}
             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div className="single-footer-widget pd-bottom50">
                 <div className="title">
@@ -79,12 +79,12 @@ const Footer = () => {
                   <span className="border"></span>
                 </div>
                 <ul className="usefull-links">
+                  <li><Link to="/">Home</Link></li>
                   <li><Link to="/about">About Us</Link></li>
-                  <li><Link to="/about/meet-dr-vijay">Meet Dr. Vijay</Link></li>
-                  <li><Link to="/faq">Patient FAQs</Link></li>
-                  <li><Link to="/testimonials">Testimonials</Link></li>
+                  <li><Link to="/about/meet-dr-vijay">Dr. Vijay</Link></li>
+                  <li><Link to="/procedures">Services</Link></li>
+                  <li><Link to="/blog-default">Blog</Link></li>
                   <li><Link to="/contact">Contact Us</Link></li>
-                  <li><Link to="/appointment">Book Appointment</Link></li>
                 </ul>
               </div>
             </div>
