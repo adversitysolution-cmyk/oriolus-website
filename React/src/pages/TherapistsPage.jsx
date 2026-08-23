@@ -6,38 +6,74 @@ import { therapistsContent } from '../content/therapistsContent';
 const TherapistsPage = () => {
   const content = therapistsContent;
 
+  const getTeamIcon = (role) => {
+    if (role.toLowerCase().includes('yoga')) return 'flaticon-lotus-flower';
+    if (role.toLowerCase().includes('massage')) return 'flaticon-stones-and-leaf-massage-spa-symbol';
+    if (role.toLowerCase().includes('naturopathy')) return 'flaticon-flower';
+    if (role.toLowerCase().includes('ayurveda')) return 'flaticon-herbal-spa-treatment-leaves';
+    if (role.toLowerCase().includes('acupuncture')) return 'flaticon-spa-essential-oils-and-candle-for-aromatherapy';
+    return 'flaticon-lotus-flower';
+  };
+
   return (
     <MainLayout>
       <Breadcrumb title={content.header.title} activeTitle={content.header.activeTitle} />
 
-      <section className="therapists-area" style={{ padding: '80px 0' }}>
+      {/* Start Experts Area */}
+      <section className="experts-area pd-top100 pd-bottom60">
         <div className="container">
           <div className="sec-title text-center">
-            <h1>Meet Our Master Specialists</h1>
+            <h1>Meet Our Therapists</h1>
             <div className="border mar0auto">
               <span className="flaticon-shape"></span>    
             </div>
-            <p style={{ maxWidth: '700px', margin: '15px auto 50px', color: '#777' }}>
-              {content.header.subtitle}
-            </p>
+            <p>{content.header.subtitle}</p>
           </div>
 
           <div className="row">
             {content.faculty.map(t => (
-              <div key={t.id} className="col-md-3 col-sm-6 col-xs-12" style={{ marginBottom: '40px' }}>
-                <div className="single-team-member text-center" style={{ background: '#fff', border: '1px solid #eee', paddingBottom: '25px', transition: 'all 0.3s' }}>
-                  <div className="img-holder" style={{ overflow: 'hidden', marginBottom: '20px' }}>
-                    <img src={t.image} alt={t.name} style={{ width: '100%', height: 'auto' }} />
+              <div key={t.id} className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div className="single-team-member">
+                  <div className="inner-content">
+                    <div className="img-holder">
+                      <img src={t.image} alt={t.name} />
+                      <div className="overlay-style-one">
+                        <div className="box">
+                          <div className="content">
+                            <ul>
+                              <li>
+                                <a href="#fb" onClick={(e) => e.preventDefault()} aria-label="Facebook">
+                                  <i className="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#tw" onClick={(e) => e.preventDefault()} aria-label="Twitter">
+                                  <i className="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#in" onClick={(e) => e.preventDefault()} aria-label="LinkedIn">
+                                  <i className="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>  
+                    </div>
+                    <div className="icon-holder">
+                      <div className="inner">
+                        <span className={getTeamIcon(t.role)}></span>    
+                      </div>    
+                    </div>
                   </div>
-                  <div className="text-holder" style={{ padding: '0 15px' }}>
-                    <h3 style={{ fontSize: '18px', margin: '0 0 5px', color: '#262626' }}>{t.name}</h3>
-                    <span style={{ color: '#c59d5f', fontSize: '13px', fontWeight: 600, display: 'block', marginBottom: '12px' }}>{t.role}</span>
-                    <p style={{ fontSize: '13px', color: '#777', lineHeight: '1.6', marginBottom: '15px' }}>{t.bio}</p>
-                    <ul className="social-links" style={{ display: 'flex', justifyContent: 'center', gap: '10px', padding: 0, listStyle: 'none' }}>
-                      <li><a href="#fb" onClick={(e) => e.preventDefault()} style={{ color: '#777' }} aria-label="Facebook"><i className="fa fa-facebook"></i></a></li>
-                      <li><a href="#tw" onClick={(e) => e.preventDefault()} style={{ color: '#777' }} aria-label="Twitter"><i className="fa fa-twitter"></i></a></li>
-                      <li><a href="#in" onClick={(e) => e.preventDefault()} style={{ color: '#777' }} aria-label="LinkedIn"><i className="fa fa-linkedin"></i></a></li>
-                    </ul>
+                  <div className="text-holder text-center">
+                    <h3>{t.name}</h3>
+                    <h4>{t.role}</h4>
+                    <span className="border"></span>
+                    <p>
+                      <span className="flaticon-technology"></span> +91 98450 12345
+                    </p>
                   </div>
                 </div>
               </div>
@@ -45,6 +81,7 @@ const TherapistsPage = () => {
           </div>
         </div>
       </section>
+      {/* End Experts Area */}
     </MainLayout>
   );
 };

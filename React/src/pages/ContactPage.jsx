@@ -24,7 +24,7 @@ const ContactPage = () => {
       setSubmitted(true);
       setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
       setTimeout(() => setSubmitted(false), 5000);
-    }, 1000);
+    }, 800);
   };
 
   const handleChange = (e) => {
@@ -38,8 +38,11 @@ const ContactPage = () => {
     <MainLayout>
       <Breadcrumb title={content.header.title} activeTitle={content.header.activeTitle} />
 
-      {/* Start contact form area */}
-      <section className="contact-form-area" style={{ padding: '80px 0' }}>
+      {/* Start Contact Form Area */}
+      <section className="contact-form-area pd-top100 pd-bottom100">
+        <div className="contact-form-img">
+          <img src="/images/resources/contact-form-img.jpg" alt="Contact Us" onError={(e) => { e.target.style.display = 'none'; }} />
+        </div>
         <div className="container">
           <div className="sec-title">
             <h1>{content.leadMessage.title}</h1>
@@ -50,9 +53,10 @@ const ContactPage = () => {
           </div>
 
           <div className="row">
-            {/* Quick Contact Card */}
-            <div className="col-lg-4 col-md-5">
-              <div className="quick-contact" style={{ background: '#f9f8f6', padding: '35px', border: '1px solid #eee', marginBottom: '30px' }}>
+            
+            {/* Quick Contact Box */}
+            <div className="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+              <div className="quick-contact">
                 <div className="title">
                   <h2>{content.quickContact.title}</h2>
                 </div>
@@ -62,7 +66,8 @@ const ContactPage = () => {
                       <span className="flaticon-location"></span>
                     </div>
                     <div className="text-holder">
-                      <h5><span>Address:</span> {content.quickContact.address}</h5>
+                      <h5>{content.quickContact.addressLabel}:</h5>
+                      <p>{content.quickContact.address}</p>
                     </div>
                   </li>
                   <li>
@@ -70,7 +75,8 @@ const ContactPage = () => {
                       <span className="flaticon-technology"></span>
                     </div>
                     <div className="text-holder">
-                      <h5><span>Phone:</span> {content.quickContact.phone}</h5>
+                      <h5>{content.quickContact.phoneLabel}:</h5>
+                      <p>{content.quickContact.phone}</p>
                     </div>
                   </li>
                   <li>
@@ -78,7 +84,8 @@ const ContactPage = () => {
                       <span className="flaticon-note"></span>
                     </div>
                     <div className="text-holder">
-                      <h5><span>Email:</span> {content.quickContact.email}</h5>
+                      <h5>{content.quickContact.emailLabel}:</h5>
+                      <p>{content.quickContact.email}</p>
                     </div>
                   </li>
                   <li>
@@ -86,102 +93,90 @@ const ContactPage = () => {
                       <span className="flaticon-clock"></span>
                     </div>
                     <div className="text-holder">
-                      <h5>
-                        {content.quickContact.workingHours.map((wh, idx) => (
-                          <span key={idx} style={{ display: 'block' }}>{wh.day}: {wh.hours}</span>
-                        ))}
-                      </h5>
+                      <h5>{content.quickContact.hoursLabel}:</h5>
+                      <p>{content.quickContact.hoursWeekdays}</p>
+                      <p><span className="closes">{content.quickContact.hoursSunday}</span></p>
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="col-lg-8 col-md-7">
-              <div className="contact-form" style={{ background: '#fff', padding: '35px', border: '1px solid #eee' }}>
+            {/* Contact Form Box */}
+            <div className="col-lg-8 col-md-7 col-sm-12 col-xs-12">
+              <div className="contact-form">
                 {submitted ? (
-                  <div style={{ background: '#131d33', padding: '40px 20px', color: '#fff', textAlign: 'center', borderRadius: '4px' }}>
-                    <i className="fa fa-check-circle" style={{ fontSize: '48px', color: '#c59d5f', marginBottom: '15px' }}></i>
-                    <h3 style={{ color: '#c59d5f', marginBottom: '10px' }}>Message Sent Successfully!</h3>
-                    <p style={{ color: '#ccc', margin: 0 }}>Thank you for reaching out to Oriolus Scientific. Our medical team will respond shortly.</p>
+                  <div className="alert alert-success text-center" style={{ padding: '40px 20px', background: '#f2fff3', border: '1px solid #2acb35' }}>
+                    <span className="flaticon-shape" style={{ fontSize: '40px', color: '#2acb35', display: 'block', marginBottom: '15px' }}></span>
+                    <h2>Message Successfully Sent!</h2>
+                    <p style={{ fontSize: '15px', marginTop: '10px' }}>
+                      Thank you for contacting Oriolus Scientific. Our patient care team will get back to you shortly.
+                    </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="default-form">
+                  <form onSubmit={handleSubmit}>
+                    <h2>Leave Us A Message</h2>
                     <div className="row">
                       <div className="col-md-6">
-                        <div className="input-box" style={{ marginBottom: '20px' }}>
-                          <input 
-                            type="text" 
-                            name="name" 
-                            placeholder="Your Name *" 
-                            value={formData.name} 
-                            onChange={handleChange} 
-                            required 
-                            style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', outline: 'none' }}
-                          />
-                        </div>
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Your Name *"
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                        />
                       </div>
                       <div className="col-md-6">
-                        <div className="input-box" style={{ marginBottom: '20px' }}>
-                          <input 
-                            type="email" 
-                            name="email" 
-                            placeholder="Your Email *" 
-                            value={formData.email} 
-                            onChange={handleChange} 
-                            required 
-                            style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', outline: 'none' }}
-                          />
-                        </div>
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Your Email *"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                        />
                       </div>
                     </div>
+
                     <div className="row">
                       <div className="col-md-6">
-                        <div className="input-box" style={{ marginBottom: '20px' }}>
-                          <input 
-                            type="tel" 
-                            name="phone" 
-                            placeholder="Phone Number" 
-                            value={formData.phone} 
-                            onChange={handleChange} 
-                            style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', outline: 'none' }}
-                          />
-                        </div>
+                        <input
+                          type="tel"
+                          name="phone"
+                          placeholder="Phone Number *"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          required
+                        />
                       </div>
                       <div className="col-md-6">
-                        <div className="input-box" style={{ marginBottom: '20px' }}>
-                          <input 
-                            type="text" 
-                            name="subject" 
-                            placeholder="Subject / Consultation Topic" 
-                            value={formData.subject} 
-                            onChange={handleChange} 
-                            style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', outline: 'none' }}
-                          />
-                        </div>
+                        <input
+                          type="text"
+                          name="subject"
+                          placeholder="Subject"
+                          value={formData.subject}
+                          onChange={handleChange}
+                        />
                       </div>
                     </div>
+
                     <div className="row">
                       <div className="col-md-12">
-                        <div className="input-box" style={{ marginBottom: '25px' }}>
-                          <textarea 
-                            name="message" 
-                            placeholder="Write your health inquiry, condition history, or message here.. *" 
-                            value={formData.message} 
-                            onChange={handleChange} 
-                            rows="5"
-                            required 
-                            style={{ width: '100%', padding: '12px 15px', border: '1px solid #e0e0e0', outline: 'none', resize: 'vertical' }}
-                          ></textarea>
-                        </div>
-                        <button 
-                          type="submit" 
-                          className="thm-btn bgclr-1" 
-                          disabled={loading}
-                          style={{ cursor: loading ? 'not-allowed' : 'pointer' }}
-                        >
-                          {loading ? 'Sending Message...' : 'Send Message'}
+                        <textarea
+                          name="message"
+                          placeholder="Your Message or Health Inquiry *"
+                          value={formData.message}
+                          onChange={handleChange}
+                          required
+                        ></textarea>
+                      </div>
+                    </div>
+
+                    <div className="row">
+                      <div className="col-md-12">
+                        <button className="thm-btn bgclr-1" type="submit" disabled={loading}>
+                          {loading ? 'Sending...' : 'Send Message'}
                         </button>
                       </div>
                     </div>
@@ -189,25 +184,28 @@ const ContactPage = () => {
                 )}
               </div>
             </div>
+
           </div>
         </div>
       </section>
-      {/* End contact form area */}
+      {/* End Contact Form Area */}
 
-      {/* Start Google Map Area */}
-      <section className="home-google-map" style={{ width: '100%', height: '400px' }}>
-        <iframe 
-          title={content.map.title}
-          src={content.map.embedUrl} 
-          width="100%" 
-          height="100%" 
-          style={{ border: 0 }} 
-          allowFullScreen="" 
-          loading="lazy" 
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+      {/* Start Contact Map Area */}
+      <section className="contact-map-area">
+        <div className="container-fluid" style={{ padding: 0 }}>
+          <iframe
+            title="Oriolus Scientific Campus Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124419.64166258079!2d77.5140801861788!3d12.969963870630602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style={{ border: 0, display: 'block' }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </section>
-      {/* End Google Map Area */}
+      {/* End Contact Map Area */}
     </MainLayout>
   );
 };
