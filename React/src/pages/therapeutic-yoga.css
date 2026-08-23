@@ -1,65 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   --ty-green: #2e5f31;
-  --ty-green-deep: #234a27;
+  --ty-green-deep: #1e4521;
   --ty-green-soft: #dfe7d6;
   --ty-cream: #fbf8f2;
   --ty-cream-2: #f5f1e8;
   --ty-cream-3: #eee8dd;
   --ty-ink: #151915;
-  --ty-muted: #4f554f;
+  --ty-muted: #555e55;
   --ty-gold: #b28b57;
   --ty-line: #ded8cd;
-  --ty-white: #fffefb;
-  --ty-radius: 8px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
+  --ty-white: #ffffff;
+  --ty-radius: 12px;
 }
 
 .ty-page {
   width: 100%;
   background: var(--ty-white);
   color: var(--ty-ink);
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow: hidden;
 }
 
 .ty-page h1,
 .ty-page h2,
-.ty-page h3 {
+.ty-page h3,
+.ty-page h4 {
   font-family: 'Cormorant Garamond', Georgia, serif;
   margin: 0;
+  color: #171b17;
 }
 
 .ty-page p {
   margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555e55;
 }
 
-/* =========================
-   HERO
-========================= */
-.ty-hero {
-  min-height: 398px;
+.ty-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.ty-hero-section {
+  padding: 80px 0 90px;
+  background: linear-gradient(135deg, #fbf8f2 0%, #f7f2e7 100%);
+  border-bottom: 1px solid var(--ty-line);
+}
+
+.ty-hero-grid {
   display: grid;
-  grid-template-columns: 48.5% 51.5%;
-  background:
-    radial-gradient(circle at 30% 15%, rgba(255,255,255,.88) 0, rgba(255,255,255,0) 42%),
-    linear-gradient(90deg, #fbf8f2 0%, #f9f5ee 100%);
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
 }
 
 .ty-hero-content {
-  padding: 39px 42px 31px 46px;
   position: relative;
   z-index: 2;
 }
@@ -67,827 +69,628 @@ body {
 .ty-kicker-row {
   display: flex;
   align-items: center;
-  gap: 13px;
-  margin-bottom: 17px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .ty-kicker {
-  font-size: 11px;
-  letter-spacing: .085em;
+  font-size: 13px;
+  letter-spacing: 1.5px;
   font-weight: 700;
   color: var(--ty-green);
+  text-transform: uppercase;
 }
 
 .ty-kicker-line {
   display: block;
-  width: 31px;
-  height: 1px;
+  width: 40px;
+  height: 1.5px;
   background: var(--ty-gold);
-  opacity: .75;
 }
 
-.ty-hero h1 {
-  font-size: clamp(42px, 5vw, 54px);
-  font-weight: 600;
-  line-height: .96;
-  letter-spacing: -.025em;
+.ty-hero-section h1 {
+  font-size: clamp(38px, 4.5vw, 52px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
   color: #171b17;
+  margin-bottom: 12px;
 }
 
-.ty-hero h2 {
-  margin-top: 12px;
-  font-size: 21px;
-  line-height: 1.2;
+.ty-hero-section h2 {
+  font-size: 22px;
+  line-height: 1.35;
   font-weight: 600;
-  color: #9a7443;
+  color: var(--ty-gold);
+  margin-bottom: 20px;
 }
 
 .ty-hero-copy {
-  max-width: 415px;
-  margin-top: 22px !important;
-  font-size: 12.5px;
-  line-height: 1.75;
-  color: #29302b;
+  max-width: 520px;
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #444c44;
+  margin-bottom: 30px !important;
 }
 
 .ty-hero-actions {
   display: flex;
-  gap: 14px;
-  margin-top: 25px;
+  gap: 16px;
+  margin-bottom: 40px;
   flex-wrap: wrap;
 }
 
 .ty-btn {
-  min-height: 40px;
-  padding: 0 19px;
-  border-radius: 4px;
+  min-height: 48px;
+  padding: 0 26px;
+  border-radius: 6px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
+  gap: 10px;
   text-decoration: none;
-  font-size: 12.5px;
+  font-size: 14px;
   font-weight: 600;
-  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
-}
-
-.ty-btn:hover {
-  transform: translateY(-1px);
+  transition: all 0.3s ease;
 }
 
 .ty-btn-primary {
-  color: white;
+  color: #ffffff !important;
   background: var(--ty-green);
   border: 1px solid var(--ty-green);
-  box-shadow: 0 5px 14px rgba(46,95,49,.12);
+  box-shadow: 0 6px 18px rgba(46, 95, 49, 0.22);
+}
+
+.ty-btn-primary:hover {
+  background: var(--ty-green-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(46, 95, 49, 0.32);
 }
 
 .ty-btn-secondary {
-  color: #172219;
-  background: rgba(255,255,255,.62);
-  border: 1px solid #7f9f82;
+  color: #172219 !important;
+  background: #ffffff;
+  border: 1px solid #c5d8c6;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.ty-btn-secondary:hover {
+  background: #f4f8f4;
+  transform: translateY(-2px);
 }
 
 .ty-trust-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0;
-  margin-top: 30px;
-  max-width: 424px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(178, 139, 87, 0.25);
+  max-width: 520px;
 }
 
 .ty-trust-item {
-  display: grid;
-  grid-template-columns: 26px 1fr;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  min-width: 0;
-  padding: 0 12px;
-  border-right: 1px solid #ded9d0;
+  gap: 10px;
   color: var(--ty-green);
 }
 
-.ty-trust-item:first-child {
-  padding-left: 0;
-}
-
-.ty-trust-item:last-child {
-  border-right: 0;
-}
-
 .ty-trust-item span {
-  color: #303730;
-  font-size: 10px;
+  color: #333d33;
+  font-size: 12px;
+  font-weight: 600;
   line-height: 1.35;
 }
 
 .ty-hero-image-wrap {
-  position: relative;
-  min-height: 398px;
+  border-radius: var(--ty-radius);
   overflow: hidden;
-}
-
-.ty-hero-image-wrap::before {
-  content: '';
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 65px;
-  z-index: 1;
-  background: linear-gradient(90deg, #f9f5ee 0%, rgba(249,245,238,.72) 35%, rgba(249,245,238,0) 100%);
-  pointer-events: none;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  border: 1px solid #e7dfd2;
+  min-height: 420px;
+  background: #eee;
 }
 
 .ty-hero-image {
   width: 100%;
   height: 100%;
+  min-height: 420px;
   display: block;
   object-fit: cover;
-  object-position: center;
 }
 
-/* =========================
-   WHAT IS THERAPEUTIC YOGA
-========================= */
-.ty-intro {
-  min-height: 282px;
+/* ==========================================================================
+   2. WHAT IS THERAPEUTIC YOGA SECTION
+   ========================================================================== */
+.ty-intro-section {
+  padding: 95px 0;
+  background: #ffffff;
+}
+
+.ty-intro-grid {
   display: grid;
-  grid-template-columns: 46.5% 53.5%;
-  background: #fff;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 55px;
+  align-items: center;
 }
 
 .ty-intro-image-wrap {
+  border-radius: var(--ty-radius);
   overflow: hidden;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.06);
+  border: 1px solid #e7dfd2;
+  min-height: 380px;
 }
 
 .ty-intro-image-wrap img {
   width: 100%;
   height: 100%;
-  min-height: 282px;
+  min-height: 380px;
   display: block;
   object-fit: cover;
-  object-position: center;
-}
-
-.ty-intro-content {
-  padding: 30px 64px 27px 52px;
-}
-
-.ty-mini-accent {
-  height: 10px;
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 2px;
-}
-
-.ty-mini-accent span {
-  width: 35px;
-  height: 1px;
-  background: var(--ty-gold);
 }
 
 .ty-intro-content h2 {
-  font-size: 28px;
-  line-height: 1.05;
-  font-weight: 600;
-  margin: 3px 0 16px;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #171b17;
 }
 
-.ty-intro-content > p {
-  max-width: 430px;
-  font-size: 11px;
-  line-height: 1.65;
-  color: #272e29;
-  margin-bottom: 10px !important;
+.ty-intro-content p {
+  margin-bottom: 16px;
+  font-size: 15.5px;
+  line-height: 1.85;
 }
 
 .ty-note-card {
-  margin-top: 17px;
-  max-width: 420px;
-  min-height: 92px;
-  border-radius: 6px;
-  background: linear-gradient(135deg, #f3efe6, #f8f5ef);
-  display: grid;
-  grid-template-columns: 46px 1fr;
-  align-items: start;
-  gap: 13px;
-  padding: 13px 17px 12px 13px;
+  margin-top: 25px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f4efe5 0%, #faf7f1 100%);
+  border-left: 4px solid var(--ty-green);
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
 }
 
 .ty-note-icon {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
   background: var(--ty-green);
+  flex-shrink: 0;
 }
 
 .ty-note-card p {
-  font-size: 10.6px;
-  line-height: 1.6;
-  color: #303631;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #2b352b;
+  font-weight: 500;
+  margin: 0;
 }
 
-/* =========================
-   SHARED SECTION TITLE
-========================= */
+/* ==========================================================================
+   3. SHARED SECTION TITLES
+   ========================================================================== */
 .ty-section-title-wrap {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .ty-section-title {
-  font-size: 27px;
-  line-height: 1.08;
-  font-weight: 600;
+  font-size: 34px;
+  font-weight: 700;
+  color: #171b17;
+  margin-bottom: 12px;
 }
 
 .ty-title-ornament {
-  height: 16px;
-  margin-top: 3px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 9px;
+  justify-content: center;
+  gap: 14px;
   color: var(--ty-green);
 }
 
 .ty-title-ornament span {
-  display: inline-block;
-  width: 44px;
+  width: 45px;
   height: 1px;
   background: var(--ty-gold);
-  opacity: .7;
+  opacity: 0.7;
 }
 
-/* =========================
-   BENEFITS
-========================= */
-.ty-support {
-  min-height: 201px;
-  padding: 23px 38px 17px;
-  background: #fff;
+/* ==========================================================================
+   4. HOW IT MAY SUPPORT YOU SECTION (7 BENEFITS)
+   ========================================================================== */
+.ty-support-section {
+  padding: 90px 0 95px;
+  background: #fbf8f2;
+  border-top: 1px solid var(--ty-line);
+  border-bottom: 1px solid var(--ty-line);
 }
 
 .ty-benefit-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  margin-top: 20px;
+  gap: 16px;
 }
 
 .ty-benefit {
-  min-height: 102px;
+  background: #ffffff;
+  border: 1px solid #e7dfd2;
+  border-radius: 10px;
+  padding: 28px 14px 22px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 9px;
-  padding: 1px 11px;
-  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.ty-benefit:hover {
+  transform: translateY(-5px);
+  border-color: var(--ty-green);
+  box-shadow: 0 10px 24px rgba(46, 95, 49, 0.12);
+}
+
+.ty-benefit-icon-wrap {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #f1f6ef;
   color: var(--ty-green);
-  border-right: 1px solid #e3ded6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
 }
 
-.ty-benefit:last-child {
-  border-right: 0;
+.ty-benefit:hover .ty-benefit-icon-wrap {
+  background: var(--ty-green);
+  color: #ffffff;
 }
 
-.ty-benefit div {
-  color: #2a312b;
-  font-size: 10.6px;
+.ty-benefit-label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #222a22;
   line-height: 1.45;
 }
 
-/* =========================
-   EXPERIENCE
-========================= */
-.ty-experience {
+/* ==========================================================================
+   5. YOUR THERAPEUTIC YOGA EXPERIENCE (5 STEPS)
+   ========================================================================== */
+.ty-experience-section {
+  padding: 95px 0 100px;
+  background: #ffffff;
   position: relative;
-  min-height: 200px;
-  padding: 18px 55px 15px;
-  background:
-    linear-gradient(90deg, rgba(248,244,236,.96), rgba(250,247,241,.93)),
-    radial-gradient(circle at 85% 10%, rgba(223,231,214,.8), transparent 22%);
 }
 
 .ty-experience-track {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  position: relative;
-  margin-top: 17px;
-  z-index: 1;
+  gap: 20px;
 }
 
 .ty-experience-item {
-  position: relative;
+  background: #fdfbf7;
+  border: 1px solid #eae3d6;
+  border-radius: 10px;
+  padding: 30px 20px 25px;
   text-align: center;
-  padding: 0 17px;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ty-experience-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-color: var(--ty-green);
 }
 
 .ty-experience-icon {
-  width: 55px;
-  height: 55px;
-  margin: 0 auto 8px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  background: #eef5ec;
   color: var(--ty-green);
-  background: #e7eddd;
-  position: relative;
-  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
 }
 
-.ty-track-line {
-  position: absolute;
-  height: 1px;
-  background: #c8d3bd;
-  width: calc(100% - 35px);
-  top: 27px;
-  left: calc(50% + 28px);
-  z-index: 0;
+.ty-experience-item:hover .ty-experience-icon {
+  background: var(--ty-green);
+  color: #ffffff;
 }
 
 .ty-experience-item h3 {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 4px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #171b17;
+  margin-bottom: 10px;
 }
 
 .ty-experience-item p {
-  font-size: 9.6px;
-  line-height: 1.45;
-  color: #353a35;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #5d675d;
 }
 
-.ty-experience-leaf {
-  position: absolute;
-  right: -20px;
-  top: 25px;
-  color: #dce4d3;
-  opacity: .8;
-  transform: rotate(-20deg);
-}
-
-/* =========================
-   JOURNEY
-========================= */
-.ty-journey {
-  min-height: 194px;
-  padding: 16px 72px 20px;
-  background: #fff;
+/* ==========================================================================
+   6. YOUR 3-STEP JOURNEY SECTION
+   ========================================================================== */
+.ty-journey-section {
+  padding: 90px 0 95px;
+  background: #f7f3ea;
+  border-top: 1px solid var(--ty-line);
+  border-bottom: 1px solid var(--ty-line);
 }
 
 .ty-journey-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  margin-top: 13px;
+  gap: 30px;
 }
 
-.ty-step {
-  min-height: 123px;
-  position: relative;
-  padding: 8px 30px 0 31px;
-  border-right: 1px solid #e4ded4;
+.ty-step-card {
+  background: #ffffff;
+  border: 1px solid #e7dfd2;
+  border-radius: 12px;
+  padding: 36px 30px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+  height: 100%;
 }
 
-.ty-step:last-child {
-  border-right: 0;
+.ty-step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+  border-color: var(--ty-green);
 }
 
 .ty-step-number {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  color: var(--ty-green);
-  font-size: 31px;
-  font-weight: 600;
-  line-height: 1;
-  position: absolute;
-  left: 3px;
-  top: 10px;
-}
-
-.ty-step-icon {
-  width: 54px;
-  height: 54px;
-  margin: 0 auto 5px 95px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: var(--ty-green);
-  background: #eff2e9;
+  background: var(--ty-green);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-family: 'Inter', sans-serif;
 }
 
-.ty-step h3 {
+.ty-step-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #171b17;
+  margin-bottom: 12px;
+}
+
+.ty-step-card p {
   font-size: 14.5px;
-  font-weight: 600;
-  margin: -31px 0 5px 3px;
+  line-height: 1.7;
+  color: #555e55;
 }
 
-.ty-step p {
-  max-width: 220px;
-  margin-left: 3px;
-  font-size: 9.8px;
-  line-height: 1.55;
-  color: #383d39;
+/* ==========================================================================
+   7. FREQUENTLY ASKED QUESTIONS SECTION
+   ========================================================================== */
+.ty-faq-section {
+  padding: 95px 0 100px;
+  background: #ffffff;
 }
 
-/* =========================
-   FAQ
-========================= */
-.ty-faq {
-  min-height: 190px;
+.ty-faq-grid {
   display: grid;
-  grid-template-columns: 42% 58%;
-  align-items: stretch;
-  padding: 11px 36px 8px;
-  background: linear-gradient(90deg, #f8f4ec 0%, #fff 100%);
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 50px;
+  align-items: flex-start;
 }
 
 .ty-faq-image-wrap {
-  border-radius: 5px;
+  border-radius: var(--ty-radius);
   overflow: hidden;
-  min-height: 170px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.06);
+  border: 1px solid #e7dfd2;
 }
 
 .ty-faq-image-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  min-height: 400px;
   display: block;
-}
-
-.ty-faq-content {
-  padding: 5px 2px 0 55px;
-}
-
-.ty-faq-content .ty-section-title {
-  font-size: 24px;
-}
-
-.ty-faq-content .ty-title-ornament {
-  margin-top: 0;
-  transform: translateY(-1px);
+  object-fit: cover;
 }
 
 .ty-faq-list {
-  margin-top: 7px;
-  display: grid;
-  gap: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .ty-faq-item {
-  border-radius: 3px;
-  background: #fff;
-  box-shadow: 0 1px 0 rgba(0,0,0,.04);
+  border: 1px solid #e4ddd2;
+  border-radius: 8px;
+  background: #faf8f4;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ty-faq-item.is-open {
+  background: #ffffff;
+  border-color: var(--ty-green);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
 }
 
 .ty-faq-question {
   width: 100%;
-  min-height: 27px;
-  padding: 5px 12px;
-  border: 0;
-  background: transparent;
+  padding: 18px 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
+  background: none;
+  border: none;
   cursor: pointer;
-  color: #1f2520;
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 10.2px;
   text-align: left;
+  gap: 15px;
 }
 
-.ty-faq-question svg {
-  transition: transform .2s ease;
+.ty-faq-question span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #171b17;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.3s;
 }
 
-.ty-faq-item.is-open .ty-faq-question svg {
+.ty-faq-item.is-open .ty-faq-question span {
+  color: var(--ty-green);
+}
+
+.ty-faq-icon {
+  color: var(--ty-green);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.ty-faq-item.is-open .ty-faq-icon {
   transform: rotate(180deg);
 }
 
 .ty-faq-answer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows .25s ease;
+  padding: 0 22px 20px;
+  border-top: 1px solid #f0eae0;
+  margin-top: 4px;
 }
 
 .ty-faq-answer p {
-  overflow: hidden;
-  padding: 0 12px;
-  font-size: 9.5px;
-  line-height: 1.5;
-  color: #586058;
+  padding-top: 14px;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: #555e55;
 }
 
-.ty-faq-item.is-open .ty-faq-answer {
-  grid-template-rows: 1fr;
-}
-
-.ty-faq-item.is-open .ty-faq-answer p {
-  padding-bottom: 9px;
-}
-
-/* =========================
-   CTA
-========================= */
-.ty-cta {
-  min-height: 135px;
-  display: flex;
-  align-items: center;
-  padding: 19px 90px;
-  color: #fff;
-  background:
-    linear-gradient(90deg, rgba(37,74,40,.95), rgba(48,80,48,.96)),
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,.1), transparent 38%);
+/* ==========================================================================
+   8. BOTTOM GREEN CTA BANNER
+   ========================================================================== */
+.ty-cta-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #1e4521 0%, #2e5f31 100%);
+  color: #ffffff;
 }
 
 .ty-cta-inner {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 76px minmax(0, 1fr) auto;
+  display: flex;
   align-items: center;
-  gap: 22px;
-}
-
-.ty-cta-icon {
-  width: 65px;
-  height: 65px;
-  border: 2px solid rgba(255,255,255,.83);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .ty-cta-copy h2 {
-  font-size: 26px;
-  line-height: 1.05;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
 }
 
 .ty-cta-copy p {
-  margin-top: 5px;
-  max-width: 520px;
-  font-size: 11px;
-  line-height: 1.55;
-  color: rgba(255,255,255,.9);
+  color: #dbe8db;
+  font-size: 15.5px;
+  line-height: 1.6;
 }
 
 .ty-cta-button {
-  min-height: 40px;
-  padding: 0 18px;
-  border-radius: 4px;
+  min-height: 50px;
+  padding: 0 32px;
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--ty-green-deep) !important;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 9px;
-  background: #fff;
-  color: #315b34;
+  gap: 10px;
   text-decoration: none;
-  font-size: 10.8px;
-  font-weight: 600;
-  box-shadow: 0 6px 16px rgba(0,0,0,.14);
+  font-size: 14.5px;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
-/* =========================
-   TABLET
-========================= */
-@media (max-width: 900px) {
-  .ty-hero {
+.ty-cta-button:hover {
+  background: #fbf8f2;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .ty-hero-grid,
+  .ty-intro-grid,
+  .ty-faq-grid {
     grid-template-columns: 1fr;
-  }
-
-  .ty-hero-content {
-    padding: 48px 42px 36px;
-  }
-
-  .ty-hero-image-wrap {
-    min-height: 440px;
-  }
-
-  .ty-intro {
-    grid-template-columns: 1fr;
-  }
-
-  .ty-intro-image-wrap img {
-    min-height: 360px;
+    gap: 40px;
   }
 
   .ty-benefit-grid {
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 20px;
-  }
-
-  .ty-benefit:nth-child(4) {
-    border-right: 0;
   }
 
   .ty-experience-track {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px 0;
-  }
-
-  .ty-track-line {
-    display: none;
-  }
-
-  .ty-journey {
-    padding-inline: 40px;
-  }
-
-  .ty-journey-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .ty-step {
-    border-right: 0;
-    border-bottom: 1px solid #e4ded4;
-  }
-
-  .ty-step:last-child {
-    border-bottom: 0;
-  }
-
-  .ty-faq {
-    grid-template-columns: 1fr;
-  }
-
-  .ty-faq-content {
-    padding: 28px 0 8px;
-  }
-
-  .ty-cta {
-    padding-inline: 40px;
-  }
-
-  .ty-cta-inner {
-    grid-template-columns: 65px 1fr;
-  }
-
-  .ty-cta-button {
-    grid-column: 2;
-    justify-self: start;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 620px) {
-  .ty-hero-content,
-  .ty-intro-content,
-  .ty-support,
-  .ty-experience,
-  .ty-journey,
-  .ty-faq,
-  .ty-cta {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .ty-hero h1 {
-    font-size: 44px;
-  }
-
-  .ty-hero h2 {
-    font-size: 20px;
-  }
-
-  .ty-hero-copy {
-    font-size: 14px;
-  }
-
-  .ty-hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .ty-btn {
-    width: 100%;
-    min-height: 46px;
-  }
-
-  .ty-trust-row {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px 0;
-  }
-
-  .ty-trust-item:nth-child(2) {
-    border-right: 0;
-  }
-
-  .ty-hero-image-wrap {
-    min-height: 310px;
-  }
-
-  .ty-intro-image-wrap img {
-    min-height: 270px;
-  }
-
-  .ty-intro-content {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-
-  .ty-intro-content h2,
-  .ty-section-title {
-    font-size: 28px;
-  }
-
-  .ty-intro-content > p,
-  .ty-note-card p {
-    font-size: 13px;
-  }
-
-  .ty-note-card {
-    grid-template-columns: 42px 1fr;
+@media (max-width: 768px) {
+  .ty-hero-section,
+  .ty-intro-section,
+  .ty-support-section,
+  .ty-experience-section,
+  .ty-journey-section,
+  .ty-faq-section {
+    padding: 60px 0;
   }
 
   .ty-benefit-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .ty-benefit:nth-child(even) {
-    border-right: 0;
-  }
-
-  .ty-benefit:nth-child(4) {
-    border-right: 0;
-  }
-
-  .ty-benefit div,
-  .ty-experience-item p,
-  .ty-step p,
-  .ty-faq-question,
-  .ty-faq-answer p {
-    font-size: 12px;
-  }
-
   .ty-experience-track {
     grid-template-columns: 1fr;
   }
 
-  .ty-experience-item {
-    max-width: 350px;
-    margin: 0 auto;
+  .ty-journey-grid {
+    grid-template-columns: 1fr;
   }
 
-  .ty-step {
-    padding-left: 42px;
-    padding-right: 0;
-  }
-
-  .ty-step-number {
-    left: 0;
-  }
-
-  .ty-step-icon {
-    margin-left: 70px;
-  }
-
-  .ty-step h3 {
-    font-size: 18px;
-  }
-
-  .ty-faq {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .ty-faq-image-wrap {
-    min-height: 180px;
-  }
-
-  .ty-faq-question {
-    min-height: 42px;
-  }
-
-  .ty-cta {
-    padding-top: 28px;
-    padding-bottom: 28px;
+  .ty-trust-row {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .ty-cta-inner {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     text-align: center;
-    justify-items: center;
-  }
-
-  .ty-cta-copy h2 {
-    font-size: 28px;
-  }
-
-  .ty-cta-copy p {
-    font-size: 13px;
-  }
-
-  .ty-cta-button {
-    grid-column: auto;
-    justify-self: stretch;
-    width: 100%;
-    min-height: 46px;
+    justify-content: center;
   }
 }
