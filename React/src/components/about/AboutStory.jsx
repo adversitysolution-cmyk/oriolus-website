@@ -6,65 +6,64 @@ const AboutStory = () => {
   const [hoveredStep, setHoveredStep] = useState(null);
   const [hoveredValue, setHoveredValue] = useState(null);
 
-  // Exact Line-Art SVG Icons matching the reference image
+  // Proper, 20% Larger Line-Art SVG Icons
   const renderJourneyIcon = (iconName) => {
     switch (iconName) {
       case 'lifestyle':
         return (
-          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             {/* Person Head */}
-            <circle cx="24" cy="16" r="6" stroke="#23492D" strokeWidth="2" fill="none" />
-            {/* Hair contour */}
-            <path d="M19 15C19 12 21 10 24 10C27 10 29 12 29 15" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
+            <circle cx="24" cy="14" r="6.5" stroke="#23492D" strokeWidth="2.2" fill="none" />
+            <path d="M19 13.5C19 10.5 21 8.5 24 8.5C27 8.5 29 10.5 29 13.5" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
             {/* Neck */}
-            <path d="M22 22V25H26V22" stroke="#23492D" strokeWidth="1.8" />
-            {/* Shoulders & V-collar */}
-            <path d="M13 37C13 30 18 27 21 26L24 30L27 26C30 27 35 30 35 37" stroke="#23492D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <path d="M22 21V25H26V21" stroke="#23492D" strokeWidth="2" />
+            {/* Shoulders & Posture Line */}
+            <path d="M11 38C11 29.5 16.5 26 21 25L24 29L27 25C31.5 26 37 29.5 37 38" stroke="#23492D" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
           </svg>
         );
       case 'wisdom':
         return (
-          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             {/* Main leaf pointing up-right */}
-            <path d="M20 33C20 33 21 21 33 13C33 13 34 26 23 31" stroke="#23492D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            <path d="M22 31L29 20" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
+            <path d="M21 35C21 35 22 21 37 12C37 12 38 27 25 33" stroke="#23492D" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <path d="M24 33L33 20" stroke="#23492D" strokeWidth="2" strokeLinecap="round" />
             {/* Secondary leaf branching down-left */}
-            <path d="M21 28C16 27 14 31 16 34C19 35 22 32 21 28Z" stroke="#23492D" strokeWidth="1.8" strokeLinejoin="round" fill="none" />
+            <path d="M22 30C16 29 14 34 16 37C20 38 23 35 22 30Z" stroke="#23492D" strokeWidth="2" strokeLinejoin="round" fill="none" />
             {/* Branch stem */}
-            <path d="M15 36C18 36 21 34 23 31" stroke="#23492D" strokeWidth="2" strokeLinecap="round" />
+            <path d="M15 39C19 39 22 37 24 33" stroke="#23492D" strokeWidth="2.4" strokeLinecap="round" />
           </svg>
         );
       case 'bridge':
         return (
-          <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="50" height="50" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             {/* Roadway beam */}
-            <line x1="8" y1="31" x2="40" y2="31" stroke="#23492D" strokeWidth="2.2" strokeLinecap="round" />
+            <line x1="6" y1="32" x2="42" y2="32" stroke="#23492D" strokeWidth="2.6" strokeLinecap="round" />
             {/* Left Tower */}
-            <path d="M16 16L14 34M16 16L18 34" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M14 16H18M14 24H18" stroke="#23492D" strokeWidth="1.6" />
+            <path d="M15 14L13 35M15 14L17 35" stroke="#23492D" strokeWidth="2.2" strokeLinecap="round" />
+            <path d="M13 14H17M13 23H17" stroke="#23492D" strokeWidth="1.8" />
             {/* Right Tower */}
-            <path d="M32 16L30 34M32 16L34 34" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M30 16H34M30 24H34" stroke="#23492D" strokeWidth="1.6" />
+            <path d="M33 14L31 35M33 14L35 35" stroke="#23492D" strokeWidth="2.2" strokeLinecap="round" />
+            <path d="M31 14H35M31 23H35" stroke="#23492D" strokeWidth="1.8" />
             {/* Suspension Cables */}
-            <path d="M8 26C12 21 16 16 16 16C16 16 24 25 32 16C32 16 36 21 40 26" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+            <path d="M6 26C10 20 15 14 15 14C15 14 24 25 33 14C33 14 38 20 42 26" stroke="#23492D" strokeWidth="2.2" strokeLinecap="round" fill="none" />
             {/* Vertical hanger cables */}
-            <line x1="21" y1="23" x2="21" y2="31" stroke="#23492D" strokeWidth="1.4" />
-            <line x1="24" y1="25" x2="24" y2="31" stroke="#23492D" strokeWidth="1.4" />
-            <line x1="27" y1="23" x2="27" y2="31" stroke="#23492D" strokeWidth="1.4" />
+            <line x1="20.5" y1="22" x2="20.5" y2="32" stroke="#23492D" strokeWidth="1.6" />
+            <line x1="24" y1="25" x2="24" y2="32" stroke="#23492D" strokeWidth="1.6" />
+            <line x1="27.5" y1="22" x2="27.5" y2="32" stroke="#23492D" strokeWidth="1.6" />
           </svg>
         );
       case 'care':
       default:
         return (
-          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Doctor Head with Medical Cap */}
-            <circle cx="24" cy="17" r="5.5" stroke="#23492D" strokeWidth="2" fill="none" />
-            <path d="M18.5 16C18.5 13 21 11.5 24 11.5C27 11.5 29.5 13 29.5 16" stroke="#23492D" strokeWidth="2" strokeLinecap="round" fill="#DFE8D3" />
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Doctor/Practitioner Head with Cap */}
+            <circle cx="24" cy="16" r="6" stroke="#23492D" strokeWidth="2.2" fill="none" />
+            <path d="M18 15C18 12 20.5 10 24 10C27.5 10 30 12 30 15" stroke="#23492D" strokeWidth="2.2" strokeLinecap="round" fill="#DFE8D3" />
             {/* Shoulders */}
-            <path d="M14 37C14 30.5 18.5 27 24 27C29.5 27 34 30.5 34 37" stroke="#23492D" strokeWidth="2" strokeLinecap="round" fill="none" />
+            <path d="M12 38C12 30 17 26 24 26C31 26 36 30 36 38" stroke="#23492D" strokeWidth="2.4" strokeLinecap="round" fill="none" />
             {/* Stethoscope */}
-            <path d="M20 27V31C20 33 22 34.5 24 34.5C26 34.5 28 33 28 31V27" stroke="#23492D" strokeWidth="1.8" strokeLinecap="round" />
-            <circle cx="28" cy="31" r="1.8" fill="#23492D" />
+            <path d="M19 26V31C19 33.5 21.5 35 24 35C26.5 35 29 33.5 29 31V26" stroke="#23492D" strokeWidth="2" strokeLinecap="round" />
+            <circle cx="29" cy="31" r="2" fill="#23492D" />
           </svg>
         );
     }
@@ -332,48 +331,8 @@ const AboutStory = () => {
             </div>
           </div>
 
-          {/* 4 Connected Milestone Steps with Center Dashed Line & Milestone Dots */}
+          {/* 4 Connected Milestone Steps */}
           <div style={{ position: 'relative' }}>
-            
-            {/* Horizontal Center Dashed Line across all 4 circles */}
-            <div 
-              className="hidden-xs"
-              style={{ 
-                position: 'absolute', 
-                top: '43px', 
-                left: '12.5%', 
-                right: '12.5%', 
-                height: '0', 
-                borderTop: '1.6px dashed #9EAC95', 
-                zIndex: 1
-              }}
-            >
-              {/* 3 Milestone Dots in between each pair of circles */}
-              <span 
-                style={{ 
-                  position: 'absolute', 
-                  top: '-4px', 
-                  left: '33.3%', 
-                  transform: 'translateX(-50%)',
-                  width: '8px', 
-                  height: '8px', 
-                  borderRadius: '50%', 
-                  background: '#688562' 
-                }}
-              />
-              <span 
-                style={{ 
-                  position: 'absolute', 
-                  top: '-4px', 
-                  left: '66.6%', 
-                  transform: 'translateX(-50%)',
-                  width: '8px', 
-                  height: '8px', 
-                  borderRadius: '50%', 
-                  background: '#688562' 
-                }}
-              />
-            </div>
 
             <div className="row" style={{ display: 'flex', flexWrap: 'wrap' }}>
               {story.journey.steps.map((step, idx) => {
@@ -391,11 +350,11 @@ const AboutStory = () => {
                         transform: isHovered ? 'translateY(-4px)' : 'translateY(0)'
                       }}
                     >
-                      {/* Step Circle Badge (Exact solid soft sage circle) */}
+                      {/* Step Circle Badge (Solid soft sage circle with proper large icon) */}
                       <div 
                         style={{ 
-                          width: '86px', 
-                          height: '86px', 
+                          width: '90px', 
+                          height: '90px', 
                           borderRadius: '50%', 
                           background: '#DFE8D3', 
                           border: '1.5px solid #C4DCC1', 
@@ -405,8 +364,9 @@ const AboutStory = () => {
                           margin: '0 auto 16px',
                           position: 'relative',
                           zIndex: 2,
+                          boxShadow: isHovered ? '0 8px 20px rgba(35, 73, 45, 0.12)' : '0 4px 12px rgba(0,0,0,0.03)',
                           transform: isHovered ? 'scale(1.06)' : 'scale(1)',
-                          transition: 'transform 0.3s ease'
+                          transition: 'all 0.3s ease'
                         }}
                       >
                         {renderJourneyIcon(step.icon)}
