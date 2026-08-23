@@ -698,7 +698,7 @@ select:focus {
 .main-menu .navigation > li > ul > li  > ul > li:hover > a{}
 
 /* ==========================================================================
-   PROCEDURES 5-COLUMN MEGA MENU (SEPARATE CARDS)
+   PROCEDURES 5-COLUMN MEGA MENU (SEAMLESS UNIFIED CONTAINER)
    ========================================================================== */
 .main-menu .navigation > li.procedures-mega-item {
   position: static !important;
@@ -712,14 +712,15 @@ select:focus {
   width: 1140px;
   max-width: 96vw;
   margin: 0 auto;
-  background: #f7faf6;
+  background: #ffffff;
   border-top: 3px solid #2acb35;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16);
-  padding: 24px 24px 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+  padding: 0;
   z-index: 99999;
   visibility: hidden;
   opacity: 0;
+  overflow: hidden;
   transition: all 350ms ease;
 }
 
@@ -732,25 +733,24 @@ select:focus {
 .procedures-mega-columns {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
+  gap: 0;
+  background: #ffffff;
 }
 
-/* Individual Card for Each Discipline */
+/* Seamless Connected Column */
 .procedures-mega-col {
   background: #ffffff;
-  border: 1px solid #e2ebd0;
-  border-top: 3px solid #2acb35;
-  border-radius: 6px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  border: none;
+  border-right: 1px solid #f0f0f0;
+  border-radius: 0;
+  box-shadow: none;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.procedures-mega-col:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(42, 203, 53, 0.12);
+.procedures-mega-col:last-child {
+  border-right: none;
 }
 
 .procedures-mega-col-title {
@@ -760,17 +760,17 @@ select:focus {
   color: #162d3d !important;
   text-transform: uppercase !important;
   letter-spacing: 0.5px;
-  padding: 12px 14px !important;
+  padding: 16px 18px 14px !important;
   margin: 0 !important;
-  background: #fafdf9;
-  border-bottom: 1px solid #eef2eb !important;
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0 !important;
   font-family: 'Poppins', sans-serif !important;
   transition: all 0.3s ease;
 }
 
 .procedures-mega-col-title:hover {
   color: #2acb35 !important;
-  background: #f0f7ef;
+  background: #f4fbf4;
 }
 
 .procedures-mega-list {
@@ -778,6 +778,7 @@ select:focus {
   padding: 0 !important;
   margin: 0 !important;
   flex-grow: 1;
+  background: #ffffff;
 }
 
 .procedures-mega-list li {
@@ -794,8 +795,8 @@ select:focus {
 
 .procedures-mega-list li a {
   display: block !important;
-  padding: 12px 14px !important;
-  font-size: 13px !important;
+  padding: 13px 18px !important;
+  font-size: 13.5px !important;
   font-weight: 600 !important;
   color: #303030 !important;
   text-transform: capitalize !important;
@@ -827,7 +828,7 @@ select:focus {
 .procedures-mega-list li a:hover {
   color: #ffffff !important;
   background-color: #2acb35 !important;
-  padding-left: 24px !important;
+  padding-left: 26px !important;
   transform: none !important;
 }
 
@@ -836,11 +837,11 @@ select:focus {
 }
 
 .procedures-mega-footer {
-  margin-top: 18px;
-  padding: 18px 26px 16px;
+  margin-top: 0;
+  padding: 16px 26px;
   min-height: 56px;
-  background: #fafdfa;
-  border-top: 1px solid #e8ede5;
+  background: #fafafa;
+  border-top: 1px solid #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -876,7 +877,6 @@ select:focus {
 }
 
 .procedures-mega-footer a:hover {
-  color: #162d3d !important;
   background: none !important;
 }
 
@@ -888,13 +888,17 @@ select:focus {
     opacity: 1;
     visibility: visible;
     box-shadow: none;
-    padding: 15px 0;
+    padding: 0;
     border-radius: 0;
-    background: transparent;
+    background: #ffffff;
   }
   .procedures-mega-columns {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 0;
+  }
+  .procedures-mega-col {
+    border-right: none;
+    border-bottom: 1px solid #f0f0f0;
   }
 }
 .main-menu .nav-container > ul li.dropdown .dropdown-btn {
