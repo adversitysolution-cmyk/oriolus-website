@@ -1,7 +1,9 @@
 /**
  * Oriolus Scientific - Procedures & Therapies Content Store
+ * Exact Service Architecture Specification
  */
 
+// Main Procedures Overview
 export const proceduresContent = {
   header: {
     title: 'Clinical Procedures & Therapies',
@@ -9,132 +11,62 @@ export const proceduresContent = {
     subtitle: 'Evidence-based natural medicine therapies combining Yoga Therapy, Naturopathy, Classical Ayurveda, and Acupuncture.'
   },
 
-  // 6 Main Procedures
+  // Overview of Core Clinical Categories
   items: [
     {
       id: 1,
-      slug: 'massage-therapy',
-      title: 'Therapeutic Yoga & Medical Bodywork',
+      slug: 'yoga-therapy',
+      title: 'Yoga Therapy',
       category: 'Yoga Therapy',
-      icon: 'flaticon-hands',
+      icon: 'flaticon-lotus-flower',
       image: '/images/procedures/1.png',
-      link: '/massage-therapy',
-      shortDesc: 'Condition-specific biomechanical alignment, restorative asanas, and clinical breathwork.',
-      tagline: 'Autonomic Balancing & Non-Invasive Musculoskeletal Healing',
-      overview: 'Therapeutic Yoga at Oriolus Scientific is an individualized clinical practice designed to address specific chronic health disorders, musculoskeletal dysfunctions, and psychosomatic imbalances.',
-      price: '$49',
-      duration: '60 Minutes',
-      benefits: [
-        'Relieves chronic musculoskeletal tension and spinal stiffness',
-        'Normalizes sympathetic-parasympathetic autonomic nervous balance',
-        'Enhances respiratory vital capacity and cellular oxygenation',
-        'Improves joint range of motion and core stability'
-      ]
+      link: '/yoga-therapy',
+      shortDesc: 'Condition-specific biomechanical alignment, Danda yoga, aerial yoga, and pain management.'
     },
     {
       id: 2,
-      slug: 'facial-treatments',
-      title: 'Clinical Naturopathy & Hydrotherapy',
+      slug: 'naturopathy',
+      title: 'Clinical Naturopathy',
       category: 'Naturopathy',
       icon: 'flaticon-medical',
       image: '/images/procedures/2.png',
-      link: '/facial-treatments',
-      shortDesc: 'Colon Hydrotherapy, living raw nutrition, and hydro-thermal metabolic detox.',
-      tagline: 'Gut Microbiome Reset & Cellular Detoxification',
-      overview: 'Clinical Naturopathy integrates hydro-thermal therapies, living nutrition, and gentle eliminative protocols to accelerate the body’s innate detoxification systems.',
-      price: '$65',
-      duration: '75 Minutes',
-      benefits: [
-        'Thoroughly cleanses the large intestine and enhances gut motility',
-        'Alleviates metabolic sluggishness, chronic fatigue, and brain fog',
-        'Restores liver enzyme equilibrium and supports renal filtration',
-        'Promotes radiant skin health and natural weight normalization'
-      ]
+      link: '/naturopathy',
+      shortDesc: 'Colon Hydrotherapy, clinical detox, diabetes wellness support, and obesity reduction.'
     },
     {
       id: 3,
-      slug: 'pedicure-menicure',
-      title: 'Classical Ayurveda & Abhyanga',
+      slug: 'ayurveda',
+      title: 'Classical Ayurveda',
       category: 'Ayurveda',
-      icon: 'flaticon-people',
+      icon: 'flaticon-stones-and-leaf-massage-spa-symbol',
       image: '/images/procedures/3.png',
-      link: '/pedicure-menicure',
-      shortDesc: 'Panchakarma biocleansing, warm medicated Abhyanga, and authentic Shirodhara.',
-      tagline: 'Deep Cellular Rejuvenation & Doshic Equilibrium',
-      overview: 'Classical Ayurveda at Oriolus Scientific utilizes warm medicated herbal tailams and authentic purification protocols to pacify aggravated Vata, Pitta, and Kapha.',
-      price: '$75',
-      duration: '90 Minutes',
-      benefits: [
-        'Deeply pacifies aggravated doshas and calms the nervous system',
-        'Nourishes joint cartilage and relieves chronic arthritis stiffness',
-        'Improves peripheral microcirculation and cellular waste elimination',
-        'Induces restorative sleep and relieves psychological burnout'
-      ]
+      link: '/ayurveda',
+      shortDesc: 'Authentic Panchakarma, Abhyanga, Shirodhara, Udwarthanam, and Herbal Swedana.'
     },
     {
       id: 4,
-      slug: 'salt-oil-bath',
+      slug: 'acupuncture',
       title: 'Acupuncture & Meridian Therapy',
       category: 'Acupuncture',
       icon: 'flaticon-relax',
       image: '/images/procedures/4.png',
-      link: '/salt-oil-bath',
-      shortDesc: 'Precision meridian neuro-stimulation and non-invasive endorphin pain modulation.',
-      tagline: 'Targeted Neuro-Endocrine & Pain Pathway Regulation',
-      overview: 'Acupuncture for Pain Management utilizes ultra-fine, single-use sterile needles inserted into specific meridian points to trigger the release of endogenous endorphins and downregulate pain signaling.',
-      price: '$55',
-      duration: '45 Minutes',
-      benefits: [
-        'Triggers immediate release of natural pain-relieving biochemicals',
-        'Deactivates hyperirritable myofascial trigger points',
-        'Improves microcirculation to ischemic and inflamed tissues',
-        'Provides safe, non-addictive relief for acute and chronic pain'
-      ]
+      link: '/acupuncture',
+      shortDesc: 'Precision meridian neuro-stimulation for pain management and chronic condition relief.'
     },
     {
       id: 5,
-      slug: 'perfect-makeup',
-      title: 'Herbal Swedana & Mud Therapy',
-      category: 'Naturopathy & Ayurveda',
-      icon: 'flaticon-light',
-      image: '/images/procedures/1.png',
-      link: '/perfect-makeup',
-      shortDesc: 'Botanical steam chamber therapy and mineral mud packs for deep tissue drainage.',
-      tagline: 'Thermal Detoxification & Joint De-Stiffening',
-      overview: 'Herbal Swedana utilizes medicinal steam infused with Dashamoola and Nirgundi decoctions combined with abdominal and spinal mineral mud packs to liquefy toxins and restore mobility.',
-      price: '$45',
-      duration: '50 Minutes',
-      benefits: [
-        'Expels deep tissue impurities and toxins through perspiration',
-        'Softens and lubricates rigid joints, relieving chronic arthritis',
-        'Improves skin microcirculation and imparts a clear complexion',
-        'Promotes whole-body lightness and deep physical relaxation'
-      ]
-    },
-    {
-      id: 6,
-      slug: 'hair-treatments',
-      title: 'Authentic Shirodhara Stream',
-      category: 'Ayurveda',
+      slug: 'structured-wellness-programs',
+      title: 'Structured Wellness Programs',
+      category: 'Clinical Programs',
       icon: 'flaticon-flower',
-      image: '/images/procedures/2.png',
-      link: '/hair-treatments',
-      shortDesc: 'Continuous warm medicated herbal oil stream over the forehead for deep mental calm.',
-      tagline: 'Neuro-Tranquilization & Alpha-Brainwave Induction',
-      overview: 'Authentic Shirodhara involves pouring a continuous, gentle stream of warm medicated herbal oil over the forehead from an oscillating copper vessel to calm the central nervous system.',
-      price: '$85',
-      duration: '60 Minutes',
-      benefits: [
-        'Induces profound mental relaxation and downregulates stress hormones',
-        'Treats chronic insomnia, disturbed sleep, and racing thoughts',
-        'Alleviates tension headaches, migraines, and mental exhaustion',
-        'Enhances cognitive clarity, memory retention, and emotional balance'
-      ]
+      image: '/images/ChatGPT Image Aug 22, 2026, 12_18_27 AM.png',
+      link: '/structured-wellness-programs',
+      shortDesc: '4 Structured Clinical Programs: Obesity Detox, Diabetes Wellness, Spine/Joint Care, & Full-Body Retreat.'
     }
   ]
 };
 
-// 1. Yoga Therapy Page Content
+// 1. Yoga Therapy — 4 Services
 export const yogaTherapyPageContent = {
   header: {
     title: 'Yoga Therapy',
@@ -144,185 +76,176 @@ export const yogaTherapyPageContent = {
   items: [
     {
       id: 1,
-      title: 'Spinal Alignment & Lumbar Care',
+      title: 'Therapeutic Yoga',
       category: 'Yoga Therapy',
       icon: 'flaticon-lotus-flower',
       image: '/images/procedures/1.png',
       link: '/massage-therapy',
-      shortDesc: 'Precision spinal decompression, pelvic stabilization asanas, and core strengthening.'
+      shortDesc: 'Condition-specific movement, breathing, and postural realignment designed around individual health goals.'
     },
     {
       id: 2,
-      title: 'Clinical Pranayama & Vagus Nerve Balance',
+      title: 'Stick Yoga / Danda Yoga',
       category: 'Yoga Therapy',
-      icon: 'flaticon-flower',
+      icon: 'flaticon-hands',
       image: '/images/procedures/2.png',
       link: '/massage-therapy',
-      shortDesc: 'Targeted breath control exercises to activate the parasympathetic healing state.'
+      shortDesc: 'Ancient Yogic stick prop methodology to correct spinal curvature, posture, and deep shoulder stiffness.'
     },
     {
       id: 3,
-      title: 'Therapeutic Yoga Nidra for Burnout',
+      title: 'Aerial Yoga',
       category: 'Yoga Therapy',
-      icon: 'flaticon-relax',
+      icon: 'flaticon-nature',
       image: '/images/procedures/3.png',
       link: '/massage-therapy',
-      shortDesc: 'Guided systematic deep relaxation inducing delta/theta restorative brainwave frequencies.'
+      shortDesc: 'Suspended silk hammock therapy for zero-compression spinal traction, decompression, and core flexibility.'
     },
     {
       id: 4,
-      title: 'Joint Mobility & Arthritis Gentle Asanas',
+      title: 'Pain Management Yoga',
       category: 'Yoga Therapy',
-      icon: 'flaticon-hands',
+      icon: 'flaticon-relax',
       image: '/images/procedures/4.png',
       link: '/massage-therapy',
-      shortDesc: 'Non-weight-bearing fluid movements to increase synovial fluid circulation.'
+      shortDesc: 'Gentle, non-invasive therapeutic asanas engineered to alleviate chronic musculoskeletal and joint pain.'
     }
   ]
 };
 
-// 2. Naturopathy Page Content
+// 2. Naturopathy — 4 Services
 export const naturopathyPageContent = {
   header: {
-    title: 'Clinical Naturopathy',
+    title: 'Naturopathy',
     activeTitle: 'Naturopathy',
-    subtitle: 'Drugless eliminative therapies, Colon Hydrotherapy, Mud Therapy, and Hydro-Thermal Metabolic Detox.'
+    subtitle: 'Lifestyle-focused natural drugless therapies, gut cleansing, and metabolic detoxification.'
   },
   items: [
     {
       id: 1,
-      title: 'Colon Hydrotherapy & Gut Cleanse',
+      title: 'Colon Hydrotherapy',
       category: 'Naturopathy',
       icon: 'flaticon-medical',
       image: '/images/procedures/2.png',
       link: '/facial-treatments',
-      shortDesc: 'Gentle, closed-system filtered water infusion to cleanse the large intestine.'
+      shortDesc: 'Safe, closed-system filtered water infusion to thoroughly cleanse the colon and enhance gut motility.'
     },
     {
       id: 2,
-      title: 'Full-Body Mineral Mud Pack',
+      title: 'Clinical Detoxification',
       category: 'Naturopathy',
       icon: 'flaticon-nature',
       image: '/images/procedures/1.png',
-      link: '/perfect-makeup',
-      shortDesc: 'Mineral-rich unpolluted clay applied to draw out toxins and reduce local inflammation.'
+      link: '/facial-treatments',
+      shortDesc: 'Hydro-thermal therapies, mineral mud packs, and supervised metabolic cleansing protocols.'
     },
     {
       id: 3,
-      title: 'Hydro-Thermal Contrast Baths',
+      title: 'Diabetes Wellness Support',
       category: 'Naturopathy',
-      icon: 'flaticon-relax',
-      image: '/images/procedures/4.png',
-      link: '/salt-oil-bath',
-      shortDesc: 'Alternating hot and cold immersion to stimulate circulation and metabolic fire.'
+      icon: 'flaticon-flower',
+      image: '/images/procedures/3.png',
+      link: '/facial-treatments',
+      shortDesc: 'Targeted lifestyle interventions, living raw nutrition, and insulin-sensitizing clinical protocols.'
     },
     {
       id: 4,
-      title: 'Living Raw Nutrition & Fasting Care',
+      title: 'Obesity Reduction & Lifestyle Wellness',
       category: 'Naturopathy',
       icon: 'flaticon-herbal-spa-treatment-leaves',
-      image: '/images/procedures/3.png',
+      image: '/images/procedures/4.png',
       link: '/facial-treatments',
-      shortDesc: 'Supervised elimination diet, alkaline green juices, and cellular metabolic fasting.'
+      shortDesc: 'Structured metabolic acceleration, active detox baths, and sustainable dietary habit transformation.'
     }
   ]
 };
 
-// 3. Ayurveda Page Content
+// 3. Ayurveda — 5 Services
 export const ayurvedaPageContent = {
   header: {
-    title: 'Classical Ayurveda',
+    title: 'Ayurveda',
     activeTitle: 'Ayurveda',
-    subtitle: 'Authentic Panchakarma biocleansing, warm medicated Abhyanga, and continuous Shirodhara stream.'
+    subtitle: 'Classical Ayurvedic treatments utilizing authentic herbal oils and purification protocols for doshic balance.'
   },
   items: [
     {
       id: 1,
-      title: 'Authentic Medicated Abhyanga',
+      title: 'Panchakarma',
+      category: 'Ayurveda',
+      icon: 'flaticon-lotus-flower',
+      image: '/images/procedures/1.png',
+      link: '/pedicure-menicure',
+      shortDesc: 'Five-fold authentic classical bio-purification and cellular detoxification protocol.'
+    },
+    {
+      id: 2,
+      title: 'Abhyanga',
       category: 'Ayurveda',
       icon: 'flaticon-stones-and-leaf-massage-spa-symbol',
       image: '/images/procedures/3.png',
       link: '/pedicure-menicure',
-      shortDesc: 'Full-body synchronized massage with warm dosha-specific herbal oils.'
+      shortDesc: 'Full-body synchronized therapeutic massage with warm dosha-specific medicated herbal tailams.'
     },
     {
-      id: 2,
-      title: 'Continuous Shirodhara Stream',
+      id: 3,
+      title: 'Shirodhara',
       category: 'Ayurveda',
       icon: 'flaticon-flower',
       image: '/images/procedures/2.png',
       link: '/hair-treatments',
-      shortDesc: 'Rhythmic stream of medicated herbal oil on the forehead for profound calm.'
+      shortDesc: 'Rhythmic, continuous stream of warm medicated herbal oil over the third-eye chakra for deep calm.'
     },
     {
-      id: 3,
-      title: 'Herbal Swedana Steam Chamber',
+      id: 4,
+      title: 'Udwarthanam',
+      category: 'Ayurveda',
+      icon: 'flaticon-hands',
+      image: '/images/procedures/4.png',
+      link: '/pedicure-menicure',
+      shortDesc: 'Deep therapeutic dry herbal powder massage to break down subcutaneous fat and stimulate lymphatic drainage.'
+    },
+    {
+      id: 5,
+      title: 'Swedana',
       category: 'Ayurveda',
       icon: 'flaticon-light',
       image: '/images/procedures/1.png',
       link: '/perfect-makeup',
-      shortDesc: 'Medicinal herbal steam box therapy to open bodily channels and release toxins.'
-    },
-    {
-      id: 4,
-      title: 'Kati Vasti Spine & Disc Care',
-      category: 'Ayurveda',
-      icon: 'flaticon-lotus-flower',
-      image: '/images/procedures/4.png',
-      link: '/pedicure-menicure',
-      shortDesc: 'Warm medicated herbal oil retained in an herbal dough dam over the lumbar spine.'
+      shortDesc: 'Medicinal herbal steam box therapy to open micro-channels (Srotas) and expel deep cellular toxins.'
     }
   ]
 };
 
-// 4. Acupuncture Page Content
+// 4. Acupuncture — 2 Services
 export const acupuncturePageContent = {
   header: {
-    title: 'Acupuncture & Meridian Therapy',
+    title: 'Acupuncture',
     activeTitle: 'Acupuncture',
-    subtitle: 'Precision meridian neuro-stimulation, myofascial trigger point release, and endorphin pain modulation.'
+    subtitle: 'Precision meridian neuro-stimulation and non-invasive endorphin pathway pain regulation.'
   },
   items: [
     {
       id: 1,
-      title: 'Clinical Pain Management Acupuncture',
+      title: 'Acupuncture for Pain Management',
       category: 'Acupuncture',
       icon: 'flaticon-relax',
       image: '/images/procedures/4.png',
       link: '/salt-oil-bath',
-      shortDesc: 'Targeted insertion into motor and meridian points for immediate non-invasive pain relief.'
+      shortDesc: 'Precision needle insertion into motor and meridian points for immediate relief from acute and chronic pain.'
     },
     {
       id: 2,
-      title: 'Electro-Acupuncture for Nerve Care',
+      title: 'Acupuncture for Chronic Conditions',
       category: 'Acupuncture',
       icon: 'flaticon-light',
       image: '/images/procedures/1.png',
       link: '/salt-oil-bath',
-      shortDesc: 'Gentle micro-current pulsed through needles to accelerate nerve regeneration.'
-    },
-    {
-      id: 3,
-      title: 'Cupping & Myofascial Decompression',
-      category: 'Acupuncture',
-      icon: 'flaticon-hands',
-      image: '/images/procedures/2.png',
-      link: '/salt-oil-bath',
-      shortDesc: 'Negative pressure suction cups to release stubborn fascial adhesions and increase blood flow.'
-    },
-    {
-      id: 4,
-      title: 'Auricular Ear Acupuncture for Stress & Metabolism',
-      category: 'Acupuncture',
-      icon: 'flaticon-medical',
-      image: '/images/procedures/3.png',
-      link: '/salt-oil-bath',
-      shortDesc: 'Ear reflexology points to regulate appetite, reduce anxiety, and balance neurotransmitters.'
+      shortDesc: 'Comprehensive neuro-endocrine meridian therapy for neurological, digestive, and psychosomatic disorders.'
     }
   ]
 };
 
-// 5. Structured Wellness Programs Page Content
+// 5. Structured Wellness Programs — 4 Programs
 export const structuredWellnessProgramsPageContent = {
   header: {
     title: 'Structured Wellness Programs',
@@ -332,12 +255,12 @@ export const structuredWellnessProgramsPageContent = {
   items: [
     {
       id: 1,
-      title: 'Obesity Reduction & Detox Program',
+      title: 'Obesity Reduction & Detox',
       category: 'Metabolic Care',
       icon: 'flaticon-medical',
       image: '/images/ChatGPT Image Aug 22, 2026, 12_18_27 AM.png',
       link: '/appointment',
-      shortDesc: 'Gut cleansing, metabolic reset, specialized hydrotherapy, and personalized nutritional guidance.'
+      shortDesc: 'Targeted metabolic reset, Colon Hydrotherapy, customized dietetics, and therapeutic weight reduction.'
     },
     {
       id: 2,
@@ -346,25 +269,25 @@ export const structuredWellnessProgramsPageContent = {
       icon: 'flaticon-flower',
       image: '/images/ChatGPT Image Aug 22, 2026, 12_22_46 AM.png',
       link: '/appointment',
-      shortDesc: 'Insulin-sensitizing yoga asanas, herbal detox, and low-glycemic dietary protocols.'
+      shortDesc: 'Structured lifestyle medicine, pancreatic-stimulating yoga, herbal detox, and glycemic regulation.'
     },
     {
       id: 3,
-      title: 'Spine & Joint Pain Care Program',
+      title: 'Spine & Joint Pain Management',
       category: 'Orthopedic Care',
       icon: 'flaticon-hands',
       image: '/images/ChatGPT Image Aug 22, 2026, 12_25_07 AM.png',
       link: '/appointment',
-      shortDesc: 'Acupuncture trigger point therapy, Kati Vasti, and gentle spinal decompression movement.'
+      shortDesc: 'Integrated acupuncture trigger point therapy, Kati Vasti, and gentle spinal decompression movement.'
     },
     {
       id: 4,
-      title: 'Full-Body Wellness Retreat (Signature Program)',
+      title: 'Full-Body Wellness Retreat',
       category: 'Signature Residential',
       icon: 'flaticon-lotus-flower',
       image: '/images/ChatGPT Image Aug 22, 2026, 12_26_08 AM.png',
       link: '/appointment',
-      shortDesc: 'Residential immersive rejuvenation combining daily Panchakarma, Yoga, and deep metabolic renewal.'
+      shortDesc: 'Immersive residential rejuvenation combining daily Panchakarma, Yoga Therapy, and profound metabolic renewal.'
     }
   ]
 };
