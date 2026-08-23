@@ -95,12 +95,13 @@ button:focus{
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
-    color: #404040;
+    color: #0B2B4E;
     margin: 0;
 }
 h3 {
     font-size: 18px;
     font-weight: 600;
+    color: #0B2B4E;
 }
 .float_left {
     float: left;
@@ -108,7 +109,9 @@ h3 {
 .float_right {
     float: right;
 }
-h4 {}
+h4 {
+    color: #0B2B4E;
+}
 a,
 a:hover,
 a:active,
@@ -147,16 +150,21 @@ button{
     display: block;
     border-radius: 30px;
     padding: 12px 30px 12px;
-    transition: all 500ms ease;
+    transition: all 400ms ease;
+    cursor: pointer;
 }
 .bgclr-1{
-    background: #EB8C47;
-    border: 2px solid #EB8C47;
+    background: #0B2B4E;
+    border: 2px solid #0B2B4E;
     color: #ffffff;
 }
+.bgclr-1:hover,
 .thm-btn:hover{
-    background: transparent;
-    color: #222222;
+    background: #EB8C47 !important;
+    border-color: #EB8C47 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(235, 140, 71, 0.4);
 }
 
 
@@ -175,10 +183,10 @@ button{
     margin: 0 auto;
 }
 .sec-title h1 {
-    color: #404040;
+    color: #0B2B4E;
     font-size: 32px;
     font-weight: 700;
-    line-height: 36px;
+}    line-height: 36px;
     text-transform: uppercase;
     margin: 0 0 9px;
 }
