@@ -258,7 +258,7 @@ export const structuredWellnessProgramsPageContent = {
       title: 'Obesity Reduction & Detox',
       category: 'Metabolic Care',
       icon: 'flaticon-medical',
-      image: '/images/ChatGPT Image Aug 22, 2026, 12_18_27 AM.png',
+      image: '/images/procedures/1.png',
       link: '/services/obesity-reduction-detox',
       shortDesc: 'Targeted metabolic reset, Colon Hydrotherapy, customized dietetics, and therapeutic weight reduction.'
     },
@@ -267,7 +267,7 @@ export const structuredWellnessProgramsPageContent = {
       title: 'Diabetes Wellness Program',
       category: 'Endocrine Care',
       icon: 'flaticon-flower',
-      image: '/images/ChatGPT Image Aug 22, 2026, 12_22_46 AM.png',
+      image: '/images/procedures/2.png',
       link: '/services/diabetes-wellness',
       shortDesc: 'Structured lifestyle medicine, pancreatic-stimulating yoga, herbal detox, and glycemic regulation.'
     },
@@ -276,7 +276,7 @@ export const structuredWellnessProgramsPageContent = {
       title: 'Spine & Joint Pain Management',
       category: 'Orthopedic Care',
       icon: 'flaticon-hands',
-      image: '/images/ChatGPT Image Aug 22, 2026, 12_25_07 AM.png',
+      image: '/images/procedures/3.png',
       link: '/services/spine-joint-pain',
       shortDesc: 'Integrated acupuncture trigger point therapy, Kati Vasti, and gentle spinal decompression movement.'
     },
@@ -285,7 +285,7 @@ export const structuredWellnessProgramsPageContent = {
       title: 'Full-Body Wellness Retreat',
       category: 'Signature Residential',
       icon: 'flaticon-lotus-flower',
-      image: '/images/ChatGPT Image Aug 22, 2026, 12_26_08 AM.png',
+      image: '/images/procedures/4.png',
       link: '/services/full-body-retreat',
       shortDesc: 'Immersive residential rejuvenation combining daily Panchakarma, Yoga Therapy, and profound metabolic renewal.'
     }
