@@ -34,11 +34,17 @@ import AyurvedaPage from './pages/AyurvedaPage';
 import AcupuncturePage from './pages/AcupuncturePage';
 import StructuredWellnessProgramsPage from './pages/StructuredWellnessProgramsPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
+import TherapeuticYogaDemoPage from './pages/TherapeuticYogaDemoPage';
 
 function App() {
   return (
     <Router>
       <Routes>
+        {/* Standalone Therapeutic Yoga Demo Page */}
+        <Route path="/demo/therapeutic-yoga" element={<TherapeuticYogaDemoPage />} />
+        <Route path="/therapeutic-yoga-demo" element={<TherapeuticYogaDemoPage />} />
+        <Route path="/demo-therapeutic-yoga" element={<TherapeuticYogaDemoPage />} />
+
         {/* Home */}
         <Route path="/" element={<HomePage />} />
         <Route path="/index.html" element={<HomePage />} />

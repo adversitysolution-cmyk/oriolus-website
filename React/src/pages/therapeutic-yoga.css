@@ -1,0 +1,893 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --ty-green: #2e5f31;
+  --ty-green-deep: #234a27;
+  --ty-green-soft: #dfe7d6;
+  --ty-cream: #fbf8f2;
+  --ty-cream-2: #f5f1e8;
+  --ty-cream-3: #eee8dd;
+  --ty-ink: #151915;
+  --ty-muted: #4f554f;
+  --ty-gold: #b28b57;
+  --ty-line: #ded8cd;
+  --ty-white: #fffefb;
+  --ty-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.ty-page {
+  width: 100%;
+  background: var(--ty-white);
+  color: var(--ty-ink);
+  font-family: 'Inter', Arial, sans-serif;
+  overflow: hidden;
+}
+
+.ty-page h1,
+.ty-page h2,
+.ty-page h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  margin: 0;
+}
+
+.ty-page p {
+  margin: 0;
+}
+
+/* =========================
+   HERO
+========================= */
+.ty-hero {
+  min-height: 398px;
+  display: grid;
+  grid-template-columns: 48.5% 51.5%;
+  background:
+    radial-gradient(circle at 30% 15%, rgba(255,255,255,.88) 0, rgba(255,255,255,0) 42%),
+    linear-gradient(90deg, #fbf8f2 0%, #f9f5ee 100%);
+}
+
+.ty-hero-content {
+  padding: 39px 42px 31px 46px;
+  position: relative;
+  z-index: 2;
+}
+
+.ty-kicker-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 17px;
+}
+
+.ty-kicker {
+  font-size: 11px;
+  letter-spacing: .085em;
+  font-weight: 700;
+  color: var(--ty-green);
+}
+
+.ty-kicker-line {
+  display: block;
+  width: 31px;
+  height: 1px;
+  background: var(--ty-gold);
+  opacity: .75;
+}
+
+.ty-hero h1 {
+  font-size: clamp(42px, 5vw, 54px);
+  font-weight: 600;
+  line-height: .96;
+  letter-spacing: -.025em;
+  color: #171b17;
+}
+
+.ty-hero h2 {
+  margin-top: 12px;
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #9a7443;
+}
+
+.ty-hero-copy {
+  max-width: 415px;
+  margin-top: 22px !important;
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: #29302b;
+}
+
+.ty-hero-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.ty-btn {
+  min-height: 40px;
+  padding: 0 19px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.ty-btn:hover {
+  transform: translateY(-1px);
+}
+
+.ty-btn-primary {
+  color: white;
+  background: var(--ty-green);
+  border: 1px solid var(--ty-green);
+  box-shadow: 0 5px 14px rgba(46,95,49,.12);
+}
+
+.ty-btn-secondary {
+  color: #172219;
+  background: rgba(255,255,255,.62);
+  border: 1px solid #7f9f82;
+}
+
+.ty-trust-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 30px;
+  max-width: 424px;
+}
+
+.ty-trust-item {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 0 12px;
+  border-right: 1px solid #ded9d0;
+  color: var(--ty-green);
+}
+
+.ty-trust-item:first-child {
+  padding-left: 0;
+}
+
+.ty-trust-item:last-child {
+  border-right: 0;
+}
+
+.ty-trust-item span {
+  color: #303730;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.ty-hero-image-wrap {
+  position: relative;
+  min-height: 398px;
+  overflow: hidden;
+}
+
+.ty-hero-image-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 65px;
+  z-index: 1;
+  background: linear-gradient(90deg, #f9f5ee 0%, rgba(249,245,238,.72) 35%, rgba(249,245,238,0) 100%);
+  pointer-events: none;
+}
+
+.ty-hero-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================
+   WHAT IS THERAPEUTIC YOGA
+========================= */
+.ty-intro {
+  min-height: 282px;
+  display: grid;
+  grid-template-columns: 46.5% 53.5%;
+  background: #fff;
+}
+
+.ty-intro-image-wrap {
+  overflow: hidden;
+}
+
+.ty-intro-image-wrap img {
+  width: 100%;
+  height: 100%;
+  min-height: 282px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ty-intro-content {
+  padding: 30px 64px 27px 52px;
+}
+
+.ty-mini-accent {
+  height: 10px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2px;
+}
+
+.ty-mini-accent span {
+  width: 35px;
+  height: 1px;
+  background: var(--ty-gold);
+}
+
+.ty-intro-content h2 {
+  font-size: 28px;
+  line-height: 1.05;
+  font-weight: 600;
+  margin: 3px 0 16px;
+}
+
+.ty-intro-content > p {
+  max-width: 430px;
+  font-size: 11px;
+  line-height: 1.65;
+  color: #272e29;
+  margin-bottom: 10px !important;
+}
+
+.ty-note-card {
+  margin-top: 17px;
+  max-width: 420px;
+  min-height: 92px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #f3efe6, #f8f5ef);
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  align-items: start;
+  gap: 13px;
+  padding: 13px 17px 12px 13px;
+}
+
+.ty-note-icon {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: var(--ty-green);
+}
+
+.ty-note-card p {
+  font-size: 10.6px;
+  line-height: 1.6;
+  color: #303631;
+}
+
+/* =========================
+   SHARED SECTION TITLE
+========================= */
+.ty-section-title-wrap {
+  text-align: center;
+}
+
+.ty-section-title {
+  font-size: 27px;
+  line-height: 1.08;
+  font-weight: 600;
+}
+
+.ty-title-ornament {
+  height: 16px;
+  margin-top: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--ty-green);
+}
+
+.ty-title-ornament span {
+  display: inline-block;
+  width: 44px;
+  height: 1px;
+  background: var(--ty-gold);
+  opacity: .7;
+}
+
+/* =========================
+   BENEFITS
+========================= */
+.ty-support {
+  min-height: 201px;
+  padding: 23px 38px 17px;
+  background: #fff;
+}
+
+.ty-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 20px;
+}
+
+.ty-benefit {
+  min-height: 102px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 9px;
+  padding: 1px 11px;
+  text-align: center;
+  color: var(--ty-green);
+  border-right: 1px solid #e3ded6;
+}
+
+.ty-benefit:last-child {
+  border-right: 0;
+}
+
+.ty-benefit div {
+  color: #2a312b;
+  font-size: 10.6px;
+  line-height: 1.45;
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+.ty-experience {
+  position: relative;
+  min-height: 200px;
+  padding: 18px 55px 15px;
+  background:
+    linear-gradient(90deg, rgba(248,244,236,.96), rgba(250,247,241,.93)),
+    radial-gradient(circle at 85% 10%, rgba(223,231,214,.8), transparent 22%);
+}
+
+.ty-experience-track {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+  margin-top: 17px;
+  z-index: 1;
+}
+
+.ty-experience-item {
+  position: relative;
+  text-align: center;
+  padding: 0 17px;
+}
+
+.ty-experience-icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--ty-green);
+  background: #e7eddd;
+  position: relative;
+  z-index: 2;
+}
+
+.ty-track-line {
+  position: absolute;
+  height: 1px;
+  background: #c8d3bd;
+  width: calc(100% - 35px);
+  top: 27px;
+  left: calc(50% + 28px);
+  z-index: 0;
+}
+
+.ty-experience-item h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.ty-experience-item p {
+  font-size: 9.6px;
+  line-height: 1.45;
+  color: #353a35;
+}
+
+.ty-experience-leaf {
+  position: absolute;
+  right: -20px;
+  top: 25px;
+  color: #dce4d3;
+  opacity: .8;
+  transform: rotate(-20deg);
+}
+
+/* =========================
+   JOURNEY
+========================= */
+.ty-journey {
+  min-height: 194px;
+  padding: 16px 72px 20px;
+  background: #fff;
+}
+
+.ty-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 13px;
+}
+
+.ty-step {
+  min-height: 123px;
+  position: relative;
+  padding: 8px 30px 0 31px;
+  border-right: 1px solid #e4ded4;
+}
+
+.ty-step:last-child {
+  border-right: 0;
+}
+
+.ty-step-number {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--ty-green);
+  font-size: 31px;
+  font-weight: 600;
+  line-height: 1;
+  position: absolute;
+  left: 3px;
+  top: 10px;
+}
+
+.ty-step-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 5px 95px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--ty-green);
+  background: #eff2e9;
+}
+
+.ty-step h3 {
+  font-size: 14.5px;
+  font-weight: 600;
+  margin: -31px 0 5px 3px;
+}
+
+.ty-step p {
+  max-width: 220px;
+  margin-left: 3px;
+  font-size: 9.8px;
+  line-height: 1.55;
+  color: #383d39;
+}
+
+/* =========================
+   FAQ
+========================= */
+.ty-faq {
+  min-height: 190px;
+  display: grid;
+  grid-template-columns: 42% 58%;
+  align-items: stretch;
+  padding: 11px 36px 8px;
+  background: linear-gradient(90deg, #f8f4ec 0%, #fff 100%);
+}
+
+.ty-faq-image-wrap {
+  border-radius: 5px;
+  overflow: hidden;
+  min-height: 170px;
+}
+
+.ty-faq-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ty-faq-content {
+  padding: 5px 2px 0 55px;
+}
+
+.ty-faq-content .ty-section-title {
+  font-size: 24px;
+}
+
+.ty-faq-content .ty-title-ornament {
+  margin-top: 0;
+  transform: translateY(-1px);
+}
+
+.ty-faq-list {
+  margin-top: 7px;
+  display: grid;
+  gap: 3px;
+}
+
+.ty-faq-item {
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,.04);
+  overflow: hidden;
+}
+
+.ty-faq-question {
+  width: 100%;
+  min-height: 27px;
+  padding: 5px 12px;
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  cursor: pointer;
+  color: #1f2520;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 10.2px;
+  text-align: left;
+}
+
+.ty-faq-question svg {
+  transition: transform .2s ease;
+}
+
+.ty-faq-item.is-open .ty-faq-question svg {
+  transform: rotate(180deg);
+}
+
+.ty-faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .25s ease;
+}
+
+.ty-faq-answer p {
+  overflow: hidden;
+  padding: 0 12px;
+  font-size: 9.5px;
+  line-height: 1.5;
+  color: #586058;
+}
+
+.ty-faq-item.is-open .ty-faq-answer {
+  grid-template-rows: 1fr;
+}
+
+.ty-faq-item.is-open .ty-faq-answer p {
+  padding-bottom: 9px;
+}
+
+/* =========================
+   CTA
+========================= */
+.ty-cta {
+  min-height: 135px;
+  display: flex;
+  align-items: center;
+  padding: 19px 90px;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(37,74,40,.95), rgba(48,80,48,.96)),
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.1), transparent 38%);
+}
+
+.ty-cta-inner {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 22px;
+}
+
+.ty-cta-icon {
+  width: 65px;
+  height: 65px;
+  border: 2px solid rgba(255,255,255,.83);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.ty-cta-copy h2 {
+  font-size: 26px;
+  line-height: 1.05;
+  font-weight: 600;
+}
+
+.ty-cta-copy p {
+  margin-top: 5px;
+  max-width: 520px;
+  font-size: 11px;
+  line-height: 1.55;
+  color: rgba(255,255,255,.9);
+}
+
+.ty-cta-button {
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: #fff;
+  color: #315b34;
+  text-decoration: none;
+  font-size: 10.8px;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(0,0,0,.14);
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 900px) {
+  .ty-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .ty-hero-content {
+    padding: 48px 42px 36px;
+  }
+
+  .ty-hero-image-wrap {
+    min-height: 440px;
+  }
+
+  .ty-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .ty-intro-image-wrap img {
+    min-height: 360px;
+  }
+
+  .ty-benefit-grid {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+  }
+
+  .ty-benefit:nth-child(4) {
+    border-right: 0;
+  }
+
+  .ty-experience-track {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 0;
+  }
+
+  .ty-track-line {
+    display: none;
+  }
+
+  .ty-journey {
+    padding-inline: 40px;
+  }
+
+  .ty-journey-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .ty-step {
+    border-right: 0;
+    border-bottom: 1px solid #e4ded4;
+  }
+
+  .ty-step:last-child {
+    border-bottom: 0;
+  }
+
+  .ty-faq {
+    grid-template-columns: 1fr;
+  }
+
+  .ty-faq-content {
+    padding: 28px 0 8px;
+  }
+
+  .ty-cta {
+    padding-inline: 40px;
+  }
+
+  .ty-cta-inner {
+    grid-template-columns: 65px 1fr;
+  }
+
+  .ty-cta-button {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 620px) {
+  .ty-hero-content,
+  .ty-intro-content,
+  .ty-support,
+  .ty-experience,
+  .ty-journey,
+  .ty-faq,
+  .ty-cta {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .ty-hero h1 {
+    font-size: 44px;
+  }
+
+  .ty-hero h2 {
+    font-size: 20px;
+  }
+
+  .ty-hero-copy {
+    font-size: 14px;
+  }
+
+  .ty-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ty-btn {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .ty-trust-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 0;
+  }
+
+  .ty-trust-item:nth-child(2) {
+    border-right: 0;
+  }
+
+  .ty-hero-image-wrap {
+    min-height: 310px;
+  }
+
+  .ty-intro-image-wrap img {
+    min-height: 270px;
+  }
+
+  .ty-intro-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .ty-intro-content h2,
+  .ty-section-title {
+    font-size: 28px;
+  }
+
+  .ty-intro-content > p,
+  .ty-note-card p {
+    font-size: 13px;
+  }
+
+  .ty-note-card {
+    grid-template-columns: 42px 1fr;
+  }
+
+  .ty-benefit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ty-benefit:nth-child(even) {
+    border-right: 0;
+  }
+
+  .ty-benefit:nth-child(4) {
+    border-right: 0;
+  }
+
+  .ty-benefit div,
+  .ty-experience-item p,
+  .ty-step p,
+  .ty-faq-question,
+  .ty-faq-answer p {
+    font-size: 12px;
+  }
+
+  .ty-experience-track {
+    grid-template-columns: 1fr;
+  }
+
+  .ty-experience-item {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .ty-step {
+    padding-left: 42px;
+    padding-right: 0;
+  }
+
+  .ty-step-number {
+    left: 0;
+  }
+
+  .ty-step-icon {
+    margin-left: 70px;
+  }
+
+  .ty-step h3 {
+    font-size: 18px;
+  }
+
+  .ty-faq {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .ty-faq-image-wrap {
+    min-height: 180px;
+  }
+
+  .ty-faq-question {
+    min-height: 42px;
+  }
+
+  .ty-cta {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .ty-cta-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .ty-cta-copy h2 {
+    font-size: 28px;
+  }
+
+  .ty-cta-copy p {
+    font-size: 13px;
+  }
+
+  .ty-cta-button {
+    grid-column: auto;
+    justify-self: stretch;
+    width: 100%;
+    min-height: 46px;
+  }
+}
