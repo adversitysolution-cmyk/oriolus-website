@@ -113,12 +113,43 @@ const Header = () => {
                       <li className={`dropdown ${['/about', '/about/meet-dr-vijay', '/dr-vijay', '/testimonials', '/faq', '/appointment'].some(p => isActive(p)) ? 'current' : ''}`}>
                         <Link to="/about">About Us</Link>
                         <div className="dropdown-btn" onClick={(e) => toggleDropdown('about', e)}></div>
-                        <ul style={{ display: openDropdowns['about'] ? 'block' : '' }}>
-                          <li><Link to="/about">About Oriolus Scientific</Link></li>
-                          <li><Link to="/about/meet-dr-vijay">Meet Dr. Vijay (Lead Practitioner)</Link></li>
-                          <li><Link to="/testimonials">Testimonials</Link></li>
-                          <li><Link to="/faq">FAQ’s</Link></li>
-                          <li><Link to="/appointment">Make an Appointment</Link></li>
+                        <ul style={{ display: openDropdowns['about'] ? 'block' : '', minWidth: '310px' }}>
+                          <li>
+                            <Link to="/about#who-we-are" style={{ display: 'block', padding: '10px 18px', borderBottom: '1px solid #f2f2f2' }}>
+                              <strong style={{ display: 'block', fontSize: '13.5px', color: '#162d3d', lineHeight: '1.3' }}>About Oriolus Scientific</strong>
+                              <span style={{ display: 'block', fontSize: '11.5px', color: '#777', marginTop: '2px', fontWeight: 'normal' }}>Who We Are &amp; Our Purpose</span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="/about#dr-vijay" style={{ display: 'block', padding: '10px 18px', borderBottom: '1px solid #f2f2f2' }}>
+                              <strong style={{ display: 'block', fontSize: '13.5px', color: '#162d3d', lineHeight: '1.3' }}>Meet Dr. Vijay</strong>
+                              <span style={{ display: 'block', fontSize: '11.5px', color: '#777', marginTop: '2px', fontWeight: 'normal' }}>Lead Practitioner</span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="/about#our-story" style={{ display: 'block', padding: '10px 18px', borderBottom: '1px solid #f2f2f2' }}>
+                              <strong style={{ display: 'block', fontSize: '13.5px', color: '#162d3d', lineHeight: '1.3' }}>Our Story</strong>
+                              <span style={{ display: 'block', fontSize: '11.5px', color: '#777', marginTop: '2px', fontWeight: 'normal' }}>The Oriolus Wellness Journey</span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="/about#why-choose-us" style={{ display: 'block', padding: '10px 18px', borderBottom: '1px solid #f2f2f2' }}>
+                              <strong style={{ display: 'block', fontSize: '13.5px', color: '#162d3d', lineHeight: '1.3' }}>Why Choose Oriolus</strong>
+                              <span style={{ display: 'block', fontSize: '11.5px', color: '#777', marginTop: '2px', fontWeight: 'normal' }}>Our Approach &amp; Differentiators</span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="/about#patient-experiences" style={{ display: 'block', padding: '10px 18px', borderBottom: '1px solid #f2f2f2' }}>
+                              <strong style={{ display: 'block', fontSize: '13.5px', color: '#162d3d', lineHeight: '1.3' }}>Patient Experiences</strong>
+                              <span style={{ display: 'block', fontSize: '11.5px', color: '#777', marginTop: '2px', fontWeight: 'normal' }}>Testimonials &amp; Wellness Stories</span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="/about#affiliations" style={{ display: 'block', padding: '10px 18px' }}>
+                              <strong style={{ display: 'block', fontSize: '13.5px', color: '#162d3d', lineHeight: '1.3' }}>Our Affiliations</strong>
+                              <span style={{ display: 'block', fontSize: '11.5px', color: '#777', marginTop: '2px', fontWeight: 'normal' }}>Institutional &amp; Brand Associations</span>
+                            </Link>
+                          </li>
                         </ul>
                       </li>
                       <li className={`dropdown ${['/procedures', '/yoga-therapy', '/naturopathy', '/ayurveda', '/acupuncture', '/structured-wellness-programs', '/wellness-programs', '/massage-therapy', '/facial-treatments', '/pedicure-menicure', '/salt-oil-bath', '/perfect-makeup', '/hair-treatments'].some(p => isActive(p)) ? 'current' : ''}`}>
