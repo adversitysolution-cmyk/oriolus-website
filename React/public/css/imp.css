@@ -20,7 +20,7 @@ input:-webkit-autofill:focus {
 
 /* Jquery ui select css */
 .ui-selectmenu-open .ui-widget-content {
-    border: 2px solid #EB8C47 !important;
+    border: 2px solid #2acb35 !important;
     background: #ffffff !important;
     color: #333 !important;
     border-radius: 0 !important;
@@ -28,7 +28,7 @@ input:-webkit-autofill:focus {
 }
 /* Jquery ui select hover bg css */
 .ui-selectmenu-open .ui-widget-content .ui-state-focus {
-    border: 1px solid #EB8C47 !important;
+    border: 1px solid #2acb35 !important;
     background: #2fd83a !important;
     font-weight: normal !important;
     color: #fff !important;
@@ -441,7 +441,7 @@ input:-webkit-autofill:focus {
 .rev_slider_wrapper .slide-content-box .button a.contact{
     background: #ffffff;
     border-color: #ffffff;
-    color: #EB8C47;
+    color: #2acb35;
 }
 .rev_slider_wrapper .slide-content-box.lastslide .button a.contact{
     margin-left: 20px;

@@ -67,7 +67,7 @@ const AboutPage = () => {
         <section className="brand-area" style={{ padding: '60px 0', background: '#f9f8f6', borderTop: '1px solid #eee' }}>
           <div className="container">
             <div className="sec-title text-center" style={{ paddingBottom: '25px' }}>
-              <span style={{ color: '#EB8C47', fontSize: '13px', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase' }}>
+              <span style={{ color: '#2acb35', fontSize: '13px', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase' }}>
                 Our Wellness Disciplines &amp; Associations
               </span>
               <h2 style={{ fontSize: '26px', color: '#222', margin: '6px 0 10px' }}>Institutional &amp; Brand Associations</h2>

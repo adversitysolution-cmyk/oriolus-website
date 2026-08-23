@@ -203,11 +203,10 @@ const Header = () => {
                           <div className="procedures-mega-footer">
                             <Link to="/procedures" className="overview-link">
                               <span>View All Procedures &amp; Therapies</span>
-                              <i className="fa fa-arrow-circle-right" style={{ fontSize: '18px', color: '#EB8C47' }}></i>
+                              <i className="fa fa-arrow-right"></i>
                             </Link>
                             <Link to="/appointment" className="book-link">
-                              <span>Book a Consultation</span>
-                              <i className="fa fa-calendar" style={{ fontSize: '17px', color: '#EB8C47', marginLeft: '6px' }}></i>
+                              Book a Consultation &rarr;
                             </Link>
                           </div>
                         </div>

@@ -40,7 +40,7 @@ const TestimonialsPage = () => {
                     />
                   </div>
                   <div className="text-holder" style={{ borderRadius: '4px' }}>
-                    <div className="rating" style={{ color: '#EB8C47', marginBottom: '12px' }}>
+                    <div className="rating" style={{ color: '#2acb35', marginBottom: '12px' }}>
                       {[...Array(item.rating)].map((_, i) => (
                         <i key={i} className="fa fa-star" style={{ margin: '0 2px' }}></i>
                       ))}
@@ -49,7 +49,7 @@ const TestimonialsPage = () => {
                     <p style={{ fontStyle: 'italic', color: '#666', lineHeight: '1.7', fontSize: '13.5px' }}>
                       "{item.quote}"
                     </p>
-                    <span className="border" style={{ display: 'block', width: '35px', height: '1.5px', background: '#EB8C47', margin: '15px auto 10px' }}></span>
+                    <span className="border" style={{ display: 'block', width: '35px', height: '1.5px', background: '#2acb35', margin: '15px auto 10px' }}></span>
                     <h4 style={{ color: '#222', fontSize: '15px', fontWeight: 600, margin: '5px 0 0' }}>{item.name}</h4>
                   </div>
                 </div>

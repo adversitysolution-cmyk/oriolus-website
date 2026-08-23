@@ -35,7 +35,7 @@
 }
 #ptTimeSelectCntr .ui-widget{}
 #ptTimeSelectCntr .ui-widget-header {
-  background: #EB8C47 none repeat scroll 0 0;
+  background: #2acb35 none repeat scroll 0 0;
   border: 2px solid #252525;
   border-radius: 0;
   color: #fff;
@@ -97,8 +97,8 @@
 }
 #ptTimeSelectCntr .ptTimeSelectHrCntr a:hover, 
 #ptTimeSelectCntr .ptTimeSelectMinCntr a:hover{
-  background: #EB8C47 !important;
-  border-color: #EB8C47 !important;
+  background: #2acb35 !important;
+  border-color: #2acb35 !important;
 }
 
 
@@ -181,7 +181,7 @@
   transition: all 500ms ease;
 }
 #ptTimeSelectCntr #ptTimeSelectSetButton a:hover{
-  background: #EB8C47 !important;  
+  background: #2acb35 !important;  
 } 
 
 

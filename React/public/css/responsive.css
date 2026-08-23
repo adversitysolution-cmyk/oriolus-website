@@ -867,7 +867,7 @@
 .main-menu .collapsing{
     padding: 5px;
     margin: 5px;
-    border: 2px solid #EB8C47;
+    border: 2px solid #2acb35;
     border-radius: 0px;
 }	
 .main-menu .navbar-header {
@@ -972,7 +972,7 @@
     padding:10px 15px !important;
     line-height:22px;
     color:#ffffff;
-    background:#EB8C47;
+    background:#2acb35;
 }
 .main-menu .nav-container > ul > li > a:hover,
 .main-menu .nav-container > ul > li > a:active,

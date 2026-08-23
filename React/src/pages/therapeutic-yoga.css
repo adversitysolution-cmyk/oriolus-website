@@ -1,37 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Official Oriolus Clinical Blue & Navy Identity */
-  --oriolus-navy: #0B2B4E;
-  --oriolus-navy-dark: #06192E;
-  --oriolus-blue: #00609C;
-  --oriolus-blue-soft: #EFF6F9;
-  
-  /* Radiant Orange (Hover & High-Energy Accent) */
-  --oriolus-amber: #EB8C47;
-  --oriolus-amber-deep: #D97830;
-  --oriolus-amber-soft: #FDF4EC;
-  
-  /* Canvas & Text Tokens */
-  --ty-white: #FFFFFF;
-  --ty-bg-subtle: #F8FAFC;
-  --ty-bg-card: #FFFFFF;
-  --ty-border: #E2E8F0;
-  --ty-line: #CBD5E1;
-  
-  /* Blue Headings & Main Texts */
-  --ty-heading: #0B2B4E;
-  --ty-heading-sub: #00609C;
-  --ty-main-text: #0E3A6C;
-  --ty-body: #162D3D;
-  --ty-muted: #526B82;
+  --ty-green: #2e5f31;
+  --ty-green-deep: #1e4521;
+  --ty-green-soft: #dfe7d6;
+  --ty-cream: #fbf8f2;
+  --ty-cream-2: #f5f1e8;
+  --ty-cream-3: #eee8dd;
+  --ty-ink: #151915;
+  --ty-muted: #555e55;
+  --ty-gold: #b28b57;
+  --ty-line: #ded8cd;
+  --ty-white: #ffffff;
   --ty-radius: 12px;
 }
 
 .ty-page {
   width: 100%;
   background: var(--ty-white);
-  color: var(--ty-body);
+  color: var(--ty-ink);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow: hidden;
 }
@@ -42,14 +29,14 @@
 .ty-page h4 {
   font-family: 'Cormorant Garamond', Georgia, serif;
   margin: 0;
-  color: var(--ty-heading);
+  color: #171b17;
 }
 
 .ty-page p {
   margin: 0;
-  font-size: 15.5px;
+  font-size: 15px;
   line-height: 1.8;
-  color: var(--ty-body);
+  color: #555e55;
 }
 
 .ty-container {
@@ -62,10 +49,9 @@
    1. HERO SECTION
    ========================================================================== */
 .ty-hero-section {
-  padding: 85px 0 95px;
-  background: radial-gradient(circle at 85% 15%, rgba(11, 43, 78, 0.05) 0%, rgba(248, 250, 252, 0) 55%),
-              linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
-  border-bottom: 1px solid var(--ty-border);
+  padding: 80px 0 90px;
+  background: linear-gradient(135deg, #fbf8f2 0%, #f7f2e7 100%);
+  border-bottom: 1px solid var(--ty-line);
 }
 
 .ty-hero-grid {
@@ -91,16 +77,15 @@
   font-size: 13px;
   letter-spacing: 1.5px;
   font-weight: 700;
-  color: var(--oriolus-blue);
+  color: var(--ty-green);
   text-transform: uppercase;
-  font-family: 'Inter', sans-serif;
 }
 
 .ty-kicker-line {
   display: block;
   width: 40px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--oriolus-blue), var(--oriolus-amber));
+  height: 1.5px;
+  background: var(--ty-gold);
 }
 
 .ty-hero-section h1 {
@@ -108,15 +93,15 @@
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.5px;
-  color: var(--ty-heading);
-  margin-bottom: 14px;
+  color: #171b17;
+  margin-bottom: 12px;
 }
 
 .ty-hero-section h2 {
   font-size: 22px;
   line-height: 1.35;
   font-weight: 600;
-  color: var(--ty-heading-sub);
+  color: var(--ty-gold);
   margin-bottom: 20px;
 }
 
@@ -124,8 +109,8 @@
   max-width: 520px;
   font-size: 15.5px;
   line-height: 1.8;
-  color: var(--ty-body);
-  margin-bottom: 32px !important;
+  color: #444c44;
+  margin-bottom: 30px !important;
 }
 
 .ty-hero-actions {
@@ -135,9 +120,6 @@
   flex-wrap: wrap;
 }
 
-/* ==========================================================================
-   BUTTONS: DEFAULT BLUE ➔ HOVER ORANGE
-   ========================================================================== */
 .ty-btn {
   min-height: 48px;
   padding: 0 26px;
@@ -145,56 +127,36 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
-  font-size: 14.5px;
+  font-size: 14px;
   font-weight: 600;
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
-.ty-btn svg {
-  width: 20px;
-  height: 20px;
-  stroke-width: 2.2px;
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-}
-
-.ty-btn:hover svg {
-  transform: translateX(3px);
-}
-
-/* Primary Button: Default Deep Navy Blue ➔ Hover Radiant Orange */
 .ty-btn-primary {
   color: #ffffff !important;
-  background: var(--oriolus-navy);
-  border: 1.5px solid var(--oriolus-navy);
-  box-shadow: 0 6px 18px rgba(11, 43, 78, 0.22);
+  background: var(--ty-green);
+  border: 1px solid var(--ty-green);
+  box-shadow: 0 6px 18px rgba(46, 95, 49, 0.22);
 }
 
 .ty-btn-primary:hover {
-  background: var(--oriolus-amber) !important;
-  border-color: var(--oriolus-amber) !important;
-  color: #ffffff !important;
+  background: var(--ty-green-deep);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(235, 140, 71, 0.4) !important;
+  box-shadow: 0 8px 24px rgba(46, 95, 49, 0.32);
 }
 
-/* Secondary Button: Default White with Blue Border ➔ Hover Orange */
 .ty-btn-secondary {
-  color: var(--oriolus-navy) !important;
+  color: #172219 !important;
   background: #ffffff;
-  border: 1.5px solid var(--oriolus-navy);
-  box-shadow: 0 2px 8px rgba(11, 43, 78, 0.04);
+  border: 1px solid #c5d8c6;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .ty-btn-secondary:hover {
-  background: var(--oriolus-amber) !important;
-  border-color: var(--oriolus-amber) !important;
-  color: #ffffff !important;
+  background: #f4f8f4;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(235, 140, 71, 0.35) !important;
 }
 
 .ty-trust-row {
@@ -202,7 +164,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   padding-top: 25px;
-  border-top: 1px solid var(--ty-border);
+  border-top: 1px solid rgba(178, 139, 87, 0.25);
   max-width: 520px;
 }
 
@@ -210,24 +172,23 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--oriolus-blue);
+  color: var(--ty-green);
 }
 
 .ty-trust-item span {
-  color: var(--ty-heading);
+  color: #333d33;
   font-size: 12px;
   font-weight: 600;
   line-height: 1.35;
-  font-family: 'Inter', sans-serif;
 }
 
 .ty-hero-image-wrap {
   border-radius: var(--ty-radius);
   overflow: hidden;
-  box-shadow: 0 16px 40px rgba(11, 43, 78, 0.08);
-  border: 1px solid var(--ty-border);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  border: 1px solid #e7dfd2;
   min-height: 420px;
-  background: var(--ty-bg-subtle);
+  background: #eee;
 }
 
 .ty-hero-image {
@@ -256,8 +217,8 @@
 .ty-intro-image-wrap {
   border-radius: var(--ty-radius);
   overflow: hidden;
-  box-shadow: 0 14px 35px rgba(11, 43, 78, 0.06);
-  border: 1px solid var(--ty-border);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.06);
+  border: 1px solid #e7dfd2;
   min-height: 380px;
 }
 
@@ -274,26 +235,25 @@
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 20px;
-  color: var(--ty-heading);
+  color: #171b17;
 }
 
 .ty-intro-content p {
   margin-bottom: 16px;
   font-size: 15.5px;
   line-height: 1.85;
-  color: var(--ty-body);
 }
 
 .ty-note-card {
   margin-top: 25px;
   border-radius: 8px;
-  background: var(--oriolus-blue-soft);
-  border-left: 4px solid var(--oriolus-blue);
+  background: linear-gradient(135deg, #f4efe5 0%, #faf7f1 100%);
+  border-left: 4px solid var(--ty-green);
   display: flex;
   align-items: flex-start;
   gap: 18px;
   padding: 20px 24px;
-  box-shadow: 0 4px 14px rgba(11, 43, 78, 0.04);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
 }
 
 .ty-note-icon {
@@ -304,14 +264,14 @@
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  background: var(--oriolus-blue);
+  background: var(--ty-green);
   flex-shrink: 0;
 }
 
 .ty-note-card p {
   font-size: 14.5px;
   line-height: 1.7;
-  color: var(--ty-heading);
+  color: #2b352b;
   font-weight: 500;
   margin: 0;
 }
@@ -327,7 +287,7 @@
 .ty-section-title {
   font-size: 34px;
   font-weight: 700;
-  color: var(--ty-heading);
+  color: #171b17;
   margin-bottom: 12px;
 }
 
@@ -336,14 +296,14 @@
   align-items: center;
   justify-content: center;
   gap: 14px;
-  color: var(--oriolus-blue);
+  color: var(--ty-green);
 }
 
 .ty-title-ornament span {
   width: 45px;
-  height: 1.5px;
-  background: linear-gradient(90deg, var(--oriolus-blue), var(--oriolus-amber));
-  opacity: 0.8;
+  height: 1px;
+  background: var(--ty-gold);
+  opacity: 0.7;
 }
 
 /* ==========================================================================
@@ -351,9 +311,9 @@
    ========================================================================== */
 .ty-support-section {
   padding: 90px 0 95px;
-  background: var(--ty-bg-subtle);
-  border-top: 1px solid var(--ty-border);
-  border-bottom: 1px solid var(--ty-border);
+  background: #fbf8f2;
+  border-top: 1px solid var(--ty-line);
+  border-bottom: 1px solid var(--ty-line);
 }
 
 .ty-benefit-grid {
@@ -364,7 +324,7 @@
 
 .ty-benefit {
   background: #ffffff;
-  border: 1px solid var(--ty-border);
+  border: 1px solid #e7dfd2;
   border-radius: 10px;
   padding: 28px 14px 22px;
   text-align: center;
@@ -372,21 +332,21 @@
   flex-direction: column;
   align-items: center;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(11, 43, 78, 0.02);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
 }
 
 .ty-benefit:hover {
   transform: translateY(-5px);
-  border-color: var(--oriolus-amber);
-  box-shadow: 0 10px 24px rgba(235, 140, 71, 0.2);
+  border-color: var(--ty-green);
+  box-shadow: 0 10px 24px rgba(46, 95, 49, 0.12);
 }
 
 .ty-benefit-icon-wrap {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: var(--oriolus-blue-soft);
-  color: var(--oriolus-blue);
+  background: #f1f6ef;
+  color: var(--ty-green);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -395,20 +355,19 @@
 }
 
 .ty-benefit:hover .ty-benefit-icon-wrap {
-  background: var(--oriolus-amber);
+  background: var(--ty-green);
   color: #ffffff;
 }
 
 .ty-benefit-label {
   font-size: 13.5px;
   font-weight: 600;
-  color: var(--ty-heading);
+  color: #222a22;
   line-height: 1.45;
-  font-family: 'Inter', sans-serif;
 }
 
 /* ==========================================================================
-   5. YOUR THERAPEUTIC EXPERIENCE (5 STEPS)
+   5. YOUR THERAPEUTIC YOGA EXPERIENCE (5 STEPS)
    ========================================================================== */
 .ty-experience-section {
   padding: 95px 0 100px;
@@ -423,8 +382,8 @@
 }
 
 .ty-experience-item {
-  background: var(--ty-bg-subtle);
-  border: 1px solid var(--ty-border);
+  background: #fdfbf7;
+  border: 1px solid #eae3d6;
   border-radius: 10px;
   padding: 30px 20px 25px;
   text-align: center;
@@ -437,17 +396,16 @@
 
 .ty-experience-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(235, 140, 71, 0.12);
-  border-color: var(--oriolus-amber);
-  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-color: var(--ty-green);
 }
 
 .ty-experience-icon {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: var(--oriolus-blue-soft);
-  color: var(--oriolus-blue);
+  background: #eef5ec;
+  color: var(--ty-green);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -456,21 +414,21 @@
 }
 
 .ty-experience-item:hover .ty-experience-icon {
-  background: var(--oriolus-amber);
+  background: var(--ty-green);
   color: #ffffff;
 }
 
 .ty-experience-item h3 {
   font-size: 19px;
   font-weight: 700;
-  color: var(--ty-heading);
+  color: #171b17;
   margin-bottom: 10px;
 }
 
 .ty-experience-item p {
   font-size: 13.5px;
   line-height: 1.65;
-  color: var(--ty-body);
+  color: #5d675d;
 }
 
 /* ==========================================================================
@@ -478,9 +436,9 @@
    ========================================================================== */
 .ty-journey-section {
   padding: 90px 0 95px;
-  background: var(--ty-bg-subtle);
-  border-top: 1px solid var(--ty-border);
-  border-bottom: 1px solid var(--ty-border);
+  background: #f7f3ea;
+  border-top: 1px solid var(--ty-line);
+  border-bottom: 1px solid var(--ty-line);
 }
 
 .ty-journey-grid {
@@ -491,19 +449,19 @@
 
 .ty-step-card {
   background: #ffffff;
-  border: 1px solid var(--ty-border);
+  border: 1px solid #e7dfd2;
   border-radius: 12px;
   padding: 36px 30px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(11, 43, 78, 0.03);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
   transition: all 0.3s ease;
   height: 100%;
 }
 
 .ty-step-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 14px 30px rgba(235, 140, 71, 0.16);
-  border-color: var(--oriolus-amber);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+  border-color: var(--ty-green);
 }
 
 .ty-step-number {
@@ -512,30 +470,25 @@
   height: 50px;
   line-height: 50px;
   border-radius: 50%;
-  background: var(--oriolus-navy);
+  background: var(--ty-green);
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 18px;
   font-family: 'Inter', sans-serif;
-  transition: all 0.3s ease;
-}
-
-.ty-step-card:hover .ty-step-number {
-  background: var(--oriolus-amber);
 }
 
 .ty-step-card h3 {
   font-size: 22px;
   font-weight: 700;
-  color: var(--ty-heading);
+  color: #171b17;
   margin-bottom: 12px;
 }
 
 .ty-step-card p {
   font-size: 14.5px;
   line-height: 1.7;
-  color: var(--ty-body);
+  color: #555e55;
 }
 
 /* ==========================================================================
@@ -556,8 +509,8 @@
 .ty-faq-image-wrap {
   border-radius: var(--ty-radius);
   overflow: hidden;
-  box-shadow: 0 14px 35px rgba(11, 43, 78, 0.06);
-  border: 1px solid var(--ty-border);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.06);
+  border: 1px solid #e7dfd2;
 }
 
 .ty-faq-image-wrap img {
@@ -575,17 +528,17 @@
 }
 
 .ty-faq-item {
-  border: 1px solid var(--ty-border);
+  border: 1px solid #e4ddd2;
   border-radius: 8px;
-  background: var(--ty-bg-subtle);
+  background: #faf8f4;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .ty-faq-item.is-open {
   background: #ffffff;
-  border-color: var(--oriolus-navy);
-  box-shadow: 0 6px 18px rgba(11, 43, 78, 0.08);
+  border-color: var(--ty-green);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
 }
 
 .ty-faq-question {
@@ -604,29 +557,28 @@
 .ty-faq-question span {
   font-size: 16px;
   font-weight: 600;
-  color: var(--ty-heading);
+  color: #171b17;
   font-family: 'Inter', sans-serif;
   transition: color 0.3s;
 }
 
 .ty-faq-item.is-open .ty-faq-question span {
-  color: var(--oriolus-blue);
+  color: var(--ty-green);
 }
 
 .ty-faq-icon {
-  color: var(--oriolus-blue);
+  color: var(--ty-green);
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
 
 .ty-faq-item.is-open .ty-faq-icon {
   transform: rotate(180deg);
-  color: var(--oriolus-amber);
 }
 
 .ty-faq-answer {
   padding: 0 22px 20px;
-  border-top: 1px solid #edf2f7;
+  border-top: 1px solid #f0eae0;
   margin-top: 4px;
 }
 
@@ -634,15 +586,15 @@
   padding-top: 14px;
   font-size: 14.5px;
   line-height: 1.75;
-  color: var(--ty-body);
+  color: #555e55;
 }
 
 /* ==========================================================================
-   8. BOTTOM CTA BANNER: DEFAULT BLUE ➔ HOVER ORANGE
+   8. BOTTOM GREEN CTA BANNER
    ========================================================================== */
 .ty-cta-section {
-  padding: 65px 0;
-  background: linear-gradient(135deg, var(--oriolus-navy) 0%, var(--oriolus-navy-dark) 100%);
+  padding: 60px 0;
+  background: linear-gradient(135deg, #1e4521 0%, #2e5f31 100%);
   color: #ffffff;
 }
 
@@ -657,52 +609,37 @@
 .ty-cta-copy h2 {
   font-size: 30px;
   font-weight: 700;
-  color: #ffffff !important;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
 .ty-cta-copy p {
-  color: #CBD5E1;
+  color: #dbe8db;
   font-size: 15.5px;
   line-height: 1.6;
 }
 
 .ty-cta-button {
-  min-height: 52px;
-  padding: 0 34px;
+  min-height: 50px;
+  padding: 0 32px;
   border-radius: 6px;
   background: #ffffff;
-  color: var(--oriolus-navy) !important;
+  color: var(--ty-green-deep) !important;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
   font-size: 14.5px;
   font-weight: 700;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   transition: all 0.3s ease;
   flex-shrink: 0;
-}
-
-.ty-cta-button svg {
-  width: 22px;
-  height: 22px;
-  stroke-width: 2.2px;
-  flex-shrink: 0;
-  color: var(--oriolus-amber);
-  transition: all 0.3s ease;
 }
 
 .ty-cta-button:hover {
-  background: var(--oriolus-amber) !important;
-  color: #ffffff !important;
+  background: #fbf8f2;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(235, 140, 71, 0.45) !important;
-}
-
-.ty-cta-button:hover svg {
-  color: #ffffff !important;
-  transform: scale(1.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 /* ==========================================================================

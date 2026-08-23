@@ -23,32 +23,32 @@ import {
 import { servicesDetailData } from '../content/servicesDetailContent';
 import './therapeutic-yoga.css';
 
-// Blank Image Slot Component with Logo Identity
+// Blank Image Slot Component
 const BlankImagePlaceholder = ({ minHeight = '380px', label = 'Image Placeholder' }) => (
   <div
     style={{
       width: '100%',
       minHeight,
       height: '100%',
-      background: 'linear-gradient(135deg, #F8FAFC 0%, #EFF6F9 100%)',
+      background: 'linear-gradient(135deg, #F3EFE6 0%, #EAE6DF 100%)',
       borderRadius: '12px',
-      border: '1px solid #E2E8F0',
+      border: '1px solid #DED8CD',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
       gap: '10px',
-      boxShadow: '0 8px 24px rgba(11,43,78,0.03)',
+      boxShadow: '0 8px 24px rgba(0,0,0,0.03)',
       position: 'relative',
       overflow: 'hidden'
     }}
   >
-    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ opacity: 0.4 }}>
-      <rect x="3" y="3" width="18" height="18" rx="3" stroke="#EB8C47" strokeWidth="1.5" />
-      <circle cx="8.5" cy="8.5" r="2" fill="#EB8C47" />
-      <path d="M21 15L16 10L5 21" stroke="#0B2B4E" strokeWidth="1.5" strokeLinejoin="round" />
+    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ opacity: 0.35 }}>
+      <rect x="3" y="3" width="18" height="18" rx="3" stroke="#2E5F31" strokeWidth="1.5" />
+      <circle cx="8.5" cy="8.5" r="2" fill="#2E5F31" />
+      <path d="M21 15L16 10L5 21" stroke="#2E5F31" strokeWidth="1.5" strokeLinejoin="round" />
     </svg>
-    <span style={{ fontSize: '11px', letterSpacing: '1.5px', textTransform: 'uppercase', color: '#64748B', fontWeight: 600, opacity: 0.7 }}>
+    <span style={{ fontSize: '11px', letterSpacing: '1.5px', textTransform: 'uppercase', color: '#687768', fontWeight: 600, opacity: 0.5 }}>
       {label}
     </span>
   </div>
@@ -249,7 +249,7 @@ const ServiceDetailPage = () => {
 
         {/* 6. IMPORTANT CONSIDERATIONS (SAFETY ALERT) */}
         {service.importantConsiderations && (
-          <section style={{ padding: '45px 0', background: 'var(--oriolus-amber-soft)', borderTop: '1px solid #F6D6BA', borderBottom: '1px solid #F6D6BA' }}>
+          <section style={{ padding: '45px 0', background: '#fffdf5', borderTop: '1px solid #f6e6b8', borderBottom: '1px solid #f6e6b8' }}>
             <div className="ty-container">
               <div style={{ 
                 display: 'flex', 
@@ -258,17 +258,17 @@ const ServiceDetailPage = () => {
                 padding: '24px 28px', 
                 background: '#ffffff', 
                 borderRadius: '8px', 
-                borderLeft: '4px solid var(--oriolus-amber)',
-                boxShadow: '0 4px 15px rgba(235,140,71,0.06)'
+                borderLeft: '4px solid #c59d5f',
+                boxShadow: '0 4px 15px rgba(0,0,0,0.02)'
               }}>
-                <div style={{ color: 'var(--oriolus-amber)', fontSize: '24px', flexShrink: 0, marginTop: '2px' }}>
+                <div style={{ color: '#c59d5f', fontSize: '24px', flexShrink: 0, marginTop: '2px' }}>
                   <i className="fa fa-info-circle"></i>
                 </div>
                 <div>
-                  <h4 style={{ margin: '0 0 6px', fontSize: '16px', color: 'var(--oriolus-navy)', fontWeight: 700, fontFamily: "'Inter', sans-serif" }}>
+                  <h4 style={{ margin: '0 0 6px', fontSize: '16px', color: '#7a5a1e', fontWeight: 700, fontFamily: "'Inter', sans-serif" }}>
                     Important Considerations &amp; Safety Guidance
                   </h4>
-                  <p style={{ margin: 0, fontSize: '14.5px', color: '#475569', lineHeight: '1.7' }}>
+                  <p style={{ margin: 0, fontSize: '14.5px', color: '#6c5324', lineHeight: '1.7' }}>
                     {service.importantConsiderations}
                   </p>
                 </div>
@@ -319,9 +319,9 @@ const ServiceDetailPage = () => {
 
         {/* 8. RELATED THERAPIES STRIP */}
         {service.relatedLinks && service.relatedLinks.length > 0 && (
-          <section style={{ padding: '45px 0', background: 'var(--ty-bg-subtle)', borderTop: '1px solid var(--ty-border)' }}>
+          <section style={{ padding: '45px 0', background: '#fbf8f2', borderTop: '1px solid #ded8cd' }}>
             <div className="ty-container text-center">
-              <h4 style={{ fontSize: '16px', fontWeight: 600, color: 'var(--oriolus-navy)', marginBottom: '16px', fontFamily: "'Inter', sans-serif" }}>
+              <h4 style={{ fontSize: '16px', fontWeight: 600, color: '#333', marginBottom: '16px', fontFamily: "'Inter', sans-serif" }}>
                 Related Therapies &amp; Complementary Practices:
               </h4>
               <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -335,25 +335,23 @@ const ServiceDetailPage = () => {
                       gap: '8px',
                       padding: '10px 22px',
                       background: '#ffffff',
-                      border: '1.5px solid #F6D6BA',
+                      border: '1px solid #cbd8c8',
                       borderRadius: '30px',
                       fontSize: '13.5px',
-                      color: 'var(--oriolus-navy)',
+                      color: '#2e5f31',
                       fontWeight: 600,
                       textDecoration: 'none',
-                      boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
+                      boxShadow: '0 2px 6px rgba(0,0,0,0.03)',
                       transition: 'all 0.3s ease'
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.borderColor = '#EB8C47';
-                      e.currentTarget.style.color = '#EB8C47';
-                      e.currentTarget.style.background = '#FDF4EC';
+                      e.currentTarget.style.borderColor = '#2e5f31';
+                      e.currentTarget.style.background = '#f4f8f4';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.borderColor = '#F6D6BA';
-                      e.currentTarget.style.color = '#0B2B4E';
+                      e.currentTarget.style.borderColor = '#cbd8c8';
                       e.currentTarget.style.background = '#ffffff';
                     }}
                   >
@@ -385,15 +383,15 @@ const ServiceDetailPage = () => {
         </section>
 
         {/* 10. UNIVERSAL MEDICAL / WELLNESS DISCLAIMER NOTE */}
-        <section style={{ padding: '30px 0', background: '#F8FAFC', borderTop: '1px solid #E2E8F0' }}>
+        <section style={{ padding: '30px 0', background: '#fafaf8', borderTop: '1px solid #eae6df' }}>
           <div className="ty-container">
             <div style={{ 
               padding: '16px 20px', 
               background: '#ffffff', 
-              border: '1px solid #E2E8F0', 
+              border: '1px solid #e7e2d8', 
               borderRadius: '6px', 
               fontSize: '12.5px', 
-              color: '#64748B', 
+              color: '#777', 
               lineHeight: '1.7' 
             }}>
               <strong>Wellness Information:</strong> Information on this website is intended for general wellness and educational purposes. Individual responses to therapies vary. Oriolus Scientific therapies are not a substitute for emergency care, medical diagnosis or prescribed treatment. If you have an existing medical condition, take medication, are pregnant, recently underwent surgery or have significant health concerns, please consult an appropriate healthcare professional before beginning a new therapy.
