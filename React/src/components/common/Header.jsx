@@ -122,17 +122,94 @@ const Header = () => {
                           <li><Link to="/about#affiliations">Our Affiliations</Link></li>
                         </ul>
                       </li>
-                      <li className={`dropdown ${['/procedures', '/yoga-therapy', '/naturopathy', '/ayurveda', '/acupuncture', '/structured-wellness-programs', '/wellness-programs', '/massage-therapy', '/facial-treatments', '/pedicure-menicure', '/salt-oil-bath', '/perfect-makeup', '/hair-treatments'].some(p => isActive(p)) ? 'current' : ''}`}>
+                      <li className={`dropdown procedures-mega-item ${['/procedures', '/yoga-therapy', '/naturopathy', '/ayurveda', '/acupuncture', '/structured-wellness-programs', '/wellness-programs', '/services/'].some(p => isActive(p)) ? 'current' : ''}`}>
                         <Link to="/procedures">Procedures</Link>
                         <div className="dropdown-btn" onClick={(e) => toggleDropdown('procedures', e)}></div>
-                        <ul style={{ display: openDropdowns['procedures'] ? 'block' : '' }}>
-                          <li><Link to="/procedures">All Procedures &amp; Therapies</Link></li>
-                          <li><Link to="/yoga-therapy">Yoga Therapy</Link></li>
-                          <li><Link to="/naturopathy">Naturopathy</Link></li>
-                          <li><Link to="/ayurveda">Ayurveda</Link></li>
-                          <li><Link to="/acupuncture">Acupuncture</Link></li>
-                          <li><Link to="/structured-wellness-programs">Structured Wellness Programs</Link></li>
-                        </ul>
+                        
+                        {/* 5-Column Mega Dropdown */}
+                        <div 
+                          className="procedures-mega-dropdown" 
+                          style={{ display: openDropdowns['procedures'] ? 'block' : undefined }}
+                        >
+                          <div className="procedures-mega-columns">
+                            
+                            {/* Col 1: Yoga Therapy */}
+                            <div className="procedures-mega-col">
+                              <Link to="/yoga-therapy" className="procedures-mega-col-title">
+                                Yoga Therapy
+                              </Link>
+                              <ul className="procedures-mega-list">
+                                <li><Link to="/services/therapeutic-yoga">Therapeutic Yoga</Link></li>
+                                <li><Link to="/services/stick-yoga">Stick Yoga / Danda Yoga</Link></li>
+                                <li><Link to="/services/aerial-yoga">Aerial Yoga</Link></li>
+                                <li><Link to="/services/pain-management-yoga">Pain Management Yoga</Link></li>
+                              </ul>
+                            </div>
+
+                            {/* Col 2: Naturopathy */}
+                            <div className="procedures-mega-col">
+                              <Link to="/naturopathy" className="procedures-mega-col-title">
+                                Naturopathy
+                              </Link>
+                              <ul className="procedures-mega-list">
+                                <li><Link to="/services/colon-hydrotherapy">Colon Hydrotherapy</Link></li>
+                                <li><Link to="/services/clinical-detoxification">Clinical Detoxification</Link></li>
+                                <li><Link to="/services/diabetes-wellness-support">Diabetes Wellness</Link></li>
+                                <li><Link to="/services/obesity-reduction">Obesity Reduction</Link></li>
+                              </ul>
+                            </div>
+
+                            {/* Col 3: Ayurveda */}
+                            <div className="procedures-mega-col">
+                              <Link to="/ayurveda" className="procedures-mega-col-title">
+                                Ayurveda
+                              </Link>
+                              <ul className="procedures-mega-list">
+                                <li><Link to="/services/panchakarma">Classical Panchakarma</Link></li>
+                                <li><Link to="/services/abhyanga">Abhyanga Massage</Link></li>
+                                <li><Link to="/services/shirodhara">Shirodhara Stream</Link></li>
+                                <li><Link to="/services/udwarthanam">Udwarthanam</Link></li>
+                                <li><Link to="/services/swedana">Herbal Swedana</Link></li>
+                              </ul>
+                            </div>
+
+                            {/* Col 4: Acupuncture */}
+                            <div className="procedures-mega-col">
+                              <Link to="/acupuncture" className="procedures-mega-col-title">
+                                Acupuncture
+                              </Link>
+                              <ul className="procedures-mega-list">
+                                <li><Link to="/services/acupuncture-pain-management">Pain Management</Link></li>
+                                <li><Link to="/services/acupuncture-chronic-conditions">Chronic Conditions</Link></li>
+                              </ul>
+                            </div>
+
+                            {/* Col 5: Structured Wellness Programs */}
+                            <div className="procedures-mega-col">
+                              <Link to="/structured-wellness-programs" className="procedures-mega-col-title">
+                                Wellness Programs
+                              </Link>
+                              <ul className="procedures-mega-list">
+                                <li><Link to="/services/obesity-reduction-detox">Obesity &amp; Detox</Link></li>
+                                <li><Link to="/services/diabetes-wellness">Diabetes Program</Link></li>
+                                <li><Link to="/services/spine-joint-pain">Spine &amp; Joint Pain</Link></li>
+                                <li><Link to="/services/full-body-retreat">Full-Body Retreat</Link></li>
+                              </ul>
+                            </div>
+
+                          </div>
+
+                          {/* Footer Bar */}
+                          <div className="procedures-mega-footer">
+                            <Link to="/procedures" className="overview-link">
+                              <span>View All Procedures &amp; Therapies</span>
+                              <i className="fa fa-arrow-right"></i>
+                            </Link>
+                            <Link to="/appointment" className="book-link">
+                              Book a Consultation &rarr;
+                            </Link>
+                          </div>
+                        </div>
                       </li>
                       <li className={isActive('/about/meet-dr-vijay') || isActive('/dr-vijay') || isActive('/therapists') ? 'current' : ''}>
                         <Link to="/about/meet-dr-vijay">Dr. Vijay</Link>
