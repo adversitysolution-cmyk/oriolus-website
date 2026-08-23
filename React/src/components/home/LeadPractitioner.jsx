@@ -306,7 +306,7 @@ const LeadPractitioner = () => {
                         height: '20px', 
                         borderRadius: '50%', 
                         background: '#e8f5e9', 
-                        color: '#2acb35', 
+                        color: '#00B5A6', 
                         display: 'inline-flex', 
                         alignItems: 'center', 
                         justifyContent: 'center', 

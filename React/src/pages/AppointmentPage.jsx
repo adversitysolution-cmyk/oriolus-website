@@ -40,7 +40,7 @@ const AppointmentPage = () => {
               <div className="appointment-box">
                 {submitted ? (
                   <div className="alert alert-success text-center" style={{ padding: '40px 20px' }}>
-                    <span className="flaticon-shape" style={{ fontSize: '40px', color: '#2acb35', display: 'block', marginBottom: '15px' }}></span>
+                    <span className="flaticon-shape" style={{ fontSize: '40px', color: '#00B5A6', display: 'block', marginBottom: '15px' }}></span>
                     <h2>Appointment Request Received!</h2>
                     <p style={{ fontSize: '15px', marginTop: '10px' }}>
                       Thank you, <strong>{booking.name}</strong>. We have received your booking for <strong>{booking.service}</strong> on <strong>{booking.date || 'your requested date'}</strong>. Our clinical OPD team will contact you to confirm.
