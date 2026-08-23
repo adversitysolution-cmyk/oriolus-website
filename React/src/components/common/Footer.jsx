@@ -98,11 +98,11 @@ const Footer = () => {
                   <li><Link to="/contact">Contact</Link></li>
                 </ul>
                 <ul className="usefull-links">
-                  <li><Link to="/procedures">Procedures</Link></li>
-                  <li><Link to="/massage-therapy">Massage</Link></li>
-                  <li><Link to="/facial-treatments">Facials</Link></li>
-                  <li><Link to="/gallery-grid">Gallery</Link></li>
-                  <li><Link to="/appointment">Appointment</Link></li>
+                  <li><Link to="/yoga-therapy">Yoga Therapy</Link></li>
+                  <li><Link to="/naturopathy">Naturopathy</Link></li>
+                  <li><Link to="/ayurveda">Ayurveda</Link></li>
+                  <li><Link to="/acupuncture">Acupuncture</Link></li>
+                  <li><Link to="/structured-wellness-programs">Programs</Link></li>
                 </ul>
               </div>
             </div>

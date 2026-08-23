@@ -285,7 +285,7 @@ const LeadPractitioner = () => {
                   display: 'flex', 
                   alignItems: 'flex-start', 
                   gap: '14px',
-                  marginBottom: '30px'
+                  marginBottom: '25px'
                 }}
               >
                 <span style={{ color: '#E8A87C', fontSize: '32px', lineHeight: '1', fontFamily: 'Georgia, serif', fontWeight: 'bold' }}>
@@ -295,6 +295,34 @@ const LeadPractitioner = () => {
                   {content.quote}
                 </p>
               </div>
+
+              {/* 3 Checkpoints */}
+              {content.threeCheckpoints && (
+                <div style={{ marginBottom: '28px' }}>
+                  {content.threeCheckpoints.map((cp, idx) => (
+                    <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '10px' }}>
+                      <span style={{ 
+                        width: '20px', 
+                        height: '20px', 
+                        borderRadius: '50%', 
+                        background: '#e8f5e9', 
+                        color: '#2acb35', 
+                        display: 'inline-flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'center', 
+                        fontSize: '11px',
+                        flexShrink: 0,
+                        marginTop: '2px'
+                      }}>
+                        <i className="fa fa-check"></i>
+                      </span>
+                      <div style={{ fontSize: '13px', color: '#555', lineHeight: '1.5' }}>
+                        <strong style={{ color: '#222' }}>{cp.title}:</strong> {cp.desc}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {/* Action Buttons */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', flexWrap: 'wrap' }}>

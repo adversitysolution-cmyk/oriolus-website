@@ -1,86 +1,106 @@
 /**
  * Oriolus Scientific - About Us Content Store
- * Premium, concise, SEO-aware and layout-balanced content.
+ * Premium, authentic, and responsible content matching exact brand guidelines.
  */
 
 export const aboutContent = {
   header: {
     title: 'About Oriolus Scientific',
     activeTitle: 'About Us',
-    subtitle: 'An integrative Yoga & Naturopathy Research Center bringing personalised natural wellness, therapeutic care and traditional healing disciplines together.'
+    subtitle: 'Discover the philosophy, people and integrated wellness approach behind Oriolus Scientific.'
   },
 
   whoWeAre: {
     eyebrow: 'Our Identity & Purpose',
     title: 'Who We Are',
-    p1: 'Oriolus Scientific is a Yoga and Naturopathy Research Center operating as a division of Funicle Health Care and Wellness Pvt. Ltd.',
+    p1: 'Oriolus Scientific is a Yoga and Naturopathy Center operating as a division of Funicle Health Care and Wellness Pvt. Ltd.',
     p2: 'We bring Yoga Therapy, Naturopathy, Ayurveda and Acupuncture together within one integrated wellness environment. Our approach combines traditional therapeutic knowledge with personalised assessment, structured care and practical lifestyle guidance designed around each individual.',
     researchCommitment: {
       title: 'Wellness With Purpose',
       desc: 'Our approach encourages structured observation, personalised care and responsible integration of traditional wellness practices with contemporary lifestyle needs.'
     },
     image: '/images/resources/welcome.jpg',
-    imageAlt: 'Oriolus Scientific Yoga and Naturopathy Research Center'
+    imageAlt: 'Oriolus Scientific Yoga and Naturopathy Center'
   },
 
   ourStory: {
     hero: {
       eyebrow: 'OUR STORY',
       title: 'Built Around a More\nIntegrated View of Wellness',
-      desc: 'Oriolus Scientific brings together the wisdom of Yoga Therapy, Naturopathy, Ayurveda and Acupuncture to understand you as a whole — body, mind and lifestyle.',
+      desc: 'Bridging established traditional wellness disciplines with a structured approach to contemporary wellbeing.',
       heritageStat: {
-        number: '26+',
-        line1: 'Years',
-        line2: 'Clinical Heritage'
-      },
-      disciplinesStat: {
         number: '4',
         line1: 'Integrated',
         line2: 'Disciplines'
+      },
+      disciplinesStat: {
+        number: '15+',
+        line1: 'Therapeutic',
+        line2: 'Services'
       },
       image: '/images/about/story-1.jpg',
       imageAlt: 'Oriolus Scientific Consultation and Holistic Care'
     },
     journey: {
-      title: 'The Oriolus Journey',
+      title: 'The Four Pillars of Our Journey',
       steps: [
         {
           number: '01',
-          title: 'Understanding the Modern Lifestyle',
-          desc: 'Long working hours, stress, poor posture, inadequate rest and irregular habits gradually affect wellbeing.',
+          title: 'The Modern Wellness Challenge',
+          desc: 'Busy routines, reduced movement, stress and inconsistent lifestyle habits can influence everyday wellbeing.',
           icon: 'lifestyle'
         },
         {
           number: '02',
-          title: 'Respecting Traditional Wisdom',
-          desc: 'Yoga, Naturopathy, Ayurveda and Acupuncture have offered valuable wellness practices for generations.',
+          title: 'Rediscovering Traditional Wisdom',
+          desc: 'Yoga, Naturopathy, Ayurveda and Acupuncture offer distinct perspectives on balanced living.',
           icon: 'wisdom'
         },
         {
           number: '03',
-          title: 'Creating a Meaningful Bridge',
-          desc: 'Oriolus Scientific was established to connect traditional wellness knowledge with contemporary lifestyles.',
+          title: 'Building an Integrated Approach',
+          desc: 'Suitable practices can work together instead of being viewed as isolated therapies.',
           icon: 'bridge'
         },
         {
           number: '04',
-          title: 'Integrated Personalised Care',
-          desc: 'Every wellness journey is designed around the individual rather than a predefined therapy.',
+          title: 'Personalised Wellness',
+          desc: 'The individual’s lifestyle, movement, comfort and goals help shape the wellness journey.',
           icon: 'care'
         }
       ]
     },
     whyCreated: {
-      title: 'Why Oriolus Scientific Was Created',
+      title: 'Our Core Guiding Values',
       p1: 'Modern lifestyles challenge physical and mental wellbeing. At the same time, traditional wellness systems contain practices refined through generations.',
       p2: 'Oriolus Scientific was created to bring these worlds together through a structured, personalised and practical wellness approach.',
       image: '/images/about/story-2.jpg',
       imageAlt: 'Doctor discussing wellness protocol with patient',
       values: [
-        { id: 1, title: 'Contemporary Lifestyle Focus', icon: 'contemporary' },
-        { id: 2, title: 'Traditional Wellness Knowledge', icon: 'traditional' },
-        { id: 3, title: 'Individual-Centered Planning', icon: 'individual' },
-        { id: 4, title: 'Practical Everyday Wellness', icon: 'everyday' }
+        { 
+          id: 1, 
+          title: 'Individual-First Care', 
+          desc: 'Understanding the whole person before selecting a wellness pathway.',
+          icon: 'contemporary' 
+        },
+        { 
+          id: 2, 
+          title: 'Natural Wellness', 
+          desc: 'Thoughtful use of established natural and traditional therapeutic practices.',
+          icon: 'traditional' 
+        },
+        { 
+          id: 3, 
+          title: 'Wellness Empowerment', 
+          desc: 'Helping individuals understand and participate in healthier everyday choices.',
+          icon: 'individual' 
+        },
+        { 
+          id: 4, 
+          title: 'Integrated Approach', 
+          desc: 'Bringing appropriate practices from multiple disciplines together when useful.',
+          icon: 'everyday' 
+        }
       ]
     }
   },
@@ -90,17 +110,17 @@ export const aboutContent = {
     title: 'Mission, Vision & Philosophy',
     mission: {
       title: 'Our Mission',
-      desc: 'To make responsible, personalised and structured natural wellness accessible through Yoga, Naturopathy, Ayurveda, Acupuncture and practical lifestyle guidance.',
+      desc: 'To make responsible, personalised and structured natural wellness accessible through Yoga Therapy, Naturopathy, Ayurveda, Acupuncture and practical lifestyle guidance.',
       icon: 'fa fa-bullseye'
     },
     vision: {
       title: 'Our Vision',
-      desc: 'To build Oriolus Scientific into a trusted center for integrative Yoga and Naturopathy practice, wellness education and meaningful long-term wellbeing.',
+      desc: 'To build Oriolus Scientific into a trusted center for integrative wellness, therapeutic practice, education and meaningful long-term wellbeing.',
       icon: 'fa fa-eye'
     },
     philosophy: {
       title: 'Our Philosophy',
-      desc: 'True wellness begins by understanding the whole person—movement, nutrition, rest, stress and lifestyle—and creating care that respects individual needs.',
+      desc: 'Understanding the individual before choosing the therapy—integrating movement, nutrition, rest, stress management and lifestyle habits.',
       icon: 'fa fa-balance-scale'
     }
   },
@@ -125,61 +145,38 @@ export const aboutContent = {
       id: 1,
       icon: 'flaticon-laurel',
       number: '4',
-      label: 'Integrated Disciplines'
+      label: 'Integrated Disciplines',
+      sublabel: 'Yoga Therapy, Naturopathy, Ayurveda & Acupuncture'
     },
     {
       id: 2,
       icon: 'flaticon-people',
       number: '15+',
-      label: 'Therapeutic Services'
+      label: 'Therapeutic Services',
+      sublabel: 'Focused wellness services across four disciplines'
     },
     {
       id: 3,
       icon: 'flaticon-hairdresser',
       number: '4',
-      label: 'Structured Programs'
+      label: 'Structured Programs',
+      sublabel: 'Personalised pathways for focused wellness goals'
     },
     {
       id: 4,
       icon: 'flaticon-nature-1',
       number: '1',
-      label: 'Personalised Approach'
+      label: 'Integrated Approach',
+      sublabel: 'Individual needs remain at the center of every journey'
     }
-  ],
-
-  accreditations: [
-    'A Division of Funicle Health Care and Wellness Pvt. Ltd.',
-    'Integrated Yoga, Naturopathy, Ayurveda & Acupuncture Practice',
-    'Personalised Wellness & Lifestyle-Oriented Care',
-    'Institutional Credentials & Affiliations — Verification in Progress'
   ],
 
   brands: [
-    {
-      id: 1,
-      image: '/images/brand/1.png',
-      alt: 'Funicle Health Care and Wellness Pvt. Ltd.'
-    },
-    {
-      id: 2,
-      image: '/images/brand/2.png',
-      alt: 'Oriolus Scientific Yoga Therapy'
-    },
-    {
-      id: 3,
-      image: '/images/brand/3.png',
-      alt: 'Oriolus Scientific Naturopathy'
-    },
-    {
-      id: 4,
-      image: '/images/brand/4.png',
-      alt: 'Oriolus Scientific Ayurveda'
-    },
-    {
-      id: 5,
-      image: '/images/brand/5.png',
-      alt: 'Oriolus Scientific Acupuncture'
-    }
+    { id: 1, name: 'Yoga Therapy', image: '/images/brand/1.jpg', alt: 'Yoga Therapy' },
+    { id: 2, name: 'Naturopathy', image: '/images/brand/2.jpg', alt: 'Naturopathy' },
+    { id: 3, name: 'Ayurveda', image: '/images/brand/3.jpg', alt: 'Ayurveda' },
+    { id: 4, name: 'Acupuncture', image: '/images/brand/4.jpg', alt: 'Acupuncture' },
+    { id: 5, name: 'Funicle Health Care', image: '/images/brand/5.jpg', alt: 'Funicle Health Care and Wellness Pvt. Ltd.' }
   ]
 };
 

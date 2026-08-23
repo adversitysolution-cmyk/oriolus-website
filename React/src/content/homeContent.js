@@ -47,25 +47,26 @@ export const homeContent = {
   },
 
   // Welcome Snapshot Area
+  // Welcome Snapshot Area
   welcomeArea: {
     eyebrow: 'About Oriolus Scientific',
     title: 'Personalised Wellness, Thoughtfully Delivered',
-    leadText: 'Oriolus Scientific is a Yoga & Naturopathy Research Center bringing Yoga Therapy, Naturopathy, Ayurveda and Acupuncture together within one integrated wellness approach.',
+    leadText: 'Bringing traditional wellness knowledge together with structured, personalised care.',
     image: '/images/resources/welcome.jpg',
-    imageAlt: 'Oriolus Scientific Yoga and Naturopathy Research Center',
+    imageAlt: 'Oriolus Scientific Yoga and Naturopathy Center',
     mission: {
       title: 'Our Mission',
-      desc: 'To make structured, responsible and personalised natural wellness accessible through integrated therapeutic care and lifestyle guidance.'
+      desc: 'To make responsible, personalised and structured natural wellness accessible through Yoga Therapy, Naturopathy, Ayurveda, Acupuncture and practical lifestyle guidance.'
     },
     vision: {
       title: 'Our Vision',
-      desc: 'To build a trusted center for integrative Yoga and Naturopathy practice, personalised wellness and meaningful long-term wellbeing.'
+      desc: 'To build Oriolus Scientific into a trusted center for integrative wellness, therapeutic practice, education and meaningful long-term wellbeing.'
     },
     cta: {
-      btnText: 'Discover Our Story',
-      btnLink: '/about',
-      adviceLabel: 'Need guidance?',
-      callBtnText: 'Call Now',
+      btnText: 'Explore Our Therapies',
+      btnLink: '/procedures',
+      adviceLabel: 'Need Guidance?',
+      callBtnText: 'Speak With Our Team',
       callPhone: 'tel:+919845012345'
     }
   },
@@ -75,7 +76,7 @@ export const homeContent = {
     eyebrow: 'LEAD PRACTITIONER',
     title: 'Guided by Experience.\nPersonalised for You.',
     doctorName: 'Dr. Vijay',
-    doctorRole: 'Lead Practitioner — Oriolus Scientific',
+    doctorRole: 'Lead Practitioner — Personalised Integrative Wellness',
     bio: 'Dr. Vijay leads the therapeutic approach at Oriolus Scientific, bringing together Yoga Therapy, Naturopathy and integrative wellness practices with a strong focus on personalised care and individual wellbeing.',
     areasOfFocusTitle: 'AREAS OF FOCUS',
     focusAreas: [
@@ -84,7 +85,21 @@ export const homeContent = {
       { id: 3, title: 'Pain Management', icon: 'spine' },
       { id: 4, title: 'Lifestyle Wellness', icon: 'yoga' }
     ],
-    quote: 'Every individual is different. Meaningful wellness begins by understanding the person before choosing the therapy.',
+    threeCheckpoints: [
+      {
+        title: 'Whole-Person Understanding',
+        desc: 'Lifestyle, movement, comfort and wellness goals are considered together.'
+      },
+      {
+        title: 'Personalised Therapy Planning',
+        desc: 'Suitable therapies are selected according to individual needs.'
+      },
+      {
+        title: 'Continued Wellness Guidance',
+        desc: 'Progress and lifestyle practices can be reviewed over time.'
+      }
+    ],
+    quote: 'Every individual is different. Understanding the individual before choosing the therapy.',
     image: '/images/team/1.jpg',
     imageAlt: 'Dr. Vijay - Lead Practitioner at Oriolus Scientific',
     btn1Text: 'Meet Dr. Vijay',
@@ -95,36 +110,36 @@ export const homeContent = {
 
   // Clinical Trust & Accreditation Strip
   clinicalTrustStrip: {
-    eyebrow: 'CLINICAL EXCELLENCE & TRUST',
-    title: 'Rooted in Science. Guided by Nature.',
-    subtitle: 'Every treatment protocol at Oriolus Scientific adheres to rigorous clinical standards, time-tested natural sciences, and individualized patient care.',
+    eyebrow: 'ORIOLUS SCIENTIFIC AT A GLANCE',
+    title: 'Rooted in Nature. Guided by Personalised Care.',
+    subtitle: 'Every wellness program at Oriolus Scientific integrates established traditional disciplines with structured, individualised support.',
     pillars: [
       {
         id: 1,
-        badge: 'BNYS',
-        subtitle: 'Licensed Medical Practitioners',
-        desc: 'Qualified and certified naturopathy professionals delivering authentic care.',
+        badge: '4',
+        subtitle: 'Integrated Disciplines',
+        desc: 'Yoga Therapy, Naturopathy, Ayurveda & Acupuncture brought together in one center.',
         icon: 'mortar'
       },
       {
         id: 2,
-        badge: 'Classical',
-        subtitle: 'Evidence-Based Protocols',
-        desc: 'Time-tested therapeutic approaches supported by clinical practice.',
+        badge: '15+',
+        subtitle: 'Therapeutic Services',
+        desc: 'Focused natural wellness services tailored across four traditional healing disciplines.',
         icon: 'scroll'
       },
       {
         id: 3,
-        badge: '26+ Years',
-        subtitle: 'Clinical Heritage',
-        desc: 'More than two decades of experience in holistic healing and patient care.',
+        badge: '4',
+        subtitle: 'Structured Programs',
+        desc: 'Personalised multidisciplinary pathways designed for focused lifestyle wellness goals.',
         icon: 'temple'
       },
       {
         id: 4,
-        badge: '100%',
-        subtitle: 'Drugless & Non-Invasive Care',
-        desc: 'Natural, gentle, and safe treatments focused on restoring wellness without medication or surgery.',
+        badge: '1',
+        subtitle: 'Integrated Approach',
+        desc: 'Individual needs, comfort, and lifestyle remain at the center of every wellness journey.',
         icon: 'waterleaf'
       }
     ]
@@ -215,47 +230,47 @@ export const homeContent = {
 
   // Why Choose Us Section
   whyChooseUs: {
-    title: 'Why Choose Oriolus Scientific?',
+    title: 'What Makes Oriolus Different',
     items: [
       {
         id: 1,
-        title: 'Individual-First Approach',
-        desc: 'Every wellness journey begins by understanding your health goals, lifestyle and physical needs.',
+        title: 'Personalised Wellness Plans',
+        desc: 'Care shaped around individual lifestyle, comfort and wellness goals.',
         icon: 'flaticon-medical-1',
         isBottomBorder: true
       },
       {
         id: 2,
-        title: 'Whole-Person Wellness',
-        desc: 'Movement, nutrition, relaxation and lifestyle are considered together rather than in isolation.',
+        title: 'Practitioner-Led Guidance',
+        desc: 'Thoughtful guidance helps identify appropriate therapies and next steps.',
         icon: 'flaticon-medical-2',
         isBottomBorder: true
       },
       {
         id: 3,
-        title: 'Guided Therapeutic Care',
-        desc: 'Structured wellness programs are delivered with practitioner guidance and personalised attention.',
+        title: 'Whole-Person Approach',
+        desc: 'Movement, nutrition, rest, stress and lifestyle are considered together.',
         icon: 'flaticon-people-1',
         isBottomBorder: true
       },
       {
         id: 4,
-        title: 'Natural Therapies',
-        desc: 'Traditional wellness practices are delivered with care, clarity and individual suitability in mind.',
+        title: 'Calm Wellness Environment',
+        desc: 'A welcoming setting designed for privacy, comfort and restorative care.',
         icon: 'flaticon-nature-1',
         isBottomBorder: false
       },
       {
         id: 5,
         title: 'Four Disciplines, One Center',
-        desc: 'Yoga Therapy, Naturopathy, Ayurveda and Acupuncture come together in one integrated approach.',
+        desc: 'Yoga Therapy, Naturopathy, Ayurveda and Acupuncture within one integrated approach.',
         icon: 'flaticon-flower',
         isBottomBorder: false
       },
       {
         id: 6,
-        title: 'Calm Healing Environment',
-        desc: 'A thoughtfully designed wellness setting that encourages privacy, relaxation and restorative care.',
+        title: 'Lifestyle-Focused Wellness',
+        desc: 'Practical guidance encourages healthier habits that can continue beyond individual sessions.',
         icon: 'flaticon-relax',
         isBottomBorder: false
       }
