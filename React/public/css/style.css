@@ -529,7 +529,6 @@ select:focus {
     z-index: 5;
 }
 .main-menu .nav-container {
-    position: relative;
     float: left;
     width: 50%;
 }
@@ -540,7 +539,6 @@ select:focus {
     padding-left: 180px;
 }
 .main-menu .nav-container > ul{
-	position:relative;
 	width:100%;
 }
 
@@ -553,14 +551,17 @@ select:focus {
 .main-menu .navigation {
     float: left;
     margin: 0;
-    position: relative;
+    position: static;
     z-index: 2;
 }
-.main-menu .navigation li {
+.main-menu .navigation > li {
     position: relative;
     display: inline-block;
     float: left;
     margin-right: 5px;
+}
+.main-menu .navigation > li.procedures-mega-item {
+    position: static !important;
 }
 .main-menu .navigation li:last-child{
     margin-right: 0;
@@ -704,30 +705,31 @@ select:focus {
   position: static !important;
 }
 
-.main-menu .navigation > li > .procedures-mega-dropdown {
-  position: absolute;
-  top: 130%;
-  left: 0;
-  right: 0;
-  width: 1140px;
-  max-width: 96vw;
-  margin: 0 auto;
-  background: #ffffff;
-  border-top: 3px solid #2acb35;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
-  padding: 0;
-  z-index: 99999;
-  visibility: hidden;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 350ms ease;
+.main-menu .procedures-mega-dropdown,
+.main-menu .navigation > li.procedures-mega-item > .procedures-mega-dropdown {
+  position: absolute !important;
+  top: 130% !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 1140px !important;
+  max-width: 96vw !important;
+  margin: 0 auto !important;
+  background: #ffffff !important;
+  border-top: 3px solid #2acb35 !important;
+  border-radius: 0 0 10px 10px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14) !important;
+  padding: 0 !important;
+  z-index: 999999 !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  transition: all 350ms ease !important;
 }
 
-.main-menu .navigation > li:hover > .procedures-mega-dropdown {
-  top: 100%;
-  opacity: 1;
-  visibility: visible;
+.main-menu .navigation > li.procedures-mega-item:hover > .procedures-mega-dropdown {
+  top: 100% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .procedures-mega-columns {
