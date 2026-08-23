@@ -133,7 +133,7 @@ const Header = () => {
                   <div className="nav-container nav-right">
                     <ul className="navigation clearfix">
                       <li className={`dropdown procedures-mega-item ${['/procedures', '/yoga-therapy', '/naturopathy', '/ayurveda', '/acupuncture', '/structured-wellness-programs', '/wellness-programs', '/services/'].some(p => isActive(p)) ? 'current' : ''}`}>
-                        <Link to="/procedures">Procedures</Link>
+                        <Link to="/procedures">Services</Link>
                         <div className="dropdown-btn" onClick={(e) => toggleDropdown('procedures', e)}></div>
                         
                         {/* 5-Column Mega Dropdown */}
@@ -212,7 +212,7 @@ const Header = () => {
                           {/* Footer Bar */}
                           <div className="procedures-mega-footer">
                             <Link to="/procedures" className="overview-link">
-                              <span>View All Procedures &amp; Therapies</span>
+                              <span>View All Services &amp; Therapies</span>
                               <i className="fa fa-arrow-right"></i>
                             </Link>
                             <Link to="/appointment" className="book-link">
