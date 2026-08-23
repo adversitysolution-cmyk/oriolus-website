@@ -33,6 +33,7 @@ import NaturopathyPage from './pages/NaturopathyPage';
 import AyurvedaPage from './pages/AyurvedaPage';
 import AcupuncturePage from './pages/AcupuncturePage';
 import StructuredWellnessProgramsPage from './pages/StructuredWellnessProgramsPage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
 
 function App() {
   return (
@@ -65,6 +66,10 @@ function App() {
         <Route path="/structured-wellness-programs.html" element={<StructuredWellnessProgramsPage />} />
         <Route path="/wellness-programs" element={<StructuredWellnessProgramsPage />} />
         <Route path="/wellness-programs.html" element={<StructuredWellnessProgramsPage />} />
+
+        {/* Detailed Individual Service Pages */}
+        <Route path="/services/:slug" element={<ServiceDetailPage />} />
+        <Route path="/services/:slug.html" element={<ServiceDetailPage />} />
 
         {/* Single Procedures */}
         <Route path="/massage-therapy" element={<MassageTherapyPage />} />

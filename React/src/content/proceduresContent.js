@@ -1,6 +1,6 @@
 /**
  * Oriolus Scientific - Procedures & Therapies Content Store
- * Exact Service Architecture Specification
+ * Exact Service Architecture Specification with Dedicated Detail Links
  */
 
 // Main Procedures Overview
@@ -80,7 +80,7 @@ export const yogaTherapyPageContent = {
       category: 'Yoga Therapy',
       icon: 'flaticon-lotus-flower',
       image: '/images/procedures/1.png',
-      link: '/massage-therapy',
+      link: '/services/therapeutic-yoga',
       shortDesc: 'Condition-specific movement, breathing, and postural realignment designed around individual health goals.'
     },
     {
@@ -89,7 +89,7 @@ export const yogaTherapyPageContent = {
       category: 'Yoga Therapy',
       icon: 'flaticon-hands',
       image: '/images/procedures/2.png',
-      link: '/massage-therapy',
+      link: '/services/stick-yoga',
       shortDesc: 'Ancient Yogic stick prop methodology to correct spinal curvature, posture, and deep shoulder stiffness.'
     },
     {
@@ -98,7 +98,7 @@ export const yogaTherapyPageContent = {
       category: 'Yoga Therapy',
       icon: 'flaticon-nature',
       image: '/images/procedures/3.png',
-      link: '/massage-therapy',
+      link: '/services/aerial-yoga',
       shortDesc: 'Suspended silk hammock therapy for zero-compression spinal traction, decompression, and core flexibility.'
     },
     {
@@ -107,7 +107,7 @@ export const yogaTherapyPageContent = {
       category: 'Yoga Therapy',
       icon: 'flaticon-relax',
       image: '/images/procedures/4.png',
-      link: '/massage-therapy',
+      link: '/services/pain-management-yoga',
       shortDesc: 'Gentle, non-invasive therapeutic asanas engineered to alleviate chronic musculoskeletal and joint pain.'
     }
   ]
@@ -127,7 +127,7 @@ export const naturopathyPageContent = {
       category: 'Naturopathy',
       icon: 'flaticon-medical',
       image: '/images/procedures/2.png',
-      link: '/facial-treatments',
+      link: '/services/colon-hydrotherapy',
       shortDesc: 'Safe, closed-system filtered water infusion to thoroughly cleanse the colon and enhance gut motility.'
     },
     {
@@ -136,7 +136,7 @@ export const naturopathyPageContent = {
       category: 'Naturopathy',
       icon: 'flaticon-nature',
       image: '/images/procedures/1.png',
-      link: '/facial-treatments',
+      link: '/services/clinical-detoxification',
       shortDesc: 'Hydro-thermal therapies, mineral mud packs, and supervised metabolic cleansing protocols.'
     },
     {
@@ -145,7 +145,7 @@ export const naturopathyPageContent = {
       category: 'Naturopathy',
       icon: 'flaticon-flower',
       image: '/images/procedures/3.png',
-      link: '/facial-treatments',
+      link: '/services/diabetes-wellness-support',
       shortDesc: 'Targeted lifestyle interventions, living raw nutrition, and insulin-sensitizing clinical protocols.'
     },
     {
@@ -154,7 +154,7 @@ export const naturopathyPageContent = {
       category: 'Naturopathy',
       icon: 'flaticon-herbal-spa-treatment-leaves',
       image: '/images/procedures/4.png',
-      link: '/facial-treatments',
+      link: '/services/obesity-reduction',
       shortDesc: 'Structured metabolic acceleration, active detox baths, and sustainable dietary habit transformation.'
     }
   ]
@@ -174,7 +174,7 @@ export const ayurvedaPageContent = {
       category: 'Ayurveda',
       icon: 'flaticon-lotus-flower',
       image: '/images/procedures/1.png',
-      link: '/pedicure-menicure',
+      link: '/services/panchakarma',
       shortDesc: 'Five-fold authentic classical bio-purification and cellular detoxification protocol.'
     },
     {
@@ -183,7 +183,7 @@ export const ayurvedaPageContent = {
       category: 'Ayurveda',
       icon: 'flaticon-stones-and-leaf-massage-spa-symbol',
       image: '/images/procedures/3.png',
-      link: '/pedicure-menicure',
+      link: '/services/abhyanga',
       shortDesc: 'Full-body synchronized therapeutic massage with warm dosha-specific medicated herbal tailams.'
     },
     {
@@ -192,7 +192,7 @@ export const ayurvedaPageContent = {
       category: 'Ayurveda',
       icon: 'flaticon-flower',
       image: '/images/procedures/2.png',
-      link: '/hair-treatments',
+      link: '/services/shirodhara',
       shortDesc: 'Rhythmic, continuous stream of warm medicated herbal oil over the third-eye chakra for deep calm.'
     },
     {
@@ -201,7 +201,7 @@ export const ayurvedaPageContent = {
       category: 'Ayurveda',
       icon: 'flaticon-hands',
       image: '/images/procedures/4.png',
-      link: '/pedicure-menicure',
+      link: '/services/udwarthanam',
       shortDesc: 'Deep therapeutic dry herbal powder massage to break down subcutaneous fat and stimulate lymphatic drainage.'
     },
     {
@@ -210,7 +210,7 @@ export const ayurvedaPageContent = {
       category: 'Ayurveda',
       icon: 'flaticon-light',
       image: '/images/procedures/1.png',
-      link: '/perfect-makeup',
+      link: '/services/swedana',
       shortDesc: 'Medicinal herbal steam box therapy to open micro-channels (Srotas) and expel deep cellular toxins.'
     }
   ]
@@ -230,7 +230,7 @@ export const acupuncturePageContent = {
       category: 'Acupuncture',
       icon: 'flaticon-relax',
       image: '/images/procedures/4.png',
-      link: '/salt-oil-bath',
+      link: '/services/acupuncture-pain-management',
       shortDesc: 'Precision needle insertion into motor and meridian points for immediate relief from acute and chronic pain.'
     },
     {
@@ -239,7 +239,7 @@ export const acupuncturePageContent = {
       category: 'Acupuncture',
       icon: 'flaticon-light',
       image: '/images/procedures/1.png',
-      link: '/salt-oil-bath',
+      link: '/services/acupuncture-chronic-conditions',
       shortDesc: 'Comprehensive neuro-endocrine meridian therapy for neurological, digestive, and psychosomatic disorders.'
     }
   ]
@@ -259,7 +259,7 @@ export const structuredWellnessProgramsPageContent = {
       category: 'Metabolic Care',
       icon: 'flaticon-medical',
       image: '/images/ChatGPT Image Aug 22, 2026, 12_18_27 AM.png',
-      link: '/appointment',
+      link: '/services/obesity-reduction-detox',
       shortDesc: 'Targeted metabolic reset, Colon Hydrotherapy, customized dietetics, and therapeutic weight reduction.'
     },
     {
@@ -268,7 +268,7 @@ export const structuredWellnessProgramsPageContent = {
       category: 'Endocrine Care',
       icon: 'flaticon-flower',
       image: '/images/ChatGPT Image Aug 22, 2026, 12_22_46 AM.png',
-      link: '/appointment',
+      link: '/services/diabetes-wellness',
       shortDesc: 'Structured lifestyle medicine, pancreatic-stimulating yoga, herbal detox, and glycemic regulation.'
     },
     {
@@ -277,7 +277,7 @@ export const structuredWellnessProgramsPageContent = {
       category: 'Orthopedic Care',
       icon: 'flaticon-hands',
       image: '/images/ChatGPT Image Aug 22, 2026, 12_25_07 AM.png',
-      link: '/appointment',
+      link: '/services/spine-joint-pain',
       shortDesc: 'Integrated acupuncture trigger point therapy, Kati Vasti, and gentle spinal decompression movement.'
     },
     {
@@ -286,7 +286,7 @@ export const structuredWellnessProgramsPageContent = {
       category: 'Signature Residential',
       icon: 'flaticon-lotus-flower',
       image: '/images/ChatGPT Image Aug 22, 2026, 12_26_08 AM.png',
-      link: '/appointment',
+      link: '/services/full-body-retreat',
       shortDesc: 'Immersive residential rejuvenation combining daily Panchakarma, Yoga Therapy, and profound metabolic renewal.'
     }
   ]
