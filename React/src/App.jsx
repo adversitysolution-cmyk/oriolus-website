@@ -70,6 +70,10 @@ function App() {
         {/* Detailed Individual Service Pages */}
         <Route path="/services/:slug" element={<ServiceDetailPage />} />
         <Route path="/services/:slug.html" element={<ServiceDetailPage />} />
+        <Route path="/therapies/:discipline/:slug" element={<ServiceDetailPage />} />
+        <Route path="/therapies/:discipline/:slug.html" element={<ServiceDetailPage />} />
+        <Route path="/programs/:slug" element={<ServiceDetailPage />} />
+        <Route path="/programs/:slug.html" element={<ServiceDetailPage />} />
 
         {/* Single Procedures */}
         <Route path="/massage-therapy" element={<MassageTherapyPage />} />
