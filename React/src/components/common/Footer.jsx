@@ -92,7 +92,7 @@ const Footer = () => {
                 </div>
                 <ul className="usefull-links fl-lft">
                   <li><Link to="/about">About Us</Link></li>
-                  <li><Link to="/therapists">Therapists</Link></li>
+                  <li><Link to="/about/meet-dr-vijay">Dr. Vijay</Link></li>
                   <li><Link to="/faq">FAQ’s</Link></li>
                   <li><Link to="/testimonials">Testimonials</Link></li>
                   <li><Link to="/contact">Contact</Link></li>

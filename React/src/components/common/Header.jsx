@@ -110,11 +110,12 @@ const Header = () => {
                       <li className={isActive('/') ? 'current' : ''}>
                         <Link to="/">Home</Link>
                       </li>
-                      <li className={`dropdown ${['/about', '/testimonials', '/faq', '/appointment'].some(p => isActive(p)) ? 'current' : ''}`}>
+                      <li className={`dropdown ${['/about', '/about/meet-dr-vijay', '/dr-vijay', '/testimonials', '/faq', '/appointment'].some(p => isActive(p)) ? 'current' : ''}`}>
                         <Link to="/about">About Us</Link>
                         <div className="dropdown-btn" onClick={(e) => toggleDropdown('about', e)}></div>
                         <ul style={{ display: openDropdowns['about'] ? 'block' : '' }}>
                           <li><Link to="/about">About Oriolus Scientific</Link></li>
+                          <li><Link to="/about/meet-dr-vijay">Meet Dr. Vijay (Lead Practitioner)</Link></li>
                           <li><Link to="/testimonials">Testimonials</Link></li>
                           <li><Link to="/faq">FAQ’s</Link></li>
                           <li><Link to="/appointment">Make an Appointment</Link></li>
@@ -132,8 +133,8 @@ const Header = () => {
                           <li><Link to="/hair-treatments">Hair Treatments</Link></li>
                         </ul>
                       </li>
-                      <li className={isActive('/therapists') ? 'current' : ''}>
-                        <Link to="/therapists">Therapists</Link>
+                      <li className={isActive('/about/meet-dr-vijay') || isActive('/dr-vijay') || isActive('/therapists') ? 'current' : ''}>
+                        <Link to="/about/meet-dr-vijay">Dr. Vijay</Link>
                       </li>
                     </ul>
                   </div>
