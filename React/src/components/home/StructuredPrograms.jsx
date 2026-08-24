@@ -70,9 +70,9 @@ const StructuredPrograms = () => {
             position: 'absolute', 
             top: 0, 
             right: 0, 
-            width: '680px', 
-            height: '490px', 
-            maxWidth: '50vw',
+            width: '540px', 
+            height: '310px', 
+            maxWidth: '42vw',
             zIndex: 1, 
             pointerEvents: 'none',
             opacity: 0.95
