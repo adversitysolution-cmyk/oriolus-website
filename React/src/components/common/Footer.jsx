@@ -1,22 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { siteContent } from '../../content/siteContent';
 
 const Footer = () => {
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
   const brand = siteContent.brand;
   const contact = siteContent.contact;
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (newsletterEmail) {
-      setSubscribed(true);
-      setTimeout(() => setSubscribed(false), 4000);
-      setNewsletterEmail('');
-    }
-  };
 
   return (
     <>
@@ -43,8 +31,8 @@ const Footer = () => {
             </div>
           </div>
           <div className="row">
-            {/* Start single footer widget */}
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            {/* 1. Quick Contact */}
+            <div className="col-lg-4 col-md-4 col-sm-6 col-xs-12">
               <div className="single-footer-widget pd-bottom50">
                 <div className="title">
                   <h3>Quick Contact</h3>
@@ -81,107 +69,42 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            {/* End single footer widget */}
 
-            {/* Start single footer widget */}
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            {/* 2. Useful Links */}
+            <div className="col-lg-4 col-md-4 col-sm-6 col-xs-12">
               <div className="single-footer-widget pd-bottom50">
                 <div className="title">
                   <h3>Useful Links</h3>
                   <span className="border"></span>
                 </div>
                 <ul className="usefull-links fl-lft">
+                  <li><Link to="/">Home</Link></li>
                   <li><Link to="/about">About Us</Link></li>
                   <li><Link to="/about/meet-dr-vijay">Dr. Vijay</Link></li>
-                  <li><Link to="/faq">FAQ’s</Link></li>
-                  <li><Link to="/testimonials">Testimonials</Link></li>
-                  <li><Link to="/contact">Contact</Link></li>
+                  <li><Link to="/procedures">Services &amp; Procedures</Link></li>
+                  <li><Link to="/blog">Blog &amp; Insights</Link></li>
+                  <li><Link to="/contact">Contact Us</Link></li>
                 </ul>
                 <ul className="usefull-links">
-                  <li><Link to="/yoga-therapy">Yoga Therapy</Link></li>
-                  <li><Link to="/naturopathy">Naturopathy</Link></li>
-                  <li><Link to="/ayurveda">Ayurveda</Link></li>
-                  <li><Link to="/acupuncture">Acupuncture</Link></li>
-                  <li><Link to="/structured-wellness-programs">Programs</Link></li>
+                  <li><Link to="/yoga-therapy">Therapeutic Yoga</Link></li>
+                  <li><Link to="/naturopathy">Clinical Naturopathy</Link></li>
+                  <li><Link to="/ayurveda">Classical Ayurveda</Link></li>
+                  <li><Link to="/acupuncture">Medical Acupuncture</Link></li>
+                  <li><Link to="/structured-wellness-programs">Wellness Programs</Link></li>
+                  <li><Link to="/faq">FAQ’s</Link></li>
                 </ul>
               </div>
             </div>
-            {/* End single footer widget */}
 
-            {/* Start single footer widget */}
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-              <div className="single-footer-widget pd-bottom50">
-                <div className="title">
-                  <h3>Latest Blog</h3>
-                  <span className="border"></span>
-                </div>
-                <ul className="footer-latest-blog">
-                  <li>
-                    <div className="img-holder">
-                      <img src="/images/footer/latest-blog-1.jpg" alt="Awesome Image" />
-                      <div className="overlay-style-one">
-                        <div className="box">
-                          <div className="content">
-                            <Link to="/blog-single"><i className="fa fa-link" aria-hidden="true"></i></Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="text-holder">
-                      <Link to="/blog-single"><h6>Therapeutic Yoga for Managing Workplace Stress</h6></Link>
-                      <span>August 15, 2026</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="img-holder">
-                      <img src="/images/footer/latest-blog-2.jpg" alt="Awesome Image" />
-                      <div className="overlay-style-one">
-                        <div className="box">
-                          <div className="content">
-                            <Link to="/blog-single"><i className="fa fa-link" aria-hidden="true"></i></Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="text-holder">
-                      <Link to="/blog-single"><h6>Clinical Detoxification &amp; Cellular Rejuvenation</h6></Link>
-                      <span>July 28, 2026</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/* End single footer widget */}
-
-            {/* Start single footer widget */}
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-              <div className="single-footer-widget clearfix">
-                <div className="title">
-                  <h3>Subscribe Us</h3>
-                  <span className="border"></span>
-                </div>
-                <div className="subscribe-form">
-                  <p>Subscribe to our wellness newsletter to receive research articles, health tips, and clinic updates.</p>
-                  {subscribed ? (
-                    <p style={{ color: '#c59d5f', fontWeight: 'bold' }}>Thank you for subscribing!</p>
-                  ) : (
-                    <form onSubmit={handleSubscribe}>
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email Address..."
-                        value={newsletterEmail}
-                        onChange={(e) => setNewsletterEmail(e.target.value)}
-                        required
-                      />
-                      <button type="submit"><i className="fa fa-paper-plane" aria-hidden="true"></i></button>
-                    </form>
-                  )}
-                </div>
-              </div>
-              <div className="single-footer-widget clearfix">
+            {/* 3. Opening Hours */}
+            <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <div className="single-footer-widget clearfix pd-bottom50">
                 <div className="title">
                   <h3>Opening Hours</h3>
+                  <span className="border"></span>
+                </div>
+                <div className="our-info" style={{ marginBottom: '20px' }}>
+                  <p>Our research and clinical outpatient department is open for consultations and therapeutic sessions:</p>
                 </div>
                 <ul className="working-hours">
                   <li>Mon-FriDay: <span>8.00 to 19.00</span></li>
@@ -190,7 +113,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            {/* End single footer widget */}
+
           </div>
         </div>
       </footer>
