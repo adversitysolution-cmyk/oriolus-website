@@ -78,43 +78,33 @@ const WellnessJourney = () => {
           }}
           className="wellness-journey-grid"
         >
-          {/* Left Column - Empty Image Slot Frame */}
+          {/* Left Column - Image Card Frame */}
           <div
             style={{
               borderRadius: '20px',
               overflow: 'hidden',
-              border: '2px dashed #D6DFD2',
-              background: '#F4F7F2',
+              background: '#FFFFFF',
               height: '100%',
               minHeight: '440px',
               position: 'relative',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: 'inset 0 2px 10px rgba(0,0,0,0.02)'
+              boxShadow: '0 12px 36px rgba(0,0,0,0.06)',
+              padding: '16px'
             }}
           >
-            {/* Empty Slot Placeholder Indicator */}
-            <div style={{ textAlign: 'center', color: '#A0B29E', padding: '20px' }}>
-              <div
-                style={{
-                  width: '64px',
-                  height: '64px',
-                  borderRadius: '50%',
-                  background: '#E5ECE1',
-                  margin: '0 auto 12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#2E5F31'
-                }}
-              >
-                <Leaf size={28} strokeWidth={1.8} />
-              </div>
-              <span style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', display: 'block' }}>
-                Image Slot
-              </span>
-            </div>
+            <img 
+              src="/images/your-wellness-journey.png" 
+              alt="Your Wellness Journey - Personalised Approach" 
+              style={{
+                width: '100%',
+                height: '100%',
+                maxHeight: '520px',
+                objectFit: 'contain',
+                display: 'block'
+              }}
+            />
           </div>
 
           {/* Right Column - 3 Step Timeline */}
