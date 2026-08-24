@@ -9,7 +9,7 @@ export const homeContent = {
     slides: [
       {
         id: 1,
-        image: '/images/slides/1.jpg',
+        image: '/images/slides/1.png',
         subtitle: 'Yoga & Naturopathy Research Center',
         title: 'Where Ancient Science Meets\nModern Medical Wellness',
         desc: 'Oriolus Scientific integrates Yoga Therapy, Naturopathy, Ayurveda and Acupuncture into personalised wellness programs designed around individual needs.',
@@ -21,7 +21,7 @@ export const homeContent = {
       },
       {
         id: 2,
-        image: '/images/slides/2.jpg',
+        image: '/images/slides/2.png',
         subtitle: 'Personalised Integrative Wellness',
         title: 'Traditional Healing.\nThoughtfully Personalised.',
         desc: 'Experience structured natural wellness through therapeutic movement, lifestyle care, Ayurvedic therapies and carefully guided integrative practices.',
@@ -33,7 +33,7 @@ export const homeContent = {
       },
       {
         id: 3,
-        image: '/images/slides/3.jpg',
+        image: '/images/slides/3.png',
         subtitle: 'Four Disciplines. One Wellness Journey.',
         title: 'Restore Balance.\nRebuild Wellbeing.',
         desc: 'From mobility and stress support to metabolic wellness and rejuvenation, our programs bring multiple natural disciplines together with personalised guidance.',

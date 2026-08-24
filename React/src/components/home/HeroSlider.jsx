@@ -41,7 +41,7 @@ const HeroSlider = () => {
         }}
       />
 
-      {/* Premium Dark Gradient Overlay */}
+      {/* Elegant Gradient Overlay tailored for Photography & Text Legibility */}
       <div
         style={{
           position: 'absolute',
@@ -49,7 +49,7 @@ const HeroSlider = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'linear-gradient(135deg, rgba(18, 48, 92, 0.90) 0%, rgba(12, 34, 66, 0.88) 50%, rgba(23, 179, 163, 0.55) 100%)',
+          background: 'linear-gradient(90deg, rgba(14, 28, 48, 0.82) 0%, rgba(14, 28, 48, 0.55) 55%, rgba(14, 28, 48, 0.25) 100%)',
           zIndex: 2
         }}
       />

@@ -24,8 +24,8 @@ const LatestBlog = () => {
         <div className="row">
           {content.posts.map(post => (
             <div key={post.id} className="col-md-4">
-              <div className="single-blog-item">
-                <div className="img-holder" style={{ height: '240px', overflow: 'hidden', position: 'relative' }}>
+              <div className="single-blog-item" style={{ background: '#ffffff', minHeight: '460px', height: '460px' }}>
+                <div className="img-holder" style={{ height: '330px', width: '100%', overflow: 'hidden', position: 'relative' }}>
                   <img 
                     src={post.image} 
                     alt={post.title} 
