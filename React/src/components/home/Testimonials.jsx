@@ -30,7 +30,7 @@ const Testimonials = () => {
           position: 'relative', 
           width: '100%', 
           overflow: 'hidden',
-          paddingTop: '60px',
+          paddingTop: '20px',
           paddingBottom: '20px',
           marginTop: '10px'
         }}
@@ -69,13 +69,10 @@ const Testimonials = () => {
           {marqueeItems.map((item, idx) => (
             <div key={`${item.id}-${idx}`} className="testimonial-marquee-item">
               <div className="single-testimonial-item text-center" style={{ position: 'relative', height: '100%' }}>
-                <div className="img-holder">
-                  <img src={item.image} alt={item.name} />
-                </div>
-                <div className="text-holder" style={{ minHeight: '260px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div className="text-holder" style={{ minHeight: '220px', paddingTop: '32px', paddingBottom: '24px', paddingLeft: '24px', paddingRight: '24px', borderRadius: '12px', boxShadow: '0 8px 24px rgba(0,0,0,0.04)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                   <div>
-                    <h3>{item.title}</h3>
-                    <p style={{ fontSize: '13.5px', lineHeight: '1.65' }}>{item.quote}</p>
+                    <h3 style={{ marginTop: 0 }}>{item.title}</h3>
+                    <p style={{ fontSize: '13.5px', lineHeight: '1.65', color: '#555555' }}>{item.quote}</p>
                   </div>
                   <div>
                     <span className="border"></span>
