@@ -26,6 +26,7 @@ const HomePage = () => {
       <WellnessJourney />
       <WhyChooseUs />
       <Testimonials />
+      <QuickAppointment />
       <LatestBlog />
     </MainLayout>
   );

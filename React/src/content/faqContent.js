@@ -1,12 +1,13 @@
 /**
  * Oriolus Scientific - Frequently Asked Questions Content Store
+ * Premium, concise, SEO-aware and layout-balanced content.
  */
 
 export const faqContent = {
   header: {
     title: 'Frequently Asked Questions',
     activeTitle: 'FAQ’s',
-    subtitle: 'Find clear answers regarding our clinical consultation process, therapies, residential retreat admissions, and policies.'
+    subtitle: 'Find clear answers about consultations, therapies, personalised wellness programs, retreat options and what to expect at Oriolus Scientific.'
   },
 
   categories: [
@@ -21,67 +22,67 @@ export const faqContent = {
   faqData: {
     'about-oriolus': [
       {
-        q: 'When should I schedule my clinical consultation?',
-        a: 'We recommend scheduling your appointment at least 3 to 7 days in advance to ensure availability with Dr. Vijay and our specialized medical faculty, particularly for comprehensive diagnostic audits and residential retreat packages.'
+        q: 'When should I schedule my wellness consultation?',
+        a: 'We recommend booking your consultation in advance so our team can arrange a suitable appointment. Program and retreat consultations may require additional planning depending on your preferred dates and therapy requirements.'
       },
       {
         q: 'What should I bring to my first appointment?',
-        a: 'Please bring any recent medical investigation reports (blood panels, lipid profiles, HbA1c, MRI/X-ray scans) and a list of current medications. This enables our doctors to personalize your natural therapy protocol safely.'
+        a: 'If available, bring recent health reports, relevant scans or investigation results, details of current medications, and information about any existing health concerns. This helps our team understand your needs before recommending an appropriate wellness pathway.'
       },
       {
-        q: 'Are treatments covered by insurance?',
-        a: 'Ayush / Naturopathy treatments may be eligible for reimbursement under specific corporate health insurance policies that include AYUSH coverage. We provide standard clinical receipts and diagnostic documentation.'
+        q: 'How is my therapy or wellness plan selected?',
+        a: 'Every journey begins with an individual consultation. Your health history, mobility, lifestyle, nutrition, stress patterns and personal wellness goals are considered before suitable Yoga, Naturopathy, Ayurveda or Acupuncture options are discussed.'
       }
     ],
 
     'yoga-therapy': [
       {
-        q: 'Is Yoga Therapy suitable for beginners or individuals with restricted mobility?',
-        a: 'Yes, absolutely. Therapeutic Yoga is customized specifically to your physical capability and medical condition. We utilize supportive props, chairs, belts, and wall ropes to ensure safe, strain-free practice.'
+        q: 'Is Yoga Therapy suitable for beginners or people with limited mobility?',
+        a: 'Yes. Therapeutic Yoga can be adapted to different levels of mobility and experience. Supportive props, chairs, belts and modified movements may be used to make the practice comfortable, accessible and appropriate for the individual.'
       },
       {
-        q: 'How does Yoga Therapy differ from regular yoga classes?',
-        a: 'Unlike general fitness yoga, Yoga Therapy is prescribed by a physician to target specific pathologies (e.g. disc herniation, hypertension, diabetes) using clinical biomechanics and therapeutic breath regulation.'
+        q: 'How does Yoga Therapy differ from a regular yoga class?',
+        a: 'Regular yoga classes usually follow a common sequence, while Yoga Therapy is personalised around individual movement, posture, comfort and wellness goals. Sessions may include modified postures, breathing practices, relaxation and guided mobility work.'
       }
     ],
 
     'naturopathy': [
       {
-        q: 'What is Colon Hydrotherapy and is it safe?',
-        a: 'Colon Hydrotherapy is a safe, hygienic clinical procedure using sterilized single-use tubing and temperature-regulated purified water to cleanse the large intestine under doctor supervision.'
+        q: 'What is Colon Hydrotherapy and what should I expect?',
+        a: 'Colon Hydrotherapy is a professionally administered wellness procedure that uses controlled, temperature-regulated water within a hygienic setting. Suitability is reviewed beforehand, and the session is conducted with privacy, comfort and appropriate aftercare guidance.'
       },
       {
-        q: 'What does the Clinical Detoxification protocol entail?',
-        a: 'Our detox combines therapeutic cold-pressed juices, alkalizing broths, hydrotherapy baths, and abdominal mud packs to stimulate natural liver and kidney eliminative channels.'
+        q: 'What does a Clinical Detoxification program include?',
+        a: 'Depending on individual needs, a detox program may combine therapeutic nutrition, hydration, selected hydrotherapy, mud applications, herbal steam and lifestyle guidance. The objective is to support a structured wellness reset rather than a restrictive quick-fix program.'
       }
     ],
 
     'ayurveda': [
       {
-        q: 'What is the recommended duration for Classical Panchakarma?',
-        a: 'A complete Panchakarma purification typically ranges between 7 to 21 days, comprising preparatory oleation (Purvakarma), primary cleansing (Pradhanakarma), and dietary restoration (Paschatkarma).'
+        q: 'What is the usual duration of a Panchakarma program?',
+        a: 'Panchakarma programs may vary from shorter introductory plans to structured 7, 14 or 21-day programs. The duration and therapies are selected according to individual requirements, constitution, wellness goals and practitioner assessment.'
       },
       {
-        q: 'How does Shirodhara help with anxiety and insomnia?',
-        a: 'The continuous, rhythmic pouring of warm herbal oil over the forehead stimulates the Ajna meridian, slowing brainwave activity from beta to alpha/theta states, which induces profound autonomic nervous relaxation.'
+        q: 'What can I expect during a Shirodhara session?',
+        a: 'Shirodhara involves a gentle, continuous stream of warm therapeutic liquid flowing across the forehead in a calm setting. It is traditionally used as a deeply relaxing Ayurvedic experience supporting rest, mental calmness and overall wellbeing.'
       }
     ],
 
     'acupuncture': [
       {
         q: 'Does acupuncture hurt?',
-        a: 'No. We use ultra-fine, single-use, sterile Japanese and Korean needles that are as thin as a strand of hair. Most patients experience only a mild, soothing tingling or warm sensation (De-Qi).'
+        a: 'Acupuncture uses very fine, sterile, single-use needles. Most people experience little discomfort during insertion, although mild sensations such as tingling, warmth or heaviness may occur at selected points during the session.'
       },
       {
-        q: 'How many sessions of acupuncture are needed for chronic pain?',
-        a: 'Acute pain often improves in 2 to 4 sessions, while chronic conditions typically benefit from a structured course of 6 to 12 sessions alongside supporting Yoga Therapy and herbal treatments.'
+        q: 'How many acupuncture sessions might I need?',
+        a: 'The number of sessions varies according to the individual, the nature of the concern and how the body responds. After an initial assessment, a suitable session plan may be recommended and reviewed periodically based on progress.'
       }
     ],
 
     'programs': [
       {
-        q: 'Can I stay on campus during the wellness programs?',
-        a: 'Yes, our Full-Body Wellness Retreat and multi-day packages include private residential accommodation, doctor-prescribed organic meals, daily therapies, and 24/7 nursing care at our serene Bengaluru campus.'
+        q: 'Can I stay during the Full-Body Wellness Retreat?',
+        a: 'Residential options may be available for selected Full-Body Wellness Retreat programs, subject to package type, dates and availability. Retreat plans can include personalised therapies, wellness nutrition, guided movement, relaxation and lifestyle support.'
       }
     ]
   }
