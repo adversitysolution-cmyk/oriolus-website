@@ -308,60 +308,14 @@ const StructuredPrograms = () => {
                       <p 
                         style={{ 
                           color: '#666666', 
-                          fontSize: '12.5px', 
+                          fontSize: '13px', 
                           lineHeight: '1.6', 
-                          marginBottom: '16px',
-                          minHeight: '60px'
+                          marginBottom: '22px',
+                          minHeight: '48px'
                         }}
                       >
                         {plan.desc}
                       </p>
-
-                      {/* Highlights Header */}
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '14px' }}>
-                        <span style={{ height: '1px', background: isSignature ? '#E89038' : '#0F8B8D', flex: 1, opacity: 0.4 }}></span>
-                        <span 
-                          style={{ 
-                            color: isSignature ? '#E89038' : '#0F8B8D', 
-                            fontSize: '11px', 
-                            fontWeight: 700, 
-                            letterSpacing: '1.5px', 
-                            textTransform: 'uppercase' 
-                          }}
-                        >
-                          HIGHLIGHTS
-                        </span>
-                        <span style={{ height: '1px', background: isSignature ? '#E89038' : '#0F8B8D', flex: 1, opacity: 0.4 }}></span>
-                      </div>
-
-                      {/* Highlights Feature List */}
-                      <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0, margin: '0 0 20px' }}>
-                        {plan.highlights.map((item, idx) => (
-                          <li 
-                            key={idx} 
-                            style={{ 
-                              display: 'flex', 
-                              alignItems: 'flex-start', 
-                              gap: '8px', 
-                              fontSize: '12.5px', 
-                              color: '#444444', 
-                              lineHeight: '1.45', 
-                              marginBottom: '8px' 
-                            }}
-                          >
-                            <i 
-                              className="fa fa-check-circle" 
-                              style={{ 
-                                color: isSignature ? '#E89038' : '#0F8B8D', 
-                                fontSize: '13px', 
-                                marginTop: '2px', 
-                                flexShrink: 0 
-                              }}
-                            ></i>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
 
                     </div>
                   </div>
