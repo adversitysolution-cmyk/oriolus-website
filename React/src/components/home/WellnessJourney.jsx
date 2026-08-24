@@ -118,23 +118,23 @@ const WellnessJourney = () => {
           </div>
 
           {/* Right Column - 3 Step Timeline */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
             
             {/* -------------------- STEP 01 -------------------- */}
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '22px' }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '26px' }}>
               {/* Number Bubble & Line */}
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
                 <div 
                   style={{ 
-                    width: '58px', 
-                    height: '58px', 
+                    width: '60px', 
+                    height: '60px', 
                     borderRadius: '50%', 
                     background: '#E5ECE1', 
                     color: '#2E5F31', 
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'center',
-                    fontSize: '23px',
+                    fontSize: '24px',
                     fontWeight: 700,
                     fontFamily: "'Playfair Display', Georgia, serif"
                   }}
@@ -142,43 +142,17 @@ const WellnessJourney = () => {
                   01
                 </div>
                 {/* Connecting Line with Center Dot */}
-                <div style={{ width: '1.5px', height: '42px', background: '#D6DFD2', position: 'relative', margin: '6px 0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ width: '1.5px', height: '48px', background: '#D6DFD2', position: 'relative', margin: '6px 0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#6C8B64' }} />
                 </div>
               </div>
 
-              {/* Outlined Icon Bubble */}
-              <div 
-                style={{ 
-                  width: '46px', 
-                  height: '46px', 
-                  borderRadius: '50%', 
-                  border: '1.5px solid #D6DFD2', 
-                  background: '#FFFFFF',
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'center',
-                  color: '#2E5F31',
-                  flexShrink: 0,
-                  marginTop: '6px'
-                }}
-              >
-                {/* Checklist / Consultation Icon */}
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="5" y="4" width="14" height="17" rx="2" stroke="#2E5F31" strokeWidth="1.6" />
-                  <path d="M9 3H15" stroke="#2E5F31" strokeWidth="1.6" strokeLinecap="round" />
-                  <path d="M8 8H16M8 12H13M8 16H11" stroke="#2E5F31" strokeWidth="1.4" strokeLinecap="round" />
-                  <circle cx="16" cy="15" r="2" stroke="#2E5F31" strokeWidth="1.4" />
-                  <path d="M14.5 19C14.5 17.5 15.2 16.8 16 16.8C16.8 16.8 17.5 17.5 17.5 19" stroke="#2E5F31" strokeWidth="1.4" strokeLinecap="round" />
-                </svg>
-              </div>
-
               {/* Text Block */}
-              <div style={{ flex: 1, paddingTop: '4px' }}>
+              <div style={{ flex: 1, paddingTop: '6px' }}>
                 <h3 
                   style={{ 
                     margin: '0 0 4px', 
-                    fontSize: '20px', 
+                    fontSize: '21px', 
                     fontWeight: 700, 
                     color: '#171B17', 
                     fontFamily: "'Playfair Display', Georgia, serif" 
@@ -187,27 +161,27 @@ const WellnessJourney = () => {
                   Consultation &amp; Assessment
                 </h3>
                 <div style={{ width: '28px', height: '2px', background: '#6C8B64', marginBottom: '8px' }}></div>
-                <p style={{ margin: 0, fontSize: '13.5px', lineHeight: '1.65', color: '#555E55' }}>
+                <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.65', color: '#555E55' }}>
                   We begin by understanding your health history, lifestyle, mobility, concerns and personal wellness goals.
                 </p>
               </div>
             </div>
 
             {/* -------------------- STEP 02 -------------------- */}
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '22px' }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '26px' }}>
               {/* Number Bubble & Line */}
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
                 <div 
                   style={{ 
-                    width: '58px', 
-                    height: '58px', 
+                    width: '60px', 
+                    height: '60px', 
                     borderRadius: '50%', 
                     background: '#E5ECE1', 
                     color: '#2E5F31', 
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'center',
-                    fontSize: '23px',
+                    fontSize: '24px',
                     fontWeight: 700,
                     fontFamily: "'Playfair Display', Georgia, serif"
                   }}
@@ -215,42 +189,17 @@ const WellnessJourney = () => {
                   02
                 </div>
                 {/* Connecting Line with Center Dot */}
-                <div style={{ width: '1.5px', height: '42px', background: '#D6DFD2', position: 'relative', margin: '6px 0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ width: '1.5px', height: '48px', background: '#D6DFD2', position: 'relative', margin: '6px 0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#6C8B64' }} />
                 </div>
               </div>
 
-              {/* Outlined Icon Bubble */}
-              <div 
-                style={{ 
-                  width: '46px', 
-                  height: '46px', 
-                  borderRadius: '50%', 
-                  border: '1.5px solid #D6DFD2', 
-                  background: '#FFFFFF',
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'center',
-                  color: '#2E5F31',
-                  flexShrink: 0,
-                  marginTop: '6px'
-                }}
-              >
-                {/* Lotus Blossom Icon */}
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4C10.5 8 10.5 13 12 16C13.5 13 13.5 8 12 4Z" stroke="#2E5F31" strokeWidth="1.6" strokeLinejoin="round" />
-                  <path d="M12 16C9.5 14 7 10.5 6.5 7.5C9 8 11 11.5 12 16Z" stroke="#2E5F31" strokeWidth="1.6" strokeLinejoin="round" />
-                  <path d="M12 16C14.5 14 17 10.5 17.5 7.5C15 8 13 11.5 12 16Z" stroke="#2E5F31" strokeWidth="1.6" strokeLinejoin="round" />
-                  <path d="M6 17C9 18.5 15 18.5 18 17" stroke="#2E5F31" strokeWidth="1.6" strokeLinecap="round" />
-                </svg>
-              </div>
-
               {/* Text Block */}
-              <div style={{ flex: 1, paddingTop: '4px' }}>
+              <div style={{ flex: 1, paddingTop: '6px' }}>
                 <h3 
                   style={{ 
                     margin: '0 0 4px', 
-                    fontSize: '20px', 
+                    fontSize: '21px', 
                     fontWeight: 700, 
                     color: '#171B17', 
                     fontFamily: "'Playfair Display', Georgia, serif" 
@@ -259,27 +208,27 @@ const WellnessJourney = () => {
                   Personalised Wellness Plan
                 </h3>
                 <div style={{ width: '28px', height: '2px', background: '#6C8B64', marginBottom: '8px' }}></div>
-                <p style={{ margin: 0, fontSize: '13.5px', lineHeight: '1.65', color: '#555E55' }}>
+                <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.65', color: '#555E55' }}>
                   Suitable Yoga, Naturopathy, Ayurveda or Acupuncture therapies are selected around your individual needs.
                 </p>
               </div>
             </div>
 
             {/* -------------------- STEP 03 -------------------- */}
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '22px' }}>
-              {/* Number Bubble (No lower line) */}
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '26px' }}>
+              {/* Number Bubble */}
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
                 <div 
                   style={{ 
-                    width: '58px', 
-                    height: '58px', 
+                    width: '60px', 
+                    height: '60px', 
                     borderRadius: '50%', 
                     background: '#E5ECE1', 
                     color: '#2E5F31', 
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'center',
-                    fontSize: '23px',
+                    fontSize: '24px',
                     fontWeight: 700,
                     fontFamily: "'Playfair Display', Georgia, serif"
                   }}
@@ -288,36 +237,12 @@ const WellnessJourney = () => {
                 </div>
               </div>
 
-              {/* Outlined Icon Bubble */}
-              <div 
-                style={{ 
-                  width: '46px', 
-                  height: '46px', 
-                  borderRadius: '50%', 
-                  border: '1.5px solid #D6DFD2', 
-                  background: '#FFFFFF',
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'center',
-                  color: '#2E5F31',
-                  flexShrink: 0,
-                  marginTop: '6px'
-                }}
-              >
-                {/* Progress & Guidance Icon */}
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10" cy="8" r="3.5" stroke="#2E5F31" strokeWidth="1.6" />
-                  <path d="M4 19C4 16 6.7 13.5 10 13.5C11.2 13.5 12.3 13.8 13.2 14.4" stroke="#2E5F31" strokeWidth="1.6" strokeLinecap="round" />
-                  <path d="M15 18L19 14M19 14H15M19 14V18" stroke="#2E5F31" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-
               {/* Text Block */}
-              <div style={{ flex: 1, paddingTop: '4px' }}>
+              <div style={{ flex: 1, paddingTop: '6px' }}>
                 <h3 
                   style={{ 
                     margin: '0 0 4px', 
-                    fontSize: '20px', 
+                    fontSize: '21px', 
                     fontWeight: 700, 
                     color: '#171B17', 
                     fontFamily: "'Playfair Display', Georgia, serif" 
@@ -326,7 +251,7 @@ const WellnessJourney = () => {
                   Progress &amp; Guidance
                 </h3>
                 <div style={{ width: '28px', height: '2px', background: '#6C8B64', marginBottom: '8px' }}></div>
-                <p style={{ margin: 0, fontSize: '13.5px', lineHeight: '1.65', color: '#555E55' }}>
+                <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.65', color: '#555E55' }}>
                   Your wellness journey is reviewed over time with practical guidance to support sustainable everyday wellbeing.
                 </p>
               </div>
