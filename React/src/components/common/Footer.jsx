@@ -9,10 +9,7 @@ const Footer = () => {
   return (
     <>
       {/* Start footer area */}
-      <footer className="footer-area">
-        <div className="arrow">
-          <img src="/images/resources/arrow.png" alt="" />
-        </div>
+      <footer className="footer-area" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="footer-image-box">
           <img src="/images/footer/footer-image.png" alt="" />
         </div>
