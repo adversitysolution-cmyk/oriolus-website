@@ -64,14 +64,16 @@ const LeadPractitioner = () => {
         <div className="row" style={{ display: 'flex', alignItems: 'stretch', flexWrap: 'wrap', position: 'relative' }}>
           
           {/* Left Column - Picture Card Container (Sticky Until Section End) */}
-          <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ marginBottom: '40px', position: 'relative', alignSelf: 'stretch' }}>
+          <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ float: 'none', display: 'flex', flexDirection: 'column', position: 'relative', alignSelf: 'stretch', marginBottom: '40px' }}>
             <div 
               style={{ 
                 position: 'sticky', 
-                top: '100px', 
+                top: '120px', 
                 maxWidth: '480px', 
+                width: '100%',
                 margin: '0 auto',
-                zIndex: 3 
+                zIndex: 3,
+                alignSelf: 'flex-start' 
               }}
             >
               
@@ -156,7 +158,7 @@ const LeadPractitioner = () => {
           </div>
 
           {/* Right Column - Content & Profile */}
-          <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ marginBottom: '40px' }}>
+          <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ float: 'none', marginBottom: '40px' }}>
             <div className="practitioner-content" style={{ paddingLeft: '20px' }}>
               
               {/* Eyebrow */}
