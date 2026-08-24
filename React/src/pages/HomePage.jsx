@@ -21,12 +21,12 @@ const HomePage = () => {
       <LeadPractitioner />
       <ClinicalTrustStrip />
       <ProceduresList />
+      <StructuredPrograms />
       <SloganBanner />
       <WellnessJourney />
       <WhyChooseUs />
       <Testimonials />
       <QuickAppointment />
-      <StructuredPrograms />
       <LatestBlog />
     </MainLayout>
   );
