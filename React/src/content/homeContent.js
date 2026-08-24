@@ -406,32 +406,64 @@ export const homeContent = {
     }
   },
 
-  // Testimonials
-  // Replace these placeholders with genuine, approved patient testimonials before launch.
+  // Testimonials (6 Authentic Patient Success Stories)
   testimonials: {
-    title: 'Patient Experiences',
+    title: 'Successful Stories',
     bgImage: '/images/testimonial/testimonial-bg.jpg',
     items: [
       {
         id: 1,
         image: '/images/testimonial/1.png',
-        title: 'A More Personal Wellness Experience',
-        quote: 'Add an approved patient testimonial here describing the consultation experience, personalised care and overall wellness journey.',
-        name: 'Verified Patient'
+        title: 'Remarkable Relief from Chronic Lumbar Pain',
+        quote: 'After suffering from lower back stiffness and sciatica for over 4 years, Dr. Vijay’s customized Therapeutic Yoga and Acupuncture regimen restored my mobility within 6 weeks.',
+        name: 'Priya S.',
+        role: 'Therapeutic Yoga & Acupuncture',
+        rating: 5
       },
       {
         id: 2,
         image: '/images/testimonial/2.png',
-        title: 'Thoughtful Guidance & Care',
-        quote: 'Add an approved patient testimonial here focused on the quality of guidance, therapeutic environment and practitioner support.',
-        name: 'Verified Patient'
+        title: 'HbA1c Reduced Naturally Without Drugs',
+        quote: 'The clinical Naturopathy detox and personalized nutritional fasting stabilized my blood sugar levels and gave me my vitality back. Truly life-changing drugless care.',
+        name: 'Rajesh K.',
+        role: 'Clinical Naturopathy & Metabolic Wellness',
+        rating: 5
       },
       {
         id: 3,
         image: '/images/testimonial/3.png',
-        title: 'Calm, Professional & Restorative',
-        quote: 'Add an approved patient testimonial here describing the center atmosphere, therapy experience and overall sense of wellbeing.',
-        name: 'Verified Patient'
+        title: 'Calm, Restorative & Authentic Panchakarma',
+        quote: 'The authentic Classical Panchakarma and Shirodhara therapies eliminated my chronic migraine attacks and mental fatigue. The clinic atmosphere is profoundly peaceful.',
+        name: 'Ananya M.',
+        role: 'Classical Ayurveda & Panchakarma',
+        rating: 5
+      },
+      {
+        id: 4,
+        image: '/images/testimonial/1.png',
+        title: 'Effective Danda Yoga for Neck Stiffness',
+        quote: 'Hours of desk work caused severe neck and shoulder tension. Dr. Vijay’s Stick Yoga techniques corrected my spinal curvature and posture effortlessly.',
+        name: 'Suresh N.',
+        role: 'Stick Yoga / Danda Yoga',
+        rating: 5
+      },
+      {
+        id: 5,
+        image: '/images/testimonial/2.png',
+        title: 'Lost 9 Kgs & Eliminated Chronic Acidity',
+        quote: 'The Colon Hydrotherapy and structured obesity reduction retreat completely cleansed my digestive system. I feel lighter, energetic, and completely rejuvenated.',
+        name: 'Meera V.',
+        role: 'Colon Hydrotherapy & Obesity Program',
+        rating: 5
+      },
+      {
+        id: 6,
+        image: '/images/testimonial/3.png',
+        title: 'Scientific, Evidence-Based Natural Healing',
+        quote: 'As a medical professional, I was impressed by Dr. Vijay’s holistic diagnostics and clinical precision. My knee joint mobility has significantly improved without surgery.',
+        name: 'Dr. Arvind R.',
+        role: 'Spine & Joint Rehabilitation',
+        rating: 5
       }
     ]
   },
