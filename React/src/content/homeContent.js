@@ -154,7 +154,7 @@ export const homeContent = {
         id: 1,
         title: 'Yoga Therapy',
         icon: 'flaticon-hands',
-        image: '/images/procedures/1.png',
+        image: '/images/procedures/1.jpg',
         link: '/therapies/yoga/therapeutic',
         desc: 'Personalised therapeutic movement, breathing and posture practices for mobility, alignment and balance.'
       },
@@ -162,7 +162,7 @@ export const homeContent = {
         id: 2,
         title: 'Naturopathy',
         icon: 'flaticon-medical',
-        image: '/images/procedures/2.png',
+        image: '/images/procedures/2.jpg',
         link: '/therapies/naturopathy/detoxification',
         desc: 'Natural wellness through hydrotherapy, therapeutic nutrition, detox support and lifestyle restoration.'
       },
@@ -170,7 +170,7 @@ export const homeContent = {
         id: 3,
         title: 'Ayurveda',
         icon: 'flaticon-people',
-        image: '/images/procedures/3.png',
+        image: '/images/procedures/3.jpg',
         link: '/therapies/ayurveda/panchakarma',
         desc: 'Classical Panchakarma, Abhyanga, Shirodhara and rejuvenative therapies personalised to individual needs.'
       },
@@ -178,7 +178,7 @@ export const homeContent = {
         id: 4,
         title: 'Acupuncture',
         icon: 'flaticon-relax',
-        image: '/images/procedures/4.png',
+        image: '/images/procedures/4.jpg',
         link: '/therapies/acupuncture/pain-management',
         desc: 'Targeted acupuncture protocols supporting musculoskeletal comfort, relaxation and integrative wellness.'
       }
