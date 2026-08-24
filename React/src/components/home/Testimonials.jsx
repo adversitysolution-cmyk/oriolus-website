@@ -10,14 +10,11 @@ const Testimonials = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <div className="sec-title pull-left">
+            <div className="sec-title">
               <h1>Successful Stories</h1>
               <div className="border">
                 <span className="flaticon-shape"></span>    
               </div>
-            </div>
-            <div className="more-button pull-right">
-              <Link to="/testimonials">More Stories</Link>
             </div>
           </div>
         </div>
