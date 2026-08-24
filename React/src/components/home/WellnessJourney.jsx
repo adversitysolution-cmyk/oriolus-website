@@ -78,20 +78,13 @@ const WellnessJourney = () => {
           }}
           className="wellness-journey-grid"
         >
-          {/* Left Column - Image Card Frame */}
+          {/* Left Column - Direct Image */}
           <div
             style={{
-              borderRadius: '20px',
-              overflow: 'hidden',
-              background: '#FFFFFF',
-              height: '100%',
-              minHeight: '440px',
-              position: 'relative',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 12px 36px rgba(0,0,0,0.06)',
-              padding: '16px'
+              width: '100%'
             }}
           >
             <img 
@@ -99,7 +92,8 @@ const WellnessJourney = () => {
               alt="Your Wellness Journey - Personalised Approach" 
               style={{
                 width: '100%',
-                height: '100%',
+                maxWidth: '460px',
+                height: 'auto',
                 maxHeight: '520px',
                 objectFit: 'contain',
                 display: 'block'
