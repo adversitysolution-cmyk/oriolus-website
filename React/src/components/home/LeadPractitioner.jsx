@@ -57,19 +57,18 @@ const LeadPractitioner = () => {
       style={{ 
         position: 'relative', 
         padding: '90px 0 95px', 
-        backgroundColor: '#FFFFFF',
-        overflow: 'hidden' 
+        backgroundColor: '#FFFFFF'
       }}
     >
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-        <div className="row" style={{ display: 'flex', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+        <div className="row" style={{ display: 'flex', alignItems: 'stretch', flexWrap: 'wrap', position: 'relative' }}>
           
-          {/* Left Column - Picture Card Container (Sticky) */}
-          <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ marginBottom: '40px', position: 'relative' }}>
+          {/* Left Column - Picture Card Container (Sticky Until Section End) */}
+          <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ marginBottom: '40px', position: 'relative', alignSelf: 'stretch' }}>
             <div 
               style={{ 
                 position: 'sticky', 
-                top: '110px', 
+                top: '100px', 
                 maxWidth: '480px', 
                 margin: '0 auto',
                 zIndex: 3 
