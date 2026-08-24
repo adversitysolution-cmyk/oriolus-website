@@ -243,7 +243,14 @@ const LeadPractitioner = () => {
                 >
                   {content.areasOfFocusTitle}
                 </div>
-                <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                <div 
+                  style={{ 
+                    display: 'grid', 
+                    gridTemplateColumns: 'repeat(4, 1fr)', 
+                    gap: '8px',
+                    width: '100%'
+                  }}
+                >
                   {content.focusAreas.map(item => {
                     const isItemHovered = hoveredFocus === item.id;
                     return (
@@ -252,21 +259,24 @@ const LeadPractitioner = () => {
                         onMouseEnter={() => setHoveredFocus(item.id)}
                         onMouseLeave={() => setHoveredFocus(null)}
                         style={{ 
-                          display: 'inline-flex', 
+                          display: 'flex', 
                           alignItems: 'center', 
-                          gap: '8px', 
+                          justifyContent: 'center',
+                          gap: '6px', 
                           background: '#FFFFFF', 
                           border: isItemHovered ? '1px solid #0F8B8D' : '1px solid #EBEAE5', 
                           borderRadius: '10px', 
-                          padding: '8px 14px', 
+                          padding: '9px 6px', 
                           boxShadow: isItemHovered ? '0 6px 16px rgba(15, 139, 141, 0.15)' : '0 2px 8px rgba(0,0,0,0.03)',
                           transform: isItemHovered ? 'translateY(-2px)' : 'translateY(0)',
                           transition: 'all 0.25s ease',
-                          cursor: 'default'
+                          cursor: 'default',
+                          textAlign: 'center',
+                          whiteSpace: 'nowrap'
                         }}
                       >
                         {renderFocusIcon(item.icon)}
-                        <span style={{ fontSize: '12.5px', fontWeight: 600, color: '#12305C' }}>
+                        <span style={{ fontSize: '12px', fontWeight: 600, color: '#12305C' }}>
                           {item.title}
                         </span>
                       </div>
