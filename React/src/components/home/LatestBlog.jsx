@@ -25,8 +25,18 @@ const LatestBlog = () => {
           {content.posts.map(post => (
             <div key={post.id} className="col-md-4">
               <div className="single-blog-item">
-                <div className="img-holder">
-                  <img src={post.image} alt={post.title} />
+                <div className="img-holder" style={{ height: '240px', overflow: 'hidden', position: 'relative' }}>
+                  <img 
+                    src={post.image} 
+                    alt={post.title} 
+                    style={{ 
+                      width: '100%', 
+                      height: '100%', 
+                      objectFit: 'cover', 
+                      objectPosition: 'center', 
+                      display: 'block' 
+                    }} 
+                  />
                   <div className="overlay-style-one"></div>
                   <div className="categories">
                     <Link to="/blog-default">{post.category}</Link>
