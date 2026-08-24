@@ -33,9 +33,32 @@ const ProceduresList = () => {
           {content.items.map(item => (
             <div key={item.id} className="col-md-3 col-sm-6 col-xs-12">
               <div className="single-item">
-                <div className="img-holder">
-                  <img src={item.image} alt={item.title} />
-                  <div className="overlay-style-one">
+                <div 
+                  className="img-holder"
+                  style={{
+                    width: '270px',
+                    height: '270px',
+                    maxWidth: '100%',
+                    aspectRatio: '1 / 1',
+                    margin: '0 auto',
+                    borderRadius: '50%',
+                    overflow: 'hidden',
+                    position: 'relative'
+                  }}
+                >
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    style={{ 
+                      width: '100%', 
+                      height: '100%', 
+                      objectFit: 'cover', 
+                      objectPosition: 'center', 
+                      borderRadius: '50%',
+                      display: 'block' 
+                    }} 
+                  />
+                  <div className="overlay-style-one" style={{ borderRadius: '50%', overflow: 'hidden' }}>
                     <div className="box">
                       <div className="content">
                         <div className="icon-holder">
