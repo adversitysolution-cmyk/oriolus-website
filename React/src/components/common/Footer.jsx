@@ -81,16 +81,16 @@ const Footer = () => {
                   <li><Link to="/">Home</Link></li>
                   <li><Link to="/about">About Us</Link></li>
                   <li><Link to="/about/meet-dr-vijay">Dr. Vijay</Link></li>
-                  <li><Link to="/procedures">Services &amp; Procedures</Link></li>
-                  <li><Link to="/blog">Blog &amp; Insights</Link></li>
+                  <li><Link to="/procedures">Services</Link></li>
+                  <li><Link to="/blog-default">Blog</Link></li>
                   <li><Link to="/contact">Contact Us</Link></li>
                 </ul>
                 <ul className="usefull-links">
-                  <li><Link to="/yoga-therapy">Therapeutic Yoga</Link></li>
-                  <li><Link to="/naturopathy">Clinical Naturopathy</Link></li>
-                  <li><Link to="/ayurveda">Classical Ayurveda</Link></li>
-                  <li><Link to="/acupuncture">Medical Acupuncture</Link></li>
-                  <li><Link to="/structured-wellness-programs">Wellness Programs</Link></li>
+                  <li><Link to="/yoga-therapy">Yoga Therapy</Link></li>
+                  <li><Link to="/naturopathy">Naturopathy</Link></li>
+                  <li><Link to="/ayurveda">Ayurveda</Link></li>
+                  <li><Link to="/acupuncture">Acupuncture</Link></li>
+                  <li><Link to="/structured-wellness-programs">Programs</Link></li>
                   <li><Link to="/faq">FAQ’s</Link></li>
                 </ul>
               </div>
