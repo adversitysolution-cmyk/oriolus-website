@@ -86,8 +86,33 @@ const WelcomeArea = () => {
             </div>
           </div>
           <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-            <div className="img-holder" style={{ marginTop: '19px' }}>
-              <img src={content.image} alt={content.imageAlt} />
+            <div 
+              className="img-holder text-center" 
+              style={{ 
+                marginTop: '19px',
+                padding: '36px 28px',
+                background: '#FFFFFF',
+                borderRadius: '16px',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+                border: '1px solid #EFEFEA',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minHeight: '340px'
+              }}
+            >
+              <img 
+                src={content.image} 
+                alt={content.imageAlt} 
+                style={{ 
+                  maxWidth: '100%', 
+                  maxHeight: '260px', 
+                  width: 'auto', 
+                  height: 'auto', 
+                  objectFit: 'contain',
+                  display: 'inline-block' 
+                }} 
+              />
             </div>
           </div>
         </div>

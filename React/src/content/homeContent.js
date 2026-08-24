@@ -52,8 +52,8 @@ export const homeContent = {
     eyebrow: 'About Oriolus Scientific',
     title: 'Personalised Wellness, Thoughtfully Delivered',
     leadText: 'Bringing traditional wellness knowledge together with structured, personalised care.',
-    image: '/images/resources/welcome.jpg',
-    imageAlt: 'Oriolus Scientific Yoga and Naturopathy Center',
+    image: '/images/45944_Oriolus scientific yoga and naturopathy research center_LOGO_SK_-01.png',
+    imageAlt: 'Oriolus Scientific — Yoga and Naturopathy Research Center',
     mission: {
       title: 'Our Mission',
       desc: 'To make responsible, personalised and structured natural wellness accessible through Yoga Therapy, Naturopathy, Ayurveda, Acupuncture and practical lifestyle guidance.'
