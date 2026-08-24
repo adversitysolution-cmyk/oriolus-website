@@ -47,28 +47,50 @@ const Header = () => {
   return (
     <>
       {/* Start top bar area */}
-      <section className="top-bar-area">
+      <section className="top-bar-area" style={{ padding: '8px 0', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container">
-          <div className="row">
-            <div className="col-lg-7 col-md-6 col-sm-12 col-xs-12">
-              <div className="top-left">
-                <ul>
-                  <li><span className="flaticon-technology"></span>Phone: {contact.phoneDisplay}</li>
-                  <li><span className="flaticon-note"></span>Email: {contact.emailPrimary}</li>
-                </ul>
-              </div>
+          <div 
+            style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'space-between', 
+              flexWrap: 'nowrap',
+              width: '100%',
+              gap: '20px'
+            }}
+          >
+            {/* Left Items: Phone & Email */}
+            <div className="top-left" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+              <ul style={{ display: 'flex', alignItems: 'center', gap: '22px', margin: 0, padding: 0, listStyle: 'none' }}>
+                <li style={{ display: 'inline-flex', alignItems: 'center', fontSize: '13px', whiteSpace: 'nowrap' }}>
+                  <span className="flaticon-technology" style={{ marginRight: '6px', color: '#2ACB35' }}></span>
+                  <span>Phone: {contact.phoneDisplay}</span>
+                </li>
+                <li style={{ display: 'inline-flex', alignItems: 'center', fontSize: '13px', whiteSpace: 'nowrap' }}>
+                  <span className="flaticon-note" style={{ marginRight: '6px', color: '#2ACB35' }}></span>
+                  <span>Email: {contact.emailPrimary}</span>
+                </li>
+              </ul>
             </div>
-            <div className="col-lg-5 col-md-6 col-sm-12 col-xs-12">
-              <div className="top-right clearfix">
-                <ul className="location">
-                  <li><span className="flaticon-location"></span>Campus: {contact.address}</li>
-                </ul>
-                <ul className="social-links">
-                  {siteContent.socialLinks.map((s, i) => (
-                    <li key={i}><a href={s.url} target="_blank" rel="noreferrer" aria-label={s.platform}><i className={s.icon}></i></a></li>
-                  ))}
-                </ul>
-              </div>
+
+            {/* Right Items: Campus Address & Social Icons in a Single Line */}
+            <div className="top-right" style={{ display: 'flex', alignItems: 'center', gap: '16px', flexShrink: 0, justifyContent: 'flex-end' }}>
+              <ul className="location" style={{ display: 'flex', alignItems: 'center', margin: 0, padding: 0, border: 'none', listStyle: 'none' }}>
+                <li style={{ display: 'inline-flex', alignItems: 'center', fontSize: '13px', whiteSpace: 'nowrap' }}>
+                  <span className="flaticon-location" style={{ marginRight: '6px', color: '#2ACB35' }}></span>
+                  <span>Campus: {contact.address}</span>
+                </li>
+              </ul>
+              <div style={{ width: '1px', height: '14px', background: 'rgba(255, 255, 255, 0.18)', margin: '0 2px' }}></div>
+              <ul className="social-links" style={{ display: 'flex', alignItems: 'center', gap: '12px', margin: 0, padding: 0, border: 'none', listStyle: 'none' }}>
+                {siteContent.socialLinks.map((s, i) => (
+                  <li key={i} style={{ display: 'inline-flex', alignItems: 'center', margin: 0 }}>
+                    <a href={s.url} target="_blank" rel="noreferrer" aria-label={s.platform} style={{ display: 'inline-flex', alignItems: 'center', color: '#888888' }}>
+                      <i className={s.icon}></i>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
