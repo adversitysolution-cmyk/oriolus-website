@@ -1,83 +1,27 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { homeContent } from '../../content/homeContent';
+import React from 'react';
+import { Leaf } from 'lucide-react';
 
 const WellnessJourney = () => {
-  const content = homeContent.wellnessJourney;
-  const [hoveredCard, setHoveredCard] = useState(null);
-
-  // SVG Icons for the 3 steps matching the design exactly
-  const renderStepIcon = (iconName) => {
-    switch (iconName) {
-      case 'consultation':
-        return (
-          <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="8" width="22" height="32" rx="3" stroke="#0F8B8D" strokeWidth="2.5" fill="none" />
-            <path d="M17 6H25C25 4.89543 24.1046 4 23 4H19C17.8954 4 17 4.89543 17 6Z" stroke="#0F8B8D" strokeWidth="2.5" fill="#E8F6F6" />
-            <path d="M16 16H26" stroke="#0F8B8D" strokeWidth="2" strokeLinecap="round" />
-            <path d="M16 21H24" stroke="#0F8B8D" strokeWidth="2" strokeLinecap="round" />
-            <path d="M16 26H21" stroke="#0F8B8D" strokeWidth="2" strokeLinecap="round" />
-            {/* Person avatar */}
-            <circle cx="34" cy="30" r="5" stroke="#0F8B8D" strokeWidth="2.5" fill="#fff" />
-            <path d="M28 42C28 38.6863 30.6863 36 34 36C37.3137 36 40 38.6863 40 42" stroke="#0F8B8D" strokeWidth="2.5" strokeLinecap="round" />
-          </svg>
-        );
-      case 'lotus':
-        return (
-          <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Center petal */}
-            <path d="M24 8C21 16 21 26 24 32C27 26 27 16 24 8Z" stroke="#0F8B8D" strokeWidth="2.3" strokeLinejoin="round" fill="#F0F9F9" />
-            {/* Left petal */}
-            <path d="M24 32C19 28 14 21 13 15C18 16 22 23 24 32Z" stroke="#0F8B8D" strokeWidth="2.3" strokeLinejoin="round" />
-            {/* Right petal */}
-            <path d="M24 32C29 28 34 21 35 15C30 16 26 23 24 32Z" stroke="#0F8B8D" strokeWidth="2.3" strokeLinejoin="round" />
-            {/* Outer left petal */}
-            <path d="M24 32C17 31 10 27 7 21C11 20 18 24 24 32Z" stroke="#0F8B8D" strokeWidth="2" strokeLinejoin="round" />
-            {/* Outer right petal */}
-            <path d="M24 32C31 31 38 27 41 21C37 20 30 24 24 32Z" stroke="#0F8B8D" strokeWidth="2" strokeLinejoin="round" />
-            {/* Base curve */}
-            <path d="M12 34C18 36.5 30 36.5 36 34" stroke="#0F8B8D" strokeWidth="2.3" strokeLinecap="round" />
-          </svg>
-        );
-      case 'progress':
-      default:
-        return (
-          <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Meditating figure */}
-            <circle cx="20" cy="14" r="4.5" stroke="#0F8B8D" strokeWidth="2.3" fill="#fff" />
-            {/* Body */}
-            <path d="M20 19V29" stroke="#0F8B8D" strokeWidth="2.3" strokeLinecap="round" />
-            {/* Crossed legs */}
-            <path d="M12 33C14 28 17 28 20 29C23 28 26 28 28 33C25 35 15 35 12 33Z" stroke="#0F8B8D" strokeWidth="2.3" strokeLinejoin="round" fill="#F0F9F9" />
-            {/* Arms in mudra */}
-            <path d="M13 25L17 24L20 22L23 24L27 25" stroke="#0F8B8D" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round" />
-            {/* Progress upward arrow */}
-            <path d="M30 27L39 18M39 18H32M39 18V25" stroke="#0F8B8D" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        );
-    }
-  };
-
   return (
     <section 
       className="wellness-journey-area" 
       style={{ 
         position: 'relative', 
-        padding: '90px 0 100px', 
-        backgroundColor: '#FAFAF7',
-        backgroundImage: 'radial-gradient(circle at 10% 20%, rgba(15, 139, 141, 0.03) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(18, 48, 92, 0.03) 0%, transparent 40%)',
-        overflow: 'hidden' 
+        padding: '95px 0 90px', 
+        backgroundColor: '#FBFBF7'
       }}
     >
-      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+      <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1240px' }}>
         
-        {/* Header Section */}
+        {/* ==========================================================================
+            1. SECTION HEADER
+            ========================================================================== */}
         <div className="row">
-          <div className="col-md-12 text-center">
+          <div className="col-md-12 text-center" style={{ marginBottom: '55px' }}>
             {/* Eyebrow */}
             <div 
               style={{ 
-                color: '#0F8B8D', 
+                color: '#2E5F31', 
                 fontSize: '13px', 
                 fontWeight: 700, 
                 letterSpacing: '3px', 
@@ -85,269 +29,383 @@ const WellnessJourney = () => {
                 marginBottom: '10px' 
               }}
             >
-              {content.eyebrow}
+              YOUR WELLNESS JOURNEY
             </div>
 
-            {/* Central Lotus / Butterfly Divider Ornament */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '14px', marginBottom: '14px' }}>
-              <span style={{ width: '38px', height: '1.5px', background: '#0F8B8D', display: 'inline-block' }}></span>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 4C10 8 6 9 3 9C3 13 6 15 9 15C10 15 11 14.5 12 14C13 14.5 14 15 15 15C18 15 21 13 21 9C18 9 14 8 12 4Z" stroke="#0F8B8D" strokeWidth="1.8" strokeLinejoin="round" fill="none" />
-                <circle cx="12" cy="14" r="1.5" fill="#0F8B8D" />
-                <path d="M9 15C7 18 8 20 12 20C16 20 17 18 15 15" stroke="#0F8B8D" strokeWidth="1.8" strokeLinecap="round" />
-              </svg>
-              <span style={{ width: '38px', height: '1.5px', background: '#0F8B8D', display: 'inline-block' }}></span>
+            {/* Central Leaf Icon */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '12px', color: '#2E5F31' }}>
+              <Leaf size={18} strokeWidth={1.8} />
             </div>
 
             {/* Main Title */}
             <h2 
               style={{ 
-                color: '#12305C', 
-                fontSize: '38px', 
+                color: '#171B17', 
+                fontSize: '40px', 
                 fontWeight: 700, 
-                fontFamily: "'Playfair Display', Georgia, serif", 
-                marginBottom: '18px',
-                lineHeight: '1.25'
+                fontFamily: "'Playfair Display', 'Cormorant Garamond', Georgia, serif", 
+                marginBottom: '12px',
+                lineHeight: '1.2'
               }}
             >
-              {content.title}
+              A Personalised Approach
             </h2>
 
-            {/* Description */}
+            {/* Subtitle */}
             <p 
               style={{ 
-                color: '#555555', 
+                color: '#555E55', 
                 fontSize: '15px', 
-                lineHeight: '1.7', 
-                maxWidth: '720px', 
-                margin: '0 auto 65px' 
+                lineHeight: '1.6', 
+                maxWidth: '680px', 
+                margin: '0 auto' 
               }}
             >
-              {content.subtitle}
+              Thoughtful care. Personalised for you. Guided every step of the way.
             </p>
           </div>
         </div>
 
-        {/* 3 Step Cards with Floating Badges and Timeline Connecting Curve */}
-        <div style={{ position: 'relative', marginBottom: '50px' }}>
-          
-          {/* Connecting Arch Line (Visible on Desktop/Tablet) */}
+        {/* ==========================================================================
+            2. MAIN 2-COLUMN LAYOUT (LEFT: IMAGE | RIGHT: 3 STEPS)
+            ========================================================================== */}
+        <div 
+          style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'minmax(320px, 1.15fr) minmax(320px, 1.25fr)', 
+            gap: '50px', 
+            alignItems: 'center' 
+          }}
+          className="wellness-journey-grid"
+        >
+          {/* Left Column - Empty Image Slot Frame */}
           <div 
-            className="hidden-xs"
             style={{ 
-              position: 'absolute', 
-              top: '72px', 
-              left: '16%', 
-              right: '16%', 
-              height: '35px', 
-              zIndex: 1,
-              pointerEvents: 'none'
+              borderRadius: '20px', 
+              overflow: 'hidden', 
+              border: '2px dashed #D6DFD2',
+              background: '#F4F7F2',
+              height: '100%',
+              minHeight: '440px',
+              position: 'relative',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: 'inset 0 2px 10px rgba(0,0,0,0.02)'
             }}
           >
-            <svg width="100%" height="100%" viewBox="0 0 800 40" fill="none" preserveAspectRatio="none">
-              <path 
-                d="M 10 32 C 120 10, 260 10, 390 30 C 520 10, 670 10, 790 32" 
-                stroke="#0F8B8D" 
-                strokeWidth="2" 
-                strokeLinecap="round"
-                fill="none" 
-              />
-              {/* Midpoint milestone dots */}
-              <circle cx="190" cy="18" r="4.5" fill="#0F8B8D" />
-              <circle cx="590" cy="18" r="4.5" fill="#0F8B8D" />
-            </svg>
+            {/* Empty Slot Placeholder Indicator */}
+            <div style={{ textAlign: 'center', color: '#A0B29E', padding: '20px' }}>
+              <div 
+                style={{ 
+                  width: '64px', 
+                  height: '64px', 
+                  borderRadius: '50%', 
+                  background: '#E5ECE1', 
+                  margin: '0 auto 12px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#2E5F31'
+                }}
+              >
+                <Leaf size={28} strokeWidth={1.8} />
+              </div>
+              <span style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', display: 'block' }}>
+                Image Slot
+              </span>
+            </div>
           </div>
 
-          <div className="row">
-            {content.steps.map((step, index) => {
-              const isHovered = hoveredCard === index;
-              const isTealBadge = step.stepNumber === '02';
-
-              return (
-                <div key={index} className="col-lg-4 col-md-4 col-sm-12 col-xs-12" style={{ marginBottom: '35px' }}>
-                  <div 
-                    style={{ 
-                      display: 'flex', 
-                      flexDirection: 'column', 
-                      alignItems: 'center', 
-                      height: '100%',
-                      position: 'relative'
-                    }}
-                  >
-                    {/* Top Step Number Circle with Dashed Halo */}
-                    <div 
-                      style={{ 
-                        width: '64px', 
-                        height: '64px', 
-                        borderRadius: '50%', 
-                        border: `1.5px dashed ${isTealBadge ? '#0F8B8D' : '#12305C'}`, 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        justifyContent: 'center', 
-                        background: '#ffffff',
-                        marginBottom: '0',
-                        position: 'relative',
-                        zIndex: 4,
-                        boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
-                      }}
-                    >
-                      <div 
-                        style={{ 
-                          width: '50px', 
-                          height: '50px', 
-                          borderRadius: '50%', 
-                          background: isTealBadge ? '#0F8B8D' : '#12305C', 
-                          color: '#ffffff', 
-                          fontWeight: 700, 
-                          fontSize: '17px', 
-                          display: 'flex', 
-                          alignItems: 'center', 
-                          justifyContent: 'center',
-                          fontFamily: "'Poppins', sans-serif"
-                        }}
-                      >
-                        {step.stepNumber}
-                      </div>
-                    </div>
-
-                    {/* Connecting Vertical Stem */}
-                    <div 
-                      style={{ 
-                        width: '2px', 
-                        height: '24px', 
-                        background: '#0F8B8D', 
-                        zIndex: 3 
-                      }}
-                    />
-
-                    {/* Floating Circular Icon Badge */}
-                    <div 
-                      style={{ 
-                        width: '78px', 
-                        height: '78px', 
-                        borderRadius: '50%', 
-                        background: '#ffffff', 
-                        border: '2px solid #E4F2F2', 
-                        boxShadow: isHovered ? '0 10px 25px rgba(15, 139, 141, 0.25)' : '0 6px 20px rgba(0,0,0,0.06)', 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        justifyContent: 'center', 
-                        position: 'relative', 
-                        zIndex: 4,
-                        marginBottom: '-39px',
-                        transition: 'all 0.35s ease',
-                        transform: isHovered ? 'scale(1.08)' : 'scale(1)'
-                      }}
-                    >
-                      {renderStepIcon(step.icon)}
-                    </div>
-
-                    {/* Main Card Container */}
-                    <div 
-                      onMouseEnter={() => setHoveredCard(index)}
-                      onMouseLeave={() => setHoveredCard(null)}
-                      style={{ 
-                        background: '#ffffff', 
-                        borderRadius: '16px', 
-                        padding: '60px 28px 38px', 
-                        textAlign: 'center', 
-                        width: '100%', 
-                        flexGrow: 1, 
-                        border: isHovered ? '1px solid #C5E6E6' : '1px solid #ECEBE6', 
-                        boxShadow: isHovered ? '0 18px 45px rgba(15, 139, 141, 0.12)' : '0 8px 30px rgba(0,0,0,0.04)', 
-                        transform: isHovered ? 'translateY(-6px)' : 'translateY(0)', 
-                        transition: 'all 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
-                        position: 'relative',
-                        zIndex: 2,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'space-between'
-                      }}
-                    >
-                      <div>
-                        {/* Card Title */}
-                        <h3 
-                          style={{ 
-                            fontSize: '18px', 
-                            fontWeight: 700, 
-                            color: '#12305C', 
-                            marginBottom: '12px',
-                            fontFamily: "'Poppins', sans-serif"
-                          }}
-                        >
-                          {step.title}
-                        </h3>
-
-                        {/* Short Accent Divider */}
-                        <div 
-                          style={{ 
-                            width: '28px', 
-                            height: '2px', 
-                            background: '#0F8B8D', 
-                            margin: '0 auto 16px', 
-                            borderRadius: '2px' 
-                          }}
-                        />
-
-                        {/* Card Description */}
-                        <p 
-                          style={{ 
-                            color: '#666666', 
-                            fontSize: '14px', 
-                            lineHeight: '1.65', 
-                            margin: 0 
-                          }}
-                        >
-                          {step.desc}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+          {/* Right Column - 3 Step Timeline */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            
+            {/* -------------------- STEP 01 -------------------- */}
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '22px' }}>
+              {/* Number Bubble & Line */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
+                <div 
+                  style={{ 
+                    width: '58px', 
+                    height: '58px', 
+                    borderRadius: '50%', 
+                    background: '#E5ECE1', 
+                    color: '#2E5F31', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    fontSize: '23px',
+                    fontWeight: 700,
+                    fontFamily: "'Playfair Display', Georgia, serif"
+                  }}
+                >
+                  01
                 </div>
-              );
-            })}
+                {/* Connecting Line with Center Dot */}
+                <div style={{ width: '1.5px', height: '42px', background: '#D6DFD2', position: 'relative', margin: '6px 0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#6C8B64' }} />
+                </div>
+              </div>
+
+              {/* Outlined Icon Bubble */}
+              <div 
+                style={{ 
+                  width: '46px', 
+                  height: '46px', 
+                  borderRadius: '50%', 
+                  border: '1.5px solid #D6DFD2', 
+                  background: '#FFFFFF',
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  color: '#2E5F31',
+                  flexShrink: 0,
+                  marginTop: '6px'
+                }}
+              >
+                {/* Checklist / Consultation Icon */}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="5" y="4" width="14" height="17" rx="2" stroke="#2E5F31" strokeWidth="1.6" />
+                  <path d="M9 3H15" stroke="#2E5F31" strokeWidth="1.6" strokeLinecap="round" />
+                  <path d="M8 8H16M8 12H13M8 16H11" stroke="#2E5F31" strokeWidth="1.4" strokeLinecap="round" />
+                  <circle cx="16" cy="15" r="2" stroke="#2E5F31" strokeWidth="1.4" />
+                  <path d="M14.5 19C14.5 17.5 15.2 16.8 16 16.8C16.8 16.8 17.5 17.5 17.5 19" stroke="#2E5F31" strokeWidth="1.4" strokeLinecap="round" />
+                </svg>
+              </div>
+
+              {/* Text Block */}
+              <div style={{ flex: 1, paddingTop: '4px' }}>
+                <h3 
+                  style={{ 
+                    margin: '0 0 4px', 
+                    fontSize: '20px', 
+                    fontWeight: 700, 
+                    color: '#171B17', 
+                    fontFamily: "'Playfair Display', Georgia, serif" 
+                  }}
+                >
+                  Consultation &amp; Assessment
+                </h3>
+                <div style={{ width: '28px', height: '2px', background: '#6C8B64', marginBottom: '8px' }}></div>
+                <p style={{ margin: 0, fontSize: '13.5px', lineHeight: '1.65', color: '#555E55' }}>
+                  We begin by understanding your health history, lifestyle, mobility, concerns and personal wellness goals.
+                </p>
+              </div>
+            </div>
+
+            {/* -------------------- STEP 02 -------------------- */}
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '22px' }}>
+              {/* Number Bubble & Line */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
+                <div 
+                  style={{ 
+                    width: '58px', 
+                    height: '58px', 
+                    borderRadius: '50%', 
+                    background: '#E5ECE1', 
+                    color: '#2E5F31', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    fontSize: '23px',
+                    fontWeight: 700,
+                    fontFamily: "'Playfair Display', Georgia, serif"
+                  }}
+                >
+                  02
+                </div>
+                {/* Connecting Line with Center Dot */}
+                <div style={{ width: '1.5px', height: '42px', background: '#D6DFD2', position: 'relative', margin: '6px 0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#6C8B64' }} />
+                </div>
+              </div>
+
+              {/* Outlined Icon Bubble */}
+              <div 
+                style={{ 
+                  width: '46px', 
+                  height: '46px', 
+                  borderRadius: '50%', 
+                  border: '1.5px solid #D6DFD2', 
+                  background: '#FFFFFF',
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  color: '#2E5F31',
+                  flexShrink: 0,
+                  marginTop: '6px'
+                }}
+              >
+                {/* Lotus Blossom Icon */}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4C10.5 8 10.5 13 12 16C13.5 13 13.5 8 12 4Z" stroke="#2E5F31" strokeWidth="1.6" strokeLinejoin="round" />
+                  <path d="M12 16C9.5 14 7 10.5 6.5 7.5C9 8 11 11.5 12 16Z" stroke="#2E5F31" strokeWidth="1.6" strokeLinejoin="round" />
+                  <path d="M12 16C14.5 14 17 10.5 17.5 7.5C15 8 13 11.5 12 16Z" stroke="#2E5F31" strokeWidth="1.6" strokeLinejoin="round" />
+                  <path d="M6 17C9 18.5 15 18.5 18 17" stroke="#2E5F31" strokeWidth="1.6" strokeLinecap="round" />
+                </svg>
+              </div>
+
+              {/* Text Block */}
+              <div style={{ flex: 1, paddingTop: '4px' }}>
+                <h3 
+                  style={{ 
+                    margin: '0 0 4px', 
+                    fontSize: '20px', 
+                    fontWeight: 700, 
+                    color: '#171B17', 
+                    fontFamily: "'Playfair Display', Georgia, serif" 
+                  }}
+                >
+                  Personalised Wellness Plan
+                </h3>
+                <div style={{ width: '28px', height: '2px', background: '#6C8B64', marginBottom: '8px' }}></div>
+                <p style={{ margin: 0, fontSize: '13.5px', lineHeight: '1.65', color: '#555E55' }}>
+                  Suitable Yoga, Naturopathy, Ayurveda or Acupuncture therapies are selected around your individual needs.
+                </p>
+              </div>
+            </div>
+
+            {/* -------------------- STEP 03 -------------------- */}
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '22px' }}>
+              {/* Number Bubble (No lower line) */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
+                <div 
+                  style={{ 
+                    width: '58px', 
+                    height: '58px', 
+                    borderRadius: '50%', 
+                    background: '#E5ECE1', 
+                    color: '#2E5F31', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    fontSize: '23px',
+                    fontWeight: 700,
+                    fontFamily: "'Playfair Display', Georgia, serif"
+                  }}
+                >
+                  03
+                </div>
+              </div>
+
+              {/* Outlined Icon Bubble */}
+              <div 
+                style={{ 
+                  width: '46px', 
+                  height: '46px', 
+                  borderRadius: '50%', 
+                  border: '1.5px solid #D6DFD2', 
+                  background: '#FFFFFF',
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  color: '#2E5F31',
+                  flexShrink: 0,
+                  marginTop: '6px'
+                }}
+              >
+                {/* Progress & Guidance Icon */}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="8" r="3.5" stroke="#2E5F31" strokeWidth="1.6" />
+                  <path d="M4 19C4 16 6.7 13.5 10 13.5C11.2 13.5 12.3 13.8 13.2 14.4" stroke="#2E5F31" strokeWidth="1.6" strokeLinecap="round" />
+                  <path d="M15 18L19 14M19 14H15M19 14V18" stroke="#2E5F31" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+
+              {/* Text Block */}
+              <div style={{ flex: 1, paddingTop: '4px' }}>
+                <h3 
+                  style={{ 
+                    margin: '0 0 4px', 
+                    fontSize: '20px', 
+                    fontWeight: 700, 
+                    color: '#171B17', 
+                    fontFamily: "'Playfair Display', Georgia, serif" 
+                  }}
+                >
+                  Progress &amp; Guidance
+                </h3>
+                <div style={{ width: '28px', height: '2px', background: '#6C8B64', marginBottom: '8px' }}></div>
+                <p style={{ margin: 0, fontSize: '13.5px', lineHeight: '1.65', color: '#555E55' }}>
+                  Your wellness journey is reviewed over time with practical guidance to support sustainable everyday wellbeing.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        {/* Bottom CTA Button */}
-        <div className="row">
-          <div className="col-md-12 text-center">
-            <Link 
-              to={content.cta.btnLink} 
-              className="wellness-journey-btn"
+        {/* ==========================================================================
+            3. BOTTOM FULL-WIDTH BANNER CARD
+            ========================================================================== */}
+        <div 
+          style={{ 
+            marginTop: '55px', 
+            background: '#EDF2EA', 
+            borderRadius: '16px', 
+            border: '1px solid #DFE7DC', 
+            padding: '24px 36px', 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: '24px', 
+            position: 'relative', 
+            overflow: 'hidden' 
+          }}
+        >
+          {/* Circular Dark Green Leaf Icon */}
+          <div 
+            style={{ 
+              width: '48px', 
+              height: '48px', 
+              borderRadius: '50%', 
+              background: '#2E5F31', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              color: '#FFFFFF',
+              flexShrink: 0 
+            }}
+          >
+            <Leaf size={22} strokeWidth={2} />
+          </div>
+
+          {/* Vertical Hairline Divider */}
+          <div style={{ width: '1px', height: '42px', background: '#CFDCD0', flexShrink: 0 }}></div>
+
+          {/* Text Info */}
+          <div>
+            <h4 
               style={{ 
-                display: 'inline-flex', 
-                alignItems: 'center', 
-                gap: '12px', 
-                background: 'linear-gradient(135deg, #0F8B8D 0%, #007678 100%)', 
-                color: '#ffffff', 
-                borderRadius: '30px', 
-                padding: '14px 34px', 
-                fontSize: '14px', 
-                fontWeight: 600, 
-                letterSpacing: '0.5px',
-                textDecoration: 'none',
-                boxShadow: '0 8px 24px rgba(15, 139, 141, 0.35)',
-                transition: 'all 0.35s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-3px)';
-                e.currentTarget.style.boxShadow = '0 12px 30px rgba(15, 139, 141, 0.45)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 8px 24px rgba(15, 139, 141, 0.35)';
+                margin: '0 0 4px', 
+                fontSize: '19px', 
+                color: '#2E5F31', 
+                fontFamily: "'Playfair Display', Georgia, serif", 
+                fontWeight: 600 
               }}
             >
-              {/* Left Butterfly / Lotus Glyph */}
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 4C10 8 6 9 3 9C3 13 6 15 9 15C10 15 11 14.5 12 14C13 14.5 14 15 15 15C18 15 21 13 21 9C18 9 14 8 12 4Z" stroke="#ffffff" strokeWidth="2" strokeLinejoin="round" fill="none" />
-                <circle cx="12" cy="14" r="1.5" fill="#ffffff" />
-              </svg>
-              <span>{content.cta.btnText}</span>
-              {/* Right Arrow */}
-              <i className="fa fa-angle-right" style={{ fontSize: '16px', fontWeight: 'bold' }}></i>
-            </Link>
+              A journey designed around you.
+            </h4>
+            <p style={{ margin: 0, fontSize: '13.5px', color: '#5C6E5C' }}>
+              Because meaningful wellness begins with understanding.
+            </p>
+          </div>
+
+          {/* Subtle Botanical Watermark on Far Right */}
+          <div 
+            style={{ 
+              position: 'absolute', 
+              right: '-10px', 
+              bottom: '-25px', 
+              opacity: 0.12, 
+              pointerEvents: 'none' 
+            }}
+          >
+            <svg width="180" height="120" viewBox="0 0 180 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 110C50 70 120 40 170 10" stroke="#2E5F31" strokeWidth="2.5" />
+              <path d="M70 75C85 45 115 35 140 30C125 55 95 65 70 75Z" stroke="#2E5F31" strokeWidth="2" />
+              <path d="M110 50C125 25 155 15 175 12C160 35 130 45 110 50Z" stroke="#2E5F31" strokeWidth="2" />
+              <path d="M40 95C55 75 80 65 100 62C85 82 60 90 40 95Z" stroke="#2E5F31" strokeWidth="2" />
+            </svg>
           </div>
         </div>
 
