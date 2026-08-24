@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
+import GlobalConsultationCTA from '../components/common/GlobalConsultationCTA';
 import ScrollToTop from '../components/common/ScrollToTop';
 
 const MainLayout = ({ children }) => {
@@ -15,6 +16,7 @@ const MainLayout = ({ children }) => {
     <div className="boxed_wrapper">
       <Header />
       {children}
+      <GlobalConsultationCTA />
       <Footer />
       <ScrollToTop />
     </div>
