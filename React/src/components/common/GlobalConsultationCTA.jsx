@@ -7,7 +7,7 @@ const GlobalConsultationCTA = () => {
       className="global-consultation-cta"
       style={{
         position: 'relative',
-        backgroundImage: `linear-gradient(180deg, rgba(22, 32, 23, 0.78) 0%, rgba(18, 26, 19, 0.82) 100%), url('/images/yoga_floral_frame.png')`,
+        backgroundImage: `linear-gradient(180deg, rgba(22, 32, 23, 0.75) 0%, rgba(18, 26, 19, 0.80) 100%), url('/images/wellness-cta-bg.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
