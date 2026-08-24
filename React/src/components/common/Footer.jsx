@@ -22,14 +22,8 @@ const Footer = () => {
     <>
       {/* Start footer area */}
       <footer className="footer-area">
-        <div className="arrow" style={{ top: 0, left: 0, width: '100%', overflow: 'hidden', lineHeight: 0 }}>
-          <svg 
-            viewBox="0 0 1920 60" 
-            preserveAspectRatio="none" 
-            style={{ width: '100%', height: '55px', display: 'block' }}
-          >
-            <path d="M0,0 L1920,0 L1920,8 Q960,60 0,8 Z" fill="#121A13" />
-          </svg>
+        <div className="arrow">
+          <img src="/images/resources/arrow.png" alt="" />
         </div>
         <div className="footer-image-box">
           <img src="/images/footer/footer-image.png" alt="" />
