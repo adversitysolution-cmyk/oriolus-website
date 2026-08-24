@@ -90,7 +90,7 @@ const StructuredPrograms = () => {
         </div>
       )}
 
-      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+      <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1320px', width: '94%' }}>
         
         {/* Section Header */}
         <div className="row">
