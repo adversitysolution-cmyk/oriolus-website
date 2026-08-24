@@ -8,15 +8,75 @@ const Footer = () => {
 
   return (
     <>
+      <style>{`
+        .footer-area-botanical {
+          background-image: url('/images/footer/footer-bg.png');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          position: relative;
+          border-top: 1px solid rgba(46, 95, 49, 0.15);
+          padding-top: 80px;
+          padding-bottom: 70px;
+        }
+        .footer-area-botanical .title h3 {
+          color: #171B17 !important;
+          font-weight: 700 !important;
+        }
+        .footer-area-botanical .our-info p {
+          color: #444E44 !important;
+          font-size: 14px;
+          line-height: 24px;
+        }
+        .footer-area-botanical .footer-contact-info li .text-holder h5 {
+          color: #333D33 !important;
+        }
+        .footer-area-botanical .footer-contact-info li .icon-holder span:before {
+          color: #2E5F31 !important;
+        }
+        .footer-area-botanical .usefull-links li a {
+          color: #3A443A !important;
+          transition: all 0.3s ease;
+        }
+        .footer-area-botanical .usefull-links li a:hover {
+          color: #2E5F31 !important;
+          padding-left: 5px;
+        }
+        .footer-area-botanical .working-hours li {
+          color: #444E44 !important;
+        }
+        .footer-area-botanical .working-hours li span {
+          color: #171B17 !important;
+          font-weight: 600;
+        }
+        .footer-area-botanical .working-hours li span.closed {
+          color: #2E5F31 !important;
+        }
+        .footer-bottom-area-botanical {
+          background: #E4D8C6;
+          border-top: 1px solid rgba(46, 95, 49, 0.12);
+          padding: 22px 0;
+        }
+        .footer-bottom-area-botanical .copyright-text p {
+          color: #555E55 !important;
+          margin: 0;
+          font-size: 13.5px;
+        }
+        .footer-bottom-area-botanical .footer-social-links li a i {
+          color: #555E55 !important;
+          transition: all 0.3s ease;
+        }
+        .footer-bottom-area-botanical .footer-social-links li a:hover i {
+          color: #2E5F31 !important;
+        }
+      `}</style>
+
       {/* Start footer area */}
-      <footer className="footer-area" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
-        <div className="footer-image-box">
-          <img src="/images/footer/footer-image.png" alt="" />
-        </div>
+      <footer className="footer-area footer-area-botanical">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="footer-logo text-center">
+              <div className="footer-logo text-center" style={{ borderBottom: '1px solid rgba(46, 95, 49, 0.15)', paddingBottom: '40px', marginBottom: '40px' }}>
                 <Link to="/">
                   <img
                     src={brand.logo}
@@ -117,7 +177,7 @@ const Footer = () => {
       {/* End footer area */}
 
       {/* Start footer bottom area */}
-      <section className="footer-bottom-area">
+      <section className="footer-bottom-area footer-bottom-area-botanical">
         <div className="container">
           <div className="row">
             <div className="col-md-8">
