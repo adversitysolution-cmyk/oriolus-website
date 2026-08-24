@@ -8,7 +8,7 @@ const GlobalConsultationCTA = () => {
       style={{
         position: 'relative',
         backgroundImage: `url('/images/wellness-cta-bg.png')`,
-        backgroundColor: '#F7EFE9',
+        backgroundColor: '#ECDCCE',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
