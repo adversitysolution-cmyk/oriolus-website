@@ -62,11 +62,19 @@ const LeadPractitioner = () => {
       }}
     >
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-        <div className="row" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+        <div className="row" style={{ display: 'flex', alignItems: 'flex-start', flexWrap: 'wrap' }}>
           
-          {/* Left Column - Picture Card Container */}
-          <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ marginBottom: '40px' }}>
-            <div style={{ position: 'relative', maxWidth: '480px', margin: '0 auto' }}>
+          {/* Left Column - Picture Card Container (Sticky) */}
+          <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ marginBottom: '40px', position: 'relative' }}>
+            <div 
+              style={{ 
+                position: 'sticky', 
+                top: '110px', 
+                maxWidth: '480px', 
+                margin: '0 auto',
+                zIndex: 3 
+              }}
+            >
               
               {/* Outer Dashed Contour Border */}
               <div 
