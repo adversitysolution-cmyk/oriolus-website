@@ -38,9 +38,9 @@ const Testimonials = () => {
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="row">
           <div className="col-md-12">
-            <div className="sec-title">
+            <div className="sec-title text-center">
               <h1>Successful Stories</h1>
-              <div className="border">
+              <div className="border mar0auto">
                 <span className="flaticon-shape"></span>    
               </div>
             </div>
@@ -54,8 +54,8 @@ const Testimonials = () => {
           position: 'relative', 
           width: '100%', 
           overflow: 'hidden',
-          paddingTop: '20px',
-          paddingBottom: '20px',
+          paddingTop: '25px',
+          paddingBottom: '25px',
           marginTop: '10px',
           zIndex: 2
         }}
@@ -76,15 +76,15 @@ const Testimonials = () => {
               display: flex;
               gap: 30px;
               width: max-content;
-              animation: testimonialMarquee 34s linear infinite;
+              animation: testimonialMarquee 36s linear infinite;
             }
             .testimonial-marquee-track.is-paused {
               animation-play-state: paused !important;
             }
             .testimonial-marquee-item {
-              width: 370px;
-              min-width: 370px;
-              flex: 0 0 370px;
+              width: 380px;
+              min-width: 380px;
+              flex: 0 0 380px;
               position: relative;
             }
           `}
@@ -97,26 +97,34 @@ const Testimonials = () => {
                 <div 
                   className="text-holder" 
                   style={{ 
-                    minHeight: '220px', 
-                    paddingTop: '32px', 
-                    paddingBottom: '24px', 
-                    paddingLeft: '24px', 
-                    paddingRight: '24px', 
+                    height: '260px',
+                    minHeight: '260px', 
+                    paddingTop: '28px', 
+                    paddingBottom: '22px', 
+                    paddingLeft: '26px', 
+                    paddingRight: '26px', 
                     borderRadius: '12px', 
                     boxShadow: '0 8px 24px rgba(0,0,0,0.04)', 
                     display: 'flex', 
                     flexDirection: 'column', 
-                    justifyContent: 'space-between' 
+                    justifyContent: 'space-between',
+                    boxSizing: 'border-box',
+                    background: '#FFFFFF'
                   }}
                 >
                   <div>
-                    <h3 style={{ marginTop: 0 }}>{item.title}</h3>
-                    <p style={{ fontSize: '13.5px', lineHeight: '1.65', color: '#555555' }}>{item.quote}</p>
+                    <h3 style={{ marginTop: 0, fontSize: '18px', color: '#171B17', fontWeight: 600 }}>{item.title}</h3>
+                    <p style={{ fontSize: '13px', lineHeight: '1.65', color: '#555555', margin: '10px 0 0' }}>"{item.quote}"</p>
                   </div>
                   <div>
-                    <span className="border"></span>
+                    <span className="border" style={{ margin: '10px auto' }}></span>
                     <div className="name">
-                      <h3>{item.name}</h3>
+                      <h3 style={{ fontSize: '16px', color: '#2E5F31', margin: 0 }}>{item.name}</h3>
+                      {item.designation && (
+                        <span style={{ fontSize: '12px', color: '#777777', fontWeight: 400, display: 'block', marginTop: '2px' }}>
+                          {item.designation}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>

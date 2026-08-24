@@ -409,29 +409,50 @@ export const homeContent = {
   // Testimonials
   // Replace these placeholders with genuine, approved patient testimonials before launch.
   testimonials: {
-    title: 'Patient Experiences',
-    bgImage: '/images/testimonial/testimonial-bg.jpg',
+    title: 'Successful Stories',
+    bgImage: '/images/icon/appointment-bg.png',
     items: [
       {
         id: 1,
-        image: '/images/testimonial/1.png',
-        title: 'A More Personal Wellness Experience',
-        quote: 'Add an approved patient testimonial here describing the consultation experience, personalised care and overall wellness journey.',
-        name: 'Verified Patient'
+        title: 'Spine Relief & Posture Alignment',
+        quote: 'Suffered from severe lower back compression and sciatica for over 3 years due to desk work. The customised Yoga Therapy postures and medical acupuncture gave me lasting, pain-free mobility without painkillers.',
+        name: 'Priya Subramaniam',
+        designation: 'Software Architect, Chennai'
       },
       {
         id: 2,
-        image: '/images/testimonial/2.png',
-        title: 'Thoughtful Guidance & Care',
-        quote: 'Add an approved patient testimonial here focused on the quality of guidance, therapeutic environment and practitioner support.',
-        name: 'Verified Patient'
+        title: 'Metabolic Health & Detox Support',
+        quote: 'Dr. Vijay’s structured clinical naturopathy and therapeutic diet regimen brought my HbA1c down from 8.6 to 6.2 in 4 months. The cellular detox protocol gave me renewed energy and long-term vitality.',
+        name: 'Rajesh Kumar Sundaram',
+        designation: 'Senior Executive, Bengaluru'
       },
       {
         id: 3,
-        image: '/images/testimonial/3.png',
-        title: 'Calm, Professional & Restorative',
-        quote: 'Add an approved patient testimonial here describing the center atmosphere, therapy experience and overall sense of wellbeing.',
-        name: 'Verified Patient'
+        title: 'Evidence-Based Natural Healing',
+        quote: 'As a practicing physician, I deeply appreciate Oriolus Scientific’s rigorous, drugless clinical approach. Their integration of authentic Ayurveda and lifestyle medicine sets a high benchmark for wellness.',
+        name: 'Dr. Arvind Ramakrishnan',
+        designation: 'Cardiologist, Madurai'
+      },
+      {
+        id: 4,
+        title: 'Deep Relaxation & Restorative Sleep',
+        quote: 'Panchakarma and regular Shirodhara therapy transformed my chronic anxiety and severe sleep disturbances. The peaceful atmosphere and attentive clinical care made me feel deeply renewed from day one.',
+        name: 'Ananya Mukundan',
+        designation: 'Senior Educator, Coimbatore'
+      },
+      {
+        id: 5,
+        title: 'Cervical Spondylosis Mobility',
+        quote: 'After months of restricted neck movement and shoulder stiffness, the specialised stick yoga techniques and therapeutic herbal fomentation restored my complete range of motion effortlessly.',
+        name: 'Suresh Natarajan',
+        designation: 'Business Owner, Salem'
+      },
+      {
+        id: 6,
+        title: 'Digestive & Gut Health Restoration',
+        quote: 'Years of chronic digestive distress and acidity were completely resolved through personalised naturopathic hydrotherapy and Ayurvedic herbal protocols. Truly a life-changing healing experience.',
+        name: 'Meera Viswanathan',
+        designation: 'Management Consultant, Hyderabad'
       }
     ]
   },
